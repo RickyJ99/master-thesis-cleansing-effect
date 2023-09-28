@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1695673007 "thery.xdv" "thery.pdf" "thery" 1695673008 0
-  "thery.xdv" 1695673007 42396 04403453cba8a7e400a71813e3cdb950 "xelatex"
+["xdvipdfmx"] 1695914389 "thery.xdv" "thery.pdf" "thery" 1695914390 0
+  "thery.xdv" 1695914388 56576 35c640d881b83da6f9b67d5cd7c2809b "xelatex"
   (generated)
   "thery.pdf"
   (rewritten before read)
-["xelatex"] 1695673005 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/thery.tex" "thery.xdv" "thery" 1695673008 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/thery.tex" 1695673005 5397 2d800b69f90efe823b64773afb105213 ""
+["xelatex"] 1695914387 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/thery.tex" "thery.xdv" "thery" 1695914390 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/thery.tex" 1695914387 7176 60c8ba59ef030e9ce3b459c0d8890511 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -146,9 +146,9 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "thery.aux" 1695673007 958 acc74d97f485d821c3eb7725d887853c "xelatex"
-  "thery.out" 1695673007 228 5dc5e61ebd6eee3bb22a340c5f59f218 "xelatex"
-  "thery.tex" 1695673005 5397 2d800b69f90efe823b64773afb105213 ""
+  "thery.aux" 1695914388 1105 3105e23609c7bebbfa9c761f7a989560 "xelatex"
+  "thery.out" 1695914388 500 d05a6186dcd17a1b0b09ccfe9465bec9 "xelatex"
+  "thery.tex" 1695914387 7176 60c8ba59ef030e9ce3b459c0d8890511 ""
   (generated)
   "thery.aux"
   "thery.log"

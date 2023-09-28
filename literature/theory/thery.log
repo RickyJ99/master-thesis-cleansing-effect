@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  25 SEP 2023 22:16
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  28 SEP 2023 17:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -537,7 +537,7 @@ Package hyperref Info: Link coloring ON on input line 22.
 
 ] [2] (./thery.aux)
 Package rerunfilecheck Info: File `thery.out' has not changed.
-(rerunfilecheck)             Checksum: 5DC5E61EBD6EEE3BB22A340C5F59F218;228.
+(rerunfilecheck)             Checksum: D05A6186DCD17A1B0B09CCFE9465BEC9;500.
  ) 
 Here is how much of TeX's memory you used:
  21158 strings out of 476684
@@ -548,4 +548,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  84i,8n,89p,519b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thery.xdv (2 pages, 42396 bytes).
+Output written on thery.xdv (2 pages, 56576 bytes).
