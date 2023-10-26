@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1696416336 "thery.xdv" "thery.pdf" "thery" 1696416337 0
-  "thery.xdv" 1696416336 73380 692a57ee09f6bb32fe168e8e74050e13 "xelatex"
+["xdvipdfmx"] 1698311046 "solving.xdv" "solving.pdf" "solving" 1698311047 0
+  "solving.xdv" 1698311046 9864 0a64d278ae5e3d64c4851556ca31adc2 "xelatex"
   (generated)
-  "thery.pdf"
+  "solving.pdf"
   (rewritten before read)
-["xelatex"] 1696416335 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/thery.tex" "thery.xdv" "thery" 1696416337 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/thery.tex" 1696416335 9738 31a27175899afc6f4c0f9b79b604a189 ""
+["xelatex"] 1698311045 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" "solving.xdv" "solving" 1698311047 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" 1698311044 2329 bea863b3cc56981e4cf0586c27dcf972 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -146,12 +146,13 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "thery.aux" 1696416336 1388 1714ec01ed497a1b968d68973f748c75 "xelatex"
-  "thery.out" 1696416336 630 69fc85c6e52b7400c94f5a47fbb2a60b "xelatex"
-  "thery.tex" 1696416335 9738 31a27175899afc6f4c0f9b79b604a189 ""
+  "K.png" 1698310907 247379 ff393702e3e2404ff9d7d4e513620f08 ""
+  "solving.aux" 1698311046 864 6ccc5978c5b111d0465d017c32af8665 "xelatex"
+  "solving.out" 1698311046 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "solving.tex" 1698311044 2329 bea863b3cc56981e4cf0586c27dcf972 ""
   (generated)
-  "thery.aux"
-  "thery.log"
-  "thery.out"
-  "thery.xdv"
+  "solving.aux"
+  "solving.log"
+  "solving.out"
+  "solving.xdv"
   (rewritten before read)

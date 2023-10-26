@@ -1,0 +1,60 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows, positioning, arrows.meta}
+
+
+\title{Finding the optimal path}
+\author{Riccardo Dal Cero}
+
+\begin{document}
+\maketitle
+
+Given that the evolution of the net worth is the following:
+\[e_{t+1} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
+The value of the firm at time t is given by:
+\[V_t(e_t) =\max_{k_t}  e_t + \beta V_{t+1}(e_{t+1})\]
+
+Solving the belman equation, the FOC are given by:
+\[\frac{\vartheta V_t(e_t)}{\vartheta k_t } =\frac{\vartheta e_t}{\vartheta k_t } +
+ \beta \frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } \]
+\[\frac{\vartheta e_t}{\vartheta k_t} = 0\]
+Using the envelope theorem:
+\[\frac{\vartheta
+V_{t+1}(e_{t+1})}{\vartheta k_t } = \frac{\vartheta
+V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
+\[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta e_{t+1} } = \beta(1+r)\]
+\[\frac{\vartheta e_{t+1}}{\vartheta k_t} = Z(\theta +\epsilon)\alpha k_t^{1-\alpha}
+-(\delta + r)\]
+Thus:
+\[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } = 
+\beta(1+r) Z(\theta +\epsilon)\alpha k_t^{1-\alpha}-(\delta + r) \]
+So the FOC became:
+\[\frac{\vartheta V_t(e_t)}{\vartheta k_t } = 0 + \beta [ k_t^{1-\alpha}-(\delta + r)] = 0 \]
+The optimal level of capital at time t is:
+\[\widehat{k} _t= {\frac{\delta + r}{\beta(1+r) Z(\theta +\epsilon)\alpha}}^{\frac{1}{1-\alpha}} \]
+Plotting the graph in (assuming \(X=Z(\theta +\epsilon)\)) and \(y=\widehat{k} _t\)
+\[ y={\frac{0.03+0.1}{0.8 x}}^{\frac{1}{1-0.8}}\]
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.4]{K.png}
+    \caption{\(X=Z(\theta +\epsilon)\) and \(y=\widehat{k} _t\) }
+    \label{plot:k_static}
+\end{figure}
+Its interesting to see that if there is an increase in productivity the firm need less optimal capital K, while the most
+low productivity firms need more capital to operate 
+\end{document}

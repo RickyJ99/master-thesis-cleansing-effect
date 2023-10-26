@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  4 OCT 2023 12:45
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  26 OCT 2023 11:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/thery.tex
-(/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/thery.tex
+**/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex
+(/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -466,8 +466,8 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count308
 \g__pdf_backend_annotation_int=\count309
 \g__pdf_backend_link_int=\count310
-) (./thery.aux)
-\openout1 = `thery.aux'.
+) (./solving.aux)
+\openout1 = `solving.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
@@ -529,23 +529,25 @@ LaTeX Font Info:    ... okay on input line 23.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 23.
-(./thery.out) (./thery.out)
+(./solving.out) (./solving.out)
 \@outlinefile=\write4
-\openout4 = `thery.out'.
+\openout4 = `solving.out'.
 
+File: K.png Graphic file (type bmp)
+<K.png>
  [1
 
-] [2] [3] (./thery.aux)
-Package rerunfilecheck Info: File `thery.out' has not changed.
-(rerunfilecheck)             Checksum: 69FC85C6E52B7400C94F5A47FBB2A60B;630.
+] [2] (./solving.aux)
+Package rerunfilecheck Info: File `solving.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21161 strings out of 476684
- 406278 string characters out of 5804056
- 1865018 words of memory out of 5000000
- 41057 multiletter control sequences out of 15000+600000
- 516599 words of font info for 58 fonts, out of 8000000 for 9000
+ 21091 strings out of 476684
+ 404505 string characters out of 5804056
+ 1855018 words of memory out of 5000000
+ 40998 multiletter control sequences out of 15000+600000
+ 516535 words of font info for 50 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,9n,89p,519b,672s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,6n,89p,521b,336s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thery.xdv (3 pages, 73380 bytes).
+Output written on solving.xdv (2 pages, 9864 bytes).
