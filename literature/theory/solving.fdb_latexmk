@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1698311046 "solving.xdv" "solving.pdf" "solving" 1698311047 0
-  "solving.xdv" 1698311046 9864 0a64d278ae5e3d64c4851556ca31adc2 "xelatex"
+["xdvipdfmx"] 1698775952 "solving.xdv" "solving.pdf" "solving" 1698775953 0
+  "solving.xdv" 1698775952 22656 295522b144bb1b21084afc4b7b708720 "xelatex"
   (generated)
   "solving.pdf"
   (rewritten before read)
-["xelatex"] 1698311045 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" "solving.xdv" "solving" 1698311047 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" 1698311044 2329 bea863b3cc56981e4cf0586c27dcf972 ""
+["xelatex"] 1698775950 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" "solving.xdv" "solving" 1698775953 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" 1698775950 4695 88c0c00fb25a391b214395913754196f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -146,10 +146,10 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "K.png" 1698310907 247379 ff393702e3e2404ff9d7d4e513620f08 ""
-  "solving.aux" 1698311046 864 6ccc5978c5b111d0465d017c32af8665 "xelatex"
-  "solving.out" 1698311046 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "solving.tex" 1698311044 2329 bea863b3cc56981e4cf0586c27dcf972 ""
+  "K.png" 1698769972 126386 27f7bf9b47fb882d30ffa2162acee679 ""
+  "solving.aux" 1698775952 1097 64ab1c5c72efdc5d513ec280aba634ff "xelatex"
+  "solving.out" 1698775952 248 e681f9c630cf6861567b592576f2f056 "xelatex"
+  "solving.tex" 1698775950 4695 88c0c00fb25a391b214395913754196f ""
   (generated)
   "solving.aux"
   "solving.log"

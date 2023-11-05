@@ -1,0 +1,50 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Caballero and Hammour(1994)]{CabHarm94}
+Ricardo~J. Caballero and Mohamad~L. Hammour.
+\newblock The cleansing effect of recessions.
+\newblock \emph{The American Economic Review}, 84\penalty0 (5):\penalty0
+  1350--1368, 1994.
+\newblock ISSN 00028282.
+\newblock URL \url{http://www.jstor.org/stable/2117776}.
+
+\bibitem[Blanchard et~al.(1990)Blanchard, Diamond, Hall, and Murphy]{BlaDia90}
+Olivier~Jean Blanchard, Peter Diamond, Robert~E. Hall, and Kevin Murphy.
+\newblock The cyclical behavior of the gross flows of u.s. workers.
+\newblock \emph{Brookings Papers on Economic Activity}, 1990\penalty0
+  (2):\penalty0 85--155, 1990.
+\newblock ISSN 00072303, 15334465.
+\newblock URL \url{http://www.jstor.org/stable/2534505}.
+
+\bibitem[Davis and Haltiwanger(1992)]{DavHalt92}
+Steven~J. Davis and John Haltiwanger.
+\newblock Gross job creation, gross job destruction, and employment
+  reallocation.
+\newblock \emph{The Quarterly Journal of Economics}, 107\penalty0 (3):\penalty0
+  819--863, 1992.
+\newblock ISSN 00335533, 15314650.
+\newblock URL \url{http://www.jstor.org/stable/2118365}.
+
+\bibitem[Hayek and Caldwell(2007)]{HaCa07}
+F.~A. Hayek and Bruce Caldwell.
+\newblock \emph{{The Pure Theory of Capital}}.
+\newblock Number 9780226320991 in University of Chicago Press Economics Books.
+  University of Chicago Press, January 2007.
+\newblock ISBN ARRAY(0x3cfcacd8).
+\newblock URL \url{https://ideas.repec.org/b/ucp/bkecon/9780226320991.html}.
+
+\bibitem[Abowd and Kramarz(2003)]{AbdKra03}
+John~M Abowd and Francis Kramarz.
+\newblock The costs of hiring and separations.
+\newblock \emph{Labour Economics}, 10\penalty0 (5):\penalty0 499--530, 2003.
+\newblock ISSN 0927-5371.
+\newblock \doi{https://doi.org/10.1016/S0927-5371(03)00017-4}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0927537103000174}.
+
+\end{thebibliography}
