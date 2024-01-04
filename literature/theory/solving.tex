@@ -102,4 +102,162 @@ Strong HP: \[\frac{\vartheta e_{t+1}}{\vartheta k_t} = 0\]
 Qui non so se ha senso continuare perchè non ho nessun meccanismo che mi trasformi il net worth al tempo t in net worth
 al periodo t+1, almeno che non includa la definzione di dividendo come \(d_t= q_t-e_{t+1}\), allora in questo caso
 dovrei risolvere il problema con un langrangiana dato che la firm dovrebbe scegliere sia \(k\) che \(e\) net worth.
+\section{Redefining the problem}
+\[V(k_{t}) = \max_{k_{t+1}, e_{t+1}} d_t + \beta V(k_{t+1})\]
+\[s.t.\]
+\[f(k_t) = Z k_t^\alpha\]
+\[f(k_t) = d_t + (c+k_{t-1}-e_{t-1})(1+r) + k_{t} - (c + k_{t}- e_{t}) - k_{-1}(1-\delta)\]
+\[(1+r)(c+k_t -e_t)p + (1-p)f(k_t) = (1+r_f)(c+k_t -e_t) \]
+\[B_t = c+k_t-e_t; R= 1+r; R_f= 1 + r_f;  \]
+\[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_t)}{D_t}\]
+In order to understand the mechanism behind this optimization problem, I firstly solve the three times problem working
+backward.
+The value function in \(t=2\) is 
+\[ V_{t+2} =  \max d_{t+2}\]
+Since there firm will not exists in t+2, there are no investiment \(B_{t+2}=0\), thus \(0=k_{t+2}+c-e_{t+2}\) as
+consequence \(k_{t+2} = e_{t+2} - c\). Then we can rewrite the value function:
+\[ V_{t+2} = \max Z(e_{t+2} - c)^\alpha - (c+k_{t+1}-e_{t+1})(1+r_{t+1}) - e_{t+2} + c + (c + e_{t+2} - c - e_{t+2}) +
+k_{t+1}(1-\delta) \]
+\[V_{t+2} = \max_{e_{t+2}} Z(e_{t+2} - c)^\alpha - B_{t+1}R_{l,t+1} - e_{t+2} + c + k_{t+1}(1-\delta) \]
+FOC:
+\[\frac{\partial V_{t+2}}{\partial e_{t+2}} = Z \alpha (e_{t+2} - c)^{\alpha-1} - 1 = 0\]
+\[ (e_{t+2} - c)^{\alpha-1}= (Z \alpha)^{-1}\]
+\[ e_{t+2} = (Z \alpha)^{\frac{-1}{\alpha-1}}+c\]
+Thus:
+\[d_{t+2} = Z\left[(Z \alpha)^{\frac{-1}{\alpha-1}}+c\right]  - B_{t+1}R_{t+1} -  \left[(Z
+\alpha)^{\frac{-1}{\alpha-1}}+c\right] + k_{t+1}(1-\delta) \]
+\[V_{t+2} = Z\left[(Z \alpha)^{\frac{-1}{\alpha-1}}+c\right]  - B_{t+1}R_{t+1} -  \left[(Z
+\alpha)^{\frac{-1}{\alpha-1}}+c\right] + k_{t+1}(1-\delta)\] 
+Writing the problem in t+1:
+\[V_{t+1} = \max_{e_{t+1},k_{t+1}} d_{t+1} + \beta V_{t+2}\]
+\[d_{t+1} = Zk^\alpha_{t+1} - B_t R_L - k_{t+1} + B_{t+1} + k_t(1-\delta)\]
+FOCs:
+\begin{equation}
+    \left\{\begin{array}{@{}l@{}}
+        \frac{\partial V_{t+1}}{\partial e_{t+1}} = \frac{\partial d_{t+1}}{\partial e_{t+1}} + \beta \frac{\partial
+            V_{t+2}}{\partial e_{t+1}} = 0  \\
+        \frac{\partial V_{t+1}}{\partial k_{t+1}} = \frac{\partial d_{t+1}}{\partial k_{t+1}} + \beta \frac{\partial
+            V_{t+2}}{\partial K_{t+1}} = 0 \\
+    \end{array} \right .\,
+\end{equation}
+solving \(\frac{\partial d_{t+1}}{\partial e_{t+1}}\):
+\[\frac{\partial d_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}}
+ - \frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial B_{t+1}}{\partial e_{t+1}}\]
+\[\frac{\partial B_{t+1}}{\partial e_{t+1}} = \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1\]
+\[\frac{\partial d_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}} -
+\frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1\]
+
+solving \(\frac{\partial V_{t+2}}{\partial e_{t+1}}\):
+\[\frac{\partial V_{t+2}}{\partial e_{t+1}} = - \left[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right) \right]\] 
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \frac{\partial B_{t+1}}{\partial e_{t+1}}R_{t+1} +
+B_{t+1}\frac{\partial R_{t+1}}{\partial e_{t+1}} \]
+\[\frac{\partial B_{t+1}}{\partial e_{t+1}} = \frac{\partial k_{t+1}}{\partial e_{t+1}}-1\]
+\[\frac{\partial R_{t+1}}{\partial e_{t+1}} = - \frac{1-p}{p}\left\{\left[Z\alpha k^{\alpha-1}_{t+1}\frac{\partial
+k_{t+1}}{\partial e_{t+1}} -\delta \frac{\partial k_{t+1}}{\partial e_{t+1}}\right] B_{t+1} - \left(\frac{\partial
+k_{t+1}}{\partial e_{t+1}} - 1\right) \left[Zk_{t+1}^{\alpha} - \delta k_{t+1}\right]\right\}B_{t+1}^{-2}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}-1 \right] R_{t+1} +
+- \frac{1-p}{p}\left\{\left[Z\alpha k^{\alpha-1}_{t+1}\frac{\partial
+k_{t+1}}{\partial e_{t+1}} -\delta \frac{\partial k_{t+1}}{\partial e_{t+1}}\right] B_{t+1} - \left(\frac{\partial
+k_{t+1}}{\partial e_{t+1}} - 1\right) \left[Zk_{t+1}^{\alpha} - \delta k_{t+1}\right]\right\}B_{t+1}^{-1}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)\left[\left(zk^\alpha_{t+1} -\delta k_{t+1}\right)\frac{1-p}{p}B_{t+1}^{-1}+R_{t+1}\right] -
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right)\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right)\]
+\[\frac{\partial V_{t+2}}{\partial e_{t+1}} = - \left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right]\]
+Substituting into the first FOC, we get:
+\[\frac{\partial V_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}} -
+\frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1 - \beta 
+\left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1 
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right] = 0\]
+second FOC: \\
+solving \(\frac{\partial d_{t+1}}{\partial k_{t+1}}\):
+\[\frac{\partial d_{t+1}}{\partial k_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1} - 1 + \frac{\partial B_{t+1}}{\partial
+k_{t+1}} \]
+\[\frac{\partial B_{t+1}}{\partial
+k_{t+1}} = 1 - \frac{\partial e_{t+1}}{\partial k_{t+1}} \]
+\[\frac{\partial d_{t+1}}{\partial k_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}}\]
+solving \(\frac{\partial V_{t+2}}{\partial k_{t+1}}\):
+\[\frac{\partial V_{t+2}}{\partial k_{t+1}} = -\left[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} -(1-\delta)\right] \]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} = \frac{\partial B_{t+1}}{\partial k_{t+1}}R_{t+1} +
+B_{t+1}\frac{\partial R_{t+1}}{\partial k_{t+1}}\]
+\[\frac{\partial B_{t+1}}{\partial k_{t+1}} = 1-\frac{\partial e_{t+1}}{\partial k_{t+1}} \]
+\[\frac{\partial R_{t+1}}{\partial k_{t+1}} =  - \frac{1-p}{p}\left[\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)B_{t+1} -
+\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)\left(Zk_{t+1}^{\alpha} - \delta k_{t+1}
+\right)\right]B_{t+1}^{-2} 
+\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} = \left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right) R_{t+1} +
+\left\{\frac{1-p}{p}\left[(Z \alpha k^{\alpha-1}_{t+1}-\delta)B_{t+1} -
+\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)\left(Zk_{t+1}^{\alpha} - \delta k_{t+1}
+\right)\right]B_{t+1}^{-1} \right\}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} =\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+\left[R_{t+1} + \frac{1-p}{p}\left(Z k_{t+1}^{\alpha} - \delta k_{t+1}\right)B_{t+1}^{-1}\right]-
+\frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right) \]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} =\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right) \]
+\[\frac{\partial V_{t+2}}{\partial k_{t+1}} = -\left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right] \]
+Substituting into the FOC:
+\[\frac{\partial V_{t+1}}{\partial k_{t+1}} =Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}} - \beta \left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right]=0\]
+thus the FOCs are:
+\[\frac{\partial V_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}}  - 1 - \beta 
+\left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1 
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right] = 0\]
+\[\frac{\partial V_{t+1}}{\partial k_{t+1}} =Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}} - \beta \left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right]=0\]
+rearranging \(\frac{\partial V_{t+1}}{\partial k_{t+1}} \) to isolate \(k_{t+1}\):
+\[k^{\alpha-1}_{t+1}=\left[\frac{\partial e_{t+1}}{\partial k_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1}\] 
+rearranging \(\frac{\partial V_{t+1}}{\partial e_{t+1}} \) to isolate \(k_{t+1}\):
+\[k^{\alpha-1}_{t+1}=\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
+Equating the two equations:
+\[\left[\frac{\partial e_{t+1}}{\partial k_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1} =
+\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta 
+\left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
+From this equation, you can isolate \(\frac{\partial e_{t+1}}{\partial k_{t+1}}\) to solve for it explicitly.
+\[\frac{\partial e_{t+1}}{\partial k_{t+1}} = -\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\delta\right) + \delta
+\frac{1-p}{p}\right]\frac{p}{Z\alpha}\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}\left(1-\beta
+R_f\right)^{-1} - \beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta R_f\right)^{-1}\] 
+\[\frac{\partial e_{t+1}}{\partial k_{t+1}} =- \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right)
++\delta\frac{1-p}{p}\right]\frac{\beta p +\beta -p}{1-\beta R_f}\]
+Knowing that \(B = k + c - e \rightarrow e= B -k -c\) thus \(\frac{\partial e_{t+1}}{\partial k_{t+1}} = -1\):
+\[ \frac{1-\beta R_f}{\beta p +\beta -p}= \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right)
++\delta\frac{1-p}{p}\right]\]
+
+
+We can rearrange it to isolate \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\):
+
+\[\frac{1-\beta R_f}{\beta p + \beta - p} - \delta\frac{1-p}{p} = \frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta
+R_f\right)\] 
+
+Now, solve for \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\) by dividing both sides by \((1-\beta R_f)\):
+
+\[\frac{\partial k_{t+1}}{\partial e_{t+1}} = \left\{-\delta\frac{1-p}{p} + \frac{1 -\beta R_f }{\beta p + \beta - p}
+\right \} \left(1-\beta R_f\right)^{-1}\]
+
+This equation provides the value of \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\) in terms of the given constants
+(\(\beta, R_f, p, \delta\)) and the relationship between \(e_{t+1}\) and \(k_{t+1}\). 
+
+\[k^{\alpha-1}_{t+1}= \left\{-\delta\frac{1-p}{p} + \frac{1 -\beta R_f }{\beta p + \beta - p}
+\right \} \left(1-\beta R_f\right)^{-1} \left(1-\beta R_f\right) + \beta
+\left(r_f+\frac{\delta}{p}\right)\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1}\] 
+\[k^{\alpha-1}_{t+1}= \left\{-\delta\frac{1-p}{p} + \frac{1 -\beta R_f }{\beta p + \beta - p}
+\right \} + \beta
+\left(r_f+\frac{\delta}{p}\right)\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1}\] 
 \end{document}
