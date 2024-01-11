@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex theory"] 0 "theory.aux" "theory.bbl" "theory" 1699213202 -1
+["bibtex theory"] 1704994466 "theory.aux" "theory.bbl" "theory" 1704994470 0
   "./reference.bib" 1699209048 5502 6318d1af7d7b3bd4d12e416d179068ce ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "theory.aux" 1699213201 2282 271671506c0434782406c9162adb78ac "xelatex"
+  "theory.aux" 1704994469 2802 e46f9bf2a7d247989510128371f5ea61 "xelatex"
   (generated)
   "theory.bbl"
   "theory.blg"
   (rewritten before read)
-["xdvipdfmx"] 1699213202 "theory.xdv" "theory.pdf" "theory" 1699213202 0
-  "theory.xdv" 1699213201 152540 5ba8084cd39e60f41def840a4f832d1b "xelatex"
+["xdvipdfmx"] 1704994469 "theory.xdv" "theory.pdf" "theory" 1704994470 0
+  "theory.xdv" 1704994469 214160 aaceec4d4294b50f5ad82ae27b9af499 "xelatex"
   (generated)
   "theory.pdf"
   (rewritten before read)
-["xelatex"] 1699213200 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/theory.tex" "theory.xdv" "theory" 1699213202 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/theory.tex" 1699213199 16440 0778eb8175fd8a217b8a5c03383af95d ""
+["xelatex"] 1704994467 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/theory.tex" "theory.xdv" "theory" 1704994470 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/theory.tex" 1704994463 24096 ba8e1600b9b134cf7c79264dcaac9dcd ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -115,7 +115,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls" 1667332637 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty" 1667332637 3052 30236f0cc243a8651b82240dfd2e8b9d ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1667332637 2462 8ce5f9a9c63002f2c1af03c262cf29af ""
-  "/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo" 1667332637 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo" 1667332637 8449 c314623021fbddd0180c05345324933c ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd" 1667332637 2430 8418b3f1835e588625becbcac4dbce56 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
@@ -150,15 +150,16 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1601326656 325 f9f16d12354225b7dd52a3321f085955 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657483315 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty" 1670275497 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty" 1655066402 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "theory.aux" 1699213201 2282 271671506c0434782406c9162adb78ac "xelatex"
-  "theory.bbl" 1699212439 2108 e4cc6681548764d7437923b77f8e1d10 "bibtex theory"
-  "theory.out" 1699213201 1112 76ae62e6aede4e07bbdb9d102bf128ce "xelatex"
-  "theory.tex" 1699213199 16440 0778eb8175fd8a217b8a5c03383af95d ""
+  "theory.aux" 1704994469 2802 e46f9bf2a7d247989510128371f5ea61 "xelatex"
+  "theory.bbl" 1704994467 2108 e4cc6681548764d7437923b77f8e1d10 "bibtex theory"
+  "theory.out" 1704994469 1112 76ae62e6aede4e07bbdb9d102bf128ce "xelatex"
+  "theory.tex" 1704994463 24096 ba8e1600b9b134cf7c79264dcaac9dcd ""
   (generated)
   "theory.aux"
   "theory.log"

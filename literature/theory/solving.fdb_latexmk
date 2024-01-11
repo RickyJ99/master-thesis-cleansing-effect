@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1704294622 "solving.xdv" "solving.pdf" "solving" 1704294623 0
-  "solving.xdv" 1704294622 53268 3097b3de7f1be6ada1d919058d468adc "xelatex"
+["xdvipdfmx"] 1704373185 "solving.xdv" "solving.pdf" "solving" 1704373185 0
+  "solving.xdv" 1704373184 55332 6052679c69f09371ef581fab7652f90f "xelatex"
   (generated)
   "solving.pdf"
   (rewritten before read)
-["xelatex"] 1704294620 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" "solving.xdv" "solving" 1704294623 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" 1704294620 16094 8ae6c3b40a3c1573748fa9b2223f6162 ""
+["xelatex"] 1704373183 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" "solving.xdv" "solving" 1704373185 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/solving.tex" 1704373183 16385 7bf4848982b1d1d64c986c11504aefda ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -147,9 +147,9 @@
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "K.png" 1698769972 126386 27f7bf9b47fb882d30ffa2162acee679 ""
-  "solving.aux" 1704294622 1216 ce285816400bbcdd9d92dab308c683d2 "xelatex"
-  "solving.out" 1704294622 407 c31729a03f795aee720cbd441062f9d9 "xelatex"
-  "solving.tex" 1704294620 16094 8ae6c3b40a3c1573748fa9b2223f6162 ""
+  "solving.aux" 1704373184 1216 ce285816400bbcdd9d92dab308c683d2 "xelatex"
+  "solving.out" 1704373184 407 c31729a03f795aee720cbd441062f9d9 "xelatex"
+  "solving.tex" 1704373183 16385 7bf4848982b1d1d64c986c11504aefda ""
   (generated)
   "solving.aux"
   "solving.log"

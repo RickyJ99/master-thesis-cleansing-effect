@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  5 NOV 2023 20:40
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  11 JAN 2024 18:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -8,8 +8,8 @@ entering extended mode
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count181
 \c@section=\count182
@@ -63,6 +63,8 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen148
 \Gm@layoutvoffset=\dimen149
 \Gm@dimlist=\toks17
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip50
@@ -475,56 +477,56 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 ) (./theory.aux)
 \openout1 = `theory.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 30.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
-* paper: letterpaper
+* paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=443.57848pt
-* \textheight=681.15898pt
+* \textheight=624.25346pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
-* \topmargin=-52.36449pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
 * \marginparwidth=49.79231pt
-* \marginparsep=11.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -534,24 +536,35 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 26.
+Package hyperref Info: Link coloring ON on input line 30.
 (./theory.out) (./theory.out)
 \@outlinefile=\write4
 \openout4 = `theory.out'.
 
  [1
 
-] [2] [3] [4] (./theory.bbl) [5] (./theory.aux)
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11]
+
+LaTeX Warning: Reference `2.5' on page 12 undefined on input line 349.
+
+[12] [13]
+
+LaTeX Warning: Reference `2.5' on page 14 undefined on input line 395.
+
+(./theory.bbl [14]) [15] (./theory.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `theory.out' has not changed.
 (rerunfilecheck)             Checksum: 76AE62E6AEDE4E07BBDB9D102BF128CE;1112.
  ) 
 Here is how much of TeX's memory you used:
- 21528 strings out of 476684
- 411047 string characters out of 5804056
- 1865018 words of memory out of 5000000
- 41413 multiletter control sequences out of 15000+600000
- 516615 words of font info for 60 fonts, out of 8000000 for 9000
+ 21590 strings out of 476684
+ 412239 string characters out of 5804056
+ 1854018 words of memory out of 5000000
+ 41472 multiletter control sequences out of 15000+600000
+ 517525 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,9n,89p,483b,672s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on theory.xdv (5 pages, 152540 bytes).
+Output written on theory.xdv (15 pages, 214160 bytes).
