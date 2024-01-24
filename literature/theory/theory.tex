@@ -344,61 +344,466 @@ conditions:
         P(t)Q(t)=\overline{D}(t)
     \end{aligned}$
 \end{enumerate}
-The first three equation \ref{eq_2.1}\ref{eq_2.2}\ref{eq_2.3} and the fifth one \ref{eq_2.5} are sufficient to describe
-the paths of \(T(t), P(t)\) and \(Q(t)\) that is determined by \(\left\{f(0,t),\overline{a}(t)\right\}\). To confirm the
-strenght of the formulation of the condition express in the equations \ref{eq_2.6} and \ref{2.5}, its possible to
-derive those equations as first order condition for maximization of a number of pefectly competitive firms that hold
-production units. \par  
-In order to understand how endogenous distruction works, lets start considering a constant demand, thus the distruction
-and the creation rate change only due to a supply factors. This steady state is characterized by constant lifetime of
-production units \(T(t)=\overline{a}(t)=\overline{a}\star\), so even the age distribution is time-invariant
-\(f(a,t)=f\star(a)\), by \ref{eq_2.5} the price \(P(t)\) must be decreasing a constant rate \(\sigma\).  Indeed higher
-innovation rates leads higher productivity that increase supply, finally leading to a lower price if the demand is
-constant or increaseing a lower rate. From equation \ref{eq_2.2} follows that the distribution of production units in
-the steady state is a truncated exponatial distributions:
-\[f^*(a)=f^*(0)e^{-\delta a} \quad 0<\leq \overline{a}^*\]
-Using free entry conditions \ref{eq_2.4} and the clearing condition \ref{eq_2.6} it is possible to determine the
-creation and destruction age \(f^*(0),\overline{a}^*\).
-Using equation \ref{eq_2.1} and \ref{eq_2.5}, we get the cost function and the productivity of a new production unit:
-\label{eq_2.7}\[c(f^*(0))=\frac{e^{\gamma
-\overline{a}^*}-e^{-(r+\delta)\overline{a}^*}}{\gamma+r+\sigma}-\frac{1-e^{-(r+\delta)\overline{a}^*}}{r+\delta} \]
-\label{eq_2.8}\[f(0)=\frac{(\sigma+\delta)\overline{D}^*}{e^{\sigma \overline{a}^*-e^{\delta \overline{a}*}}}\]
-The authors then normalized the creation rate:
-\[ N= f^*(0)*(1-e^{\delta \overline{a}^*})\]
-in the steady state is given by
-\[CC^*=\frac{\delta}{1-e^{-\delta \overline{a}^*}}\]
-Considering a special case in when the creation cost is a constant c, thus \(c(f^*(0))= c\), substituting into
-\ref{eq_2.7}, one can retrive \(\overline{a}^*\) substituing into \ref{eq_2.8}. Regarding the effect of
-technological rate \(\sigma\) on \(\overline{a}^*\), it is decreasing since higher the innovation rate, higher will be
-the oppurtinity cost of delay renovation, while higher is the cost of creating new units lower will be the renovation
-rate. finally, optimal lifetime of production units increases with higher \(r and \delta\) since it would make harder to
-recover creation costs. \par
-Now we can drop the constant demand, in order to understand how the industry adjust to the fluctuations of demand. There
-are two ways in which industry can adjust production to meet demand:
-\begin{itemize}
-    \item reducing the rate of creation \(f(0,t)\)
-    \item increasing the rate of endogenous destruction \(f(\overline{a}(t),t) \cdot [1-\overline{\dot{a}}(t)]\), thus
-    reducing \(\overline{a}\) the age at which units are demolited
-\end{itemize}
-These two margins interact with each other leading: a reduction in demand the most outdated units are scrapped since are
-made unproffitable, but if the recession is partially accommodated by a reduction in the creation rate the effect on the
-distruction margin is reduced. The authors argue that the extent to which creation will "insulate" existing units from a
-variations in demand depends on the marginal cost of creating a new units \(c'f(0,t)\). In the case in which the
-marginal cost of creation is 0 then the demand fluctuations are completly adjusted by the creation margin. This is the
-case above \(c(f(0,t))=c\). In this case the insulation effects is complete since there is non need to drop older units,
-its enough to lower \(f(0,t)\), since is cheaper to reduce creation rate instead of reducing the life of already
-existing production units. The insulation effect is not due to assymetric adjustemnt cost on the creation and
-destruction margins, indeed the insulation would be complete even with linear adjusting costs. The creation rate in the
-case of costant creation cost is given by:
-\begin{itemize}
-    \item solve for \(\overline{a}\), using the free-entry condition \ref{eq_2.6} together with \ref{eq_2.3} and
-    \ref{2.5}, the solution  is the same as in constant demand case 
-    \item Solve for the creation rate \(f(0,t)\) to satisfy the market equilibrium condition \ref{eq_2.6}, using
-    \ref{eq_2.1} and \ref{eq_2.6}.
-\end{itemize}
-Finally you get that the creation rate:
-\label{eq_2.10} 
+The first three equations (\ref{eq_2.1}, \ref{eq_2.2}, \ref{eq_2.3}) and the fifth one (\ref{eq_2.5}) suffice to delineate the trajectories of \(T(t)\), \(P(t)\), and \(Q(t)\), which are determined by \(\left\{f(0,t), \overline{a}(t)\right\}\). To affirm the robustness of the conditions expressed in equations \ref{eq_2.6} and \ref{eq_2.5}, it is possible to derive these equations as first-order conditions for the maximization of a number of perfectly competitive firms holding production units.
 
+To comprehend the functioning of endogenous destruction, let's consider a scenario with constant demand. In this case, both the destruction and creation rates change only due to supply factors. This steady state is characterized by a constant lifetime of production units \(T(t) = \overline{a}(t) = \overline{a}^*\), resulting in a time-invariant age distribution \(f(a,t) = f^*(a)\). Equation \ref{eq_2.5} implies that the price \(P(t)\) must consistently decrease at a rate \(\sigma\). Higher innovation rates lead to increased productivity, raising the supply and consequently lowering the price. Equation \ref{eq_2.2} reveals that the distribution of production units in the steady state follows a truncated exponential distribution:
+
+\[f^*(a) = f^*(0)e^{-\delta a} \quad 0 \leq a \leq \overline{a}^*\]
+
+Using free entry conditions (\ref{eq_2.4}) and the clearing condition (\ref{eq_2.6}), one can determine the creation and destruction ages \(f^*(0)\) and \(\overline{a}^*\). Equations \ref{eq_2.1} and \ref{eq_2.5} yield the cost function and productivity of a new production unit:
+
+\[\label{eq_2.7} c(f^*(0)) = \frac{e^{\gamma \overline{a}^*} - e^{-(r + \delta)\overline{a}^*}}{\gamma + r + \sigma} - \frac{1 - e^{-(r + \delta)\overline{a}^*}}{r + \delta}\]
+
+\[\label{eq_2.8} f(0) = \frac{(\sigma + \delta)\overline{D}^*}{e^{\sigma \overline{a}^* - e^{\delta \overline{a}^*}}}\]
+
+The authors then normalize the creation rate:
+
+\[N = f^*(0) \cdot (1 - e^{\delta \overline{a}^*})\]
+
+In the steady state, this is given by:
+
+\[(9) \label{eq2.9}CC^* = \frac{\delta}{1 - e^{-\delta \overline{a}^*}}\]
+
+Considering a special case where the creation cost is a constant \(c\), i.e., \(c(f^*(0)) = c\), substituting into
+equation \ref{eq_2.7} allows retrieval of \(\overline{a}^*\). The effect of technological rate \(\sigma\) on
+\(\overline{a}^*\) is decreasing, as a higher innovation rate increases the opportunity cost of delayed renovation,
+while a higher cost of creating new units lowers the renovation rate. Optimal lifetime of production units increases
+with higher \(r\) and \(\delta\) as it becomes harder to recover creation costs. 
+
+Now, dropping the assumption of constant demand, we examine how the industry adjusts to demand fluctuations. Two ways
+are identified in which the industry adapts production to meet demand: by reducing the rate of creation \(f(0,t)\) and
+by increasing the rate of endogenous destruction \(f(\overline{a}(t),t) \cdot [1-\overline{\dot{a}}(t)]\), thus reducing
+\(\overline{a}\), the age at which units are demolished. 
+
+These two adjustments interact, leading to a reduction in demand causing the most outdated units to be scrapped,
+rendering them unprofitable. However, if the recession is partially accommodated by a reduction in the creation rate,
+the effect on the destruction margin is diminished. The authors argue that the extent to which creation will "insulate"
+existing units from variations in demand depends on the marginal cost of creating new units \(c'f(0,t)\). When the
+marginal cost of creation is zero, demand fluctuations are entirely adjusted by the creation margin. This is exemplified
+in the case where \(c(f(0,t)) = c\). In such instances, the insulation effect is complete, as there is no need to retire
+older units. Lowering \(f(0,t)\) is sufficient, and it is cheaper than reducing the life of existing production units. 
+
+The insulation effect is not solely due to asymmetric adjustment costs on the creation and destruction margins. Complete
+insulation would occur even with linear adjusting costs. The creation rate in the case of constant creation cost is
+given by: 
+
+\[\label{eq_2.10} f(0, t) = \frac{\dot{\bar{D}}(t) + \delta \bar{D}(t) + P(t) A(t - \bar{a}(t)) f(\bar{a}(t), t)[1 -
+\dot{\bar{a}}(t)] - \dot{P}(t) Q(t)}{P(t) A(t)}\] 
+
+In the attained equilibrium, variations in demand are entirely offset by adjustments at the creation margin denoted as
+\(f(0, t)\), with \(\overline{a}(t)\) remaining steady at the destruction margin. The creation process effectively
+counteracts the impact of demand fluctuations on the price \(P(t)\), effectively shielding existing units from demand
+changes. The price \(P(t)\) experiences a constant decline at a rate represented by \(\sigma\), reflecting the pace of
+technical progress. This consistent decline in \(P(t)\) serves as a clear signal for production units to function
+optimally throughout their constant lifetime \(\overline{a}(t)^*\). \\
+In the aforementioned scenario, the destruction rate is not constant, but it does not respond to demand through
+variations in the age \(\overline{a}(t)^*\) at which units are destroyed. Instead, variations in the creation rates have
+an impact on the number of units that reach obsolescence. If fewer units are created, fewer units become obsolete after
+\(\overline{a}(t)^*\) periods. It is noteworthy that any modification leaving equations \ref{eq_2.3} to \ref{eq_2.5}
+independent of \(\overline{D}(t)\) and \(f(0,t)\) does not alter the full-insulation results. 
+\\
+Interestingly, assumptions such as perfect competition, industry-wide return to scale, and perfect foresight are not
+necessary for these conclusions. The latter is particularly noteworthy as it asserts that fully accommodating demand on
+the creation side only requires knowledge of current conditions. As long as the non-negativity constraint on \(f(0,t)\)
+is never binding, implementing equilibrium behaviors does not necessitate expectations of future demand. 
+\subsection{Application of the model}
+The model undergoes calibration utilizing Job-flow data and Industry production data. The former facilitates the
+replication of job creation dynamics, while the latter is employed to mimic the behaviors of firm creation and
+destruction in the manufacturing industry. To capture these dynamics, the marginal cost of creating new production units
+is stipulated as positive \(c'f(0,t)\). This allows for a partial insulation effect, and the destruction margin responds
+to demand fluctuations. However, introducing a dependency of \(c\) on \(f(0,t)\) compromises the analytical tractability
+of the system (Equations \ref{eq_2.1} - \ref{eq_2.6}). Consequently, the authors resort to methods such as multiple
+shooting to ascertain the optimal equilibrium and subsequently employ an iterative procedure to converge to the correct
+expected creation rate. 
+
+For numerical solutions, the authors adopt a linear formulation:
+
+\[c(f(0,t))=c_0+c_1f(0,t)\]
+
+To gain a deeper understanding of how creation and destruction respond to demand, the authors simulate sinusoidal demand
+using the equation: 
+
+\[\overline{D}(t)=1+0.07\sin(t)\]
+
+The results are visualized in the image below, depicting the feedback of normalized creation and destruction (CC and DD)
+to changes in demand. 
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.4]{Plot2.1.png}
+    \caption{Figure 1. A Creation and destruction \(c_0=0.3, c_1=1\) B Change in demand (Symmetric)}
+    \label{plot:2.1}
+\end{figure}
+
+The plot clearly illustrates that the insulation effect is only partial; otherwise, DD would have remained flat, as in
+the case with \(c(f(0,t)=c)\). From a mathematical perspective, destruction responds to demand as equations
+\ref{eq_2.3}-\ref{eq_2.5} are no longer independent of the path \(f(0,t)\) and demand. From an economic standpoint,
+increasing creation costs smoothen the creation process. In scenarios with a nearly flat innovation rate, firms during
+crises cannot fully accommodate lower demand, nullifying the adoption of new production units, as the marginal costs
+would exceed the reduction in existing production units. \par
+In the considered model, production units integrate labor and capital in fixed proportions to generate output. Each unit
+can be conceptualized as contributing to job creation within the industry, and job-flow data serves as a metric for
+quantifying the flows of production units. 
+
+Datasets that closely align with the theoretical CC and DD series have been compiled by Davis and Haltiwanger
+\cite{DAvHalt90,DavHalt92} and Blanchard and Diamond \cite{BlaDia90}, drawing from various sources. The primary focus
+lies on the dataset curated by Davis and Haltiwanger, who leverage the Longitudinal Research Database to construct
+quarterly series for U.S. manufacturing plants spanning the period 1972:2-1986:4. 
+
+In their empirical approach, Davis and Haltiwanger utilize output to empirically determine demand, employing the growth
+rate of the industrial production index as a proxy for output growth. Notably, in the foundational theoretical model,
+\(Q(r)\) is smoothed by price movement, with the elasticity of demand determining the extent of smoothing, assumed to be
+equal to 1. While the theoretical model maintains a constant consumption-wage, the authors acknowledge that considering
+a procyclical consumption-wage, as in the case of general equilibrium with correlated industry shocks, may dampen the
+effect of demand shocks. However, they assert that this adjustment would alter only the magnitude, not the direction, of
+the analysis. 
+
+The figure below illustrates the data that the model seeks to replicate, showcasing job creation, job destruction, and growth.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.4]{Plot2.2.png}
+    \caption{Figure 1. Job creation and job destruction in U.S. Manufacturing B Index of the industrial production}
+    \label{plot:2.2}
+\end{figure}
+
+To discern the characteristics of the series, the authors perform regression analysis on sectoral rates of job creation
+and job destruction against leads and lags of the corresponding rates of growth. They find that job creation is less
+responsive to demand fluctuations, while job destruction exhibits a more countercyclical behavior. 
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.4]{Plot2.3.png}
+    \caption{Table 2.1. Job Creation and Job Destruction in U.S. Manufacturing Response to Output Growth}
+    \label{Table 2.1.}
+    \footnotesize \textit{Notes}: The table presents the reaction of job creation to the growth rate of the industrial production index. The latter is categorized into values above and below its mean (Q). The table encompasses quarterly observations for the two-digit SIC industries during the period 1972:2-1986:4. The coefficients are uniformly constrained to be equal across all sectors, with the exception of a constant (not shown).
+\end{figure}
+The initial finding indicates that the rate of job destruction displays greater responsiveness to changes in sectoral
+activity compared to the rate of job creation. Specifically, the sums of coefficients are -0.384 for job destruction and
+0.218 for job creation showed in the table \ref{Table 2.1.}, the same results as in \cite{DAvHalt90,DavHalt92} and in
+\cite{BlaDia90}.
+The authors capitalize on a natural experiment rooted in the intrinsic asymmetric characteristics of business cycles.
+Recessions, marked by brevity but intense contractions, provide the backdrop for the authors' model. This model
+endeavors to emulate the creation rate while concurrently mitigating the impact of asymmetric cyclicality inherent in
+business cycles. The empirical evidence supporting this model's behavior is encapsulated in Table \ref{Table 2.1.},
+wherein two distinct scenarios are explored: output growth trajectories above \(Q^+\) and below \(Q^-\), relative to
+their respective means. The table meticulously delineates how creation and destruction rates respond to these deviations
+in output growth. 
+\par
+The salient observation emerges regarding creation rates, elucidating that they exhibit a more rapid and robust response
+in instances of vigorous output growth, as opposed to scenarios where the output growth rate experiences a reduction. On
+a contrasting note, the destruction margin, in line with the model's projections, manifests heightened sensitivity to a
+decline in output. This responsiveness is particularly pronounced from one quarter before the onset of the shock to one
+quarter after. Notably, during expansionary phases, the mean response of the destruction margin is -0.066, a notably
+milder reaction compared to the recessionary case where the mean response stands at -0.634. 
+\par
+These empirical outcomes seamlessly align with the predictions of the model. Specifically, the creation rate exhibits
+heightened responsiveness during expansionary phases, given their cyclical and symmetric nature. In contrast, the
+asymmetric and non-cyclical nature of recessions triggers a more substantial decline in the production unit rate, in
+line with the model's expectations. 
+\par 
+In oder to better understand the asymmetrical behavior the authors simulate an asymmetrical demand function:
+\[\cdot{\overline{D}}(t)=0.05[\cos(t)+\sin(t)] - 0.016 \sin(2t)-0.003\cos(3t)\]
+\[\overline{D}(t)=1\quad r = 0.065, \delta =0.15, \gamma=0.028, c_0=0.3, c_1=1.0\] 
+The results are depicted in \ref{plot:2.4}
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.4]{Plot2.4.png}
+    \caption{A.  Creation and  Destruction B. Output Growth}
+    \label{plot:2.4}
+    \footnotesize \textit{Notes}: The figure depicts a simulation of asymmetrical supply growth.
+\end{figure}
+
+From the plot \ref{plot:2.4}, its evident that firms use prediction in demand to smooth job creation in order to avoid
+big change, since they are too costly,by avaraging the demand over the lifetime of a production unit ove. On the other
+hand, destruction depends only on current conditions, thus responding only to significant deviations from the demand
+prediction . It can be better undestand thinking about a case in which creation rates respond only mildy to a sharp
+deacrease in demand, the equilibrium price falls leading to additional distruction, since older units' profits go to 0.
+Indeed, destruction not only preserves , but amplifies the assymetry of demand.\section{Frictionless economy}
+\par
+The authors culminate their study with a compelling calibration exercise using manufacturing series to exploit the
+model. This entails dissecting the observed net change in employment into destruction and creation rates, as well as
+applying the same approach to output production. The model is simulated for the duration of 1972:2-1983:4, with
+parameters as follows: 
+
+\begin{equation}
+    \begin{aligned}
+    &\text { Table 2.1 \label{Tab2.1} - Calibrated Parameters }\\
+    &\begin{array}{lcc}
+    \hline \hline \text { Variable } & \text { Symbol } & \text { Value } \\
+    \hline \text { Interest rate } & r & 0.065 \\
+    \text { Depreciation rate } & \delta & 0.150 \\
+    \text { Rate of technical progress } & \gamma & 0.028 \\
+    \text { Adjustment cost parameters } & c_0 & 0.403 \\
+    & c_1 & 0.500 \\
+    \hline
+    \end{array}
+    \end{aligned}
+\end{equation}
+
+The technical progress is selected to attribute all the growth in employment and manufacturing to technological
+advancements, setting \(\lambda\) as 2.8. The authors employ Equation \ref{eq2.9}, linking the steady state to the
+lifetime of jobs and job turnover (\(CC^*\)), determining \(\overline{a}^*+7.42\) years. Utilizing this information,
+they ascertain the steady state entry cost to be 0.525, equivalent to half a year's operating costs for production
+units. Subsequently, they employ ordinary least squares (OLS) to retrieve the value of \(c_1\), the marginal cost of
+creating a new unit, which is found to be 0.5. This aligns with a small elasticity for the creation cost function,
+signifying the vulnerability of the insulation mechanism to breakdown. 
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.4]{Plot2.5.png}
+    \caption{Figure 1. A employment driven job creation \(c_0=0.403, c_1=0.5\) B Employment job destruction \(c_0=0.403, c_1=0.5\)} 
+    \label{plot:2.5}
+\end{figure}
+The outcomes stemming from the simulations driven by employment and output are disclosed and contrasted with the data in
+Figure \ref{plot:2.5}. Notably, the simulation of job creation displays a level of smoothness that diverges from the
+observed 
+data, with this discrepancy being attributed, in part, to the inherent absence of uncertainty in our model. Despite
+this, the model effectively elucidates the relative volatility discernible in the patterns of job creation and
+destruction. Moreover, it successfully captures the greater symmetry observed in the former, offering insights into the
+nuanced dynamics at play in employment and output fluctuations. 
+
+\section{Solving}
+
+Given that the evolution of the net worth is the following:
+\[e_{t+1} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
+The value of the firm at time t is given by:
+\[V_t(e_t) =\max_{k_t}  e_t + \beta V_{t+1}(e_{t+1})\]
+
+Solving the Belman equation, the FOC are given by:
+\[\frac{\vartheta V_t(e_t)}{\vartheta k_t } =\frac{\vartheta e_t}{\vartheta k_t } +
+ \beta \frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } \]
+Strong assumption a change in \(k_t\) does not have an impact on \(e_t\) only on \(e_{t+1}\):
+\[\frac{\vartheta e_t}{\vartheta k_t} = 0\]
+Using the envelope theorem:
+\[\frac{\vartheta
+V_{t+1}(e_{t+1})}{\vartheta k_t } = \frac{\vartheta
+V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
+\[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta e_{t+1} } =1 + \beta(1+r)\]
+\[\frac{\vartheta e_{t+1}}{\vartheta k_t} = Z(\theta +\epsilon)\alpha k_t^{\alpha-1}
+-(\delta + r)\]
+Thus:
+\[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } = 
+[1+\beta(1+r)] [Z(\theta + \epsilon)\alpha k_t^{\alpha-1}-(\delta + r)] \]
+So the FOC became:
+\[\frac{\vartheta V_t(e_t)}{\vartheta k_t } = 0 + \beta [1+\beta(1+r)] [Z(\theta + \epsilon)\alpha
+k_t^{\alpha-1}-(\delta + r)]  = 0 \]
+The optimal level of capital at time t is:
+\[\widehat{k} _t= {\frac{\beta(1+r) Z(\theta +\epsilon)\alpha}{\delta + r}}^{\frac{1}{1-\alpha}} \]
+Plotting the graph in (assuming \(X=Z(\theta +\epsilon)\)) and \(y=\widehat{k} _t\)
+\[ y={\frac{0.8 x}{0.03+0.1}}^{\frac{1}{1-0.8}}\]
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.8]{K.png}
+    \caption{\(X=Z(\theta +\epsilon)\) and \(y=\widehat{k} _t\) }
+    \label{plot:k_static}
+\end{figure}
+Its interesting to see that if there is an increase in productivity the firm need more optimal capital K, while the most
+low productivity firms need less capital to operate 
+
+
+\subsection{Frictions}
+Now I consider the participation constraint of the borrower given that she could observe \(\epsilon\) only paying \(\mu
+k^\alpha\) so:
+\[
+ (1+r )(k+c+e)(1-\Phi(\overline{\epsilon}))+\int_{-\infty}^{\overline{\epsilon}}[Z(\theta+\overline{\epsilon})
+k^\alpha+(1-\delta)k-\mu k^\alpha] \,d\Phi(\epsilon) \geq (1+r)(c+k+e)
+ \]
+\(r\) is the rate of interest that makes equal the expected value of borrowing to the opportunity cost of capital.
+rewriting became 
+\[
+Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})=(1+r)(k_t+c-e_t)
+\]
+where
+\[G(\overline{\epsilon} )= (1-\Phi(\varepsilon )\overline{\varepsilon }
++\int_{-\infty}^{\overline{\varepsilon}}\epsilon\,d \Phi(\epsilon) )\]
+While the firm participation constraint is \(q_t \geq 0 \) so the end-of-period net worth must be greater than 0, thus
+the problem of the firm becomes:
+The value of the firm at time t is given by:
+\[V_t(e_t) =\max_{k_t}  q_t - e_{t+1} + \beta V_{t+1}(e_{t+1})\]
+\[s.t.\]
+\[q_{t} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
+\[
+Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})=(1+r)(k_t+c-e_t)
+\]
+so we can rewrite the second constraint in order to get \(r\):
+\[r = \frac{Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})}{k_t+c-e_t}-1\]
+FOC:
+\[\frac{\vartheta
+V_{t}(e_{t})}{\vartheta k_t } = \frac{\vartheta
+q_{t}}{\vartheta k_t } - \frac{\vartheta
+e_{t}}{\vartheta k_t } + \beta \frac{\vartheta
+V_{t+1}(e_{t+1})}{\vartheta k_{t} } = 0\]
+by envelope theorem:
+\[\frac{\vartheta
+V_{t+1}(e_{t+1})}{\vartheta k_{t} } = \frac{\vartheta
+V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
+Strong HP: \[\frac{\vartheta e_{t+1}}{\vartheta k_t} = 0\]
+Qui non so se ha senso continuare perchè non ho nessun meccanismo che mi trasformi il net worth al tempo t in net worth
+al periodo t+1, almeno che non includa la definzione di dividendo come \(d_t= q_t-e_{t+1}\), allora in questo caso
+dovrei risolvere il problema con un langrangiana dato che la firm dovrebbe scegliere sia \(k\) che \(e\) net worth.
+\section{Redefining the problem}
+\[V(k_{t}) = \max_{k_{t+1}, e_{t+1}} d_t + \beta V(k_{t+1})\]
+\[s.t.\]
+\[f(k_t) = Z k_t^\alpha\]
+\[f(k_t) = d_t + (c+k_{t-1}-e_{t-1})(1+r) + k_{t} - (c + k_{t}- e_{t}) - k_{-1}(1-\delta)\]
+\[(1+r)(c+k_t -e_t)p + (1-p)f(k_t) = (1+r_f)(c+k_t -e_t) \]
+\[B_t = c+k_t-e_t; R= 1+r; R_f= 1 + r_f;  \]
+\[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_t)}{D_t}\]
+In order to understand the mechanism behind this optimization problem, I firstly solve the three times problem working
+backward.
+The value function in \(t=2\) is 
+\[ V_{t+2} =  \max d_{t+2}\]
+Since there firm will not exists in t+2, there are no investiment \(B_{t+2}=0\), thus \(0=k_{t+2}+c-e_{t+2}\) as
+consequence \(k_{t+2} = e_{t+2} - c\). Then we can rewrite the value function:
+\[ V_{t+2} = \max Z(e_{t+2} - c)^\alpha - (c+k_{t+1}-e_{t+1})(1+r_{t+1}) - e_{t+2} + c + (c + e_{t+2} - c - e_{t+2}) +
+k_{t+1}(1-\delta) \]
+\[V_{t+2} = \max_{e_{t+2}} Z(e_{t+2} - c)^\alpha - B_{t+1}R_{l,t+1} - e_{t+2} + c + k_{t+1}(1-\delta) \]
+FOC:
+\[\frac{\partial V_{t+2}}{\partial e_{t+2}} = Z \alpha (e_{t+2} - c)^{\alpha-1} - 1 = 0\]
+\[ (e_{t+2} - c)^{\alpha-1}= (Z \alpha)^{-1}\]
+\[ e_{t+2} = (Z \alpha)^{\frac{1}{1-\alpha}}+c\]
+Thus:
+\[d_{t+2} = Z\left[(Z \alpha)^{\frac{\alpha}{1-\alpha}}\right]  - B_{t+1}R_{t+1} -  \left[(Z
+\alpha)^{\frac{1}{1-\alpha}}\right] + k_{t+1}(1-\delta) \]
+\[V_{t+2} = Z\left[(Z \alpha)^{\frac{\alpha}{1-\alpha}}\right]  - B_{t+1}R_{t+1} -  \left[(Z
+\alpha)^{\frac{1}{1-\alpha}}\right] + k_{t+1}(1-\delta) \]
+Writing the problem in t+1:
+\[V_{t+1} = \max_{e_{t+1},k_{t+1}} d_{t+1} + \beta V_{t+2}\]
+\[d_{t+1} = Zk^\alpha_{t+1} - B_t R_L - k_{t+1} + B_{t+1} + k_t(1-\delta)\]
+FOCs:
+\begin{equation}
+    \left\{\begin{array}{@{}l@{}}
+        \frac{\partial V_{t+1}}{\partial e_{t+1}} = \frac{\partial d_{t+1}}{\partial e_{t+1}} + \beta \frac{\partial
+            V_{t+2}}{\partial e_{t+1}} = 0  \\
+        \frac{\partial V_{t+1}}{\partial k_{t+1}} = \frac{\partial d_{t+1}}{\partial k_{t+1}} + \beta \frac{\partial
+            V_{t+2}}{\partial K_{t+1}} = 0 \\
+    \end{array} \right .\,
+\end{equation}
+solving \(\frac{\partial d_{t+1}}{\partial e_{t+1}}\):
+\[\frac{\partial d_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}}
+ - \frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial B_{t+1}}{\partial e_{t+1}}\]
+\[\frac{\partial B_{t+1}}{\partial e_{t+1}} = \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1\]
+\[\frac{\partial d_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}} -
+\frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1\]
+
+solving \(\frac{\partial V_{t+2}}{\partial e_{t+1}}\):
+\[\frac{\partial V_{t+2}}{\partial e_{t+1}} = - \left[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right) \right]\] 
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \frac{\partial B_{t+1}}{\partial e_{t+1}}R_{t+1} +
+B_{t+1}\frac{\partial R_{t+1}}{\partial e_{t+1}} \]
+\[\frac{\partial B_{t+1}}{\partial e_{t+1}} = \frac{\partial k_{t+1}}{\partial e_{t+1}}-1\]
+\[\frac{\partial R_{t+1}}{\partial e_{t+1}} = - \frac{1-p}{p}\left\{\left[Z\alpha k^{\alpha-1}_{t+1}\frac{\partial
+k_{t+1}}{\partial e_{t+1}} -\delta \frac{\partial k_{t+1}}{\partial e_{t+1}}\right] B_{t+1} - \left(\frac{\partial
+k_{t+1}}{\partial e_{t+1}} - 1\right) \left[Zk_{t+1}^{\alpha} - \delta k_{t+1}\right]\right\}B_{t+1}^{-2}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}-1 \right] R_{t+1}
+- \frac{1-p}{p}\left\{\left[Z\alpha k^{\alpha-1}_{t+1}\frac{\partial
+k_{t+1}}{\partial e_{t+1}} -\delta \frac{\partial k_{t+1}}{\partial e_{t+1}}\right] B_{t+1} - \left(\frac{\partial
+k_{t+1}}{\partial e_{t+1}} - 1\right) \left[Zk_{t+1}^{\alpha} - \delta k_{t+1}\right]\right\}B_{t+1}^{-1}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)\left[\left(zk^\alpha_{t+1} -\delta k_{t+1}\right)\frac{1-p}{p}B_{t+1}^{-1}+R_{t+1}\right] -
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right)\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right)\]
+\[\frac{\partial V_{t+2}}{\partial e_{t+1}} = - \left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right]\]
+Substituting into the first FOC, we get:
+\[\frac{\partial V_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}} -
+\frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1 - \beta 
+\left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1 
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right] = 0\]
+second FOC: \\
+solving \(\frac{\partial d_{t+1}}{\partial k_{t+1}}\):
+\[\frac{\partial d_{t+1}}{\partial k_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1} - 1 + \frac{\partial B_{t+1}}{\partial
+k_{t+1}} \]
+\[\frac{\partial B_{t+1}}{\partial
+k_{t+1}} = 1 - \frac{\partial e_{t+1}}{\partial k_{t+1}} \]
+\[\frac{\partial d_{t+1}}{\partial k_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}}\]
+solving \(\frac{\partial V_{t+2}}{\partial k_{t+1}}\):
+\[\frac{\partial V_{t+2}}{\partial k_{t+1}} = -\left[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} -(1-\delta)\right] \]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} = \frac{\partial B_{t+1}}{\partial k_{t+1}}R_{t+1} +
+B_{t+1}\frac{\partial R_{t+1}}{\partial k_{t+1}}\]
+\[\frac{\partial B_{t+1}}{\partial k_{t+1}} = 1-\frac{\partial e_{t+1}}{\partial k_{t+1}} \]
+\[\frac{\partial R_{t+1}}{\partial k_{t+1}} =  - \frac{1-p}{p}\left[\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)B_{t+1} -
+\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)\left(Zk_{t+1}^{\alpha} - \delta k_{t+1}
+\right)\right]B_{t+1}^{-2} 
+\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} = \left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right) R_{t+1} +
+\left\{\frac{1-p}{p}\left[(Z \alpha k^{\alpha-1}_{t+1}-\delta)B_{t+1} -
+\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)\left(Zk_{t+1}^{\alpha} - \delta k_{t+1}
+\right)\right]B_{t+1}^{-1} \right\}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} =\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+\left[R_{t+1} + \frac{1-p}{p}\left(Z k_{t+1}^{\alpha} - \delta k_{t+1}\right)B_{t+1}^{-1}\right]-
+\frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right) \]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} =\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right) \]
+\[\frac{\partial V_{t+2}}{\partial k_{t+1}} = -\left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right] \]
+Substituting into the FOC:
+\[\frac{\partial V_{t+1}}{\partial k_{t+1}} =Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}} - \beta \left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right]=0\]
+thus the FOCs are:
+\[\frac{\partial V_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}}  - 1 - \beta 
+\left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1 
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right] = 0\]
+\[\frac{\partial V_{t+1}}{\partial k_{t+1}} =Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}} - \beta \left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right]=0\]
+rearranging \(\frac{\partial V_{t+1}}{\partial k_{t+1}} \) to isolate \(k_{t+1}\):
+\[k^{\alpha-1}_{t+1}=\left[\frac{\partial e_{t+1}}{\partial k_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1}\] 
+rearranging \(\frac{\partial V_{t+1}}{\partial e_{t+1}} \) to isolate \(k_{t+1}\):
+\[k^{\alpha-1}_{t+1}=\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
+Equating the two equations:
+\[\left[\frac{\partial e_{t+1}}{\partial k_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1} =
+\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta 
+\left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
+From this equation, you can isolate \(\frac{\partial e_{t+1}}{\partial k_{t+1}}\) to solve for it explicitly.
+\[\frac{\partial e_{t+1}}{\partial k_{t+1}} = -\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\delta\right) + \delta
+\frac{1-p}{p}\right]\frac{p}{Z\alpha}\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}\left(1-\beta
+R_f\right)^{-1} - \beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta R_f\right)^{-1}\] 
+\[\frac{\partial e_{t+1}}{\partial k_{t+1}} =- \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right)
++\delta\frac{1-p}{p}\right]\frac{\beta p +\beta -p}{1-\beta R_f} - \beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta
+R_f\right)^{-1} \]
+Fino a qui non ho molti dubbi, mentre il seguente passaggio presenta molti dubbi e secondo me è responsabile del segno
+negativo del capitale. Tuttavia non mi è venuto in mente altro modo per procedere.
+Knowing that \(B = k + c - e \rightarrow e= B -k -c\) thus \(\frac{\partial e_{t+1}}{\partial k_{t+1}} = -1\):
+\[  -\beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta R_f\right)^{-1}\frac{1-\beta R_f}{\beta p +\beta -p}= \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right)
++\delta\frac{1-p}{p}\right]\]
+
+
+We can rearrange it to isolate \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\):
+
+\[ -\beta \left(r_f+\frac{\delta}{p}\right)\left(\beta p +\beta -p\right) - \delta\frac{1-p}{p} = \frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta
+R_f\right)\] 
+
+Now, solve for \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\) by dividing both sides by \((1-\beta R_f)\):
+
+\[\frac{\partial k_{t+1}}{\partial e_{t+1}} = \left\{-\beta \left(r_f+\frac{\delta}{p}\right)\left(\beta p +\beta
+-p\right) - \delta\frac{1-p}{p} 
+\right \} \left(1-\beta R_f\right)^{-1}\]
+
+This equation provides the value of \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\) in terms of the given constants
+(\(\beta, R_f, p, \delta\)) and the relationship between \(e_{t+1}\) and \(k_{t+1}\). 
+\[k^{\alpha-1}_{t+1}=\left[\left\{-\beta \left(r_f+\frac{\delta}{p}\right)\left(\beta p +\beta
+-p\right) - \delta\frac{1-p}{p} 
+\right \} + \beta
+\left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
+\[k^{\alpha-1}_{t+1}= \left[\left\{-\beta \left(r_f+\frac{\delta}{p}\right)\left(\beta p +\beta
+-p\right) 
+\right \} + \beta
+\left(r_f+\delta\right) \right]\frac{p}{Z\alpha}\]
 \medskip
 
 \bibliography{reference}

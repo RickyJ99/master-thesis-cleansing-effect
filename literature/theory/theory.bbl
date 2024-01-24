@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -46,5 +46,13 @@ John~M Abowd and Francis Kramarz.
 \newblock \doi{https://doi.org/10.1016/S0927-5371(03)00017-4}.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/S0927537103000174}.
+
+\bibitem[Davis and Haltiwanger(1990)]{DAvHalt90}
+Steven~J. Davis and John Haltiwanger.
+\newblock Gross job creation and destruction: Microeconomic evidence and
+  macroeconomic implications.
+\newblock \emph{NBER Macroeconomics Annual}, 5:\penalty0 123--168, 1990.
+\newblock ISSN 08893365, 15372642.
+\newblock URL \url{http://www.jstor.org/stable/3585137}.
 
 \end{thebibliography}

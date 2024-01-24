@@ -4,45 +4,45 @@ The top-level auxiliary file: theory.aux
 The style file: unsrtnat.bst
 Database file #1: reference.bib
 Warning--can't use both author and editor fields in HaCa07
-You've used 5 entries,
+You've used 6 entries,
             2481 wiz_defined-function locations,
-            605 strings with 5642 characters,
-and the built_in function-call counts, 2123 in all, are:
-= -- 206
-> -- 87
-< -- 5
-+ -- 34
-- -- 24
-* -- 180
-:= -- 343
-add.period$ -- 27
-call.type$ -- 5
-change.case$ -- 9
-chr.to.int$ -- 5
-cite$ -- 6
-duplicate$ -- 95
-empty$ -- 184
-format.name$ -- 37
-if$ -- 449
+            612 strings with 5836 characters,
+and the built_in function-call counts, 2537 in all, are:
+= -- 249
+> -- 102
+< -- 6
++ -- 40
+- -- 28
+* -- 211
+:= -- 408
+add.period$ -- 32
+call.type$ -- 6
+change.case$ -- 11
+chr.to.int$ -- 6
+cite$ -- 7
+duplicate$ -- 114
+empty$ -- 221
+format.name$ -- 44
+if$ -- 538
 int.to.chr$ -- 1
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 44
-num.names$ -- 15
-pop$ -- 26
+int.to.str$ -- 7
+missing$ -- 7
+newline$ -- 51
+num.names$ -- 18
+pop$ -- 31
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 6
 quote$ -- 0
-skip$ -- 56
+skip$ -- 68
 stack$ -- 0
-substring$ -- 109
-swap$ -- 13
+substring$ -- 136
+swap$ -- 15
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
+type$ -- 39
 warning$ -- 1
-while$ -- 17
+while$ -- 21
 width$ -- 0
-write$ -- 94
+write$ -- 111
 (There was 1 warning)
