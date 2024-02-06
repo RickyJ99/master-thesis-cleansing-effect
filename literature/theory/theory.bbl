@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,18 +12,40 @@ Friedrich A. von (Friedrich~August) Hayek.
 \newblock The Bedford series of economic handbooks. Economic theory section. J.
   Cape, London, 1933.
 
-\bibitem[Keynes(1960)]{key60}
-John~Maynard Keynes.
-\newblock \emph{The theory of employment interest and money}.
-\newblock Macmillan, 1960.
-
-\bibitem[Hayek and Caldwell(1941)]{Ha1941}
+\bibitem[Hayek and Caldwell(1941)]{Ha41}
 F.~A. Hayek and Bruce Caldwell.
 \newblock \emph{{The Pure Theory of Capital}}.
 \newblock Number 9780226320991 in University of Chicago Press Economics Books.
   University of Chicago Press, January 1941.
 \newblock ISBN ARRAY(0x42a86798).
 \newblock URL \url{https://ideas.repec.org/b/ucp/bkecon/9780226320991.html}.
+
+\bibitem[Keynes(1960)]{key60}
+John~Maynard Keynes.
+\newblock \emph{The theory of employment interest and money}.
+\newblock Macmillan, 1960.
+
+\bibitem[Phillips(1958)]{Phi58}
+Alban~W Phillips.
+\newblock The relation between unemployment and the rate of change of money
+  wage rates in the united kingdom, 1861-1957.
+\newblock \emph{economica}, 25\penalty0 (100):\penalty0 283--299, 1958.
+
+\bibitem[Friedman(1972)]{Fri72}
+Milton Friedman.
+\newblock Have monetary policies failed?
+\newblock \emph{The American Economic Review}, 62\penalty0 (1/2):\penalty0
+  11--18, 1972.
+
+\bibitem[Lucas(1976)]{Luc76}
+Robert~E. Lucas.
+\newblock Econometric policy evaluation: A critique.
+\newblock \emph{Carnegie-Rochester Conference Series on Public Policy},
+  1:\penalty0 19--46, 1976.
+\newblock ISSN 0167-2231.
+\newblock \doi{https://doi.org/10.1016/S0167-2231(76)80003-6}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0167223176800036}.
 
 \bibitem[Mankiw and Romer(1991)]{ManRom91}
 N~Gregory Mankiw and David Romer.
@@ -44,6 +66,12 @@ Ben~S Bernanke and Mark Gertler.
 \newblock Working Paper 2015, National Bureau of Economic Research, September
   1986.
 \newblock URL \url{http://www.nber.org/papers/w2015}.
+
+\bibitem[Mortensen and Pissarides(1994)]{MorDalPisChr94}
+Dale~T Mortensen and Christopher~A Pissarides.
+\newblock Job creation and job destruction in the theory of unemployment.
+\newblock \emph{The review of economic studies}, 61\penalty0 (3):\penalty0
+  397--415, 1994.
 
 \bibitem[Solow(1956)]{Sol56}
 Robert~M. Solow.
@@ -68,6 +96,19 @@ George~W Stadler.
   1990.
 \newblock URL
   \url{https://EconPapers.repec.org/RePEc:aea:aecrev:v:80:y:1990:i:4:p:763-78}.
+
+\bibitem[Clark(1973)]{Cla73}
+C~Scott Clark.
+\newblock Labor hoarding in durable goods industries.
+\newblock \emph{The American Economic Review}, pages 811--824, 1973.
+
+\bibitem[Burnside et~al.(1993)Burnside, Eichenbaum, and Rebelo]{BurnCrai93}
+Craig Burnside, Martin Eichenbaum, and Sergio Rebelo.
+\newblock Labor hoarding and the business cycle.
+\newblock \emph{Journal of Political Economy}, 101\penalty0 (2):\penalty0
+  245--273, 1993.
+\newblock \doi{10.1086/261875}.
+\newblock URL \url{https://doi.org/10.1086/261875}.
 
 \bibitem[Caballero and Hammour(1994)]{CabHarm94}
 Ricardo~J. Caballero and Mohamad~L. Hammour.
