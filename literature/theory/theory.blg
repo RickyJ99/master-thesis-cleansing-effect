@@ -4,47 +4,48 @@ The top-level auxiliary file: theory.aux
 The style file: unsrtnat.bst
 Database file #1: reference.bib
 Warning--I didn't find a database entry for "Key36"
+Warning--I didn't find a database entry for "DavHal94"
 Warning--can't use both author and editor fields in Ha41
 Warning--can't use both author and editor fields in HaCa07
-You've used 22 entries,
+You've used 25 entries,
             2481 wiz_defined-function locations,
-            745 strings with 8435 characters,
-and the built_in function-call counts, 8142 in all, are:
-= -- 789
-> -- 276
-< -- 25
-+ -- 120
-- -- 76
-* -- 605
-:= -- 1295
-add.period$ -- 98
-call.type$ -- 22
-change.case$ -- 40
-chr.to.int$ -- 22
-cite$ -- 24
-duplicate$ -- 418
-empty$ -- 762
-format.name$ -- 120
-if$ -- 1753
+            775 strings with 9159 characters,
+and the built_in function-call counts, 9477 in all, are:
+= -- 908
+> -- 345
+< -- 26
++ -- 146
+- -- 96
+* -- 725
+:= -- 1510
+add.period$ -- 111
+call.type$ -- 25
+change.case$ -- 46
+chr.to.int$ -- 25
+cite$ -- 27
+duplicate$ -- 475
+empty$ -- 879
+format.name$ -- 145
+if$ -- 2036
 int.to.chr$ -- 1
-int.to.str$ -- 23
-missing$ -- 25
-newline$ -- 147
-num.names$ -- 66
-pop$ -- 140
+int.to.str$ -- 26
+missing$ -- 28
+newline$ -- 166
+num.names$ -- 75
+pop$ -- 157
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 25
 quote$ -- 0
-skip$ -- 251
+skip$ -- 283
 stack$ -- 0
-substring$ -- 394
-swap$ -- 60
+substring$ -- 479
+swap$ -- 66
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 139
+type$ -- 160
 warning$ -- 2
-while$ -- 70
+while$ -- 80
 width$ -- 0
-write$ -- 351
-(There were 3 warnings)
+write$ -- 398
+(There were 4 warnings)

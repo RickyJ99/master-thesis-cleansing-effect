@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,7 +14,7 @@ Friedrich A. von (Friedrich~August) Hayek.
 
 \bibitem[Hayek and Caldwell(1941)]{Ha41}
 F.~A. Hayek and Bruce Caldwell.
-\newblock \emph{{The Pure Theory of Capital}}.
+\newblock \emph{The Pure Theory of Capital}.
 \newblock Number 9780226320991 in University of Chicago Press Economics Books.
   University of Chicago Press, January 1941.
 \newblock ISBN ARRAY(0x42a86798).
@@ -110,6 +110,15 @@ Craig Burnside, Martin Eichenbaum, and Sergio Rebelo.
 \newblock \doi{10.1086/261875}.
 \newblock URL \url{https://doi.org/10.1086/261875}.
 
+\bibitem[Davis and Haltiwanger(1992)]{DavHalt92}
+Steven~J. Davis and John Haltiwanger.
+\newblock Gross job creation, gross job destruction, and employment
+  reallocation.
+\newblock \emph{The Quarterly Journal of Economics}, 107\penalty0 (3):\penalty0
+  819--863, 1992.
+\newblock ISSN 00335533, 15314650.
+\newblock URL \url{http://www.jstor.org/stable/2118365}.
+
 \bibitem[Caballero and Hammour(1994)]{CabHarm94}
 Ricardo~J. Caballero and Mohamad~L. Hammour.
 \newblock The cleansing effect of recessions.
@@ -117,6 +126,14 @@ Ricardo~J. Caballero and Mohamad~L. Hammour.
   1350--1368, 1994.
 \newblock ISSN 00028282.
 \newblock URL \url{http://www.jstor.org/stable/2117776}.
+
+\bibitem[Osotimehin and Pappadà(2017)]{OsePap17}
+Sophie Osotimehin and Francesco Pappadà.
+\newblock Credit frictions and the cleansing effect of recessions.
+\newblock \emph{The Economic Journal}, 127\penalty0 (602):\penalty0 1153--1187,
+  2017.
+\newblock \doi{https://doi.org/10.1111/ecoj.12319}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/ecoj.12319}.
 
 \bibitem[Blanchard et~al.(1990)Blanchard, Diamond, Hall, and Murphy]{BlaDia90}
 Olivier~Jean Blanchard, Peter Diamond, Robert~E. Hall, and Kevin Murphy.
@@ -126,14 +143,29 @@ Olivier~Jean Blanchard, Peter Diamond, Robert~E. Hall, and Kevin Murphy.
 \newblock ISSN 00072303, 15334465.
 \newblock URL \url{http://www.jstor.org/stable/2534505}.
 
-\bibitem[Davis and Haltiwanger(1992)]{DavHalt92}
+\bibitem[Foster et~al.(2016)Foster, Grim, and Haltiwanger]{FosHal16}
+Lucia Foster, Cheryl Grim, and John Haltiwanger.
+\newblock Reallocation in the great recession: Cleansing or not?
+\newblock \emph{Journal of Labor Economics}, 34\penalty0 (S1):\penalty0
+  S293--S331, 2016.
+\newblock \doi{10.1086/682397}.
+\newblock URL \url{https://doi.org/10.1086/682397}.
+
+\bibitem[Davis and Haltiwanger(1990)]{DAvHalt90}
 Steven~J. Davis and John Haltiwanger.
-\newblock Gross job creation, gross job destruction, and employment
-  reallocation.
-\newblock \emph{The Quarterly Journal of Economics}, 107\penalty0 (3):\penalty0
-  819--863, 1992.
-\newblock ISSN 00335533, 15314650.
-\newblock URL \url{http://www.jstor.org/stable/2118365}.
+\newblock Gross job creation and destruction: Microeconomic evidence and
+  macroeconomic implications.
+\newblock \emph{NBER Macroeconomics Annual}, 5:\penalty0 123--168, 1990.
+\newblock ISSN 08893365, 15372642.
+\newblock URL \url{http://www.jstor.org/stable/3585137}.
+
+\bibitem[Baily et~al.(1992)Baily, Hulten, Campbell, Bresnahan, and
+  Caves]{baily1992productivity}
+Martin~Neil Baily, Charles Hulten, David Campbell, Timothy Bresnahan, and
+  Richard~E Caves.
+\newblock Productivity dynamics in manufacturing plants.
+\newblock \emph{Brookings papers on economic activity. Microeconomics},
+  1992:\penalty0 187--267, 1992.
 
 \bibitem[Hayek and Caldwell(2007)]{HaCa07}
 F.~A. Hayek and Bruce Caldwell.
@@ -151,14 +183,6 @@ John~M Abowd and Francis Kramarz.
 \newblock \doi{https://doi.org/10.1016/S0927-5371(03)00017-4}.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/S0927537103000174}.
-
-\bibitem[Davis and Haltiwanger(1990)]{DAvHalt90}
-Steven~J. Davis and John Haltiwanger.
-\newblock Gross job creation and destruction: Microeconomic evidence and
-  macroeconomic implications.
-\newblock \emph{NBER Macroeconomics Annual}, 5:\penalty0 123--168, 1990.
-\newblock ISSN 08893365, 15372642.
-\newblock URL \url{http://www.jstor.org/stable/3585137}.
 
 \bibitem[Galí and Hammour(1992)]{GaHam92}
 Jordi Galí and J.L. Hammour.
