@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{26}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -166,6 +166,13 @@ Martin~Neil Baily, Charles Hulten, David Campbell, Timothy Bresnahan, and
 \newblock Productivity dynamics in manufacturing plants.
 \newblock \emph{Brookings papers on economic activity. Microeconomics},
   1992:\penalty0 187--267, 1992.
+
+\bibitem[Fort et~al.(2013)Fort, Haltiwanger, Jarmin, and
+  Miranda]{fort2013firms}
+Teresa~C Fort, John Haltiwanger, Ron~S Jarmin, and Javier Miranda.
+\newblock How firms respond to business cycles: The role of firm age and firm
+  size.
+\newblock \emph{IMF Economic Review}, 61\penalty0 (3):\penalty0 520--559, 2013.
 
 \bibitem[Hayek and Caldwell(2007)]{HaCa07}
 F.~A. Hayek and Bruce Caldwell.
