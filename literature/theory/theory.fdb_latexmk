@@ -1,23 +1,29 @@
 # Fdb version 4
-["bibtex theory"] 1707427708 "theory.aux" "theory.bbl" "theory" 1707427727 0
+["bibtex theory"] 1707494198 "theory.aux" "theory.bbl" "theory" 1707494204 0
   "./reference.bib" 1707426793 22728 f4405ec7952a1b0f024bd6a0baa88da3 ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "theory.aux" 1707427723 10306 ba41720a04c099b75a9ff2292a3a6b4b "xelatex"
+  "theory.aux" 1707494200 12540 5c08c0304fd1ea382c8373df2dca2ab9 "xelatex"
   (generated)
   "theory.bbl"
   "theory.blg"
   (rewritten before read)
-["xdvipdfmx"] 1707427724 "theory.xdv" "theory.pdf" "theory" 1707427727 0
-  "theory.xdv" 1707427723 1057708 399388f2b4a98a9545715597d35c7fda "xelatex"
+["xdvipdfmx"] 1707494201 "theory.xdv" "theory.pdf" "theory" 1707494204 0
+  "theory.xdv" 1707494200 1149700 6407da043bec790f571835cbbee1ccd2 "xelatex"
   (generated)
   "theory.pdf"
   (rewritten before read)
-["xelatex"] 1707427722 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/theory.tex" "theory.xdv" "theory" 1707427727 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/theory.tex" 1707427722 118134 1d9f01ecc38a75ee5c4c42aa78f2565b ""
+["xelatex"] 1707494198 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/theory.tex" "theory.xdv" "theory" 1707494204 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/theory.tex" 1707494194 130203 bd257e93146b31221f892358d130e8dd ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1136768653 1344 8a0be4fe4d376203000810ad4dc81558 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1136768653 1336 3125ccb448c1a09074e3aa4a9832f130 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1136768653 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -141,6 +147,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty" 1677530379 80947 75a96bb4c9f40ae31d54a01d924df2ff ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty" 1677530379 205154 31132370016e8c97e49bc3862419679b ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty" 1677530379 77021 d05e9115c67855816136d82929db8892 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty" 1615845910 6149 2398eec4faa1ee24ff761581e580ecf1 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty" 1291685959 45456 1c8843383c0bd05870c45fa0ebea6cc2 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1601326656 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1673816307 373 00b204b1d7d095b892ad31a7494b0373 ""
@@ -163,15 +170,20 @@
   "K.png" 1698769972 126386 27f7bf9b47fb882d30ffa2162acee679 ""
   "Plot1.1.png" 1707404233 113248 aa639e3d3c733151738b6ad17349cdea ""
   "Plot1.2.png" 1707411496 83040 29e4f4468423076433559b7b57e0f634 ""
+  "Plot1.3.png" 1707487164 42726 2ebad18da8ccfe3f2004f67c9432cca4 ""
+  "Plot1.4.png" 1707487164 44381 db60594cb0130e5cb0880e8a7568725b ""
+  "Plot1.5.png" 1707487164 44141 6ab75a93767c3a31fc943a6b5ba8a175 ""
+  "Plot1.6.png" 1707492170 51863 2596d77555b9bcd8dc310dbf3d36caa0 ""
+  "Plot1.7.png" 1707492170 60106 b5144680a3f56c9ccd6a132e975f8286 ""
   "Plot2.1.png" 1705069830 736899 1a6b59caf671966e8f0aaf9a8eb31110 ""
   "Plot2.2.png" 1705072685 620735 f49d9e6e00cd21dac4a1a4f2602bf03b ""
   "Plot2.3.png" 1705308692 231481 97634c4666632841e59ce6b5a0aa660c ""
   "Plot2.4.png" 1705320086 180321 7445abad82723d3fed79460063a4588a ""
   "Plot2.5.png" 1706091819 228182 d5205c6f5c2e5056424ea485d3fe1789 ""
-  "theory.aux" 1707427723 10306 ba41720a04c099b75a9ff2292a3a6b4b "xelatex"
-  "theory.bbl" 1707427708 8262 b842596d92ba4b1eb7841f57466daf54 "bibtex theory"
-  "theory.out" 1707427723 2751 a204389a2c508d54233ef5885a626ad4 "xelatex"
-  "theory.tex" 1707427722 118134 1d9f01ecc38a75ee5c4c42aa78f2565b ""
+  "theory.aux" 1707494200 12540 5c08c0304fd1ea382c8373df2dca2ab9 "xelatex"
+  "theory.bbl" 1707494198 8262 b842596d92ba4b1eb7841f57466daf54 "bibtex theory"
+  "theory.out" 1707494200 2751 a204389a2c508d54233ef5885a626ad4 "xelatex"
+  "theory.tex" 1707494194 130203 bd257e93146b31221f892358d130e8dd ""
   (generated)
   "theory.aux"
   "theory.log"

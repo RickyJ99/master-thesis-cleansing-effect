@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 
+ % Add this line to your preamble
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
@@ -14,7 +15,7 @@
 \usepackage{amsmath}
 \usepackage{listings}
 \usepackage{xcolor}
-
+\usepackage{multirow}
 \lstdefinestyle{mystyle}{
     commentstyle=\color{gray},
     keywordstyle=\color{blue},
@@ -60,6 +61,7 @@
     recession, replicating the model in computer  simulation.
 \end{abstract}
 \section{Introduction} 
+\bibliography{reference}
 In macroeconomic theory, the investigation of business cycles and long-term growth trajectories traditionally unfolds in
 distinct academic silos, drawing a parallel to the distinct realms of quantum mechanics and Einstein's theory of
 relativity in physics. This academic segregation, however, obscures a fundamental and profound question: How do business
@@ -615,7 +617,7 @@ persisted beyond the first quarter of 2012.
 Adding to this, job creation during the Great Recession was as low as it has been at any time in the past 30 years, as
 illustrated in the figure. Moreover, job reallocation (the sum of job creation and destruction) reached its lowest point
 in 30 years during the Great Recession and its immediate aftermath. When comparing the Great Recession to the early
-1980s recession, the rate of job reallocation was 28\% in 2009, in stark contrast to 35\% in 1983 (both periods represent
+1980s recession, the rate of job reallocation was 28* in 2009, in stark contrast to 35* in 1983 (both periods represent
 peaks in job destruction and are measured using March-to-March Business Dynamics Statistics data). These patterns are
 partly driven by significant downward trends in job flows, as evidenced in both the Business Dynamics Statistics (BDS)
 and the BED data. Although exploring the causes of these declining trends in job flows is beyond the scope of this
@@ -741,9 +743,6 @@ with the behavior of older firms, which, although also experiencing shifts in th
 margins, do not demonstrate the same level of sensitivity as their younger counterparts. The distinction between young
 and old firms becomes even more pronounced when examining the destruction margin, where young firms again show a greater
 responsiveness, underscoring the differential impact of economic cycles based on firm age. 
-
-The second question that the authors try to adress was: Did Cleansing Effect change in the great recession?
-In order to adress this question the authors focus on analysis if th
 \begin{figure}
     \centering
     \includegraphics[scale = 0.54]{Plot1.2.png}
@@ -753,6 +752,165 @@ In order to adress this question the authors focus on analysis if th
     establishment based and are classiﬁed by ﬁrm age characteristics.
     }
     \label{plot:1.1}
+\end{figure} 
+The second question that the authors try to adress was: Did Cleansing Effect change in the great recession?
+In order to address this question the authors use a regression which examine the relation between growth and survival
+dynamics of the incumbent  esthablisment to productivity. The specification that they imply is the following 
+The specification is defined as follows:
+\[ Y_{es,t+1} = \lambda_s + \lambda_{t+1} + \beta(\text{TFP}_{es,t}) + \gamma(\text{Cycle}_{s,t+1}) + \delta(\text{TFP}_{es,t} \times \text{Cycle}_{s,t+1}) + X'_{es,t}\mathbf{V} + \epsilon_{es,t+1}; \]
+where \(e\) represents the establishment, \(s\) denotes the state, and \(Y\) encompasses a series of outcomes. TFP
+refers to the deviations in total factor productivity from the average within each industry by year, and Cycle
+represents the variation in the state-specific unemployment rate from time \(t\) to \(t+1\). The model assesses three
+distinct outcomes (all calculated from \(t\) to \(t+1\)): "Overall Growth" (combining continuing operations and exits),
+"Exit," and "Conditional Growth" (considering only those that continue, i.e., continuers). 
+They used data from 1981-2010 controlling per year and state effects. In order to asses if the Great recession was
+different respect to previous recessions the add iteration terms with a dummy variable representing the Great Recession. 
+The specification became the following:
+The refined model is expressed as:
+\[ Y_{es,t+1} = \lambda_s + \lambda_{t+1} + \beta(\text{TFP}_{es,t}) + \gamma(\text{Cycle}_{s,t+1}) + \delta(\text{TFP}_{es,t} \times \text{Cycle}_{s,t+1}) + \xi(\text{GR}_{t+1} \times \text{TFP}_{es,t}) + \mu(\text{GR}_{t+1} \times \text{Cycle}_{s,t+1}) + \phi(\text{GR}_{t+1} \times \text{Cycle}_{s,t+1} \times \text{TFP}_{es,t}) + X'_{es,t}\mathbf{V} + \epsilon_{es,t+1}; \]
+where GR signifies a dummy variable for the Great Recession, assigned a value of 1 during the years 2007 to 2009. This
+model takes into account the impact of the Great Recession by including interaction terms between the Great Recession
+dummy (GR), changes in the state-specific unemployment rate (Cycle), and deviations in total factor productivity (TFP)
+from the industry-year averages.
+ The results are shown in the following table
+ \begin{table}[ht]
+    \centering
+    \caption{Reallocation and Productivity over the Business Cycle}
+    \begin{tabular}{|c|c c c c c c|}
+    \hline & \multicolumn{2}{c|}{Overall Gr.Rat. (Cont + Exit)} & \multicolumn{2}{c|}{Exit} &
+    \multicolumn{2}{c|}{Cond. Gr.Rat.(Cont.)} \\
+    & \multirow{2}{*}{prova}\\
+    \hline & (1) & (2) & (3) & (4) & (5) & (6) \\
+     \multirow{2}{*}{TFP} & $.157^{***}$ & $159^{***}$ & $-.060^{***}$ & $-.060^{**}$ & $.041^{**}$ & $.042^{*}$ \\
+    & $(.006)$ & $(.006)$ & $(.003)$ & $(.003)$ & $(.003)$ & $(.003)$ \\
+     \multirow{2}{*}{Cycle} & $-3.307^{**}$ & $-2.961^{*}$ & $.671^{*}$ & $.497^{*}$ & $-2.143^{**}$ & $-2.128$ \\
+    & $(.459)$ & $(.483)$ & $(.176)$ & $(.179)$ & $(.247)$ & $(.286)$ \\
+     \multirow{2}{*}{TFP $\times$ cycle} & $1.542^{***}$ & $2.182^{***}$ & $-.655^{***}$ & $-.927^{**}$ & $.494$ & $.534$ \\
+    & $(.643)$ & $(.862)$ & $(.226)$ & $(.265)$ & $(.412)$ & $(.567)$ \\
+     \multirow{2}{*}{GR $\times$ TFP} & & $.030$ & & $-.018^{*}$ & & $-.005$ \\
+    & & $(.023)$ & & $(.011)$ & & $(.011)$ \\
+     \multirow{2}{*}{GR $\times$ cycle} & & $-3.116^{*}$ & & $1.581$ & & $-.126$ \\
+    & & $(1.349)$ & & $(.523)$ & & $(.770)$ \\
+     \multirow{2}{*}{GR $\times$ TFP $\times$ cycle} & & $-2.961^{*}$ & & $1.466^{***}$ & & $.066$ \\
+    & & $(1.619)$ & & $(.684)$ & & $(.764)$ \\
+    \hline Year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+     State FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+     Firm size class FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+     $N$ (millions) & 2.2 & 2.2 & 2.2 & 2.2 & 2.1 & 2.1 \\
+    \hline
+    \end{tabular}
+    \footnote{SOURCE: Authors' calculations based on the Annual Survey of Manufactures, the Census of Manufactures, and the Longitudinal Business Database.}
+    \footnote{NOTE: Regressions are weighted using propensity score weights, detailed in the online appendix. Standard errors, in parentheses, are clustered at the state level. Employment growth and exit rates are measured from period $t$ to $t+1$. Exit regression employs a linear probability model, defining exit as 1 if the establishment is active in period $t$ but not in $t+1$. TFP represents the deviation of establishment-level log TFP from its industry-year mean. GR is a dummy variable for the years 2007 to 2009, reflecting the impact of the Great Recession from March 2007 to March 2010. Cycle measures the change in the state-year unemployment rate. Establishment size (log employment) at time $t$ is included as a control.}  
+\end{table}
+The regression analysis presented in the table offers insightful observations on how the Great Recession exacerbated the
+effects on overall growth rates compared to other periods of economic downturns. A critical aspect to highlight is the
+interaction between the Great Recession dummy variable (GR) and the cycle, which denotes changes in the state-year
+unemployment rate. This interaction is particularly important and statistically significant, with one coefficient
+significant at the 5\% level and the other at the 1\% level. This suggests that the economic dynamics during the Great
+Recession had a distinct and profound impact on reallocation and productivity across businesses. 
+
+The coefficient for the GR $\times$ cycle interaction being significant implies that the Great Recession intensified the
+negative effects of the business cycle on overall growth rates. This finding is notable because it underscores the
+unique severity of the Great Recession, distinguishing it from previous economic downturns. Specifically, the negative
+coefficient indicates that during the Great Recession, the adverse effects of an economic downturn on job creation and
+overall business growth were more pronounced. This could be attributed to a range of factors, including tighter credit
+conditions, greater uncertainty, and possibly more significant structural shifts in the economy that affected businesses
+more severely during this period. 
+
+Moreover, the presence of significant interaction terms involving TFP (total factor productivity), the cycle, and the
+Great Recession dummy highlights the complex relationship between productivity, economic cycles, and major economic
+crises. The analysis suggests that the Great Recession not only impacted the rate of job creation and destruction but
+also influenced how productivity interacts with the business cycle to affect economic outcomes. 
+
+To have a better comprhension the authors use the regression coefficents to estimate the difference in the outcomes
+between an establishment firm with one standard deviation above and below the industry year mean, differing between
+older and younger firms the results are depicted in the following plot.
+\begin{figure}{ht}
+    \centering
+    \title{A. Overall Growth(Cont. + Exiters)}
+    \includegraphics[scale = 0.35]{Plot1.3.png}
+    
+    \label{plot:1.3}
+\end{figure} 
+\begin{figure}{ht}
+    \centering
+    \title{B.Exit Rates}
+    \includegraphics[scale = 0.35]{Plot1.4.png}
+    
+    \label{plot:1.3}
+\end{figure} 
+\begin{figure}{ht}
+    \centering
+    \title{C.Conditional Growth (Continuers only)}
+    \includegraphics[scale = 0.35]{Plot1.5.png}
+    
+    \label{plot:1.3}
+    \caption{Differences in growth rates between high-productivity and low-
+    productivity establishments, normal times. Authors' calculations on Annual Survey
+    of Manufactures, Census of Manufactures, and Longitudinal Business Database.
+    Depicted is the predicted difference in growth rates (panels A and C, high minus
+    low) and the predicted difference in probability of exit (panel B, low minus high)
+    between an establishment one standard deviation above industry-by-year mean
+    productivity and an establishment one standard deviation below industry-by-year
+    mean productivity. Normal is zero change in state-level unemployment.
+    }
+\end{figure} 
+From the graph, it is evident that there is an 11 percentage point difference in overall growth between firms that are
+one standard deviation more productive than the average and those one standard deviation below the mean. When
+distinguishing between mature and younger firms, it becomes apparent that younger firms are more responsive to
+productivity differences. Specifically, younger firms that are more productive experience an overall growth that is 18
+percentage points higher compared to less productive counterparts. In contrast, this relationship between productivity
+and growth is weaker for mature firms, where those with higher productivity only see an overall growth of 0.11
+percentage points more than their less productive peers. The initial graph encompasses all firms, including those that
+survived the Great Recession and those that exited. 
+
+Focusing on exit rates, being more productive offers a smaller advantage in survival rate probabilities. While the
+patterns are consistent with the previous graph, the benefit of higher productivity is reduced across all categories.
+Notably, younger firms with higher productivity have a 6 percentage point greater chance of survival compared to their
+less productive counterparts, whereas for mature firms, this productivity premium is reduced by 2 percentage points. 
+
+Looking exclusively at firms that did not exit, the growth rate is significantly less influenced by productivity,
+showing nearly half the sensitivity compared to the initial analysis, which includes exiters. This indicates that less
+productive firms are more likely to exit the market, especially if they are younger. 
+This is largely consistent with \cite{OsePap17} since younger firms are less capitalaside compare to older companies and
+this meachanism that is not included in the \cite{CabHarm94} can modify the strict relations between producity and
+survivial rate. 
+A final question remains from the empircal point of view; 
+Did these patterns change in the great Recession?
+That is an important question since as exposed in the model in this thesis financial frictions can reduce the cleansing
+effect of the economic downturn. 
+An answer to this question can be found in the regressions results exposed in the table 3, in particualar one can see
+that the interaction effects between cycle and TFP is larger for period previous to the Great Recession. Indeed the
+three-way interactions terms between TFP, cycle and Great Recession dummy is negative and statistically significant for
+exit and overall growth. Thus, instead of the cycle enhancing the impact of TFP
+on overall growth, it tends to diminish it on the margin in the Great
+Recession. A similar pattern is observed for exit. The estimated three-way
+interaction effect is positive and larger in magnitude than the two-way
+interaction effect of TFP and the cycle. Instead of the cycle enhancing the
+impact of TFP on exit, it tends to diminish it on the margin in the Great
+Recession.
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.35]{Plot1.6.png}
+    \label{plot:1.6}
+\end{figure} 
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.35]{Plot1.7.png}
+    \label{plot:1.7}
+    \caption{Differences in growth and exit rates between high-productivity and
+    low-productivity establishments over the business cycle. Authors' calculations on
+    Annual Survey of Manufactures, Census of Manufactures, and Longitudinal Busi-
+    ness Database. Depicted is the predicted difference in growth rates (panel A, high
+    minus low) and the predicted difference in probability of exit (panel B, low minus
+    high) between an establishment one standard deviation above industry-by-year
+    mean productivity and an establishment one standard deviation below industry-by-
+    year mean productivity. Normal is zero change in state-level unemployment, mild
+    contraction is 1 percentage point increase in state level unemployment, sharp
+    contraction is 3 percentage point increase in state-level unemployment, and GR is
+    for the period 2007-9.
+    }
 \end{figure} 
 \section{\cite{OsePap17}}
 The economy comprises risk-neutral firms with a constant discount rate represented by $0 < \beta < 1$. These firms
@@ -1687,6 +1845,6 @@ Thus the debt at time t+1 is:
 \medskip
 
 
-\bibliography{reference}
+
 
 \end{document}
