@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -196,5 +196,12 @@ Jordi Galí and J.L. Hammour.
 \newblock Long run effects of business cycles.
 \newblock Working papers, Columbia - Graduate School of Business, 1992.
 \newblock URL \url{https://EconPapers.repec.org/RePEc:fth:colubu:92-26}.
+
+\bibitem[Bernanke and Gertler(1995)]{bernanke1995inside}
+Ben~S Bernanke and Mark Gertler.
+\newblock Inside the black box: the credit channel of monetary policy
+  transmission.
+\newblock \emph{Journal of Economic perspectives}, 9\penalty0 (4):\penalty0
+  27--48, 1995.
 
 \end{thebibliography}

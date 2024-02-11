@@ -16,6 +16,11 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{decorations.markings}
 \lstdefinestyle{mystyle}{
     commentstyle=\color{gray},
     keywordstyle=\color{blue},
@@ -42,6 +47,7 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{tikz}
 \usepackage{natbib}
+\pgfplotsset{width=12cm,compat=1.9}
 \doublespacing
 
 \bibliographystyle{unsrtnat}
@@ -61,7 +67,7 @@
     recession, replicating the model in computer  simulation.
 \end{abstract}
 \section{Introduction} 
-\bibliography{reference}
+
 In macroeconomic theory, the investigation of business cycles and long-term growth trajectories traditionally unfolds in
 distinct academic silos, drawing a parallel to the distinct realms of quantum mechanics and Einstein's theory of
 relativity in physics. This academic segregation, however, obscures a fundamental and profound question: How do business
@@ -1490,86 +1496,456 @@ validation of the model's predictions. When firms opt not to fully insulate them
 the creation margin, they tend to respond with intense layoffs. This alignment between the model's predictions and the
 observed behavior of larger firms underlines the model's relevance and its capacity to capture real-world dynamics. 
 
-\section{Solving}
+\section{Theoretical model}
+\subsection{Introduction}
+The model exposed in this thesis is similar to the theoretical framework of \cite{OsePap17}, since the main scope of
+this model is understand how the financial frictions affects the distribution of exiters with respect to productivity in
+particular if this mechanism is responsible to the difference between previous crisis and the Great recession. The
+innovation to this model due to differnce in the flow of funds and in the partecipartion constrant of the financial
+intermediaries, moreover the intertemporal maximization problem of the firms is more tractable from the mathematical
+point of view. In the following paragraphs I dwelve first in the new formulation of flow of funds and its dynamics than
+I proced first solving the maximization problem in case of a frictionless economy, then i procedd with the case in which
+frictions are present. Finally I will simulate with a sinusoidal demand the distribution of exiters in relation with
+capital and productivity.
 
-Given that the evolution of the net worth is the following:
-\[e_{t+1} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
-The value of the firm at time t is given by:
-\[V_t(e_t) =\max_{k_t}  e_t + \beta V_{t+1}(e_{t+1})\]
+\subsection{Dynamics of Financial Flows}
 
-Solving the Belman equation, the FOC are given by:
-\[\frac{\vartheta V_t(e_t)}{\vartheta k_t } =\frac{\vartheta e_t}{\vartheta k_t } +
- \beta \frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } \]
-Strong assumption a change in \(k_t\) does not have an impact on \(e_t\) only on \(e_{t+1}\):
-\[\frac{\vartheta e_t}{\vartheta k_t} = 0\]
-Using the envelope theorem:
-\[\frac{\vartheta
-V_{t+1}(e_{t+1})}{\vartheta k_t } = \frac{\vartheta
-V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
-\[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta e_{t+1} } =1 + \beta(1+r)\]
-\[\frac{\vartheta e_{t+1}}{\vartheta k_t} = Z(\theta +\epsilon)\alpha k_t^{\alpha-1}
--(\delta + r)\]
-Thus:
-\[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } = 
-[1+\beta(1+r)] [Z(\theta + \epsilon)\alpha k_t^{\alpha-1}-(\delta + r)] \]
-So the FOC became:
-\[\frac{\vartheta V_t(e_t)}{\vartheta k_t } = 0 + \beta [1+\beta(1+r)] [Z(\theta + \epsilon)\alpha
-k_t^{\alpha-1}-(\delta + r)]  = 0 \]
-The optimal level of capital at time t is:
-\[\widehat{k} _t= {\frac{\beta(1+r) Z(\theta +\epsilon)\alpha}{\delta + r}}^{\frac{1}{1-\alpha}} \]
-Plotting the graph in (assuming \(X=Z(\theta +\epsilon)\)) and \(y=\widehat{k} _t\)
-\[ y={\frac{0.8 x}{0.03+0.1}}^{\frac{1}{1-0.8}}\]
+This model is set within a partial equilibrium framework where firms are differentiated by their productivity levels.
+They have the option to fund their operations by either obtaining loans from financial intermediaries, as outlined by
+\cite{bernanke1995inside}, or by channeling dividends into capital growth. The capital at any time \(t\) is calculated by
+adjusting the capital from the previous period for depreciation (\(\delta\)), then adding the investment and including
+the interest on previous debt: 
+\[k_t = k_{t-1}(1 - \delta) - r \cdot b_{t-1} + I,\]
+where \(r\) denotes the interest rate and \(b_{t-1}\) represents the debt from the preceding period.
+
+Investment is articulated as the aggregate of the preceding period's debt principal, the newly incurred debt, and the
+net proceeds from production after the distribution of dividends: 
+\[I = b_{t} + f(k_t) - d_t,\]
+with \(d_t\) indicating the dividends disbursed at time \(t\).
+
+The production function is:
+\[f(k_t) = Z \cdot k_t^\alpha,\]
+with \(Z\) indicating the firm's productivity level, and \(k_t\) symbolizing capital, which may also reflect units of
+production as in the model by Caballero and Hammour (1994). This setup captures the intricate relationship among capital
+growth, investment choices, and productivity-driven firm output. 
+
+Explicating the investment function within the financial flow framework, we have:
+\[k_t = k_{t-1}(1 - \delta) - R \cdot b_{t-1} + b_{t} + f(k_t) - d_t,\]
+where \(R = 1 + r\).
+This expression can be simplified to:
+\[k_t - k_{t-1}(1 - \delta) = f(k_t) - d_t + b_{t} - R \cdot b_{t-1},\]
+leading to:
+\[\Delta k_t = f(k_t) - \delta \cdot k_{t-1} - R \cdot b_{t-1} + b_{t} - d_t\]
+
+Imposing a stationary condition for capital (\(\Delta k = 0\)):
+\[0 = f(k_t) - \delta \cdot k_{t-1} - R \cdot b_{t-1} + b_{t} - d_t,\]
+\[f(\widehat{k_t}) = \delta \cdot k + r \cdot b_{t-1} - \Delta b_{t} + d_t.\]
+
+To satisfy the stationary capital condition, the firm's output must equal the sum of capital depreciation, debt
+interest, and dividend payouts, minus any debt increment. Analyzing the scenario where both debt and capital remain
+unchanged (\(b_t = b_{t+1}\)): 
+\[\Delta b_t = \Delta k_t - f(k_t) + \delta \cdot k_{t-1} + r \cdot b_{t-1} + d_t,\]
+\[0 = \Delta k_t - f(k_t) + \delta \cdot k_{t-1} + r \cdot b_{t-1} + d_t,\]
+\[\Delta k_t = f(k_t) - \delta \cdot k_{t-1} - r \cdot b_{t-1} - d_t.\]
+
+Hence, for capital to remain constant, production must offset the sum of capital depreciation, the interest payable on
+debt, and dividends, less any increase in debt. Considering a state where both debt and capital are steady, we define: 
+\begin{equation}
+    \left\{
+        \begin{aligned}
+            0 &= \Delta k_t - f(k_t) + \delta \cdot k_{t-1} + r \cdot b_{t-1} + d_t,    \\
+            0 &= f(k_t) - \delta \cdot k_{t-1} - R \cdot b_{t-1} + b_{t} - d_t.
+        \end{aligned}
+    \right.
+\end{equation}
+Consequently, the equilibrium condition is:
+\[f(\widehat{k}) = \delta \cdot \widehat{k} + r \cdot \widehat{b} + d_t.\]
+
+It is demonstrable that when capital and debt stock are in equilibrium, dividends too reach a steady state:
+\[d_t = f(\widehat{k}) - \delta \cdot \widehat{k} - r \cdot \widehat{b}.\]
+Projecting one period forward:
+\[d_{t+1} = f(\widehat{k}) - \delta \cdot \widehat{k} - r \cdot \widehat{b},\]
+therefore:
+\[\Delta d = f(\widehat
+{k}) - \delta \cdot \widehat{k} - r \cdot \widehat{b} - \left[f(\widehat{k}) - \delta \cdot \widehat{k} - r \cdot
+\widehat{b}\right], \]
+\[\Delta d = 0 \quad \blacksquare \]
+
+Thus, the condition simplifies to:
+\[f(\widehat{k}) = \delta \cdot \widehat{k} + r \cdot \widehat{b} + \widehat{d}.\]
+This refined analysis delineates the equilibrium conditions under which firms manage their capital and debt to navigate
+financial flows and productivity-driven growth, illustrated by a steady state where both debt and capital, alongside
+dividends, are balanced. 
+\begin{figure}
+    \centering
+    
+    \begin{tikzpicture}
+        \begin{axis}[
+            title=Steady State,
+            colormap/cool,
+            xlabel= \(\widehat{k}\),
+            ylabel= \(\widehat{b}\),
+            zlabel=\(\widehat{d}\)
+        ]
+        \addplot3[
+            mesh,
+            samples=10,
+            domain=0:1,
+        ]
+        {0.5*x^0.8-0.1*x-0.07*y};
+
+        \addlegendentry{\(f(\widehat{k} ) = \delta \cdot \widehat{k} + r \cdot \widehat{b} = \widehat{d}\)}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{For this plot the following value has been used: \(\delta =0.1, r=0.1, \alpha=0.8, Z=0.5\)}
+\end{figure}
+
+The graph plots different steady states with different combination of debt \(b\), capital \(k\) and dividends \(d\), its
+clear that if we increse the stock of debt the dividends became less, since major resources are put into paying
+interest. 
+While clearly the relation between capital and dividens is a convex one as illutrared in the  graph.
+Lets consider a firm wich has \(k_0=0.2, b_0=0.1\) in order to met this condition of stationary for both capital and
+debt, the dividens whould be equal to \(\widehat{d} = 0.5*0.02^{0.8} - 0.1 *0.2 - 0.1*0.1\). This point \(k_0=0.2,
+b_0=0.1\) is a stationary ponints.
+Up to now we are focus only in stationary condition, but what happend if we perturbate the sytem, starting from the
+relation between capital and dividens. What happends if the dividens are higher compare the stationary path in which
+capital remains constan over time. For the moment lets assume the firm is free of debt. Thus the flow of funds became ,
+\[\Delta k_t = f(k_t) - \delta \cdot k_{t-1} - d_t\]
+\[k_{t+1} = f(k_t) + (1 -\delta)k_t - d_t \]
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=left,
+            xlabel=\(k_t\),
+            ylabel={\(k_{t+1}\)},
+        ]
+        % Below the black line is defined
+        \addplot [
+            domain=0:5, 
+            samples=100, 
+            color=black,
+            dotted,
+        ]
+        {x};
+        
+        % Horizontal line at y=2.5
+        \draw [dotted, color=black] (axis cs:0,2.5) -- (axis cs:2.5,2.5);
+        
+        % Vertical line at x=2.5
+        \draw [dotted, color=black] (axis cs:2.5,0) -- (axis cs:2.5,2.5);
+        
+        % Draw a red dot at coordinates (2.5,2.5)
+        \node[draw, circle, fill=red, inner sep=2pt] at (axis cs:2.5,2.5) {};
+        
+        % Here the blue curve is defined with arrows
+        \addplot [
+            domain=0:5, 
+            samples=100, 
+            color=blue,
+            postaction={
+                decorate,
+                decoration={
+                    markings,
+                    mark=at position 0.33 with {\arrow{<}},
+                    %mark=at position 0.5 with {\arrow{>}},
+                    mark=at position 0.66 with {\arrow{>}},
+                }
+            }
+        ]
+        {0.5*x^0.8 - 0.1*x + x - 0.8};
+        
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The graph depicts the trajectory of capital when there is no debt involved, given the parameters \(\delta =
+    0.1\), \(r = 0.1\), \(\alpha = 0.8\), \(Z = 0.5\), and \(d = 0.8\). The blue line traces the flow of funds according
+    to the equation \(k_{t+1} = 0.5 \cdot k_t^{0.8} - 0.1 \cdot k_t + k_t - 0.8\). }
+\end{figure}
+The graph distinctly demonstrates that when the capital at time \(t\) is below the red dot, it signifies that the
+capital is less than the steady-state capital, leading to a diminishing trajectory in the firm's capital. Conversely, if
+the capital is above the steady-state level, indicated by \(\widehat{k}\), the firm is overcapitalized, and the
+trajectory becomes explosive, with capital increasing without bound. 
+
+If a firm's capital is less than the steady-state, meaning it has less than the optimal amount, the outflows—such as
+depreciation and constant dividends—are disproportionately high compared to its production. This dynamic will inevitably
+cause the firm's capital to deplete towards zero. It's crucial to recognize that this path is predicated on the
+assumption of constant dividends; the higher the dividend payout, the greater the capital necessary to ensure that
+production can meet the outflows. 
+
+Furthermore, the steeper the slope of the blue line, the higher the productivity factor \(Z\), signifying a reduced need
+for capital. This plays a significant role since firms with greater productivity can sustain their expenses with less
+capital, which correlates with a higher likelihood of enduring economic downturns. 
+
+To examine the dynamics of debt, consider a scenario where the capital remains constant, signifying that it is at the
+steady-state level. 
+
+\[ b_{t} =  - f(k_t) + \delta \cdot \widehat{k} + R \cdot b_{t-1} + d_t\]
 
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.8]{K.png}
-    \caption{\(X=Z(\theta +\epsilon)\) and \(y=\widehat{k} _t\) }
-    \label{plot:k_static}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=left,
+            xlabel=\(b_t\),
+            ylabel={\(b_{t+1}\)},
+        ]
+        % Below the black line is defined
+        \addplot [
+            domain=0:5, 
+            samples=100, 
+            color=black,
+            dotted,
+        ]
+        {x};
+        % Horizontal line at y=2.5
+        \draw [dotted, color=black] (axis cs:0,2.5) -- (axis cs:2.5,2.5);
+        
+        % Vertical line at x=2.5
+        \draw [dotted, color=black] (axis cs:2.5,0) -- (axis cs:2.5,2.5);
+        
+        % Draw a red dot at coordinates (2.5,2.5)
+        \node[draw, circle, fill=red, inner sep=2pt] at (axis cs:2.5,2.5) {};
+        
+        % Horizontal line at y=2.5
+        \draw [dotted, color=black] (axis cs:0,1.1) -- (axis cs:1.1,1.1);
+        
+        % Vertical line at x=2.5
+        \draw [dotted, color=black] (axis cs:1.1,0) -- (axis cs:1.1,1.1);
+        
+        
+        
+        % Here the blue curve is defined with arrows
+        \addplot [
+            domain=0:5, 
+            samples=100, 
+            color=blue,
+            postaction={
+                decorate,
+                decoration={
+                    markings,
+                    mark=at position 0.1 with {\arrow{>}},
+                    %mark=at position 0.5 with {\arrow{>}},
+                    mark=at position 0.3 with {\arrow{<}},
+                }
+            }
+        ]
+        {-0.5*3^0.8 + 0.1*3 + 1.1*x + 0.8};
+        % Draw a red dot at coordinates (2.5,2.5)
+        \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:1.1,1.1) {};
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The graph illustrates the progression of debt under the condition that the change in capital (\(\Delta k\))
+    is zero, with parameters set at \(\delta = 0.1\), \(r = 0.1\), \(\alpha = 0.8\), \(Z = 0.5\), \(d = 0.8\),\(\widehat{k} = 3\) . The
+    blue line represents the flow of funds as modeled by the equation \(b_{t} =  - f(k_t) + \delta \cdot \widehat{k} + R
+    \cdot b_{t-1} + d_t\). The red dot marks the threshold beyond which debt cannot exceed capital, effectively serving
+    as a limit 
+    on debt. The green dot signifies the steady state of the debt. The vertical or horizontal gap between the red and
+    green dots quantifies the firm's equity. 
+    }
 \end{figure}
-Its interesting to see that if there is an increase in productivity the firm need more optimal capital K, while the most
-low productivity firms need less capital to operate 
+The graph illustrates the relationship between a firm's current debt (\(b_t\)) and its capacity for future operations
+(\(k_{t+1}\)), within the context of constant dividends. The steady state is indicated by the red dot, signifying the
+juncture at which the firm's output is precisely adequate to cover dividends, depreciation, and interest on its
+steady-state debt. 
+
+If dividends were to increase, this would necessitate a higher debt level to maintain the steady state, as the firm
+would have less equity. This change would be represented graphically by an elevated intercept on the curve, resulting in
+an increased debt burden. 
+
+As for productivity, firms with superior productivity require less debt to produce the same amount of dividends, as they
+operate more efficiently. This is depicted by their position on the \(b_t\) axis for a given \(k_{t+1}\). However, when
+the goal is to maximize dividends, highly productive firms will need more capital to reach the optimal dividend payout,
+a point that will be elaborated upon while discussing the maximization problem later in the analysis. 
+
+In essence, the graph conveys how steady-state conditions are shaped by dividend policy and productivity, with the
+former influencing the firm's financial leverage and the latter determining its capital efficiency. 
+
+\subsection{Partecipation constraint of the financial intermidiaries }
+The firms in this model coul finace himself in two way retaing dividends or increasing debts, up to now the interest was
+exogenous and indipendent from the quantity of the debt. This rise a problem since with the exogenous rate formulation
+if the debt goes to infinity compare to the equity the interest remain the same. In ordet to make the model more
+realistic, there shold be a fincial market in which interest rate is determined by the clearing condition. Moreover the
+financial intermidiaries maxise its proifts in a perfect competition enviroment. The results as in the \cite{BerGer86}
+is that the lennding activity should be proffitable as the opportunity cost of money: the lender with a probabilities p
+that is the successful repayment of the debt she will get the interest mature plus the capital, while in the case in
+which firms declare bankrupvy she will get the capital of the production of the firms and the capital net of
+depriciation. 
+Thus the partecipation constriant of the lender is the following:
+\[(1+r)(c+k_t -e_t)p + (1-p)f(k_t) = (1+r_f)(c+k_t -e_t) \]
+Here the opportunity cost of capital is set as risk free. Using this partecipartion constraint its possible to express
+the interest rate as a function of \(p,f(k)\). Here there are no financial frictions since the lender can sicure the
+entire production, and there are no assymetric information thus the lender can exactly estimates the amouts that can
+retrive in both state of the firm.
+Rewriting the constraint, we get:
+\[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_t)}{b_t}\]
+Lets draw a graph with the following paramenters \(p = 0.95, \delta = 0.1, \alpha = 0.8, Z = 0.5, d = 0.8,\widehat{k} =
+3 \)
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            domain=0:5, y domain=0:1.5, % Corrected the domain specification
+            ymin=0, ymax=2, % Set the y-axis limits
+            xmin=0, xmax=5, % Set the x-axis limits
+            axis lines=left,
+            xlabel=\(b_t\),
+            ylabel={\(R\)},
+        ]
+        % Below the black line is defined
+        \addplot [
+             
+            samples=100, 
+            color=black,
+            dotted,
+        ]
+        {x};
+        
+        % Horizontal line at y=2.5 is outside the y-axis limit and should be removed or adjusted
+        
+        % Vertical line at x=2.5 is outside the y-axis limit and should be removed or adjusted
+        
+        % Draw a red dot at coordinates (2.5,2.5) is outside the y-axis limit and should be removed or adjusted
+        
+        % Horizontal line at y=1.1
+        \draw [dotted, color=black] (axis cs:0,1.1) -- (axis cs:1.1,1.1);
+        
+        % Vertical line at x=1.1
+        \draw [dotted, color=black] (axis cs:1.1,0) -- (axis cs:1.1,1.1);
+        
+        % Here the blue curve is defined with arrows
+        \addplot [
+             % Corrected the domain specification
+            samples=100, 
+            color=blue,
+            postaction={
+                decorate,
+                decoration={
+                    markings,
+                    mark=at position 0.1 with {\arrow{>}},
+                    %mark=at position 0.5 with {\arrow{>}}, % Commented out as not needed
+                    mark=at position 0.3 with {\arrow{<}},
+                }
+            }
+        ]
+        {1.03/0.095-(0.05/0.095)*(0.5*3^0.8)/x -1};
+        
+        % Draw a green dot at coordinates (1.1,1.1)
+        \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:1.1,1.1) {};
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The graph illustrates the progression of debt under the condition that the change in capital (\(\Delta k\))
+    is zero, with parameters set at \(\delta = 0.1\), \(r = 0.1\), \(\alpha = 0.8\), \(Z = 0.5\), and \(d = 0.8\), with \(\widehat{k} = 3\). The
+    blue line represents the flow of funds as modeled by the equation \(b_{t} =  - f(k_t) + \delta \cdot \widehat{k} + R
+    \cdot b_{t-1} + d_t\). The red dot, which should be at the intercept of the blue line with the \(R\) axis, marks the threshold beyond which debt cannot exceed capital, effectively serving
+    as a limit on debt. The green dot signifies the steady state of the debt. The vertical or horizontal gap between the red and
+    green dots quantifies the firm's equity. 
+    }
+\end{figure}
+
+% \begin{figure}
+%     \centering
+    
+%     \begin{tikzpicture}
+%         \begin{axis}[
+%             title=Steady State,
+%             colormap/cool,
+%             xlabel= \(\widehat{k}\),
+%             ylabel= \(\widehat{b}\),
+%             zlabel=\(\widehat{d}\)
+%         ]
+%         \addplot3[
+%             mesh,
+%             samples=10,
+%             domain=0:1,
+%         ]
+%         {1.03/0.095-(0.05/0.095)*(y/x) -1};
+
+%         \addlegendentry{\(f(\widehat{k} ) = \delta \cdot \widehat{k} + r \cdot \widehat{b} = \widehat{d}\)}
+%         \end{axis}
+%     \end{tikzpicture}
+%     \caption{For this plot the following value has been used: \(\delta =0.1, r=0.1, \alpha=0.8, Z=0.5\)}
+% \end{figure}
+% Given that the evolution of the net worth is the following:
+% \[e_{t+1} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
+% The value of the firm at time t is given by:
+% \[V_t(e_t) =\max_{k_t}  e_t + \beta V_{t+1}(e_{t+1})\]
+
+% Solving the Belman equation, the FOC are given by:
+% \[\frac{\vartheta V_t(e_t)}{\vartheta k_t } =\frac{\vartheta e_t}{\vartheta k_t } +
+%  \beta \frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } \]
+% Strong assumption a change in \(k_t\) does not have an impact on \(e_t\) only on \(e_{t+1}\):
+% \[\frac{\vartheta e_t}{\vartheta k_t} = 0\]
+% Using the envelope theorem:
+% \[\frac{\vartheta
+% V_{t+1}(e_{t+1})}{\vartheta k_t } = \frac{\vartheta
+% V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
+% \[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta e_{t+1} } =1 + \beta(1+r)\]
+% \[\frac{\vartheta e_{t+1}}{\vartheta k_t} = Z(\theta +\epsilon)\alpha k_t^{\alpha-1}
+% -(\delta + r)\]
+% Thus:
+% \[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } = 
+% [1+\beta(1+r)] [Z(\theta + \epsilon)\alpha k_t^{\alpha-1}-(\delta + r)] \]
+% So the FOC became:
+% \[\frac{\vartheta V_t(e_t)}{\vartheta k_t } = 0 + \beta [1+\beta(1+r)] [Z(\theta + \epsilon)\alpha
+% k_t^{\alpha-1}-(\delta + r)]  = 0 \]
+% The optimal level of capital at time t is:
+% \[\widehat{k} _t= {\frac{\beta(1+r) Z(\theta +\epsilon)\alpha}{\delta + r}}^{\frac{1}{1-\alpha}} \]
+% Plotting the graph in (assuming \(X=Z(\theta +\epsilon)\)) and \(y=\widehat{k} _t\)
+% \[ y={\frac{0.8 x}{0.03+0.1}}^{\frac{1}{1-0.8}}\]
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[scale = 0.8]{K.png}
+%     \caption{\(X=Z(\theta +\epsilon)\) and \(y=\widehat{k} _t\) }
+%     \label{plot:k_static}
+% \end{figure}
+% Its interesting to see that if there is an increase in productivity the firm need more optimal capital K, while the most
+% low productivity firms need less capital to operate 
 
 
-\subsection{Frictions}
-Now I consider the participation constraint of the borrower given that she could observe \(\epsilon\) only paying \(\mu
-k^\alpha\) so:
-\[
- (1+r )(k+c+e)(1-\Phi(\overline{\epsilon}))+\int_{-\infty}^{\overline{\epsilon}}[Z(\theta+\overline{\epsilon})
-k^\alpha+(1-\delta)k-\mu k^\alpha] \,d\Phi(\epsilon) \geq (1+r)(c+k+e)
- \]
-\(r\) is the rate of interest that makes equal the expected value of borrowing to the opportunity cost of capital.
-rewriting became 
-\[
-Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})=(1+r)(k_t+c-e_t)
-\]
-where
-\[G(\overline{\epsilon} )= (1-\Phi(\varepsilon )\overline{\varepsilon }
-+\int_{-\infty}^{\overline{\varepsilon}}\epsilon\,d \Phi(\epsilon) )\]
-While the firm participation constraint is \(q_t \geq 0 \) so the end-of-period net worth must be greater than 0, thus
-the problem of the firm becomes:
-The value of the firm at time t is given by:
-\[V_t(e_t) =\max_{k_t}  q_t - e_{t+1} + \beta V_{t+1}(e_{t+1})\]
-\[s.t.\]
-\[q_{t} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
-\[
-Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})=(1+r)(k_t+c-e_t)
-\]
-so we can rewrite the second constraint in order to get \(r\):
-\[r = \frac{Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})}{k_t+c-e_t}-1\]
-FOC:
-\[\frac{\vartheta
-V_{t}(e_{t})}{\vartheta k_t } = \frac{\vartheta
-q_{t}}{\vartheta k_t } - \frac{\vartheta
-e_{t}}{\vartheta k_t } + \beta \frac{\vartheta
-V_{t+1}(e_{t+1})}{\vartheta k_{t} } = 0\]
-by envelope theorem:
-\[\frac{\vartheta
-V_{t+1}(e_{t+1})}{\vartheta k_{t} } = \frac{\vartheta
-V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
-Strong HP: \[\frac{\vartheta e_{t+1}}{\vartheta k_t} = 0\]
-Qui non so se ha senso continuare perchè non ho nessun meccanismo che mi trasformi il net worth al tempo t in net worth
-al periodo t+1, almeno che non includa la definzione di dividendo come \(d_t= q_t-e_{t+1}\), allora in questo caso
-dovrei risolvere il problema con un langrangiana dato che la firm dovrebbe scegliere sia \(k\) che \(e\) net worth.
+% \subsection{Frictions}
+% Now I consider the participation constraint of the borrower given that she could observe \(\epsilon\) only paying \(\mu
+% k^\alpha\) so:
+% \[
+%  (1+r )(k+c+e)(1-\Phi(\overline{\epsilon}))+\int_{-\infty}^{\overline{\epsilon}}[Z(\theta+\overline{\epsilon})
+% k^\alpha+(1-\delta)k-\mu k^\alpha] \,d\Phi(\epsilon) \geq (1+r)(c+k+e)
+%  \]
+% \(r\) is the rate of interest that makes equal the expected value of borrowing to the opportunity cost of capital.
+% rewriting became 
+% \[
+% Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})=(1+r)(k_t+c-e_t)
+% \]
+% where
+% \[G(\overline{\epsilon} )= (1-\Phi(\varepsilon )\overline{\varepsilon }
+% +\int_{-\infty}^{\overline{\varepsilon}}\epsilon\,d \Phi(\epsilon) )\]
+% While the firm participation constraint is \(q_t \geq 0 \) so the end-of-period net worth must be greater than 0, thus
+% the problem of the firm becomes:
+% The value of the firm at time t is given by:
+% \[V_t(e_t) =\max_{k_t}  q_t - e_{t+1} + \beta V_{t+1}(e_{t+1})\]
+% \[s.t.\]
+% \[q_{t} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
+% \[
+% Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})=(1+r)(k_t+c-e_t)
+% \]
+% so we can rewrite the second constraint in order to get \(r\):
+% \[r = \frac{Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})}{k_t+c-e_t}-1\]
+% FOC:
+% \[\frac{\vartheta
+% V_{t}(e_{t})}{\vartheta k_t } = \frac{\vartheta
+% q_{t}}{\vartheta k_t } - \frac{\vartheta
+% e_{t}}{\vartheta k_t } + \beta \frac{\vartheta
+% V_{t+1}(e_{t+1})}{\vartheta k_{t} } = 0\]
+% by envelope theorem:
+% \[\frac{\vartheta
+% V_{t+1}(e_{t+1})}{\vartheta k_{t} } = \frac{\vartheta
+% V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
+% Strong HP: \[\frac{\vartheta e_{t+1}}{\vartheta k_t} = 0\]
+% Qui non so se ha senso continuare perchè non ho nessun meccanismo che mi trasformi il net worth al tempo t in net worth
+% al periodo t+1, almeno che non includa la definzione di dividendo come \(d_t= q_t-e_{t+1}\), allora in questo caso
+% dovrei risolvere il problema con un langrangiana dato che la firm dovrebbe scegliere sia \(k\) che \(e\) net worth.
 \section{Redefining the problem}
 \[V(k_{t}) = \max_{k_{t+1}, e_{t+1}} d_t + \beta V(k_{t+1})\]
 \[s.t.\]
@@ -1843,7 +2219,7 @@ Thus the debt at time t+1 is:
 % \left(r_f+\delta\right) \right]\frac{p}{Z\alpha}\]
 
 \medskip
-
+\bibliography{reference}
 
 
 
