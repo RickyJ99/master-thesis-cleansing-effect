@@ -1961,6 +1961,7 @@ the constrants are the following:
 \[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{b_t}\]
 \[f(k_{t-1}) = Z \cdot k_t^\alpha\]
 \[k_t = k_{t-1}(1 - \delta) - R \cdot b_{t-1} + b_{t} + f(k_{t-1}) - d_{t-1}\]
+\paragraph{The debt free case}
 Assuming Modgliani Miller theorem holds since we are in the case of no assymetric information between firms and lender,
 we can assume that the firms is complitely financed with equity \(b_t=0 \quad \forall t\), thus the flow-of-funds
 becames:
@@ -2226,7 +2227,64 @@ The optimal path, marked in blue, is the desirable route for firms to follow as 
 capital where the economy can sustain a constant level of consumption or investment without necessitating further
 changes in capital. 
 
+In conclusion there is an optimal path of dividends and capital, however in order to find the close solution is
+necessary to use a belman equation. However before finding the exact solution, we will examine what happends if we
+include debt. The same procedure will be followed in the next paragraph.
 
+\paragraph{The case with debt}
+Now lets consider the possibility to use debt to increase capital, thus the intertemporal maximization problem of the
+firm is exactly as defined at the beging of this chapter, and lets assume a fixed leverage \(b_t = l \cdot k_t \quad 0
+\leq l \leq 1\).
+Our problem becames 
+\[\max_{{\{d_{t}\}}^{+\infty}_{t_0}}V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)}\]
+the constrants are the following:
+\[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{b_t}\]
+\[f(k_{t-1}) = Z \cdot k_t^\alpha\]
+\[k_t = k_{t-1}(1 - \delta) - R \cdot b_{t-1} + b_{t} + f(k_{t-1}) - d_{t-1}\]
+\(b_t = l \cdot k_t \quad 0
+\leq l \leq 1\)
+Consolidating the constraints:
+\[k_t = \frac{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} + l k_{t}
++ f(k_{t-1}) - d_{t-1}}{l-1}\]
+The lagrangian fanction is the following:
+\[L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t-1}(1 - \delta) - \left(\frac{R_f}{p}  -\frac{ 1-p }{ p }
+\frac{f(k_{t-1})}{l k_{t-1}}\right) \cdot l k_{t-1} + l k_t
++ f(k_{t-1}) - d_{t-1}\right]{l-1}^{-1}\]
+We optimize for \(d_t,k_t
+\quad \forall t\), we get the following  focs:
+\begin{equation}
+    \begin{aligned}
+    U'(d_0) &= \frac{\lambda_0}{l-1} , \\
+    U'(d_1) &= \frac{\lambda_1}{l-1}, \\
+    & \vdots \\
+    U'(d_{t}) &= \frac{\lambda_t}{l-1}, \\
+    & \vdots \\
+    U'(d_{T}) &= \frac{\lambda_T}{l-1}.
+    \end{aligned}
+\end{equation}
+
+\begin{equation}
+    \begin{aligned}
+        \lambda_0 &= \beta \frac{\lambda_1}{l-1} \left[ f'(k_1) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{1}) - \frac{R_f}{p}l \right], \\
+        \beta \lambda_1 &= \beta^2 \frac{\lambda_2}{l-1} \left[ f'(k_2) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{2}) - \frac{R_f}{p}l\right],\\
+        & \vdots \\
+        \beta^t \lambda_t &= \beta^{t+1} \frac{\lambda_{t+1}}{l-1} \left[ f'(k_{t+1}) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{t+1}) - \frac{R_f}{p}l\right],\\
+        & \vdots \\
+        \beta^{T-1} \lambda_{T-1} &= \beta^T \frac{\lambda_{T}}{l-1} \left[ f'(k_T) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{T}) - \frac{R_f}{p}l\right], \\
+        \beta^T \mu &= \beta^{T+1} \frac{\lambda_{T}}{l-1}.
+    \end{aligned}
+\end{equation}
+
+thus the euler dividens equation becames:
+\[U^{\prime}\left(d_{t}\right)=\frac{\beta}{l-1}
+U^{\prime}\left(d_{t+1}\right)\left[\frac{f^{\prime}\left(k_{t+1}\right)}{p}+(1-\delta) - \frac{R_f}{p}l\right]\]
+consindering the locus of costant dividens, the capital should be:
+\[f^{\prime}\left(k_{t+1}\right) = \left(l - \beta + \beta \delta \right)\frac{p}{\beta}+R_f\]
+\[\widehat{k} = \left\{\left[\left(l - \beta + \beta \delta \right)\frac{p}{\beta}+R_f\right]Z^{-1}\right\}^{\frac{1}{\alpha}}\]
+Compare to the previus steady state the capital is higher the case free of debt.
+While the locus in which capital is at the steady state:
+\[k_t = \frac{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} + l k_{t}
++ f(k_{t-1}) - d_{t-1}}{l-1}\]
 % \begin{figure}
 %     \centering
     

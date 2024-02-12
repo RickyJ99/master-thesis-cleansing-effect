@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  12 FEB 2024 19:43
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  12 FEB 2024 23:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -766,67 +766,72 @@ NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (i
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
 Missing character: There is no ; ("3B) in font nullfont!
 [70] [71] [72] [73] [74]
-Overfull \hbox (10.43176pt too wide) in paragraph at lines 2020--2023
+Overfull \hbox (10.43176pt too wide) in paragraph at lines 2021--2024
 []\TU/lmr/m/n/12 Deriving equation (1.5) with respect to the Lagrange multipliers $\OML/cmm/m/it/12 ^^U[]$ \TU/lmr/m/n/12 for $\OML/cmm/m/it/12 t \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; T$
  []
 
 [75] [76] [77] [78] [79] [80] [81]
-Overfull \hbox (0.97949pt too wide) detected at line 2347
+Overfull \hbox (56.42255pt too wide) detected at line 2252
+\OML/cmm/m/it/12 L \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ^^L[]U\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 d[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L[]^^U[] [] [][]
+ []
+
+[82] [83]
+Overfull \hbox (0.97949pt too wide) detected at line 2405
 \OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 c\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 k[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 )(1 + \OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + (\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 c \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 k[]\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^N\OT1/cmr/m/n/12 )
  []
 
-[82]
-Overfull \hbox (11.09369pt too wide) detected at line 2385
+[84]
+Overfull \hbox (11.09369pt too wide) detected at line 2443
 [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[] [] \OML/cmm/m/it/12 B[]
  []
 
 
-Overfull \hbox (122.83052pt too wide) detected at line 2389
+Overfull \hbox (122.83052pt too wide) detected at line 2447
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ [] [] \OML/cmm/m/it/12 B[]
  []
 
-
-Overfull \hbox (22.40384pt too wide) detected at line 2392
+[85]
+Overfull \hbox (22.40384pt too wide) detected at line 2450
 [] \OT1/cmr/m/n/12 = [] [] \OMS/cmsy/m/n/12 ^^@ [][] []
  []
 
 
-Overfull \hbox (131.22702pt too wide) detected at line 2406
+Overfull \hbox (131.22702pt too wide) detected at line 2464
 [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z^^Kk[][] \OMS/cmsy/m/n/12 ^^@ [] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L [] \OT1/cmr/m/n/12 = 0
  []
 
-[83]
-Overfull \hbox (76.1803pt too wide) detected at line 2427
+
+Overfull \hbox (76.1803pt too wide) detected at line 2485
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 + []
  []
 
-
-Overfull \hbox (53.16032pt too wide) detected at line 2444
+[86]
+Overfull \hbox (53.16032pt too wide) detected at line 2502
 [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z^^Kk[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L [] \OT1/cmr/m/n/12 = 0
  []
 
-[84]
-Overfull \hbox (96.3378pt too wide) detected at line 2458
+
+Overfull \hbox (96.3378pt too wide) detected at line 2516
 [] [][] \OT1/cmr/m/n/12 = [] []
  []
 
 
-Overfull \hbox (154.61467pt too wide) detected at line 2463
+Overfull \hbox (154.61467pt too wide) detected at line 2521
 [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@ [] [] [] [][] ^^@ \OML/cmm/m/it/12 ^^L [] [][]
  []
 
-[85] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+[87] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [86] [87] [88] (./theory.bbl [89] [90] [91]
+) [88] [89] [90] (./theory.bbl [91] [92] [93]
 Underfull \hbox (badness 1024) in paragraph at lines 164--169
 []\TU/lmr/m/n/12 Martin Neil Baily, Charles Hulten, David Campbell, Timothy Bresnahan, and
  []
 
-[92])
+[94])
 
 Package natbib Warning: There were undefined citations.
 
-[93] (./theory.aux)
+[95] (./theory.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -836,10 +841,10 @@ Package rerunfilecheck Info: File `theory.out' has not changed.
 Here is how much of TeX's memory you used:
  35173 strings out of 476684
  824320 string characters out of 5804056
- 1929018 words of memory out of 5000000
+ 1932018 words of memory out of 5000000
  54807 multiletter control sequences out of 15000+600000
  522535 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,19n,94p,1033b,2711s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on theory.xdv (93 pages, 1490880 bytes).
+Output written on theory.xdv (95 pages, 1507156 bytes).
