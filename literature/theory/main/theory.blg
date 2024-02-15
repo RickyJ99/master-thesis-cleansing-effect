@@ -7,45 +7,46 @@ Warning--I didn't find a database entry for "Key36"
 Warning--I didn't find a database entry for "DavHal94"
 Warning--can't use both author and editor fields in Ha41
 Warning--can't use both author and editor fields in HaCa07
-You've used 27 entries,
+Warning--empty publisher in THoBru04
+You've used 29 entries,
             2481 wiz_defined-function locations,
-            788 strings with 9490 characters,
-and the built_in function-call counts, 10289 in all, are:
-= -- 979
-> -- 387
-< -- 27
-+ -- 162
-- -- 108
-* -- 795
-:= -- 1638
-add.period$ -- 117
-call.type$ -- 27
-change.case$ -- 50
-chr.to.int$ -- 27
-cite$ -- 29
-duplicate$ -- 513
-empty$ -- 953
-format.name$ -- 161
-if$ -- 2206
+            802 strings with 9934 characters,
+and the built_in function-call counts, 10896 in all, are:
+= -- 1026
+> -- 415
+< -- 28
++ -- 174
+- -- 116
+* -- 836
+:= -- 1739
+add.period$ -- 125
+call.type$ -- 29
+change.case$ -- 52
+chr.to.int$ -- 29
+cite$ -- 32
+duplicate$ -- 551
+empty$ -- 1013
+format.name$ -- 171
+if$ -- 2334
 int.to.chr$ -- 1
-int.to.str$ -- 28
-missing$ -- 30
-newline$ -- 176
-num.names$ -- 81
-pop$ -- 171
+int.to.str$ -- 30
+missing$ -- 34
+newline$ -- 188
+num.names$ -- 87
+pop$ -- 194
 preamble$ -- 1
-purify$ -- 27
+purify$ -- 29
 quote$ -- 0
-skip$ -- 305
+skip$ -- 323
 stack$ -- 0
-substring$ -- 527
-swap$ -- 70
+substring$ -- 531
+swap$ -- 75
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 174
-warning$ -- 2
-while$ -- 88
+type$ -- 182
+warning$ -- 3
+while$ -- 92
 width$ -- 0
-write$ -- 424
-(There were 4 warnings)
+write$ -- 451
+(There were 5 warnings)

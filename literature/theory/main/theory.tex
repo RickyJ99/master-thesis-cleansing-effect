@@ -2244,47 +2244,417 @@ the constrants are the following:
 \(b_t = l \cdot k_t \quad 0
 \leq l \leq 1\)
 Consolidating the constraints:
-\[k_t = \frac{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} + l k_{t}
-+ f(k_{t-1}) - d_{t-1}}{l-1}\]
+\[k_t = \frac{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} 
++ f(k_{t-1}) - d_{t-1}}{\left(1-l\right)}\]
 The lagrangian fanction is the following:
 \[L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t-1}(1 - \delta) - \left(\frac{R_f}{p}  -\frac{ 1-p }{ p }
-\frac{f(k_{t-1})}{l k_{t-1}}\right) \cdot l k_{t-1} + l k_t
-+ f(k_{t-1}) - d_{t-1}\right]{l-1}^{-1}\]
+\frac{f(k_{t-1})}{l k_{t-1}}\right) \cdot l k_{t-1} 
++ f(k_{t-1}) - d_{t-1}\right]{\left(1-l\right)}^{-1}\]
 We optimize for \(d_t,k_t
 \quad \forall t\), we get the following  focs:
 \begin{equation}
     \begin{aligned}
-    U'(d_0) &= \frac{\lambda_0}{l-1} , \\
-    U'(d_1) &= \frac{\lambda_1}{l-1}, \\
+    U'(d_0) &= \frac{\lambda_0}{\left(1-l\right)} , \\
+    U'(d_1) &= \frac{\lambda_1}{\left(1-l\right)}, \\
     & \vdots \\
-    U'(d_{t}) &= \frac{\lambda_t}{l-1}, \\
+    U'(d_{t}) &= \frac{\lambda_t}{\left(1-l\right)}, \\
     & \vdots \\
-    U'(d_{T}) &= \frac{\lambda_T}{l-1}.
+    U'(d_{T}) &= \frac{\lambda_T}{\left(1-l\right)}.
     \end{aligned}
 \end{equation}
 
 \begin{equation}
     \begin{aligned}
-        \lambda_0 &= \beta \frac{\lambda_1}{l-1} \left[ f'(k_1) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{1}) - \frac{R_f}{p}l \right], \\
-        \beta \lambda_1 &= \beta^2 \frac{\lambda_2}{l-1} \left[ f'(k_2) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{2}) - \frac{R_f}{p}l\right],\\
+        \lambda_0 &= \beta \frac{\lambda_1}{\left(1-l\right)} \left[ f'(k_1) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{1}) - \frac{R_f}{p}l \right], \\
+        \beta \lambda_1 &= \beta^2 \frac{\lambda_2}{\left(1-l\right)} \left[ f'(k_2) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{2}) - \frac{R_f}{p}l\right],\\
         & \vdots \\
-        \beta^t \lambda_t &= \beta^{t+1} \frac{\lambda_{t+1}}{l-1} \left[ f'(k_{t+1}) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{t+1}) - \frac{R_f}{p}l\right],\\
+        \beta^t \lambda_t &= \beta^{t+1} \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t+1}) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{t+1}) - \frac{R_f}{p}l\right],\\
         & \vdots \\
-        \beta^{T-1} \lambda_{T-1} &= \beta^T \frac{\lambda_{T}}{l-1} \left[ f'(k_T) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{T}) - \frac{R_f}{p}l\right], \\
-        \beta^T \mu &= \beta^{T+1} \frac{\lambda_{T}}{l-1}.
+        \beta^{T-1} \lambda_{T-1} &= \beta^T \frac{\lambda_{T}}{\left(1-l\right)} \left[ f'(k_T) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{T}) - \frac{R_f}{p}l\right], \\
+        \beta^T \mu &= \beta^{T+1} \frac{\lambda_{T}}{\left(1-l\right)}.
     \end{aligned}
 \end{equation}
 
 thus the euler dividens equation becames:
-\[U^{\prime}\left(d_{t}\right)=\frac{\beta}{l-1}
+\[U^{\prime}\left(d_{t}\right)=\frac{\beta}{\left(1-l\right)}
 U^{\prime}\left(d_{t+1}\right)\left[\frac{f^{\prime}\left(k_{t+1}\right)}{p}+(1-\delta) - \frac{R_f}{p}l\right]\]
 consindering the locus of costant dividens, the capital should be:
 \[f^{\prime}\left(k_{t+1}\right) = \left(l - \beta + \beta \delta \right)\frac{p}{\beta}+R_f\]
 \[\widehat{k} = \left\{\left[\left(l - \beta + \beta \delta \right)\frac{p}{\beta}+R_f\right]Z^{-1}\right\}^{\frac{1}{\alpha}}\]
-Compare to the previus steady state the capital is higher the case free of debt.
+Compare to the previus steady state the capital is lower the case free of debt, since there is interest to pay. Moreover
+Considering the case in which capital is less than \(\widehat{k}\), thus the marginal producitvity will be higher than
+the marginal cost of capital.
 While the locus in which capital is at the steady state:
-\[k_t = \frac{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} + l k_{t}
-+ f(k_{t-1}) - d_{t-1}}{l-1}\]
+\[k_t = \left[k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} 
++ f(k_{t-1}) - d_{t-1}\right]{\left(1-l\right)}^{-1}\]
+\[\widehat{d} =\frac{f(k)}{p} - k\left(\delta + \frac{R_f}{p}l -l\right)\]
+In order to represent the phase diagram, lets consider the case in which dividends are higher then steady state, in that
+case \(k_t<k_{t-1}\), thus the capital will decrease over time, while in the opposite case the capital will increase.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle, % sets the position of the axes
+            xlabel=\(k_t\),
+            ylabel=\(d_t\),
+            xmin=0, ymin=0,
+            xmax=5, ymax=5,
+            ticks=none, % removes ticks on axes
+            clip=false,
+            axis on top=true
+        ]
+        
+        % Parabolic curve
+        \addplot [
+            color=red,
+            domain=0:4, 
+            samples=100, 
+            thick,
+        ]
+        {-x^2 + 4*x};
+        
+        \addplot [
+            color=blue,
+            domain=0:3.5, 
+            samples=100, 
+            thick,
+        ]
+        {-x^2 + 3.5*x};
+        
+        % Arrows
+       
+        
+        % Vertical line at k hat
+        \draw [dashed] (axis cs:2,0) -- (axis cs:2,5);
+        \node at (axis cs:2.5,4.5) {\(\Delta k_t = 0\)};
+        \node at (axis cs:3.5,3.5) {\(\Delta d_t = 0\)};
+        \node at (axis cs:2,-0.5) {\(\underline{k} \)};
+
+        \draw [dashed] (axis cs:1.7,0) -- (axis cs:1.7,5);
+        \node at (axis cs:1.5,5.5) {\(\Delta k_t^{\prime} = 0\)};
+        \node at (axis cs:2.3,2) {\(\Delta d_t^{\prime} = 0\)};
+        \node at (axis cs:1.7,-0.5) {\(\underline{k}^{\prime} \)};
+        % Arrows on the left side
+        \draw [-{Stealth[bend]}]  (axis cs:1.3,1)--(axis cs:1.8,1);
+        \draw [-{Stealth[bend]}]  (axis cs:0.8,3) -- (axis cs:0.3,3);
+        
+        % Arrows on the right side
+        \draw [-{Stealth[bend]}]  (axis cs:2.5,1)--(axis cs:3,1);
+        \draw [-{Stealth[bend]}]  (axis cs:4,3) -- (axis cs:3.5,3);
+        
+        % Arrows
+        % Upwards arrows
+        \draw [-{Stealth[bend]}]  (axis cs:0.8,3) -- (axis cs:0.8,3.5);
+        \draw [-{Stealth[bend]}]  (axis cs:1.3,1) -- (axis cs:1.3,1.5);
+        \draw [-{Stealth[bend]}]  (axis cs:2.5,1) -- (axis cs:2.5,0.5);
+        \draw [-{Stealth[bend]}]  (axis cs:4,3) -- (axis cs:4,2.5);
+        
+        % Vertical line at k hat
+        \draw [dashed] (axis cs:1,0) -- (axis cs:1,5);
+        \node at (axis cs:0.8,2) {A};
+        \node at (axis cs:1,-0.5) {\(k_0\)};
+        \draw [dashed] (axis cs:1,0) -- (axis cs:1,5);
+        
+        % Draw a green dot at coordinates (1.1,1.1)
+        \draw [-{Stealth[bend]}, color=red]  (axis cs:1,2) -- (axis cs:2,4);
+        \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:2,4) {};
+        \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:1,2) {};
+        \node at (axis cs:2.1,4.2) {B};
+
+        \draw [-{Stealth[bend]}, color=blue]  (axis cs:1,1.5) -- (axis cs:1.7,3.05);
+        \node[draw, circle, fill=orange, inner sep=2pt] at (axis cs:1,1.5) {};
+        \node[draw, circle, fill=orange, inner sep=2pt] at (axis cs:1.7,3.05) {};
+
+        \node at (axis cs:0.8,1.5) {A'};
+        \node at (axis cs:1.8,3.15) {B'};
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{This diagram depicts the consumption dynamics as they relate to capital accumulation, highlighting areas of
+    stability and instability. The red line corresponds to a firm that is carrying debt, whereas the blue line
+    represents a firm with fixed leverage. The red arrow traces a potential saddle path for the indebted firm, beginning
+    from \( k_0 \), while
+     the blue arrow illustrates a conceivable saddle path for a firm with fixed  leverage.} 
+    \label{pl_phase_b}
+\end{figure}
+The phase diagram \ref{pl_phase_b} illustrates the dynamics of capital accumulation in scenarios with
+fixed leverage and without debt. Although the dynamics are similar in both cases, the steady-state level of capital is
+lower for firms with debt due to their obligation to service the debt. Consequently, the trajectory that firms with debt
+follow, known as the saddle path, results in lower dividend payouts compared to debt-free firms. 
+
+This distinction is particularly significant in economic downturns. Assuming two firms have identical production
+functions but different levels of leverage, the firm with higher debt may face a greater risk of exiting the market
+during a recession. This is because its lower dividend levels may not be sufficient to compensate shareholders for the
+increased risk associated with its leverage. Therefore, in times of economic stress, firms with higher leverage are at a
+disadvantage due to their reduced financial flexibility and the burden of debt repayments. 
+\subsection{Solving with the Belman}
+Now thats the dynamics are clear we can solve dynamic problem finding the optimal path given an initial condition
+\(k_0\). In order to do so we assume that the utility function is a logaritmic function, and we rewrite the problem
+using a bellman equation:
+\begin{equation}
+    \begin{gathered}
+    \max _{\left\{d_t\right\}_{t=0}^{\infty}} V_0=\max _{\left\{d_t\right\}_{t=0}^{\infty}}\left\{U\left(d_0\right)+\beta\left[\sum_{t=1}^{\infty}
+ \beta^{d-1} U\left(c_t\right)\right]\right\}  \\
+ s.t. \\
+ k_t = \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1}
++ f(k_{t-1}) - d_{t-1}\right\}{\left(1-l\right)}^{-1} \forall t
+    \end{gathered}
+\end{equation}
+In other words, we wish to determine the optimal dividend $d_t^*$, and the implied capital level $k_{t+1}^*$, for
+$t=0,1, \ldots$. The optimal trajectory is a function \(\varphi(.)\) relating the dividends with the capital levels,
+such relation should be stationary, thus do not depend over time, using constraint is possible to define such a
+function:
+\begin{equation}
+    \begin{gathered}
+        k_t = \left\{k_{t-1}(1 - \delta) - \frac{R_f}{p} l k_{t-1}  
++ \frac{f(k_{t-1})}{p} - \varphi(k_{t-1})\right\}{\left(1-l\right)}^{-1} = \zeta(k_1)
+    \end{gathered}
+\end{equation}
+Since the capital and dividends are constinous and differentiable, thusunction of capital at time t-1:
+\[k_1: d_2^*=\varphi\left(k_2^*\right)=\varphi\left(\zeta\left(k_1\right)\right)\]
+riterating the process we can express a the optimal path of dividens as a function of capital at time 1, thus we can
+define \(V(k_1)\) as the maximum value function:maximum overall utility  \(\varphi(.)\) should be continous and
+differentiable. In this way er can express consumption at time t as a fat time 1 given the optimal path of dividends:
+\[\sum_{t=1}^{\infty} \beta^{t-1} U\left(d_t^*\right)=V\left(k_1\right)\].
+We can rewrite the problem as follows:
+\begin{equation}
+    \begin{aligned}
+        & V\left(k_0\right)=\max _{c_0}\left\{U\left(c_0\right)+\beta V\left(k_1\right)\right\} \\
+        & \text { s.t. } k_1=f\left(k_0\right)+(1-\delta) k_0-c_0 \\
+        & k_0 given.
+    \end{aligned}
+\end{equation}
+
+Before solving the belman is necessary to determine under which condition the problem is solvable, in this sense the
+theorem exposed in \cite{PreStoLu89} which states: the solution  exists and it is unique if the following conditons are
+met:
+\begin{enumerate}
+    \item \(\beta \in (0,1)\)
+    \item the return function is continous, boundend and strictly concave 
+    \item the transition function is concave
+\end{enumerate}
+Then the maximum value \(V(k_t)\) exits, its unique and strictly concave. Howeve this condition rules out the logaritmic
+return function \(U(d_t)=\ln{d_t}\). However if we are willing to leave the strictly concave results we can use the
+\cite{THoBru04} theorem.
+Now that our problem have a unique solution, lets find the optimal path. The first order condition is the following:
+\[U^{\prime}\left(d_0^*\right)+\beta V^{\prime}\left(k_1\right) \frac{\partial k_1}{\partial d_0}=0\]
+from the transition function \(\frac{\partial k_1}{\partial d_0}=-1\). The optimal path is thus given by the followinf
+system:
+\begin{equation}
+    \left\{
+    \begin{array}{l}
+        V\left(k_0\right) = U\left(d_0^*\right) + \beta V\left(k_1\right), \\
+        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
++ \frac{f(k_0)}{p} - d^*_0\right\}{\left(1-l\right)}^{-1}, \\ 
+        U'\left(d_0^*\right) = \beta V'\left(k_1\right), \\
+        k_0 \text{ given.}
+    \end{array}
+    \right.
+\end{equation}
+\paragraph{Guess and verify method}
+The return function is \(U(d_t)=\ln{d_t}\), the transition function is \(k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
++ \frac{f(k_0)}{p} - d^*_0\right\}{\left(1-l\right)}^{-1}\). The Foc becames \( d_0=\left[\beta
+V^{\prime}(k_{1})\right]^{-1}\), Substituting into the transition function, the problem can be written as
+\begin{equation}
+    \left\{
+    \begin{array}{l}
+        V\left(k_0\right) = \ln\left(d_0^*\right) + \beta V\left(k_0\right), \\
+        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
++ \frac{f(k_0)}{p} - \left[\beta
+V^{\prime}(k_{t+1})\right]^{-1} \right\}{\left(1-l\right)}^{-1}, \\ 
+        U'\left(d_0^*\right) = \beta V'\left(k_1\right), \\
+        k_0 \text{ given.} 
+    \end{array}
+    \right.
+\end{equation}
+Our guess solution is:
+\begin{equation}
+    \begin{gathered}
+        V(k_t) = e + f \ln{k_t}
+    \end{gathered}
+\end{equation}
+thus:
+\begin{equation}
+    \left\{
+    \begin{array}{l}
+        e + f \ln{k_0} = \ln{\left(\frac{k_1}{\beta f}\right)} + \beta \left[e + f \ln{k_1}\right], \\
+        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
++ \frac{f(k_0)}{p} - \left[
+\frac{k_1}{\beta f}\right] \right\}{\left(1-l\right)}^{-1}.
+    \end{array}
+    \right.
+\end{equation}
+In order to be tractable lets assume \(p - \delta p - R_f l=0\).
+Solving for \(k_1\):
+\begin{align}
+    k_1 &= \left[k_0\left(p-p\delta-R_f l\right)+ Zk_0^{\alpha}\right]\cdot \left(\frac{ \beta f}{\beta f - l\beta f +1}\right)p^{-1},\\
+    d_1 &= \left[k_0\left(p-p\delta-R_f l\right) + Zk_0^{\alpha}\right]\cdot \left(\frac{p}{\beta f - l\beta f +1}\right),\\
+    e + f \ln k_0 &= \ln \left\{\left[k_0\left(p-p\delta-R_f l\right) + Zk_0^{\alpha}\right]\cdot \left(\frac{p}{\beta f - l\beta f +1}\right)\right\} \nonumber \\
+    &\quad + \beta \left[e + f \ln \left\{\left[k_0\left(p-p\delta-R_f l\right) + Zk_0^{\alpha}\right]\cdot \left(\frac{ \beta f}{\beta f - l\beta f +1}\right)p^{-1}\right\}\right].
+\end{align}
+Now is possible to retrieve parameters e and \(f\):
+
+\begin{align}
+    f &= \frac{\alpha}{1 - \alpha \beta},\\
+    e &= \left\{\frac{1 - \alpha \beta - \alpha}{1 - \alpha \beta}\left[\ln Z - \ln\left(1 - l\alpha \beta\right)\right] \right. \nonumber \\
+      &\quad + \frac{1 - \alpha \beta}{1 - \alpha \beta} \ln p + \ln\left(1 - \alpha \beta\right) \nonumber \\
+      &\quad \left. + \frac{\alpha}{1 - \alpha \beta} (\ln \alpha + \ln \beta) \right\}(1 - \beta)^{-1}.
+\end{align}
+
+
+
+
+\(f\) is positive so \(V^{\prime}(k)>0 \), thus higher dividens path leads to higher value of the return function.
+Moreover is important to notice that since \(\beta \in (0,1)\) the maximum value function do not explode to infinity.
+The guess is verified since \(e,f\) are indipendent from \(k\). Substituting \(e,f\) into (16), (17):
+\[k_1 = \frac{Z k_0^{\alpha}}{p}\frac{\alpha\beta}{1-l\alpha\beta}\]
+\[d_0 = \frac{Z k_0^{\alpha}}{p}\frac{1-\alpha\beta}{1-l\alpha\beta}\beta\]
+the steady state for capital is
+\(\widehat{k}=\left[\frac{Z}{p}\frac{\alpha\beta}{1-l\alpha\beta}\right]^{\frac{1}{1-\alpha}} \). Using \(p =\frac{R_f
+l}{1-\delta} \):
+\begin{align}
+    &k_1 = \frac{Z k_0^{\alpha}{\left(1-\delta\right)}}{l R_f}\frac{\alpha\beta}{1-l\alpha\beta} \\
+    &d_0 = \frac{Z k_0^{\alpha}{\left(1-\delta\right)}}{l R_f}\frac{1-\alpha\beta}{1-l\alpha\beta}\beta \\
+    & \widehat{k}=\left[\frac{Z  {\left(1-\delta\right)}}{l R_f}\frac{\alpha\beta}{1-l\alpha\beta}\right]^{\frac{1}{1-\alpha}}
+\end{align}
+Locunik at the policy function (22) its interesting to notice that dividends are a constant share of production of the
+same period. Moreover dividends depend negatively on firm'slavarage and on the risk free rate if the firms is not debt
+free. While more productive is the firm higher its level of capital and the dividends level. Notice that in the case of
+firm free of debt the solution does not hold since l=0 and thus p=1. Hower is easy to find the solution assuming no
+depreciation:
+\begin{align}
+    &k_1 = {Z k_0^{\alpha} {\left(1-\delta\right)}}{\alpha\beta} \\
+    &d_0 = {Z k_0^{\alpha}{\left(1-\delta\right)}}{1-\alpha\beta} \\
+    & \widehat{k}=\left[{Z}{\alpha\beta}\right]^{\frac{1}{1-\alpha}}
+\end{align}
+It easy to show that under no debts case the firm has higher capital at the steady state since it does not need to pay
+interest as it is shown in \ref{pl_phase_b}.
+\subsection{Optimization problem with frictions}
+Now that we have found a closed form solution to our policy function, lets introduce financial friction due to assymetry
+of information between the lender and the firms. Lets assume that the lender discount an uncertainty value about the
+value of production \(\mu \quad 0 \leq \mu \leq 1\): close is to 0 higher is the level of frictions.
+ the landing activity thus the problem will became 
+\begin{equation}
+    \begin{gathered}
+    \max _{\left\{d_t\right\}_{t=0}^{\infty}} V_0=\max _{\left\{d_t\right\}_{t=0}^{\infty}}\left\{U\left(d_0\right)+\beta\left[\sum_{t=1}^{\infty}
+ \beta^{d-1} U\left(c_t\right)\right]\right\}  \\
+ s.t. \\
+ k_t = \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1}
++ f(k_{t-1}) - d_{t-1}\right\}{\left(1-l\right)}^{-1} \forall t
+    \end{gathered}
+\end{equation}
+Using the same method in the case without frictions:
+\begin{equation}
+    \left\{
+    \begin{array}{l}
+        V\left(k_0\right) = \ln\left(d_0^*\right) + \beta V\left(k_0\right), \\
+        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
++ \frac{f(k_0)}{p} - \left[\beta
+V^{\prime}(k_{t+1})\right]^{-1} \right\}{\left(1-l\right)}^{-1}, \\ 
+        U'\left(d_0^*\right) = \beta V'\left(k_1\right), \\
+        k_0 \text{ given.} 
+    \end{array}
+    \right.
+\end{equation}
+Our guess solution is:
+\begin{equation}
+    \begin{gathered}
+        V(k_t) = e + f \ln{k_t}
+    \end{gathered}
+\end{equation}
+\begin{equation}
+    \left\{
+    \begin{array}{l}
+        e + f \ln{k_0} = \ln{\left(\frac{k_1}{\beta f}\right)} + \beta \left[e + f \ln{k_1}\right], \\
+        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
++ \frac{f(k_0)}{p} - \left[
+\frac{k_1}{\beta f}\right] \right\}{\left(1-l\right)}^{-1}.
+    \end{array}
+    \right.
+\end{equation}
+In order to be tractable lets assume \(p - \delta p - R_f l=0\).
+Solving for \(k_1\):
+\begin{align}
+    k_1 &= \left[k_0\left(p-p\delta-R_f l\right)+ \mu Zk_0^{\alpha}\right]\cdot \left(\frac{ \beta f}{\beta f - l\beta f +1}\right)p^{-1},\\
+    d_1 &= \left[k_0\left(p-p\delta-R_f l\right) + \mu Zk_0^{\alpha}\right]\cdot \left(\frac{p}{\beta f - l\beta f +1}\right),\\
+    e + f \ln k_0 &= \ln \left\{\left[k_0\left(p-p\delta-R_f l\right) + \mu Zk_0^{\alpha}\right]\cdot \left(\frac{p}{\beta f - l\beta f +1}\right)\right\} \nonumber \\
+    &\quad + \beta \left[e + f \ln \left\{\left[k_0\left(p-p\delta-R_f l\right) + \mu Zk_0^{\alpha}\right]\cdot \left(\frac{ \beta f}{\beta f - l\beta f +1}\right)p^{-1}\right\}\right].\\
+    f &= \frac{\alpha}{1 - \alpha \beta},\\
+    e &= \left\{\frac{1 - \alpha \beta - \alpha}{1 - \alpha \beta}\left[\ln{Z} +ln{\mu} - \ln\left(1 - l\alpha \beta\right)\right] \right. \nonumber \\
+      &\quad + \frac{1 - \alpha \beta}{1 - \alpha \beta} \ln p + \ln\left(1 - \alpha \beta\right) \nonumber \\
+      &\quad \left. + \frac{\alpha}{1 - \alpha \beta} (\ln \alpha + \ln \beta) \right\}(1 - \beta)^{-1}. \\
+\end{align}
+Thus the transition function and policy function in the case of financial friction are:
+\begin{align}
+    k_1 &= \frac{Z \mu k_0^{\alpha}{\left(1-\delta\right)}}{l R_f}\frac{\alpha\beta}{1-l\alpha\beta} \\
+    d_0 &= \frac{Z \mu k_0^{\alpha}{\left(1-\delta\right)}}{l R_f}\frac{1-\alpha\beta}{1-l\alpha\beta}\beta \\
+    \widehat{k}&=\left[\frac{Z \mu  {\left(1-\delta\right)}}{l R_f}\frac{\alpha\beta}{1-l\alpha\beta}\right]^{\frac{1}{1-\alpha}}
+\end{align}
+Thus frictions as the same effect as a reduction in productivity which lowers the dividens, the capital level and
+velocity to which firms accumulate capital.
+\subsection{Simulation example}
+In order to grasp the differnces between the friction case and the frictionless, lets implement a simulation exercise in
+which I'll use the same parameters as in in the \cite{OsePap17} paper:
+\begin{table}
+    \centering
+    \begin{tabular}{lcc}
+    \hline Parameter & Symbol & Value \\
+    \hline \hline Discount factor & $\beta$ & 0.956 \\
+    Risk-free rate & $R_f$ & 1.04 \\
+    Depreciation rate & $\delta$ & 0.07 \\
+    Returns to scale & $\alpha$ & 0.70 \\
+    Aggregate productivity & $\bar{Z}$ & 1 \\
+    Monitoring cost & $1-\mu$ & 0.25 \\
+    \hline
+    \end{tabular}
+    \caption{Benchmark calibration}
+\end{table}
+Since we want to understand which are the effect of including friction we fix the leverage \(l=0.5\) and \(k_0=1\). Lets take a look
+to the transtion function, thus how the capital evolves following the optimal path. 
+We can compute \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx 
+0.559 \). The results are shown in the plots below:
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Optimal Path of Capital},
+        xlabel={Time},
+        ylabel={Capital},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+    ]
+    \addplot table [col sep=comma, x=Time, y=Capital] {simulation.csv};
+    \addplot table [col sep=comma, x=Time, y=Capital] {simulation_withoutfriction.csv};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Evolution of capital over time}
+\end{figure}
+The first plot shows the transition function 
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Path of Dividends},
+        xlabel={Time},
+        ylabel={Dividends},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+    ]
+    \addplot table [col sep=comma, x=Time, y=Dividends] {simulation.csv};
+    \addplot table [col sep=comma, x=Time, y=Capital] {simulation_withoutfriction.csv};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Evolution of dividends over time}
+\end{figure}
+
 % \begin{figure}
 %     \centering
     

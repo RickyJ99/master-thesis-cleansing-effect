@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex theory"] 1707778280 "theory.aux" "theory.bbl" "theory" 1707778382 0
-  "./reference.bib" 1707749960 23290 7bc4ad3c19db3d864a722fbf0bd869c8 ""
+["bibtex theory"] 1707934338 "theory.aux" "theory.bbl" "theory" 1707934799 0
+  "./reference.bib" 1707833219 24211 9c9a5dc4ae84408f0e7bada1ed53a26b ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "theory.aux" 1707778378 16772 d4e1d5f120e87b618c7d30fac08bd65e "xelatex"
+  "theory.aux" 1707934794 18929 fbaa31abad39ff6936633c177dddd164 "xelatex"
   (generated)
   "theory.bbl"
   "theory.blg"
   (rewritten before read)
-["xdvipdfmx"] 1707778379 "theory.xdv" "theory.pdf" "theory" 1707778382 0
-  "theory.xdv" 1707778378 1507156 cbae542c903dee7c7bbf37188ce98207 "xelatex"
+["xdvipdfmx"] 1707934795 "theory.xdv" "theory.pdf" "theory" 1707934799 0
+  "theory.xdv" 1707934794 1691604 4d8bba9deceb71fecd7afd4c8a31acdc "xelatex"
   (generated)
   "theory.pdf"
   (rewritten before read)
-["xelatex"] 1707778372 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/theory.tex" "theory.xdv" "theory" 1707778382 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/theory.tex" 1707778372 171680 675b3367822929ccf2e909efa2edab08 ""
+["xelatex"] 1707934786 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/theory.tex" "theory.xdv" "theory" 1707934799 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/theory.tex" 1707934785 190630 e203f700d81a69422adcefc5ac63986c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -246,10 +246,12 @@
   "Plot2.3.png" 1705308692 231481 97634c4666632841e59ce6b5a0aa660c ""
   "Plot2.4.png" 1705320086 180321 7445abad82723d3fed79460063a4588a ""
   "Plot2.5.png" 1706091819 228182 d5205c6f5c2e5056424ea485d3fe1789 ""
-  "theory.aux" 1707778378 16772 d4e1d5f120e87b618c7d30fac08bd65e "xelatex"
-  "theory.bbl" 1707778281 8531 b14322fcfaa05a1397cfe5f07a3e5ea8 "bibtex theory"
-  "theory.out" 1707778378 3829 731a5f79abbc1fbab2c244e977c8650a "xelatex"
-  "theory.tex" 1707778372 171680 675b3367822929ccf2e909efa2edab08 ""
+  "simulation.csv" 1707933053 1614 f72656526dbc46abdbd0ba1f4d95e79b ""
+  "simulation_withoutfriction.csv" 1707933443 1739 75412b1273b3f8e09e6fc6245e888943 ""
+  "theory.aux" 1707934794 18929 fbaa31abad39ff6936633c177dddd164 "xelatex"
+  "theory.bbl" 1707934339 9156 d94d19dd2ebb9e89ca33c5b60650d82b "bibtex theory"
+  "theory.out" 1707934794 4404 8a862398569de7e8469ee0d33df500b7 "xelatex"
+  "theory.tex" 1707934785 190630 e203f700d81a69422adcefc5ac63986c ""
   (generated)
   "theory.aux"
   "theory.log"

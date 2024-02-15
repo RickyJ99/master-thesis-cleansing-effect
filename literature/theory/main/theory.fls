@@ -1017,6 +1017,10 @@ INPUT Plot2.4.png
 INPUT ./Plot2.5.png
 INPUT ./Plot2.5.png
 INPUT Plot2.5.png
+INPUT simulation.csv
+INPUT simulation_withoutfriction.csv
+INPUT simulation.csv
+INPUT simulation_withoutfriction.csv
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
