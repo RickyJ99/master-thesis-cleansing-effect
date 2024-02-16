@@ -1021,6 +1021,15 @@ INPUT simulation.csv
 INPUT simulation_withoutfriction.csv
 INPUT simulation.csv
 INPUT simulation_withoutfriction.csv
+INPUT ./OptimalK_noexit.png
+INPUT ./OptimalK_noexit.png
+INPUT OptimalK_noexit.png
+INPUT ./div_cap_noexit.png
+INPUT ./div_cap_noexit.png
+INPUT div_cap_noexit.png
+INPUT ./Output_noexit.png
+INPUT ./Output_noexit.png
+INPUT Output_noexit.png
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty

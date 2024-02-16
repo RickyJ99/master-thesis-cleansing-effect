@@ -2,7 +2,7 @@
 
  % Add this line to your preamble
 % Language setting
-% Replace `english' with e.g. `spanish' to change the document language
+% Replace `English' with e.g. `Spanish' to change the document language
 \usepackage[english]{babel}
 
 % Set page size and margins
@@ -2609,7 +2609,7 @@ which I'll use the same parameters as in in the \cite{OsePap17} paper:
     \end{tabular}
     \caption{Benchmark calibration}
 \end{table}
-Since we want to understand which are the effect of including friction we fix the leverage \(l=0.5\) and \(k_0=1\). Lets take a look
+Since we want to understand which are the effect of including friction we fix the leverage \(l=0.5\) and \(k_0=1\). Let's take a look
 to the transtion function, thus how the capital evolves following the optimal path. 
 We can compute \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx 
 0.559 \). The results are shown in the plots below:
@@ -2633,7 +2633,7 @@ We can compute \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx
     \end{tikzpicture}
     \caption{Evolution of capital over time}
 \end{figure}
-The first plot shows the transition function 
+The first plot shows the transition function: 
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}
@@ -2649,11 +2649,65 @@ The first plot shows the transition function
         height=6cm,
     ]
     \addplot table [col sep=comma, x=Time, y=Dividends] {simulation.csv};
-    \addplot table [col sep=comma, x=Time, y=Capital] {simulation_withoutfriction.csv};
+    \addplot table [col sep=comma, x=Time, y=Dividends] {simulation_withoutfriction.csv};
     \end{axis}
     \end{tikzpicture}
     \caption{Evolution of dividends over time}
 \end{figure}
+Clearly, the path of dividends is higher  in the case of the absence of friction 
+\subsection{Simulation exercises}
+
+
+To enhance our model, we now introduce heterogeneity across firms. Specifically, the productivity level, denoted as
+\(Z_i\), varies from one firm to another. Additionally, leverage ratios are no longer uniform across firms. We simulate
+the initial distribution of capital, leverage, and productivity in a manner that ensures the correlation between
+productivity and leverage is zero. The aggregate production is equal to:
+\[\overline{K} = \int_{\underline{K} }^{\overline{k} }Z_i k_{i,t}^{\alpha}\,di \]
+Business cycles are introduced through variations in capital, where each firm experiences changes proportionate to their existing capital levels. Less efficient firms face larger decreases during downturns, whereas in periods of economic upswing, all firms benefit from increased capital availability. Additionally, firms may exit the market under two conditions: voluntary exit when returns on equity fall below the risk-free rate, and bankruptcy, characterized by an inability to cover debts and depreciation. Initially, the simulation incorporates a sinusoidal business cycle to modulate output:
+\[
+\Delta \overline{K}_t = 1 + 0.05 \sin(t)
+\]
+Meanwhile, the distributions for productivity (\(Z\)) and leverage (\(l\)) are defined as truncated normal:
+\begin{align}
+    l &\sim \mathcal{N}(0.5, 0.02), \quad 0.01 \leq l \leq 2, \\
+    Z-1 &\sim \mathcal{N}(0.05, 0.02), \quad 1.01 \leq Z \leq 1.1.
+\end{align}
+A firm exits the market if its return on capital is less than the risk-free rate, being replaced by a new firm with capital equivalent to the lowest in the existing pool. The remaining capital is then proportionally reinvested among the other firms, based on their returns on capital. The return on capital for firm \(i\) at time \(t\) is calculated as follows:
+\[
+R_{i,t} = \frac{d_{i,t}}{k_{i,t}}
+\]
+If \(R_f \geq R\), the firm exits the market due to its return on capital being lower than the risk-free rate.\footnote{This criterion is applied only after 5 periods to highlight the differences between scenarios with and without the cleansing effect in action.}
+
+The figure below illustrates the outcome of a 20-step simulation involving 10 firms, depicting the optimal and actual capital levels. The actual capital is adjusted according to the defined business cycle:
+\[
+\Delta \overline{K}_t = 1 + 0.05 \sin(t)
+\]
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{OptimalK_noexit.png}
+    \caption{The plot shows the result of a 20-step simulation with 10 firms: the optimal \(k \) is the capital choice of the firm, while the actual \(k\) is the capital after applying the business cycle effect.}
+    \label{fig:optKnoE}
+\end{figure}
+
+The subsequent graph displays the distribution of dividends calculated based on the actual capital of each firm.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{div_cap_noexit.png}
+    \caption{This plot presents the results of a 20-step simulation with 10 firms, showcasing dividends (\(d \)) and the actual capital (\(k \)) post-adjustment for the business cycle effect.}
+    \label{fig:divNoExit}
+\end{figure}
+
+This rewritten section maintains the integrity of your original description while enhancing readability and precision,
+particularly in the mathematical modeling and the explanation of the simulation's framework and outcomes.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{Output_noexit.png}
+    \caption{This plot presents the results of a 20-step simulation with 10 firms, showcasing output (\(K \)) post-adjustment for the business cycle effect.}
+    \label{fig:OutNoExit}
+\end{figure}
+
+
 
 % \begin{figure}
 %     \centering

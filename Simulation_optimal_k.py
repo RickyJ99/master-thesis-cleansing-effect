@@ -94,7 +94,7 @@ simulation_data_adjusted = pd.DataFrame(
 )
 
 # Save the adjusted data to a CSV file for LaTeX/TikZ plotting
-csv_file_path_adjusted = "simulation.csv"
-simulation_data_adjusted.to_csv(csv_file_path_adjusted, index=False)
+# csv_file_path_adjusted = "simulation.csv"
+# simulation_data_adjusted.to_csv(csv_file_path_adjusted, index=False)
 
-csv_file_path_adjusted
+# csv_file_path_adjusted
