@@ -8,6 +8,8 @@ import pandas as pd
 from scipy.stats import truncnorm
 import matplotlib.pyplot as plt
 
+np.random.seed(42)
+
 
 # Transtion function and policy function for capital and dividends
 def transition_and_policy(k_0, Z, mu, alpha, beta, delta, R_f, l):
@@ -30,9 +32,13 @@ def transition_and_policy(k_0, Z, mu, alpha, beta, delta, R_f, l):
     return k_1, d_0, k_hat
 
 
-def reinvest_capital_with_min_return_exit(k_path_act, d_path_opt, Z, t, R_f):
+def reinvest_capital_with_min_return_exit(
+    k_path_act, d_path_opt, k_path_opt, Z, t, R_f
+):
     # Calculate return on capital for each firm at time t
-    return_on_capital = np.divide(d_path_opt, k_path_act)
+    return_on_capital = np.divide(d_path_opt, k_path_act) + np.divide(
+        k_path_act - k_path_opt, k_path_opt
+    )
 
     # Identify the firm with the lowest return on capital
     min_return_index = np.argmin(return_on_capital)
@@ -81,12 +87,12 @@ def main():
     K0 = np.ones(NFIRM)
 
     # Define the parameters for the productivity
-    meanZ, std_devZ, lowerZ, upperZ = 0.05, 0.1, 0.01, 0.2
+    meanZ, std_devZ, lowerZ, upperZ = 0.05, 0.15, 0.01, 0.2
     aZ, bZ = (lowerZ - meanZ) / std_devZ, (upperZ - meanZ) / std_devZ
     Z = truncnorm.rvs(aZ, bZ, loc=meanZ, scale=std_devZ, size=NFIRM) + 1
 
     # Define the parameters for the leverage
-    meanL, std_devL, lowerL, upperL = 0.5, 0.02, 0.01, 2
+    meanL, std_devL, lowerL, upperL = 0.5, 0.1, 0.01, 1
     aL, bL = (lowerL - meanL) / std_devL, (upperL - meanL) / std_devL
     L = truncnorm.rvs(aL, bL, loc=meanL, scale=std_devL, size=NFIRM)
 
@@ -99,9 +105,9 @@ def main():
     for t in range(STEP):
         k_next_step = []
         d_current_step = []
-        if (t % 2 == 0) and (t != 0):
+        if (False == False) and (t != 0):
             k_exit, exit_r = reinvest_capital_with_min_return_exit(
-                k_path_act[-1], d_path_act[-1], Z, t, R_f
+                k_path_act[-1], d_path_act[-1], k_path_act[-2], Z, t, R_f
             )
             k_path_act[-1] = k_exit
         for i in range(NFIRM):
@@ -174,7 +180,7 @@ def distribute_effect(Z, k, t):
     return new_k, K
 
 
-mu = 1  # Since 1 - mu = 0.25
+mu = 1  # 0.75  # Since 1 - mu = 0.25
 beta = 0.956
 R_f = 1.04
 delta = 0.07
@@ -194,6 +200,7 @@ steps = np.repeat(np.arange(num_steps), num_firms)
 firms = np.tile(np.arange(num_firms), num_steps)
 k_tot = np.repeat(K, num_firms)
 exit_rate = np.repeat(exit_rate, num_firms)
+
 # Prepare the data dictionary
 data = {
     "Step": steps,
@@ -203,12 +210,11 @@ data = {
     "Dividends": d_path_act.flatten(),
     "Total Production": k_tot,
     "Exit Rate": exit_rate,
-    "Average productivity": k_tot / 10,
 }
 
 # Create the DataFrame
 df = pd.DataFrame(data)
-
+# df.to_csv("in_out_market/literature/theory/main/noexit_frictions.csv")
 
 # Set up the plot
 plt.figure(figsize=(14, 7))
@@ -237,8 +243,9 @@ plt.ylabel("Capital")
 plt.title("Optimal and Actual Capital Over Time for All Firms")
 plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.tight_layout()
-plt.show()
-# plt.savefig("in_out_market/literature/theory/main/OptimalK_noexit.png")
+# plt.show()
+plt.savefig("in_out_market/literature/theory/main/OptimalK_exit.png")
+
 # Set up the plot for dividends
 plt.figure(figsize=(14, 7))
 
@@ -266,13 +273,11 @@ plt.ylabel("d,k")
 plt.title("Dividends and Actual Capital Over Time for All Firms")
 plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.tight_layout()
-# plt.savefig("in_out_market/literature/theory/main/div_cap_noexit.png")
+# plt.savefig("in_out_market/literature/theory/main/div_cap_exit_friction.png")
 # plt.show()
+plt.clf()
 
-# Set up the plot for dividends
 plt.figure(figsize=(14, 7))
-
-
 # Plot Optimal and Actual K for each firm
 for firm_id in df["Firm"].unique():
     firm_data = df[df["Firm"] == firm_id]
@@ -293,40 +298,6 @@ plt.ylabel("Output")
 plt.title("Overall output Over Time for All Firms")
 plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.tight_layout()
+
 # plt.show()
-# plt.savefig("in_out_market/literature/theory/main/div_cap_noexit.png")
-for firm_id in df["Firm"].unique():
-    firm_data = df[df["Firm"] == firm_id]
-    plt.plot(
-        firm_data["Step"],
-        firm_data["Exit Rate"],
-        label=f"K",
-        linestyle="-",
-        alpha=0.5,
-    )
-    break
-plt.xlabel("Step")
-plt.ylabel("Exit rate")
-plt.title("Exit rate over time")
-plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
-plt.tight_layout()
-# plt.show()
-# plt.savefig('in_out_market/literature/theory/main/div_cap_noexit.png')
-plt.clf()
-for firm_id in df["Firm"].unique():
-    firm_data = df[df["Firm"] == firm_id]
-    plt.plot(
-        firm_data["Step"],
-        firm_data["Average productivity"],
-        label=f"k",
-        linestyle="-",
-        alpha=0.5,
-    )
-    break
-plt.xlabel("Step")
-plt.ylabel("K/10")
-plt.title("Average productivity over time")
-plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
-plt.tight_layout()
-plt.show()
-# plt.savefig('in_out_market/literature/theory/main/Avg_producitity_noexit.png')
+# plt.savefig("in_out_market/literature/theory/main/Output_noexit.png")

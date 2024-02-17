@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -203,20 +203,5 @@ Ben~S Bernanke and Mark Gertler.
   transmission.
 \newblock \emph{Journal of Economic perspectives}, 9\penalty0 (4):\penalty0
   27--48, 1995.
-
-\bibitem[Stokey et~al.(1989)Stokey, Lucas, and Prescott]{PreStoLu89}
-Nancy~L. Stokey, Robert~E. Lucas, and Edward~C. Prescott.
-\newblock \emph{Recursive Methods in Economic Dynamics}.
-\newblock Harvard University Press, 1989.
-\newblock ISBN 9780674750968.
-\newblock URL \url{http://www.jstor.org/stable/j.ctvjnrt76}.
-
-\bibitem[Thompson(2004)]{THoBru04}
-Bruce Thompson.
-\newblock \emph{Thompson, B. (2004). Exploratory and confirmatory factor
-  analysis: Understanding concepts and applications. Washington, DC: American
-  Psychological Association. (International Standard Book Number:
-  1-59147-093-5)}.
-\newblock 01 2004.
 
 \end{thebibliography}

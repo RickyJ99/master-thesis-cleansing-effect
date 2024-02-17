@@ -18,6 +18,7 @@
 \usepackage{multirow}
 \usepackage{amssymb}
 \usepackage{pgfplots}
+\usepackage{float}
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{arrows.meta, bending}
 \pgfplotsset{compat=newest}
@@ -68,6 +69,7 @@
     recession, replicating the model in computer  simulation.
 \end{abstract}
 \section{Introduction} 
+
 
 In macroeconomic theory, the investigation of business cycles and long-term growth trajectories traditionally unfolds in
 distinct academic silos, drawing a parallel to the distinct realms of quantum mechanics and Einstein's theory of
@@ -636,7 +638,7 @@ that the creation rate of new jobs slower before the crisis spread out and than 
 not possible to fully accommodate the decrease in demand only stopping new labour hiring. They asses that during the
 Great Recession this patterns changes in particularly the fraction of net employment  contraction accounted by a job
 reduction is higeger than 0.5, while for all the previous recession it was way below 0.4 as shown in the table.
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \caption{
     Share of Change in Net Employment Growth Due to Change in Job Creation in Periods of Net Contraction}
@@ -780,7 +782,7 @@ model takes into account the impact of the Great Recession by including interact
 dummy (GR), changes in the state-specific unemployment rate (Cycle), and deviations in total factor productivity (TFP)
 from the industry-year averages.
  The results are shown in the following table
- \begin{table}[ht]
+ \begin{table}[H]
     \centering
     \caption{Reallocation and Productivity over the Business Cycle}
     \begin{tabular}{|c|c c c c c c|}
@@ -955,7 +957,7 @@ Key variables include:
 
 The timeline of events is as follows:
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}
         % Draw timeline
@@ -1499,15 +1501,19 @@ observed behavior of larger firms underlines the model's relevance and its capac
 
 \section{Theoretical model}
 \subsection{Introduction}
-The model exposed in this thesis is similar to the theoretical framework of \cite{OsePap17}, since the main scope of
-this model is understand how the financial frictions affects the distribution of exiters with respect to productivity in
-particular if this mechanism is responsible to the difference between previous crisis and the Great recession. The
-innovation to this model due to differnce in the flow of funds and in the partecipartion constrant of the financial
-intermediaries, moreover the intertemporal maximization problem of the firms is more tractable from the mathematical
-point of view. In the following paragraphs I dwelve first in the new formulation of flow of funds and its dynamics than
-I proced first solving the maximization problem in case of a frictionless economy, then i procedd with the case in which
-frictions are present. Finally I will simulate with a sinusoidal demand the distribution of exiters in relation with
-capital and productivity.
+This thesis presents a model closely aligned with the theoretical structure discussed in \cite{OsePap17}, focusing
+primarily on exploring how financial frictions impact the distribution of firms exiting the market in relation to their
+productivity levels. Specifically, it investigates whether these frictions can explain the disparities observed between
+previous economic downturns and the Great Recession. The novel aspects of this model include modifications in the flow
+of funds and adjustments to the participation constraints of financial intermediaries, which collectively enhance the
+tractability of the firms'  intertemporal maximization problem from a mathematical standpoint.
+
+The subsequent sections delve into the revised formulation of the flow of funds and its dynamics. Initially, the
+analysis tackles the maximization problem within a frictionless economic environment to establish a foundational
+understanding. Following this, the focus shifts to scenarios where financial frictions are present, examining their
+implications on firm behavior and market outcomes. The final part of this study involves simulating the distribution of
+exiting firms in relation to their capital and productivity levels under a sinusoidal demand pattern, aiming to provide
+deeper insights into the interplay between  financial health and economic fluctuations.
 
 \subsection{Dynamics of Financial Flows}
 
@@ -1601,18 +1607,28 @@ dividends, are balanced.
     \caption{For this plot the following value has been used: \(\delta =0.1, r=0.1, \alpha=0.8, Z=0.5\)}
 \end{figure}
 
-The graph plots different steady states with different combination of debt \(b\), capital \(k\) and dividends \(d\), its
-clear that if we increse the stock of debt the dividends became less, since major resources are put into paying
-interest. 
-While clearly the relation between capital and dividens is a convex one as illutrared in the  graph.
-Lets consider a firm wich has \(k_0=0.2, b_0=0.1\) in order to met this condition of stationary for both capital and
-debt, the dividens whould be equal to \(\widehat{d} = 0.5*0.02^{0.8} - 0.1 *0.2 - 0.1*0.1\). This point \(k_0=0.2,
-b_0=0.1\) is a stationary ponints.
-Up to now we are focus only in stationary condition, but what happend if we perturbate the sytem, starting from the
-relation between capital and dividens. What happends if the dividens are higher compare the stationary path in which
-capital remains constan over time. For the moment lets assume the firm is free of debt. Thus the flow of funds became ,
-\[\Delta k_t = f(k_{t-1}) - \delta \cdot k_{t-1} - d_{t-1}\]
-\[k_{t+1} = f(k_{t-1}) + (1 -\delta)k_t - d_{t-1} \]
+The figure illustrates the steady state relationships among debt (\(\widehat{b}\)), capital (\(\widehat{k}\)), and
+dividends  (\(\widehat{d}\)) in a three-dimensional plot. The graph demonstrates how various combinations of debt and
+capital influence the distribution of dividends. It is evident that increasing the level of debt results in lower
+dividends, as a larger portion of resources is allocated towards servicing interest payments. Conversely, the
+relationship between capital and dividends is depicted as convex, highlighting an increase in dividends with higher
+capital levels, under the specified model parameters: \(\delta = 0.1\), \(r = 0.1\), \(\alpha = 0.8\), and \(Z = 0.5\).
+
+For a firm starting with initial capital \(k_0 = 0.2\) and debt \(b_0 = 0.1\), to maintain a steady state for both
+capital and  debt, the dividends would be calculated as \(\widehat{d} = 0.5 \times 0.2^{0.8} - 0.1 \times 0.2 - 0.1
+\times 0.1\). This specific combination of \(k_0 = 0.2\) and \(b_0 = 0.1\) represents a stationary point in the model.
+
+While the discussion thus far has focused on steady states, it is crucial to explore the system's behavior under
+perturbations,  particularly concerning the relationship between capital and dividends. If dividends are increased
+beyond the level consistent with a stationary path—where capital remains constant over time—the analysis shifts.
+Assuming the firm is debt-free for simplicity, the dynamics of fund flows adjust as follows:
+\[
+\Delta k_t = f(k_{t-1}) - \delta \cdot k_{t-1} - d_{t-1},
+\]
+\[
+k_{t+1} = f(k_{t-1}) + (1 - \delta)k_t - d_{t-1},
+\]
+thereby affecting the firm's capital accumulation and distribution strategy in response to changes in dividend payments.
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1763,32 +1779,37 @@ a point that will be elaborated upon while discussing the maximization problem l
 In essence, the graph conveys how steady-state conditions are shaped by dividend policy and productivity, with the
 former influencing the firm's financial leverage and the latter determining its capital efficiency. 
 
+
 \subsection{Partecipation constraint of the financial intermidiaries }
-The firms in this model coul finace himself in two way retaing dividends or increasing debts, up to now the interest was
-exogenous and indipendent from the quantity of the debt. This rise a problem since with the exogenous rate formulation
-if the debt goes to infinity compare to the equity the interest remain the same. In ordet to make the model more
-realistic, there shold be a fincial market in which interest rate is determined by the clearing condition. Moreover the
-financial intermidiaries maxise its proifts in a perfect competition enviroment. The results as in the \cite{BerGer86}
-is that the lennding activity should be proffitable as the opportunity cost of money: the lender with a probabilities p
-that is the successful repayment of the debt she will get the interest mature plus the capital, while in the case in
-which firms declare bankrupvy she will get the capital of the production of the firms and the capital net of
-depriciation. 
-Thus the partecipation constriant of the lender is the following:
-\[(1+r)(c+k_t -e_t)p + (1-p)f(k_{t-1}) = (1+r_f)(c+k_t -e_t) \]
-Here the opportunity cost of capital is set as risk free. Using this partecipartion constraint its possible to express
-the interest rate as a function of \(p,f(k)\). Here there are no financial frictions since the lender can sicure the
-entire production, and there are no assymetric information thus the lender can exactly estimates the amouts that can
-retrive in both state of the firm.
-Rewriting the constraint, we get:
-\[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{b_t}\]
-Lets draw a graph with the following paramenters \(p = \{0.95,0.9\}, \delta = 0.1, \alpha = 0.8, Z = 0.5, d = 0.8,\widehat{k} =
-4, R_f={0.05,0.1} \).
-The visualization conveys that higher levels of debt are associated with increased interest rates, underscoring the
-risk-return tradeoff faced by lenders. A riskier financial profile, as indicated by the elevated position of the red
-line, demands higher returns to offset the potential for default. It is critical to recognize that the capital remains
-constant in this depiction; yet in practical scenarios, an escalation in debt typically results in augmented capital,
-thereby boosting production capabilities. This dynamic explains why the curves do not originate from the origin, as the
-initial loan amounts already incorporate the cost of capital. 
+The subsection delves into the constraints facing financial intermediaries within the model, highlighting how firms can
+finance themselves either through retaining dividends or accruing debt. Initially, the model assumed an exogenous
+interest rate, unaffected by the volume of debt, leading to an unrealistic scenario where interest rates remain constant
+regardless of debt levels relative to equity. To address this, the model introduces a financial market where the
+interest rate is determined by market-clearing conditions, and financial intermediaries operate under perfect
+competition to maximize  profits.
+
+According to \cite{BerGer86}, lending should yield a profit equivalent to the opportunity cost of capital. Lenders earn
+interest  plus the principal if borrowers repay successfully (with probability \(p\)) or acquire the firm's production
+assets (less depreciation) in case of bankruptcy. The lender's participation constraint is formulated as:
+\[
+(1+r)(c+k_t -e_t)p + (1-p)f(k_{t-1}) = (1+r_f)(c+k_t -e_t),
+\]
+where \(r_f\) represents the risk-free rate, aligning the opportunity cost of capital with risk-free returns. This
+framework allows for  the derivation of the interest rate as a function of \(p\) and \(f(k)\), assuming no financial
+frictions and perfect information for lenders to accurately estimate recoverable amounts in all firm states.
+
+The revised participation constraint is expressed as:
+\[
+R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{b_t}.
+\]
+
+For illustration, consider parameters \(p = \{0.95,0.9\}\), \(\delta = 0.1\), \(\alpha = 0.8\), \(Z = 0.5\), \(d =
+0.8\), \(\widehat{k} = 4\), and \(R_f=\{0.05,0.1\}\). The graphical representation suggests that as debt levels
+increase, so do interest rates, reflecting the risk-return dilemma for lenders. A higher risk profile, denoted by a more
+elevated red line, necessitates greater returns to compensate for default risks. It's important to note that while the
+graph assumes constant capital, real-world scenarios often see debt increases leading to higher capital and,
+consequently, greater production capacities. This reasoning clarifies why  the curves do not start from the origin, as
+initial borrowing incorporates capital costs.
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1861,7 +1882,8 @@ initial loan amounts already incorporate the cost of capital.
     }
 \end{figure}
 
-The graph captures the dynamics between the debt stock \(b_t\) and the return on capital \(r\). It is clear that an increase in the debt stock leads to a rise in the interest rate, reflecting the augmented risk
+The graph captures the dynamics between the debt stock \(b_t\) and the return on capital \(r\). It is clear that an
+increase in  the debt stock leads to a rise in the interest rate, reflecting the augmented risk
 perceived by lenders. Displayed are two distinct lines: one representing a riskier loan with a higher probability of
 default and the other indicating a safer loan with a lower default probability. As anticipated, the riskier loan
 scenario is characterized by a curve that lies above, dictating higher interest rates at each level of debt. The
@@ -1869,7 +1891,7 @@ constant capital assumption underpins this model; however, in reality, an increa
 increase in capital, thereby enhancing production potential. This factor accounts for the curves not starting at the
 origin. 
 
-Another way to visualize the partecipartion constraint of the financial intermediaries is by the definig \(x=f(k)/b\).
+Another way to visualize the participation constraint of the financial intermediaries is by the defining \(x=f(k)/b\).
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1933,13 +1955,13 @@ Another way to visualize the partecipartion constraint of the financial intermed
         \end{axis}
     \end{tikzpicture}
     \caption{The figure presents a graphical analysis of the returns on loans as a function of the production over the
-    debt level, while kepping level of capital at
+    debt level while kepping the level of capital at
     \(k=3\). The red curve models the scenario where the default risk probability is 
     \(1-p=0.05\)
     , implying a 5\% chance of default, while the blue curve corresponds to a higher default risk at 
     \(1-p=0.1\), a 10\% chance of default. Both curves reflect the increased interest rates required to compensate for
     the heightened risk as the production-debt ratio grows. Notably, the opportunity cost of capital is maintained at 0.05 for the
-    red  one, while at 0.1 for the higher risk curve.
+    red one, while at 0.1 for the higher risk curve.
     }
 \end{figure}
 The graph delineates a critical boundary within the participation constraint framework: as leverage approaches
@@ -1952,34 +1974,35 @@ opportunity cost of capital, and the default risk probability. By integrating th
 model, the impact of debt on capital is mediated through the variable \( r \), establishing a feedback loop where
 financial leverage influences and is influenced by the cost of borrowing. 
 \subsection{The intertemporal maximization problem of the firm}
-In this paragraph will be exposed the intertemporal maximization problem of the firm using a lagrangian approach.
-The firm maximizes dividends over time, thus the intertemporal problem is defined as follow:
-\[V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_{t-1})}\]
-Our problem becames 
-\[\max_{{\{d_{t}\}}^{+\infty}_{t_0}}V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)}\]
-the constrants are the following:
-\[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{b_t}\]
-\[f(k_{t-1}) = Z \cdot k_t^\alpha\]
-\[k_t = k_{t-1}(1 - \delta) - R \cdot b_{t-1} + b_{t} + f(k_{t-1}) - d_{t-1}\]
-\paragraph{The debt free case}
-Assuming Modgliani Miller theorem holds since we are in the case of no assymetric information between firms and lender,
-we can assume that the firms is complitely financed with equity \(b_t=0 \quad \forall t\), thus the flow-of-funds
-becames:
-\[k_t = k_{t-1}(1 - \delta)+ f(k_{t-1}) - d_{t-1}\]
-Lets solve the maximization problem with the lagrangia approach, the lagrangian is defined as follows:
-\[L_0 = \sum_{t=0}^{+\infty}\left[{\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t+1} - k_{t}(1 - \delta)+ f(k_t) -
-d_t\right]}\right] \]
-We take the first order conditions with respect to \(d_{t}, k_{t+1}, \lambda_t\) for \(t=0,1,...\) obtaning:
+This section outlines the intertemporal maximization problem faced by a firm, employing a Lagrangian approach to
+optimize dividends over time. The objective is to maximize  the present value of future dividends, formulated as:
+\[V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)},\]
+subject to constraints on the rate of return \(R\), the production function \(f(k_{t-1})\), and the capital accumulation
+equation. The model explores scenarios including debt  financing and its impact on firm dynamics.
+
+\paragraph{The Debt-Free Case}
+Under the assumption of no asymmetric information between firms and lenders, akin to the Modigliani-Miller theorem, we
+consider a firm entirely financed by equity (\(b_t=0\)  for all \(t\)), leading to a simplified flow-of-funds equation:
+\[k_t = k_{t-1}(1 - \delta) + f(k_{t-1}) - d_{t-1}.\]
+
+The maximization problem is tackled using a Lagrangian method, where the Lagrangian is defined as:
+\[L_0 = \sum_{t=0}^{+\infty}\left[{\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t+1} - k_{t}(1 - \delta) + f(k_t) - d_t\right]}\right].\]
+
+The first-order conditions for \(d_{t}\), \(k_{t+1}\), and \(\lambda_t\) for all periods \(t=0,1,\ldots\) yield:
 \[
-U^{\prime}\left(d_{t}\right)=\lambda_t, \forall t
+U^{\prime}(d_{t}) = \lambda_t, \quad \forall t,
 \]
 \[
-\beta^t \lambda_t=\beta^{t+1} \lambda_{t+1}\left[f^{\prime}\left(k_{t+1}\right)+(1-\delta)\right], \forall t,
+\beta^t \lambda_t = \beta^{t+1} \lambda_{t+1}[f^{\prime}(k_{t+1}) + (1-\delta)], \quad \forall t,
 \]
-and, of course:
+with the capital update equation:
 \[
-k_{t+1}=f\left(k_t\right)+(1-\delta) k_t-d_{t}, \forall t
+k_{t+1} = f(k_t) + (1-\delta) k_t - d_{t}, \quad \forall t.
 \]
+
+This approach delineates the optimal strategy for dividend distribution and capital allocation in a debt-free
+environment, illustrating the firm's decision-making process to balance  immediate returns against future growth and
+stability.
 In the infinite horizon model, the role of this final
 condition is played by the so-called transversality condition:
 $\lim _{T \rightarrow \infty} \beta^T U^{\prime}\left(d_{t}\right) k_{T+1}=0$.
@@ -2018,27 +2041,34 @@ Optimization with respect to the capital levels at \(T+1\) (ranging from \(k_1\)
 
 
 
-Deriving equation (1.5) with respect to the Lagrange multipliers \(\lambda_t\) for \(t=0,1,2,\ldots,T\) results in the
-system  of constraints (1.3). Additionally, derivation concerning \(\mu\) yields the constraint (1.4); given that (1.4)
-is an inequality constraint, the complementary slackness condition must be considered:
+Differentiating equation (1.5) with respect to the Lagrange multipliers \(\lambda_t\) for each period
+\(t=0,1,2,\ldots,T\) produces  the set of constraints seen in equation (1.3). Furthermore, differentiating with respect
+to \(\mu\) leads to constraint (1.4). Since constraint (1.4) represents an inequality, the principle of complementary
+slackness applies:
 
 \[
-\beta^T \mu k_{T+1} = 0 \quad \text{and} \quad \mu \geq 0.
+\beta^T \mu k_{T+1} = 0, \quad \text{with} \quad \mu \geq 0.
 \]
 
-From the FOCs above we can retrive the dividends' euler equation:
-\[U^{\prime}\left(d_{t}\right)=\beta U^{\prime}\left(d_{t+1}\right)\left[f^{\prime}\left(k_{t+1}\right)+(1-\delta)\right]\]
-The euler divideds equation suggests the marginal utility of dividend distribuoited at time should be equalt to the
-discounted marginal utility of dividends a period the next period multiplied by the resudual marginal value of the
-production less the depriciation.
-Now in order to drow the phase diagram lets study the locus in which dividends are stationary \(\Delta d_t =0\), thus
-\(U^{\prime}(d_t) = U'(d_{t+1})\):
-\[\frac{1}{\beta}=
-\left[f^{\prime}\left(k_{t+1}\right)+(1-\delta)\right]\]
-\[
-f^{\prime}\left(k_{t+1}\right)= \frac{1}{\beta} - (1-\delta)\]
-\[Z\widehat{k}^{\alpha} = \frac{1 - \beta + \delta}{\beta}\]
-\[\widehat{k} = {\left[\frac{1 - \beta + \delta}{\beta Z}\right]}^{\frac{1}{\alpha}}\]
+From these first-order conditions (FOCs), we derive the Euler equation for dividends:
+\[U^{\prime}(d_{t}) = \beta U^{\prime}(d_{t+1})[f^{\prime}(k_{t+1}) + (1-\delta)],\]
+indicating that the marginal utility of distributing dividends at time \(t\) should match the discounted marginal
+utility of distributing  dividends in the next period, adjusted for the net marginal product of capital after accounting
+for depreciation.
+
+To construct a phase diagram and examine the conditions under which dividends remain constant (\(\Delta d_t = 0\)), we
+equate the marginal  utilities across two consecutive periods:
+\[U^{\prime}(d_t) = U^{\prime}(d_{t+1}):\]
+\[\frac{1}{\beta} = [f^{\prime}(k_{t+1}) + (1-\delta)],\]
+leading to the equilibrium condition for the marginal product of capital:
+\[f^{\prime}(k_{t+1}) = \frac{1}{\beta} - (1-\delta),\]
+which, when solved for \(k_{t+1}\), gives:
+\[Z\widehat{k}^{\alpha} = \frac{1 - \beta + \delta}{\beta},\]
+yielding the steady-state level of capital:
+\[\widehat{k} = \left[\frac{1 - \beta + \delta}{\beta Z}\right]^{\frac{1}{\alpha}}.\]
+
+This analysis elucidates the conditions under which dividends do not change over time, offering insights into the firm's
+optimal dividend  distribution strategy in response to its capital productivity and depreciation rate.
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -2091,7 +2121,7 @@ capital, the firm has no incentive to change its dividend—any movement away fr
 driving the firm back to steady-state. This equilibrium is crucial for the firm's long-term planning and operational
 efficiency, providing a target for managing its capital structure and dividends patterns.
 
-Lets look at the locus in which capital is stationary \(\Delta k = 0\) is given by the partecipetion constraint:
+Lets look at the locus in which capital is stationary \(\Delta k = 0 \) is given by the partecipetion constraint:
 \[d_{t}=f\left(k_t\right) -\delta k_t\]
 \begin{figure}
     \centering
@@ -2211,85 +2241,95 @@ profit-maximizing and will adjust their capital to reach the level that maximize
     instability along the curve.}
 \end{figure}
 
-The graph illustrates the trajectory of debt \( d_t \) in relation to capital \( k_t \) with the blue line representing
-an optimal path of capital accumulation. Starting from point A, located at initial capital \( k_0 \), the blue line
-ascends along the curve towards point B, which lies at the peak of the parabola where \( \Delta k_t = 0 \). This peak
-signifies the steady-state level of capital, \( \hat{k} \), where no further net investments are made as the capital
-stock does not change. 
+The diagram depicts the evolution of debt (\(d_t\)) in relation to capital (\(k_t\)), highlighting the blue line as the
+optimal trajectory for capital accumulation. Beginning at point A, characterized by an initial capital (\(k_0\)), the
+trajectory follows an upward curve towards point B,  positioned at the apex of the parabola where \(\Delta k_t = 0\).
+This apex represents the steady-state capital level (\(\hat{k}\)), indicating a point where the capital stock remains
+constant, reflecting an equilibrium where no additional net investments are necessary.
 
-The arrows indicate the dynamic behavior of the system; to the left of the steady-state, capital is accumulating as
-firms move towards a higher level of capital, guided by the optimal path. To the right of the steady-state, the arrows
-show that if capital exceeds the steady-state level, it tends to decrease, moving back towards the steady-state. This
-adjustment occurs because capital levels above the steady-state are not sustainable due to decreasing marginal returns
-or other economic pressures that incentivize the firm to reduce capital back to \( \hat{k} \). 
+Directional arrows along the curve illustrate the system's dynamics; to the left of the steady-state, they denote
+capital accumulation as firms progress towards an elevated capital level, adhering to the optimal path. Conversely, to
+the right of the steady-state, the arrows depict a  reduction in capital should it surpass the equilibrium level,
+guiding it back to the steady-state. This reversion is attributed to the unsustainable nature of capital levels above
+\(\hat{k}\), driven by diminishing marginal returns or economic mechanisms that prompt firms to adjust their capital
+downwards towards the steady-state.
 
-The optimal path, marked in blue, is the desirable route for firms to follow as it leads to the steady-state level of
-capital where the economy can sustain a constant level of consumption or investment without necessitating further
-changes in capital. 
+The blue path represents the preferred course for firms, guiding them to a steady-state where the economy maintains a
+consistent level of consumption or investment, eliminating the need for further capital  adjustments.
 
-In conclusion there is an optimal path of dividends and capital, however in order to find the close solution is
-necessary to use a belman equation. However before finding the exact solution, we will examine what happends if we
-include debt. The same procedure will be followed in the next paragraph.
+To encapsulate, while an optimal trajectory for dividends and capital is identified, achieving a precise solution
+requires employing a Bellman equation. Before delving into the exact solution, the subsequent analysis will explore the
+implications of integrating debt into the model,  following a similar investigative approach in the ensuing section.
 
 \paragraph{The case with debt}
-Now lets consider the possibility to use debt to increase capital, thus the intertemporal maximization problem of the
-firm is exactly as defined at the beging of this chapter, and lets assume a fixed leverage \(b_t = l \cdot k_t \quad 0
-\leq l \leq 1\).
-Our problem becames 
-\[\max_{{\{d_{t}\}}^{+\infty}_{t_0}}V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)}\]
-the constrants are the following:
-\[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{b_t}\]
-\[f(k_{t-1}) = Z \cdot k_t^\alpha\]
-\[k_t = k_{t-1}(1 - \delta) - R \cdot b_{t-1} + b_{t} + f(k_{t-1}) - d_{t-1}\]
-\(b_t = l \cdot k_t \quad 0
-\leq l \leq 1\)
-Consolidating the constraints:
-\[k_t = \frac{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} 
-+ f(k_{t-1}) - d_{t-1}}{\left(1-l\right)}\]
-The lagrangian fanction is the following:
-\[L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t-1}(1 - \delta) - \left(\frac{R_f}{p}  -\frac{ 1-p }{ p }
-\frac{f(k_{t-1})}{l k_{t-1}}\right) \cdot l k_{t-1} 
-+ f(k_{t-1}) - d_{t-1}\right]{\left(1-l\right)}^{-1}\]
-We optimize for \(d_t,k_t
-\quad \forall t\), we get the following  focs:
-\begin{equation}
-    \begin{aligned}
-    U'(d_0) &= \frac{\lambda_0}{\left(1-l\right)} , \\
-    U'(d_1) &= \frac{\lambda_1}{\left(1-l\right)}, \\
-    & \vdots \\
-    U'(d_{t}) &= \frac{\lambda_t}{\left(1-l\right)}, \\
-    & \vdots \\
-    U'(d_{T}) &= \frac{\lambda_T}{\left(1-l\right)}.
-    \end{aligned}
-\end{equation}
+Considering the scenario where a firm can leverage debt to enhance its capital, the intertemporal maximization framework
+remains  as initially established, with a specified fixed leverage ratio \(b_t = l \cdot k_t\), where \(0 \leq l \leq
+1\). The firm's objective is to maximize its value through the optimal selection of dividends over time:
 
-\begin{equation}
-    \begin{aligned}
-        \lambda_0 &= \beta \frac{\lambda_1}{\left(1-l\right)} \left[ f'(k_1) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{1}) - \frac{R_f}{p}l \right], \\
-        \beta \lambda_1 &= \beta^2 \frac{\lambda_2}{\left(1-l\right)} \left[ f'(k_2) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{2}) - \frac{R_f}{p}l\right],\\
-        & \vdots \\
-        \beta^t \lambda_t &= \beta^{t+1} \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t+1}) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{t+1}) - \frac{R_f}{p}l\right],\\
-        & \vdots \\
-        \beta^{T-1} \lambda_{T-1} &= \beta^T \frac{\lambda_{T}}{\left(1-l\right)} \left[ f'(k_T) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{T}) - \frac{R_f}{p}l\right], \\
-        \beta^T \mu &= \beta^{T+1} \frac{\lambda_{T}}{\left(1-l\right)}.
-    \end{aligned}
-\end{equation}
+\[
+\max_{{\{d_{t}\}}_{t=0}^{+\infty}}V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)}
+\]
 
-thus the euler dividens equation becames:
-\[U^{\prime}\left(d_{t}\right)=\frac{\beta}{\left(1-l\right)}
-U^{\prime}\left(d_{t+1}\right)\left[\frac{f^{\prime}\left(k_{t+1}\right)}{p}+(1-\delta) - \frac{R_f}{p}l\right]\]
-consindering the locus of costant dividens, the capital should be:
-\[f^{\prime}\left(k_{t+1}\right) = \left(l - \beta + \beta \delta \right)\frac{p}{\beta}+R_f\]
-\[\widehat{k} = \left\{\left[\left(l - \beta + \beta \delta \right)\frac{p}{\beta}+R_f\right]Z^{-1}\right\}^{\frac{1}{\alpha}}\]
-Compare to the previus steady state the capital is lower the case free of debt, since there is interest to pay. Moreover
-Considering the case in which capital is less than \(\widehat{k}\), thus the marginal producitvity will be higher than
-the marginal cost of capital.
-While the locus in which capital is at the steady state:
-\[k_t = \left[k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} 
-+ f(k_{t-1}) - d_{t-1}\right]{\left(1-l\right)}^{-1}\]
-\[\widehat{d} =\frac{f(k)}{p} - k\left(\delta + \frac{R_f}{p}l -l\right)\]
-In order to represent the phase diagram, lets consider the case in which dividends are higher then steady state, in that
-case \(k_t<k_{t-1}\), thus the capital will decrease over time, while in the opposite case the capital will increase.
+subject to the constraints that define the dynamics of capital and debt financing. These include the return on
+investment \(R\), the  production function \(f(k_{t-1}) = Z \cdot k_t^\alpha\), and the capital accumulation equation:
+
+\[
+k_t = k_{t-1}(1 - \delta) - R \cdot b_{t-1} + b_{t} + f(k_{t-1}) - d_{t-1},
+\]
+
+where \(b_t = l \cdot k_t\) and \(0 \leq l \leq 1\), leading to a consolidated capital equation:
+
+\[
+k_t = \frac{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1} + f(k_{t-1}) - d_{t-1}}{\left(1-l\right)}.
+\]
+
+The Lagrangian for this optimization problem is formulated as:
+
+\[
+L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t-1}(1 - \delta) - \left(\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l k_{t-1}}\right) \cdot l k_{t-1} + f(k_{t-1}) - d_{t-1}\right]{\left(1-l\right)}^{-1},
+\]
+
+leading to the first order conditions for optimizing dividends and capital over time:
+
+\[
+\begin{aligned}
+    U'(d_t) &= \frac{\lambda_t}{\left(1-l\right)}, \quad \forall t,
+\end{aligned}
+\]
+
+and the dynamic optimality conditions for capital allocation:
+
+\[
+\begin{aligned}
+    \lambda_t = \beta \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t+1}) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{t+1}) - \frac{R_f}{p}l \right], \quad \forall t.
+\end{aligned}
+\]
+
+This formulation yields the Euler equation for dividends:
+
+\[
+U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[\frac{f^{\prime}(k_{t+1})}{p}+(1-\delta) - \frac{R_f}{p}l\right],
+\]
+
+and the condition for constant dividends and the corresponding steady-state capital level:
+
+\[
+\widehat{k} = \left\{\left[\left(l - \beta + \beta \delta \right)\frac{p}{\beta}+R_f\right]Z^{-1}\right\}^{\frac{1}{\alpha}}.
+\]
+
+In this debt-financed case, the steady-state capital is lower than in a debt-free scenario due to the interest
+obligations. Marginal productivity of capital exceeds its marginal cost when capital is below \(\widehat{k}\),
+indicating an incentive for capital accumulation. Conversely, at the steady state, the capital adjustment  mechanism
+ensures that dividends align with the profitability and cost conditions:
+
+\[
+\widehat{d} =\frac{f(k)}{p} - k\left(\delta + \frac{R_f}{p}l -l\right).
+\]
+
+In scenarios where dividends exceed their steady-state value, capital diminishes over time, suggesting a depletion of
+resources contrary to situations where capital is below the steady state, leading to an accumulation of capital. This
+dynamic illustrates the balancing act between leveraging debt for growth and the sustainable  management of capital and
+dividends.
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -2374,7 +2414,7 @@ case \(k_t<k_{t-1}\), thus the capital will decrease over time, while in the opp
     stability and instability. The red line corresponds to a firm that is carrying debt, whereas the blue line
     represents a firm with fixed leverage. The red arrow traces a potential saddle path for the indebted firm, beginning
     from \( k_0 \), while
-     the blue arrow illustrates a conceivable saddle path for a firm with fixed  leverage.} 
+     the blue arrow illustrates a conceivable saddle path for a firm with fixed leverage.} 
     \label{pl_phase_b}
 \end{figure}
 The phase diagram \ref{pl_phase_b} illustrates the dynamics of capital accumulation in scenarios with
@@ -2387,219 +2427,186 @@ functions but different levels of leverage, the firm with higher debt may face a
 during a recession. This is because its lower dividend levels may not be sufficient to compensate shareholders for the
 increased risk associated with its leverage. Therefore, in times of economic stress, firms with higher leverage are at a
 disadvantage due to their reduced financial flexibility and the burden of debt repayments. 
-\subsection{Solving with the Belman}
-Now thats the dynamics are clear we can solve dynamic problem finding the optimal path given an initial condition
-\(k_0\). In order to do so we assume that the utility function is a logaritmic function, and we rewrite the problem
-using a bellman equation:
+Addressing the dynamic optimization problem with an initial condition \(k_0\), we employ a logarithmic utility function
+and frame the issue through a Bellman equation:
+
+
 \begin{equation}
-    \begin{gathered}
-    \max _{\left\{d_t\right\}_{t=0}^{\infty}} V_0=\max _{\left\{d_t\right\}_{t=0}^{\infty}}\left\{U\left(d_0\right)+\beta\left[\sum_{t=1}^{\infty}
- \beta^{d-1} U\left(c_t\right)\right]\right\}  \\
- s.t. \\
- k_t = \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1}
-+ f(k_{t-1}) - d_{t-1}\right\}{\left(1-l\right)}^{-1} \forall t
-    \end{gathered}
-\end{equation}
-In other words, we wish to determine the optimal dividend $d_t^*$, and the implied capital level $k_{t+1}^*$, for
-$t=0,1, \ldots$. The optimal trajectory is a function \(\varphi(.)\) relating the dividends with the capital levels,
-such relation should be stationary, thus do not depend over time, using constraint is possible to define such a
-function:
-\begin{equation}
-    \begin{gathered}
-        k_t = \left\{k_{t-1}(1 - \delta) - \frac{R_f}{p} l k_{t-1}  
-+ \frac{f(k_{t-1})}{p} - \varphi(k_{t-1})\right\}{\left(1-l\right)}^{-1} = \zeta(k_1)
-    \end{gathered}
-\end{equation}
-Since the capital and dividends are constinous and differentiable, thusunction of capital at time t-1:
-\[k_1: d_2^*=\varphi\left(k_2^*\right)=\varphi\left(\zeta\left(k_1\right)\right)\]
-riterating the process we can express a the optimal path of dividens as a function of capital at time 1, thus we can
-define \(V(k_1)\) as the maximum value function:maximum overall utility  \(\varphi(.)\) should be continous and
-differentiable. In this way er can express consumption at time t as a fat time 1 given the optimal path of dividends:
-\[\sum_{t=1}^{\infty} \beta^{t-1} U\left(d_t^*\right)=V\left(k_1\right)\].
-We can rewrite the problem as follows:
-\begin{equation}
-    \begin{aligned}
-        & V\left(k_0\right)=\max _{c_0}\left\{U\left(c_0\right)+\beta V\left(k_1\right)\right\} \\
-        & \text { s.t. } k_1=f\left(k_0\right)+(1-\delta) k_0-c_0 \\
-        & k_0 given.
-    \end{aligned}
+    \max _{\{d_t\}_{t=0}^{\infty}} V_0 = \max _{\{d_t\}_{t=0}^{\infty}} \left\{U(d_0) + \beta \left[\sum_{t=1}^{\infty} \beta^{t-1} U(c_t)\right]\right\}
 \end{equation}
 
-Before solving the belman is necessary to determine under which condition the problem is solvable, in this sense the
-theorem exposed in \cite{PreStoLu89} which states: the solution  exists and it is unique if the following conditons are
-met:
+
+subject to a dynamic capital accumulation constraint:
+
+\[
+k_t = \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p} - \frac{1-p}{p} \frac{f(k_{t-1})}{l \cdot k_t}\right] l k_{t-1} + f(k_{t-1}) - d_{t-1}\right\}(1-l)^{-1} \, \forall t.
+\]
+
+The aim is to determine the optimal dividend strategy \(d_t^*\) and the consequent capital levels \(k_{t+1}^*\) across
+all periods. The optimal policy \(\varphi(.)\) links dividends and capital in a time-invariant manner, deduced from the
+constraint:
+
+\[
+k_t = \left\{k_{t-1}(1 - \delta) - \frac{R_f}{p} l k_{t-1} + \frac{f(k_{t-1})}{p} - \varphi(k_{t-1})\right\}(1-l)^{-1} = \zeta(k_1).
+\]
+
+Given the continuous and differentiable nature of capital and dividends, the optimal dividend path can be represented as
+a function of initial capital, thereby defining the maximum value function \(V(k_1)\) in terms of overall utility
+maximization. The revised problem formulation becomes:
+
+
+\begin{align}
+    & V(k_0) = \max _{c_0} \left\{U(c_0) + \beta V(k_1)\right\} \\
+    & \text{s.t. } k_1 = f(k_0) + (1-\delta)k_0 - c_0 \\
+    & k_0 \text{ given.}
+\end{align}
+
+
+Before proceeding, it's critical to verify the solvability of the problem, adhering to criteria for existence and uniqueness of the solution: 
 \begin{enumerate}
-    \item \(\beta \in (0,1)\)
-    \item the return function is continous, boundend and strictly concave 
-    \item the transition function is concave
+    \item \(0 < \beta < 1\),
+    \item The utility function is continuous, bounded, and strictly concave,
+    \item The capital transition function is concave.
+
 \end{enumerate}
-Then the maximum value \(V(k_t)\) exits, its unique and strictly concave. Howeve this condition rules out the logaritmic
-return function \(U(d_t)=\ln{d_t}\). However if we are willing to leave the strictly concave results we can use the
-\cite{THoBru04} theorem.
-Now that our problem have a unique solution, lets find the optimal path. The first order condition is the following:
-\[U^{\prime}\left(d_0^*\right)+\beta V^{\prime}\left(k_1\right) \frac{\partial k_1}{\partial d_0}=0\]
-from the transition function \(\frac{\partial k_1}{\partial d_0}=-1\). The optimal path is thus given by the followinf
-system:
+
+
+These conditions ensure the solution's uniqueness and strict concavity, although the logarithmic utility function
+\(U(d_t) = \ln{d_t}\) might  not strictly meet these criteria. Utilizing alternative theorems allows for relaxation of
+the strict concavity requirement.
+
+The optimal strategy is derived from the first order condition \(U'(d_0^*) + \beta V'(k_1) \frac{\partial k_1}{\partial d_0} = 0\), with  the  capital transition function implying \(\frac{\partial k_1}{\partial d_0} = -1\). The solution
+encompasses:
+
+
 \begin{equation}
-    \left\{
-    \begin{array}{l}
-        V\left(k_0\right) = U\left(d_0^*\right) + \beta V\left(k_1\right), \\
-        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
-+ \frac{f(k_0)}{p} - d^*_0\right\}{\left(1-l\right)}^{-1}, \\ 
-        U'\left(d_0^*\right) = \beta V'\left(k_1\right), \\
+    \begin{cases}
+        V(k_0) = U(d_0^*) + \beta V(k_1), \\
+        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - d_0^*\right\}(1-l)^{-1}, \\
+        U'(d_0^*) = \beta V'(k_1), \\
         k_0 \text{ given.}
-    \end{array}
-    \right.
+    \end{cases}
 \end{equation}
-\paragraph{Guess and verify method}
-The return function is \(U(d_t)=\ln{d_t}\), the transition function is \(k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
-+ \frac{f(k_0)}{p} - d^*_0\right\}{\left(1-l\right)}^{-1}\). The Foc becames \( d_0=\left[\beta
-V^{\prime}(k_{1})\right]^{-1}\), Substituting into the transition function, the problem can be written as
-\begin{equation}
-    \left\{
-    \begin{array}{l}
-        V\left(k_0\right) = \ln\left(d_0^*\right) + \beta V\left(k_0\right), \\
-        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
-+ \frac{f(k_0)}{p} - \left[\beta
-V^{\prime}(k_{t+1})\right]^{-1} \right\}{\left(1-l\right)}^{-1}, \\ 
-        U'\left(d_0^*\right) = \beta V'\left(k_1\right), \\
-        k_0 \text{ given.} 
-    \end{array}
-    \right.
-\end{equation}
-Our guess solution is:
-\begin{equation}
-    \begin{gathered}
-        V(k_t) = e + f \ln{k_t}
-    \end{gathered}
-\end{equation}
-thus:
-\begin{equation}
-    \left\{
-    \begin{array}{l}
-        e + f \ln{k_0} = \ln{\left(\frac{k_1}{\beta f}\right)} + \beta \left[e + f \ln{k_1}\right], \\
-        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
-+ \frac{f(k_0)}{p} - \left[
-\frac{k_1}{\beta f}\right] \right\}{\left(1-l\right)}^{-1}.
-    \end{array}
-    \right.
-\end{equation}
-In order to be tractable lets assume \(p - \delta p - R_f l=0\).
-Solving for \(k_1\):
-\begin{align}
-    k_1 &= \left[k_0\left(p-p\delta-R_f l\right)+ Zk_0^{\alpha}\right]\cdot \left(\frac{ \beta f}{\beta f - l\beta f +1}\right)p^{-1},\\
-    d_1 &= \left[k_0\left(p-p\delta-R_f l\right) + Zk_0^{\alpha}\right]\cdot \left(\frac{p}{\beta f - l\beta f +1}\right),\\
-    e + f \ln k_0 &= \ln \left\{\left[k_0\left(p-p\delta-R_f l\right) + Zk_0^{\alpha}\right]\cdot \left(\frac{p}{\beta f - l\beta f +1}\right)\right\} \nonumber \\
-    &\quad + \beta \left[e + f \ln \left\{\left[k_0\left(p-p\delta-R_f l\right) + Zk_0^{\alpha}\right]\cdot \left(\frac{ \beta f}{\beta f - l\beta f +1}\right)p^{-1}\right\}\right].
-\end{align}
-Now is possible to retrieve parameters e and \(f\):
-
-\begin{align}
-    f &= \frac{\alpha}{1 - \alpha \beta},\\
-    e &= \left\{\frac{1 - \alpha \beta - \alpha}{1 - \alpha \beta}\left[\ln Z - \ln\left(1 - l\alpha \beta\right)\right] \right. \nonumber \\
-      &\quad + \frac{1 - \alpha \beta}{1 - \alpha \beta} \ln p + \ln\left(1 - \alpha \beta\right) \nonumber \\
-      &\quad \left. + \frac{\alpha}{1 - \alpha \beta} (\ln \alpha + \ln \beta) \right\}(1 - \beta)^{-1}.
-\end{align}
 
 
+This system guides us towards the optimal path of dividends and capital levels, underpinning the dynamic economic analysis.
+
+\paragraph{Guess and verify}
+The method of "guess and verify" involves proposing a return function \(U(d_t) = \ln{d_t}\) and working through a
+transition equation defined as \(k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} -
+d^*_0\right\}{(1-l)}^{-1}\). The first order condition (FOC) is specified as \(d_0 = [\beta V'(k_{1})]^{-1}\). When this
+FOC is incorporated into the transition equation, the formulation of the problem becomes a system of equations outlined
+as follows:
 
 
-\(f\) is positive so \(V^{\prime}(k)>0 \), thus higher dividens path leads to higher value of the return function.
-Moreover is important to notice that since \(\beta \in (0,1)\) the maximum value function do not explode to infinity.
-The guess is verified since \(e,f\) are indipendent from \(k\). Substituting \(e,f\) into (16), (17):
-\[k_1 = \frac{Z k_0^{\alpha}}{p}\frac{\alpha\beta}{1-l\alpha\beta}\]
-\[d_0 = \frac{Z k_0^{\alpha}}{p}\frac{1-\alpha\beta}{1-l\alpha\beta}\beta\]
-the steady state for capital is
-\(\widehat{k}=\left[\frac{Z}{p}\frac{\alpha\beta}{1-l\alpha\beta}\right]^{\frac{1}{1-\alpha}} \). Using \(p =\frac{R_f
-l}{1-\delta} \):
-\begin{align}
-    &k_1 = \frac{Z k_0^{\alpha}{\left(1-\delta\right)}}{l R_f}\frac{\alpha\beta}{1-l\alpha\beta} \\
-    &d_0 = \frac{Z k_0^{\alpha}{\left(1-\delta\right)}}{l R_f}\frac{1-\alpha\beta}{1-l\alpha\beta}\beta \\
-    & \widehat{k}=\left[\frac{Z  {\left(1-\delta\right)}}{l R_f}\frac{\alpha\beta}{1-l\alpha\beta}\right]^{\frac{1}{1-\alpha}}
-\end{align}
-Locunik at the policy function (22) its interesting to notice that dividends are a constant share of production of the
-same period. Moreover dividends depend negatively on firm'slavarage and on the risk free rate if the firms is not debt
-free. While more productive is the firm higher its level of capital and the dividends level. Notice that in the case of
-firm free of debt the solution does not hold since l=0 and thus p=1. Hower is easy to find the solution assuming no
-depreciation:
-\begin{align}
-    &k_1 = {Z k_0^{\alpha} {\left(1-\delta\right)}}{\alpha\beta} \\
-    &d_0 = {Z k_0^{\alpha}{\left(1-\delta\right)}}{1-\alpha\beta} \\
-    & \widehat{k}=\left[{Z}{\alpha\beta}\right]^{\frac{1}{1-\alpha}}
-\end{align}
-It easy to show that under no debts case the firm has higher capital at the steady state since it does not need to pay
-interest as it is shown in \ref{pl_phase_b}.
-\subsection{Optimization problem with frictions}
-Now that we have found a closed form solution to our policy function, lets introduce financial friction due to assymetry
-of information between the lender and the firms. Lets assume that the lender discount an uncertainty value about the
-value of production \(\mu \quad 0 \leq \mu \leq 1\): close is to 0 higher is the level of frictions.
- the landing activity thus the problem will became 
 \begin{equation}
-    \begin{gathered}
-    \max _{\left\{d_t\right\}_{t=0}^{\infty}} V_0=\max _{\left\{d_t\right\}_{t=0}^{\infty}}\left\{U\left(d_0\right)+\beta\left[\sum_{t=1}^{\infty}
- \beta^{d-1} U\left(c_t\right)\right]\right\}  \\
- s.t. \\
- k_t = \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_{t-1})}{l \cdot k_t}\right] \cdot l k_{t-1}
-+ f(k_{t-1}) - d_{t-1}\right\}{\left(1-l\right)}^{-1} \forall t
-    \end{gathered}
+    \begin{cases}
+        V(k_0) = \ln(d_0^*) + \beta V(k_0), \\
+        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - [\beta V'(k_{t+1})]^{-1} \right\}{(1-l)}^{-1}, \\
+        U'(d_0^*) = \beta V'(k_1), \\
+        k_0 \text{ given.}
+    \end{cases}
 \end{equation}
-Using the same method in the case without frictions:
+
+
+Our initial guess for the solution is:
+
+
 \begin{equation}
-    \left\{
-    \begin{array}{l}
-        V\left(k_0\right) = \ln\left(d_0^*\right) + \beta V\left(k_0\right), \\
-        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
-+ \frac{f(k_0)}{p} - \left[\beta
-V^{\prime}(k_{t+1})\right]^{-1} \right\}{\left(1-l\right)}^{-1}, \\ 
-        U'\left(d_0^*\right) = \beta V'\left(k_1\right), \\
-        k_0 \text{ given.} 
-    \end{array}
-    \right.
+    V(k_t) = e + f \ln{k_t},
 \end{equation}
-Our guess solution is:
+
+
+which leads to a refined system:
+
+
 \begin{equation}
-    \begin{gathered}
-        V(k_t) = e + f \ln{k_t}
-    \end{gathered}
+    \begin{cases}
+        e + f \ln{k_0} = \ln{\left(\frac{k_1}{\beta f}\right)} + \beta [e + f \ln{k_1}], \\
+        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - \left[ \frac{k_1}{\beta f}\right] \right\}{(1-l)}^{-1}.
+    \end{cases}
 \end{equation}
+
+
+Assuming a condition to simplify the analysis, \(p - \delta p - R_f l=0\), we solve for \(k_1\) and \(d_1\), leading to
+expressions that relate capital and dividends directly to the parameters of the problem. These solutions indicate that
+dividends are a proportion of the output, dependent on the firm's productivity, leverage, and the risk-free rate. The
+formulation highlights how dividends and capital evolve over time,  with dividends being a constant share of the
+period's production.
+
+Under conditions of no debt (\(l=0\) and thus \(p=1\)) and ignoring depreciation, we obtain simplified expressions for
+capital and dividends in the steady state. This scenario suggests higher capital accumulation for a debt-free firm, as
+it does not bear interest expenses. The policy function derived reflects the relationship between dividends, firm
+productivity, and leverage, offering insights into the management of capital  and dividends in different financial
+states of a firm.
+
+\subsection{Optimization Problem with Financial Frictions}
+
+Following the derivation of a closed-form solution for our policy function, we now integrate financial frictions
+stemming from information  asymmetry between lenders and firms. We model this by introducing a discount factor \(\mu\)
+on the perceived value of production, where \(0 \leq \mu \leq 1\); a value closer to 0 indicates higher friction levels.
+Consequently, the lending activity modifies the optimization problem as follows:
+
 \begin{equation}
-    \left\{
-    \begin{array}{l}
-        e + f \ln{k_0} = \ln{\left(\frac{k_1}{\beta f}\right)} + \beta \left[e + f \ln{k_1}\right], \\
-        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0  
-+ \frac{f(k_0)}{p} - \left[
-\frac{k_1}{\beta f}\right] \right\}{\left(1-l\right)}^{-1}.
-    \end{array}
-    \right.
+    \max _{\left\{d_t\right\}_{t=0}^{\infty}} V_0 = \max _{\left\{d_t\right\}_{t=0}^{\infty}} \left\{ U(d_0) + \beta \left[ \sum_{t=1}^{\infty} \beta^{t-1} U(c_t) \right] \right\}
 \end{equation}
-In order to be tractable lets assume \(p - \delta p - R_f l=0\).
-Solving for \(k_1\):
+subject to
+\begin{equation}
+    k_t = \left\{ k_{t-1}(1 - \delta) - \left[ \frac{R_f}{p} - \frac{1-p}{p} \frac{\mu f(k_{t-1})}{l \cdot k_t} \right] l k_{t-1} + f(k_{t-1}) - d_{t-1} \right\} \cdot \left(1-l\right)^{-1} \, \forall t.
+\end{equation}
+
+Adapting our approach from the frictionless scenario, we propose:
+\begin{equation}
+    V(k_0) = \ln(d_0^*) + \beta V(k_1),
+\end{equation}
+where
+\begin{equation}
+    k_1 = \left\{ k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - \left[ \beta V'(k_{t+1}) \right]^{-1} \right\} \cdot \left(1-l\right)^{-1},
+\end{equation}
+and
+\begin{equation}
+    U'(d_0^*) = \beta V'(k_1).
+\end{equation}
+
+Our hypothetical solution takes the form:
+\begin{equation}
+    V(k_t) = e + f \ln(k_t),
+\end{equation}
+leading to:
 \begin{align}
-    k_1 &= \left[k_0\left(p-p\delta-R_f l\right)+ \mu Zk_0^{\alpha}\right]\cdot \left(\frac{ \beta f}{\beta f - l\beta f +1}\right)p^{-1},\\
-    d_1 &= \left[k_0\left(p-p\delta-R_f l\right) + \mu Zk_0^{\alpha}\right]\cdot \left(\frac{p}{\beta f - l\beta f +1}\right),\\
-    e + f \ln k_0 &= \ln \left\{\left[k_0\left(p-p\delta-R_f l\right) + \mu Zk_0^{\alpha}\right]\cdot \left(\frac{p}{\beta f - l\beta f +1}\right)\right\} \nonumber \\
-    &\quad + \beta \left[e + f \ln \left\{\left[k_0\left(p-p\delta-R_f l\right) + \mu Zk_0^{\alpha}\right]\cdot \left(\frac{ \beta f}{\beta f - l\beta f +1}\right)p^{-1}\right\}\right].\\
-    f &= \frac{\alpha}{1 - \alpha \beta},\\
-    e &= \left\{\frac{1 - \alpha \beta - \alpha}{1 - \alpha \beta}\left[\ln{Z} +ln{\mu} - \ln\left(1 - l\alpha \beta\right)\right] \right. \nonumber \\
-      &\quad + \frac{1 - \alpha \beta}{1 - \alpha \beta} \ln p + \ln\left(1 - \alpha \beta\right) \nonumber \\
-      &\quad \left. + \frac{\alpha}{1 - \alpha \beta} (\ln \alpha + \ln \beta) \right\}(1 - \beta)^{-1}. \\
+    e + f \ln(k_0) &= \ln\left( \frac{k_1}{\beta f} \right) + \beta \left[ e + f \ln(k_1) \right], \\
+    k_1 &= \left\{ k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - \left[ \frac{k_1}{\beta f} \right] \right\} \cdot \left(1-l\right)^{-1}.
 \end{align}
-Thus the transition function and policy function in the case of financial friction are:
+
+Assuming \(p - \delta p - R_f l = 0\) simplifies to:
 \begin{align}
-    k_1 &= \frac{Z \mu k_0^{\alpha}{\left(1-\delta\right)}}{l R_f}\frac{\alpha\beta}{1-l\alpha\beta} \\
-    d_0 &= \frac{Z \mu k_0^{\alpha}{\left(1-\delta\right)}}{l R_f}\frac{1-\alpha\beta}{1-l\alpha\beta}\beta \\
-    \widehat{k}&=\left[\frac{Z \mu  {\left(1-\delta\right)}}{l R_f}\frac{\alpha\beta}{1-l\alpha\beta}\right]^{\frac{1}{1-\alpha}}
+    k_1 &= \left[ k_0(p - p\delta - R_f l) + \mu Z k_0^{\alpha} \right] \cdot \left( \frac{\beta f}{\beta f - l\beta f + 1} \right) p^{-1}, \\
+    d_1 &= \left[ k_0(p - p\delta - R_f l) + \mu Z k_0^{\alpha} \right] \cdot \left( \frac{p}{\beta f - l\beta f + 1} \right), \\
+    e + f \ln(k_0) &= \ln \left\{ \left[ k_0(p - p\delta - R_f l) + \mu Z k_0^{\alpha} \right] \cdot \left( \frac{p}{\beta f - l\beta f + 1} \right) \right\} \nonumber \\
+    &\quad + \beta \left[ e + f \ln \left\{ \left[ k_0(p - p\delta - R_f l) + \mu Z k_0^{\alpha} \right] \cdot \left( \frac{\beta f}{\beta f - l\beta f + 1} \right) p^{-1} \right\} \right].
 \end{align}
-Thus frictions as the same effect as a reduction in productivity which lowers the dividens, the capital level and
-velocity to which firms accumulate capital.
-\subsection{Simulation example}
-In order to grasp the differnces between the friction case and the frictionless, lets implement a simulation exercise in
-which I'll use the same parameters as in in the \cite{OsePap17} paper:
-\begin{table}
+
+Hence, the transition and policy functions under financial frictions are formalized as:
+\begin{align}
+    k_1 &= \frac{Z \mu k_0^{\alpha} (1-\delta)}{l R_f} \frac{\alpha\beta}{1-l\alpha\beta}, \\
+    d_0 &= \frac{Z \mu k_0^{\alpha} (1-\delta)}{l R_f} \frac{1-\alpha\beta}{1-l\alpha\beta} \beta, \\
+    \widehat{k} &= \left[ \frac{Z \mu (1-\delta)}{l R_f} \frac{\alpha\beta}{1-l\alpha\beta} \right]^{\frac{1}{1-\alpha}}.
+\end{align}
+
+This analysis elucidates that financial frictions equate to a de facto reduction in productivity, which in turn
+diminishes dividends, capital levels, and the rate at which firms accumulate capital. 
+
+\section{Simulation Study}
+
+To explore the distinctions between scenarios with and without financial frictions, we conduct a simulation exercise
+employing  parameters consistent with those used in the \cite{OsePap17} study:
+
+\begin{table}[H]
     \centering
     \begin{tabular}{lcc}
     \hline Parameter & Symbol & Value \\
-    \hline \hline Discount factor & $\beta$ & 0.956 \\
+    \hline \hline
+    Discount factor & $\beta$ & 0.956 \\
     Risk-free rate & $R_f$ & 1.04 \\
     Depreciation rate & $\delta$ & 0.07 \\
     Returns to scale & $\alpha$ & 0.70 \\
@@ -2609,11 +2616,13 @@ which I'll use the same parameters as in in the \cite{OsePap17} paper:
     \end{tabular}
     \caption{Benchmark calibration}
 \end{table}
-Since we want to understand which are the effect of including friction we fix the leverage \(l=0.5\) and \(k_0=1\). Let's take a look
-to the transtion function, thus how the capital evolves following the optimal path. 
-We can compute \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx 
-0.559 \). The results are shown in the plots below:
-\begin{figure}[htbp]
+
+Our aim is to ascertain the impact of incorporating financial frictions into the model. Therefore, we set the leverage
+ratio (\(l=0.5\))  and the initial capital (\(k_0=1\)). This allows us to examine capital evolution along the optimal
+path. For instance, we calculate \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx 0.559\), with the outcomes depicted in the
+subsequent plots:
+
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}
     \begin{axis}[
@@ -2627,14 +2636,18 @@ We can compute \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx
         width=0.8\textwidth,
         height=6cm,
     ]
-    \addplot table [col sep=comma, x=Time, y=Capital] {simulation.csv};
-    \addplot table [col sep=comma, x=Time, y=Capital] {simulation_withoutfriction.csv};
+    \addplot[blue] table [col sep=comma, x=Time, y=Capital] {simulation.csv}; % With friction
+    \addplot[red] table [col sep=comma, x=Time, y=Capital] {simulation_withoutfriction.csv}; % Without friction
+    \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
-    \caption{Evolution of capital over time}
+    \caption{Evolution of capital over time.}
+    \label{fig:capitalEvolution}
 \end{figure}
-The first plot shows the transition function: 
-\begin{figure}[htbp]
+
+The initial plot delineates the capital's transition function:
+
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}
     \begin{axis}[
@@ -2648,170 +2661,243 @@ The first plot shows the transition function:
         width=0.8\textwidth,
         height=6cm,
     ]
-    \addplot table [col sep=comma, x=Time, y=Dividends] {simulation.csv};
-    \addplot table [col sep=comma, x=Time, y=Dividends] {simulation_withoutfriction.csv};
+    \addplot[blue] table [col sep=comma, x=Time, y=Dividends] {simulation.csv}; % With friction
+    \addplot[red] table [col sep=comma, x=Time, y=Dividends] {simulation_withoutfriction.csv}; % Without friction
+    \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
-    \caption{Evolution of dividends over time}
+    \caption{Evolution of dividends over time.}
+    \label{fig:dividendsEvolution}
 \end{figure}
-Clearly, the path of dividends is higher  in the case of the absence of friction 
-\subsection{Simulation exercises}
 
+It is apparent that the trajectory of dividends is consistently higher in scenarios devoid of financial frictions,
+underscoring the impact of such frictions on diminishing returns. This comparison vividly demonstrates the differential
+outcomes in capital and dividend paths under varying financial conditions, highlighting the broader implications of
+financial frictions on economic performance and firm-level profitability. 
 
-To enhance our model, we now introduce heterogeneity across firms. Specifically, the productivity level, denoted as
-\(Z_i\), varies from one firm to another. Additionally, leverage ratios are no longer uniform across firms. We simulate
-the initial distribution of capital, leverage, and productivity in a manner that ensures the correlation between
-productivity and leverage is zero. The aggregate production is equal to:
-\[\overline{K} = \int_{\underline{K} }^{\overline{k} }Z_i k_{i,t}^{\alpha}\,di \]
-Business cycles are introduced through variations in capital, where each firm experiences changes proportionate to their existing capital levels. Less efficient firms face larger decreases during downturns, whereas in periods of economic upswing, all firms benefit from increased capital availability. Additionally, firms may exit the market under two conditions: voluntary exit when returns on equity fall below the risk-free rate, and bankruptcy, characterized by an inability to cover debts and depreciation. Initially, the simulation incorporates a sinusoidal business cycle to modulate output:
+\subsection{heterogeneity and Aggregation Mechanism}
+
+To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity and leverage
+ratios.  Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
+the model. Additionally, we diversify leverage ratios, ensuring no direct correlation between a firm's productivity and
+its leverage. This heterogeneity is captured from the outset by simulating the initial distribution of capital,
+leverage, and productivity, setting the stage for a dynamic interplay of firm characteristics. The aggregate production
+is then represented as:
+\[
+\overline{K} = \int_{\underline{K} }^{\overline{k} }Z_i k_{i,t}^{\alpha}\,di
+\]
+
+Business cycles impact capital fluctuations, with each firm's changes being proportional to its existing capital. Less
+efficient  firms endure more significant reductions during economic downturns, while all firms enjoy capital increases
+during upswings. Market exit is modeled through two avenues: voluntary exit for returns on equity below the risk-free
+rate, and bankruptcy due to failure in covering debts and depreciation. The model incorporates a sinusoidal business
+cycle affecting output as follows:
 \[
 \Delta \overline{K}_t = 1 + 0.05 \sin(t)
 \]
-Meanwhile, the distributions for productivity (\(Z\)) and leverage (\(l\)) are defined as truncated normal:
+
+Productivity (\( Z \)) and leverage (\( l \)) follow truncated normal distributions:
 \begin{align}
-    l &\sim \mathcal{N}(0.5, 0.02), \quad 0.01 \leq l \leq 2, \\
-    Z-1 &\sim \mathcal{N}(0.05, 0.02), \quad 1.01 \leq Z \leq 1.1.
+    l &\sim \mathcal{N}(0.05, 0.1), \quad 0.01 \leq l \leq 1, \\
+    Z-1 &\sim \mathcal{N}(0.5, 0.1), \quad 1.01 \leq Z \leq 1.1.
 \end{align}
-A firm exits the market if its return on capital is less than the risk-free rate, being replaced by a new firm with capital equivalent to the lowest in the existing pool. The remaining capital is then proportionally reinvested among the other firms, based on their returns on capital. The return on capital for firm \(i\) at time \(t\) is calculated as follows:
-\[
-R_{i,t} = \frac{d_{i,t}}{k_{i,t}}
-\]
-If \(R_f \geq R\), the firm exits the market due to its return on capital being lower than the risk-free rate.\footnote{This criterion is applied only after 5 periods to highlight the differences between scenarios with and without the cleansing effect in action.}
 
-The figure below illustrates the outcome of a 20-step simulation involving 10 firms, depicting the optimal and actual capital levels. The actual capital is adjusted according to the defined business cycle:
+The figure below demonstrates the results of a 20-step simulation for 10 firms, contrasting optimal and actual capital
+levels.  The actual capital adjusts in response to the business cycle:
 \[
 \Delta \overline{K}_t = 1 + 0.05 \sin(t)
 \]
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{OptimalK_noexit.png}
-    \caption{The plot shows the result of a 20-step simulation with 10 firms: the optimal \(k \) is the capital choice of the firm, while the actual \(k\) is the capital after applying the business cycle effect.}
+    \includegraphics[scale=0.4]{OptimalK_noexit.png}
+    \caption{Illustrating a 20-step simulation of 10 firms, this plot compares the chosen optimal capital (\(k\))
+    against the
+     actual capital (\(k\)) post-business cycle adjustment.}
     \label{fig:optKnoE}
 \end{figure}
 
-The subsequent graph displays the distribution of dividends calculated based on the actual capital of each firm.
-\begin{figure}[ht]
+Following this, the distribution of dividends, based on actual capital, is visualized:
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{div_cap_noexit.png}
-    \caption{This plot presents the results of a 20-step simulation with 10 firms, showcasing dividends (\(d \)) and the actual capital (\(k \)) post-adjustment for the business cycle effect.}
+    \includegraphics[scale=0.4]{div_cap_noexit.png}
+    \caption{Displaying a 20-step simulation for 10 firms, this plot highlights dividends (\( d \)) and the actual capital
+    (\(k\)) after business cycle
+     adjustments.}
     \label{fig:divNoExit}
 \end{figure}
 
-This rewritten section maintains the integrity of your original description while enhancing readability and precision,
-particularly in the mathematical modeling and the explanation of the simulation's framework and outcomes.
-\begin{figure}[ht]
+Figure \ref{fig:divNoExit} distinctly shows that firms with superior productivity yield higher dividends. Moreover, upon
+achieving a steady state, both capital and dividends exhibit oscillations around a rising mean. 
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{Output_noexit.png}
-    \caption{This plot presents the results of a 20-step simulation with 10 firms, showcasing output (\(K \)) post-adjustment for the business cycle effect.}
+    \includegraphics[scale=0.4]{Output_noexit.png}
+    \caption{Showcasing a 20-step simulation of 10 firms, this plot reveals the adjusted output (\( K \)) following the business cycle impact.}
     \label{fig:OutNoExit}
 \end{figure}
 
 
+\subsection{The Exit Mechanism}
 
-% \begin{figure}
-%     \centering
-    
-%     \begin{tikzpicture}
-%         \begin{axis}[
-%             title=Steady State,
-%             colormap/cool,
-%             xlabel= \(\widehat{k}\),
-%             ylabel= \(\widehat{b}\),
-%             zlabel=\(\widehat{d}\)
-%         ]
-%         \addplot3[
-%             mesh,
-%             samples=10,
-%             domain=0:1,
-%         ]
-%         {1.03/0.095-(0.05/0.095)*(y/x) -1};
+A firm is prompted to exit the market if its return on capital ranks as the lowest within the firm distribution, making
+way for a newcomer that inherits the minimum capital from the existing pool. Subsequently, the exiting firm's capital is
+reallocated proportionally among the remaining firms, based on their respective returns on capital. The return on
+capital for firm \( i \) at time \( t \) is defined as: 
+\[
+R_{i,t} = \frac{d_{i,t}}{k_{i,t}}
+\]
+Should a firm exhibit the \( \min{R} \), it is compelled to exit the market due to possessing the lowest return on capital
+among all firms.\footnote{This criterion is enforced at each step, effectively merging the concepts of reallocation and
+exit mechanisms henceforth.} 
 
-%         \addlegendentry{\(f(\widehat{k} ) = \delta \cdot \widehat{k} + r \cdot \widehat{b} = \widehat{d}\)}
-%         \end{axis}
-%     \end{tikzpicture}
-%     \caption{For this plot the following value has been used: \(\delta =0.1, r=0.1, \alpha=0.8, Z=0.5\)}
-% \end{figure}
-% Given that the evolution of the net worth is the following:
-% \[e_{t+1} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
-% The value of the firm at time t is given by:
-% \[V_t(e_t) =\max_{k_t}  e_t + \beta V_{t+1}(e_{t+1})\]
+In the ensuing simulation, while all parameters remain consistent with prior examples, the distinctive feature now is
+the market exit of firms. The subsequent figure illustrates both the optimal and actual capital paths for each firm: 
 
-% Solving the Belman equation, the FOC are given by:
-% \[\frac{\vartheta V_t(e_t)}{\vartheta k_t } =\frac{\vartheta e_t}{\vartheta k_t } +
-%  \beta \frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } \]
-% Strong assumption a change in \(k_t\) does not have an impact on \(e_t\) only on \(e_{t+1}\):
-% \[\frac{\vartheta e_t}{\vartheta k_t} = 0\]
-% Using the envelope theorem:
-% \[\frac{\vartheta
-% V_{t+1}(e_{t+1})}{\vartheta k_t } = \frac{\vartheta
-% V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
-% \[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta e_{t+1} } =1 + \beta(1+r)\]
-% \[\frac{\vartheta e_{t+1}}{\vartheta k_t} = Z(\theta +\epsilon)\alpha k_t^{\alpha-1}
-% -(\delta + r)\]
-% Thus:
-% \[\frac{\vartheta V_{t+1}(e_{t+1})}{\vartheta k_t } = 
-% [1+\beta(1+r)] [Z(\theta + \epsilon)\alpha k_t^{\alpha-1}-(\delta + r)] \]
-% So the FOC became:
-% \[\frac{\vartheta V_t(e_t)}{\vartheta k_t } = 0 + \beta [1+\beta(1+r)] [Z(\theta + \epsilon)\alpha
-% k_t^{\alpha-1}-(\delta + r)]  = 0 \]
-% The optimal level of capital at time t is:
-% \[\widehat{k} _t= {\frac{\beta(1+r) Z(\theta +\epsilon)\alpha}{\delta + r}}^{\frac{1}{1-\alpha}} \]
-% Plotting the graph in (assuming \(X=Z(\theta +\epsilon)\)) and \(y=\widehat{k} _t\)
-% \[ y={\frac{0.8 x}{0.03+0.1}}^{\frac{1}{1-0.8}}\]
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{OptimalK_exit.png}
+    \caption{Displaying a 20-step simulation involving 10 firms: the optimal \( k \) represents the firm's capital choice,
+    whereas the actual \( k \) reflects capital post-adjustment for the business cycle
+     effect.}
+    \label{fig:optKE}
+\end{figure}
 
-% \begin{figure}
-%     \centering
-%     \includegraphics[scale = 0.8]{K.png}
-%     \caption{\(X=Z(\theta +\epsilon)\) and \(y=\widehat{k} _t\) }
-%     \label{plot:k_static}
-% \end{figure}
-% Its interesting to see that if there is an increase in productivity the firm need more optimal capital K, while the most
-% low productivity firms need less capital to operate 
+Contrasting with previous outcomes, the introduction of an exit mechanism and the redistribution of residual
+capital—proportionate to returns, yet ensuring the new entrant retains the minimum capital from the firm
+distribution—markedly influences capital trajectory. These mechanisms facilitate incumbent firms in accruing additional
+capital, thus hastening their approach to a stationary state, particularly benefiting the most productive entities. This
+dynamic underscores the cleansing effect of recessions, as capital reallocation during economic downturns favors
+business continuity. Evidently, the impact of reallocation manifests in the subsequent graph, which delineates a higher
+dividends trajectory compared to scenarios devoid of reallocation mechanisms: 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{div_cap_exit.png}
+    \caption{This figure showcases the results of a 20-step simulation with 10 firms, highlighting dividends (\( d \))
+    and actual 
+    capital (\( k \)) following business cycle adjustments.}
+    \label{fig:divExit}
+\end{figure}
+
+Ultimately, examining overall production reveals an uptick attributable to capital reallocation when juxtaposed with
+prior simulations, underscoring the efficiency of the exit and reallocation strategies in fostering economic resilience
+and growth.
 
 
-% \subsection{Frictions}
-% Now I consider the participation constraint of the borrower given that she could observe \(\epsilon\) only paying \(\mu
-% k^\alpha\) so:
-% \[
-%  (1+r )(k+c+e)(1-\Phi(\overline{\epsilon}))+\int_{-\infty}^{\overline{\epsilon}}[Z(\theta+\overline{\epsilon})
-% k^\alpha+(1-\delta)k-\mu k^\alpha] \,d\Phi(\epsilon) \geq (1+r)(c+k+e)
-%  \]
-% \(r\) is the rate of interest that makes equal the expected value of borrowing to the opportunity cost of capital.
-% rewriting became 
-% \[
-% Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})=(1+r)(k_t+c-e_t)
-% \]
-% where
-% \[G(\overline{\epsilon} )= (1-\Phi(\varepsilon )\overline{\varepsilon }
-% +\int_{-\infty}^{\overline{\varepsilon}}\epsilon\,d \Phi(\epsilon) )\]
-% While the firm participation constraint is \(q_t \geq 0 \) so the end-of-period net worth must be greater than 0, thus
-% the problem of the firm becomes:
-% The value of the firm at time t is given by:
-% \[V_t(e_t) =\max_{k_t}  q_t - e_{t+1} + \beta V_{t+1}(e_{t+1})\]
-% \[s.t.\]
-% \[q_{t} = Z(\theta +\epsilon)k_t^\alpha + (1-\delta )k_t - (1+r)(c+k_t-e_t)\]
-% \[
-% Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})=(1+r)(k_t+c-e_t)
-% \]
-% so we can rewrite the second constraint in order to get \(r\):
-% \[r = \frac{Z[\theta+G(\overline{\epsilon} )]k_t^\alpha+(1-\delta)k_t-uk_t^\alpha\Phi (\overline{\epsilon})}{k_t+c-e_t}-1\]
-% FOC:
-% \[\frac{\vartheta
-% V_{t}(e_{t})}{\vartheta k_t } = \frac{\vartheta
-% q_{t}}{\vartheta k_t } - \frac{\vartheta
-% e_{t}}{\vartheta k_t } + \beta \frac{\vartheta
-% V_{t+1}(e_{t+1})}{\vartheta k_{t} } = 0\]
-% by envelope theorem:
-% \[\frac{\vartheta
-% V_{t+1}(e_{t+1})}{\vartheta k_{t} } = \frac{\vartheta
-% V_{t+1}(e_{t+1})}{\vartheta e_{t+1} }\frac{\vartheta e_{t+1}}{\vartheta k_t}\]
-% Strong HP: \[\frac{\vartheta e_{t+1}}{\vartheta k_t} = 0\]
-% Qui non so se ha senso continuare perchè non ho nessun meccanismo che mi trasformi il net worth al tempo t in net worth
-% al periodo t+1, almeno che non includa la definzione di dividendo come \(d_t= q_t-e_{t+1}\), allora in questo caso
-% dovrei risolvere il problema con un langrangiana dato che la firm dovrebbe scegliere sia \(k\) che \(e\) net worth.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Path of Overall Output},
+        xlabel={Time},
+        ylabel={\( K \)},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+    ]
+    \addplot[blue] table [col sep=comma, x=Step, y=Total Production] {exit_nofrictions.csv}; % Blue line for exit mechanism
+    \addplot[red] table [col sep=comma, x=Step, y=Total Production] {noexit_nofrictions.csv}; % Red line for no exit mechanism
+    \legend{With Exit Mechanism, Without Exit Mechanism}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{This plot illustrates a 20-step simulation involving 10 firms and demonstrates the impact of business cycle
+    adjustments on overall output \( K \). The blue line represents the scenario incorporating an exit mechanism, whereas
+    the red line denotes the scenario without an exit mechanism, illustrating the variations in output across both
+     contexts.}
+    \label{fig:OutExit}
+\end{figure}
 
-\subsection{Solving with the Belman for the frictions}
+Integrating the exit and reallocation mechanisms notably enhances both the dividends' trajectory and the aggregate
+output, distinctly highlighting how the cleansing effect bolsters productivity. 
+
+
+\subsection{Incorporating Financial Frictions into the Model}
+
+
+In keeping with the methodology set forth in \cite{OsePap17}, financial frictions are incorporated into the model,
+parameterized as  \(1-\mu = 0.25\). To discern the cleansing effect amidst financial frictions, an initial simulation is
+run where capital remains static due to an absence of a reallocation or exit mechanism. Subsequently, a contrasting
+simulation is performed where capital reallocation is possible, with both iterations subjected to financial frictions.
+
+The following plot illustrates the progression of total output over time, displaying two distinct scenarios. The red
+line delineates  the case without financial frictions, and the blue line portrays the scenario with frictions in place.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Path of Overall Output},
+        xlabel={Time},
+        ylabel={K},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+        legend entries={Without Frictions,With Frictions},
+        legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
+    ]
+    \addplot[red, mark=square*] table [col sep=comma, x=Step, y=Total Production] {noexit_frictions.csv};
+    \addplot[blue, mark=otimes*] table [col sep=comma, x=Step, y=Total Production] {exit_frictions.csv};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Evolution of the overall output over time. The red line represents the scenario without reallocation and
+    exit mechanisms, 
+     while the blue line represents the scenario with these mechanisms under financial frictions.}
+    \label{fig:output_evolution_frictions}
+\end{figure}
+
+Observations indicate that financial frictions attenuate overall production, akin to an effective reduction in
+productivity when  firms operate with leverage. Although the cleansing effect is evident without financial frictions, it
+is imperative to examine whether this effect is sustained when frictions are introduced. To this end, the subsequent plot
+juxtaposes the overall output for two comparable financial friction scenarios: one with capital reallocation and one
+without.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Path of Overall Output with Financial Frictions},
+        xlabel={Time},
+        ylabel={K},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+        legend entries={Reallocation Allowed,No Reallocation},
+        legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
+    ]
+    \addplot[blue, mark=*] table [col sep=comma, x=Step, y=Total Production] {exit_frictions.csv};
+    \addplot[red, mark=x] table [col sep=comma, x=Step, y=Total Production] {noexit_frictions.csv};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Comparison of overall output with financial frictions over time. The blue line illustrates the output when
+    reallocation  
+    is allowed, while the red line indicates the output when it is not.}
+    \label{fig:output_comparison_frictions}
+\end{figure}
+Figure \ref{fig:output_comparison_frictions} demonstrates that, even under financial frictions where \(1- \mu =0.25\),
+there is a productivity-enhancing mechanism facilitated by capital reallocation due to firm exits. This occurs despite
+the presence of asymmetric information between financial intermediaries and firms, as discussed in \cite{OsePap17}.
+Furthermore, the cleansing effect on overall production appears to be cumulative, with its impact amplifying over time,
+as evidenced by the trend in the graph. Thus, it can be concluded that two economies, identical in their distribution of
+productivity and capital among firms and initialized with the same seed\footnote{All simulations were conducted with the
+same seed for consistency.}, will diverge in terms of output and productivity if one allows for capital reallocation
+through firm exits. This divergence is not only distinct but also grows as time progresses. 
+
+\section{Solving the Belman with Benveniste-Scheinkman}
+In this section, I will address the intertemporal maximization problem without the assumption of fixed leverage,
+utilizing the Benveniste-Scheinkman equation to derive the functional form of the solution. This approach aims to
+demonstrate that the optimal capital trajectory does not significantly deviate from the results obtained in the prior
+analysis. However, I will refrain from conducting simulations using the policy function derived through this method, as
+it yields only a series of optimal paths rather than a comprehensive simulation framework. 
+
 \[V(k_{t}) = \max_{k_{t+1}, e_{t+1}} d_t + \beta V(k_{t+1})\]
 \[s.t.\]
 \[f(k_t) = Z k_t^\alpha\]
@@ -2939,6 +3025,7 @@ Equating the two equations:
 \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta 
 \left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
 From this equation, you can isolate \(\frac{\partial e_{t+1}}{\partial k_{t+1}}\) to solve for it explicitly.
+
 \[\frac{\partial e_{t+1}}{\partial k_{t+1}} = -\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta
 \left(r_f+\delta\right) + \delta
 \frac{1-p}{p}\right]\frac{p}{Z\alpha}\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}\left(1-\beta
@@ -3051,41 +3138,18 @@ Thus the debt at time t+1 is:
     & - \left\{\frac{N}{D} \cdot \left[\frac{N}{D}\left(1-\beta R_f\right) + \beta\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1} + C\right\}
 \end{align}
 
-
-
-
-% Fino a qui non ho molti dubbi, mentre il seguente passaggio presenta molti dubbi e secondo me è responsabile del segno
-% negativo del capitale. Tuttavia non mi è venuto in mente altro modo per procedere.
-% Knowing that \(B = k + c - e \rightarrow e= B -k -c\) thus \(\frac{\partial e_{t+1}}{\partial k_{t+1}} = -1\):
-% \[  -\beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta R_f\right)^{-1}\frac{1-\beta R_f}{\beta p +\beta -p}= \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right)
-% +\delta\frac{1-p}{p}\right]\]
-
-
-% We can rearrange it to isolate \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\):
-
-% \[ -\beta \left(r_f+\frac{\delta}{p}\right)\left(\beta p +\beta -p\right) - \delta\frac{1-p}{p} = \frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta
-% R_f\right)\] 
-
-% Now, solve for \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\) by dividing both sides by \((1-\beta R_f)\):
-
-% \[\frac{\partial k_{t+1}}{\partial e_{t+1}} = \left\{-\beta \left(r_f+\frac{\delta}{p}\right)\left(\beta p +\beta
-% -p\right) - \delta\frac{1-p}{p} 
-% \right \} \left(1-\beta R_f\right)^{-1}\]
-
-% This equation provides the value of \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\) in terms of the given constants
-% (\(\beta, R_f, p, \delta\)) and the relationship between \(e_{t+1}\) and \(k_{t+1}\). 
-% \[k^{\alpha-1}_{t+1}=\left[\left\{-\beta \left(r_f+\frac{\delta}{p}\right)\left(\beta p +\beta
-% -p\right) - \delta\frac{1-p}{p} 
-% \right \} + \beta
-% \left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
-% \[k^{\alpha-1}_{t+1}= \left[\left\{-\beta \left(r_f+\frac{\delta}{p}\right)\left(\beta p +\beta
-% -p\right) 
-% \right \} + \beta
-% \left(r_f+\delta\right) \right]\frac{p}{Z\alpha}\]
-
 \medskip
 \bibliography{reference}
 
-
-
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
