@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  27 FEB 2024 18:04
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  27 FEB 2024 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -774,140 +774,136 @@ NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (i
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
 [82] [83]
 Missing character: There is no ; ("3B) in font nullfont!
-[84] [85]
-Overfull \hbox (46.24199pt too wide) detected at line 2371
-[]
- []
-
-[86] [87] [88] [89] [90] [91] [92] [93] [94]
+[84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96]
 PGFPlots: reading {simulation.csv}
 PGFPlots: reading {simulation_withoutfriction.csv}
 PGFPlots: reading {simulation.csv}
 PGFPlots: reading {simulation_withoutfriction.csv}
- [95] [96]
+ [97] [98]
 File: OptimalK_noexit.png Graphic file (type bmp)
 <OptimalK_noexit.png>
- [97]
 File: div_cap_noexit.png Graphic file (type bmp)
 <div_cap_noexit.png>
+ [99]
 File: Output_noexit.png Graphic file (type bmp)
 <Output_noexit.png>
- [98] [99]
+ [100]
 File: OptimalK_exit.png Graphic file (type bmp)
 <OptimalK_exit.png>
- [100]
+ [101]
 File: div_cap_exit.png Graphic file (type bmp)
 <div_cap_exit.png>
+ [102]
 PGFPlots: reading {exit_nofrictions.csv}
 
 
-Package pgfplots Warning: Table 'exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2882.
+Package pgfplots Warning: Table 'exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2918.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {noexit_nofrictions.csv}
 
-Package pgfplots Warning: Table 'noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2883.
-
- [warning /pgfplots/warning/empty column name]
-[101]
-PGFPlots: reading {noexit_frictions.csv}
-
-
-Package pgfplots Warning: Table 'noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2925.
-
- [warning /pgfplots/warning/empty column name]
-PGFPlots: reading {exit_frictions.csv}
-
-Package pgfplots Warning: Table 'exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2926.
-
- [warning /pgfplots/warning/empty column name]
-[102]
-PGFPlots: reading {exit_frictions.csv}
-
-
-Package pgfplots Warning: Table 'exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2957.
-
- [warning /pgfplots/warning/empty column name]
-PGFPlots: reading {noexit_frictions.csv}
-
-Package pgfplots Warning: Table 'noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2958.
+Package pgfplots Warning: Table 'noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2919.
 
  [warning /pgfplots/warning/empty column name]
 [103]
-Overfull \hbox (2.03815pt too wide) in paragraph at lines 2975--2975
+PGFPlots: reading {noexit_frictions.csv}
+
+
+Package pgfplots Warning: Table 'noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2961.
+
+ [warning /pgfplots/warning/empty column name]
+PGFPlots: reading {exit_frictions.csv}
+
+Package pgfplots Warning: Table 'exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2962.
+
+ [warning /pgfplots/warning/empty column name]
+[104]
+PGFPlots: reading {exit_frictions.csv}
+
+
+Package pgfplots Warning: Table 'exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2993.
+
+ [warning /pgfplots/warning/empty column name]
+PGFPlots: reading {noexit_frictions.csv}
+
+Package pgfplots Warning: Table 'noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2994.
+
+ [warning /pgfplots/warning/empty column name]
+[105]
+Overfull \hbox (2.03815pt too wide) in paragraph at lines 3011--3011
 []\TU/lmr/bx/n/17.28 Solving the Belman with Benveniste-Scheinkman 
  []
 
-[104]
-Overfull \hbox (0.97949pt too wide) detected at line 2996
+[106]
+Overfull \hbox (0.97949pt too wide) detected at line 3032
 \OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 c\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 k[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 )(1 + \OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + (\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 c \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 k[]\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^N\OT1/cmr/m/n/12 )
  []
 
-[105] [106]
-Overfull \hbox (11.09369pt too wide) detected at line 3034
+[107] [108]
+Overfull \hbox (11.09369pt too wide) detected at line 3070
 [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[] [] \OML/cmm/m/it/12 B[]
  []
 
 
-Overfull \hbox (122.83052pt too wide) detected at line 3038
+Overfull \hbox (122.83052pt too wide) detected at line 3074
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ [] [] \OML/cmm/m/it/12 B[]
  []
 
 
-Overfull \hbox (22.40384pt too wide) detected at line 3041
+Overfull \hbox (22.40384pt too wide) detected at line 3077
 [] \OT1/cmr/m/n/12 = [] [] \OMS/cmsy/m/n/12 ^^@ [][] []
  []
 
 
-Overfull \hbox (131.22702pt too wide) detected at line 3055
+Overfull \hbox (131.22702pt too wide) detected at line 3091
 [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z^^Kk[][] \OMS/cmsy/m/n/12 ^^@ [] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L [] \OT1/cmr/m/n/12 = 0
  []
 
-[107]
-Overfull \hbox (76.1803pt too wide) detected at line 3076
+[109]
+Overfull \hbox (76.1803pt too wide) detected at line 3112
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 + []
  []
 
 
-Overfull \hbox (53.16032pt too wide) detected at line 3093
+Overfull \hbox (53.16032pt too wide) detected at line 3129
 [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z^^Kk[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L [] \OT1/cmr/m/n/12 = 0
  []
 
-[108]
-Overfull \hbox (96.3378pt too wide) detected at line 3107
+[110]
+Overfull \hbox (96.3378pt too wide) detected at line 3143
 [] [][] \OT1/cmr/m/n/12 = [] []
  []
 
 
-Overfull \hbox (154.61467pt too wide) detected at line 3113
+Overfull \hbox (154.61467pt too wide) detected at line 3149
 [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@ [] [] [] [][] ^^@ \OML/cmm/m/it/12 ^^L [] [][]
  []
 
-[109] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+[111] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [110] [111] [112] (./theory.bbl [113] [114] [115]
+) [112] [113] [114] (./theory.bbl [115] [116] [117]
 Underfull \hbox (badness 1024) in paragraph at lines 164--169
 []\TU/lmr/m/n/12 Martin Neil Baily, Charles Hulten, David Campbell, Timothy Bresnahan, and
  []
 
-[116])
+[118])
 
 Package natbib Warning: There were undefined citations.
 
-[117] (./theory.aux)
+[119] (./theory.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `theory.out' has not changed.
-(rerunfilecheck)             Checksum: 90A009AA45DE4A6F39C002334B7A585A;5037.
+(rerunfilecheck)             Checksum: DBFDC6C7430B3C26DBFD27FCE48C8A86;5163.
  ) 
 Here is how much of TeX's memory you used:
- 35461 strings out of 476684
- 830034 string characters out of 5804056
+ 35465 strings out of 476684
+ 830070 string characters out of 5804056
  1931018 words of memory out of 5000000
- 55073 multiletter control sequences out of 15000+600000
+ 55077 multiletter control sequences out of 15000+600000
  522535 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,18n,94p,1084b,2711s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on theory.xdv (117 pages, 2084448 bytes).
+Output written on theory.xdv (119 pages, 2096844 bytes).

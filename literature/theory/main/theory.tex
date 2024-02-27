@@ -2135,9 +2135,9 @@ steady state conditions in a phase diagram. In the next section we will repeat t
 
 \section{Introducing financial frictions}
 In this section we tackle the infinite maximization problem of the firm, introducing the possibility of financing through
-debt and two types of financial frictions. The first financial friction is a financing constraints (\(\forall t, b_t = l
+debt and two types of financial frictions. The first financial friction is a financing constraint (\(\forall t, b_t = l
 k_t\)), which implies fixed leverage for the firm. The second financial friction is introducing a participation
-constraint with monitoring cost \(\mu\) for the financial intermediaries. The goal is to understand how those frictions
+constraint with monitoring cost \(1-\mu\) for the financial intermediaries. The goal is to understand how those frictions
 affect the steady state of capital and dividends.
 
 \subsection{Participation constraint of the financial intermediaries } 
@@ -2356,18 +2356,18 @@ subject to:
     \item the financing constraint \(b_t=l k_t \quad \forall t\)
     \item the participation constraint of borrower \ref{eq21}
 \end{enumerate}
-Consolidating the constraints we get:
+Consolidating the constraints we get the flow of funds constrant:
 
 
 \begin{align}
     k_t &= \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_{t-1})}{l  k_{t-1}}\right] \cdot l k_{t-1} + f(k_{t-1}) - d_{t} \right \}{\left(1-l\right)}^{-1} \nonumber \\
-    k_t &= \left[ \frac{1 + \mu - \mu p}{p}f(k_{t+1}) + \frac{p - \delta p - R_f l}{p} k_{t-1}  - d_{t} \right](1-l)^{-1}
+    k_t &= \left[ \frac{1 + \mu - \mu p}{p}f(k_{t-1}) + \frac{p - \delta p - R_f l}{p} k_{t-1}  - d_{t} \right](1-l)^{-1} \label{eq:ff}
 \end{align}
 
 The Lagrangian for this optimization problem is formulated as:
 
 \begin{align}
-L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t-1}(1 - \delta) - \left(\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_{t-1})}{l k_{t-1}}\right) \cdot l k_{t-1} + f(k_{t-1}) - d_{t-1}\right]{\left(1-l\right)}^{-1},
+L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[ \frac{1 + \mu - \mu p}{p}f(k_{t-1}) + \frac{p - \delta p - R_f l}{p} k_{t-1}  - d_{t} \right](1-l)^{-1},
 \end{align}
 
 leading to the first-order conditions for optimizing dividends and capital over time:
@@ -2382,31 +2382,67 @@ and the dynamic optimality conditions for capital allocation:
 
 
 \begin{align}
-    \lambda_t = \beta \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t+1}) + (1 - \delta) + \frac{ 1-p }{ p } f^{\prime}(k_{t+1}) - \frac{R_f}{p}l \right], \quad \forall t.
+    \lambda_t = \beta \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t-1})\frac{1 + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right], \quad \forall t.
 \end{align}
 
 
 This formulation yields the Euler equation for dividends:
 
 \begin{align}
-U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[\frac{f^{\prime}(k_{t+1})}{p}+(1-\delta) - \frac{R_f}{p}l\right],
+U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[ f'(k_{t-1})\frac{1 + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right],
 \end{align}
 
-and the condition for constant dividends and the corresponding steady-state capital level:
+imposing (\(d_t = d_{t+1} =\hat{d}\)), we get:
 
-\[
-\widehat{k} = \left\{\left[\left(l - \beta + \beta \delta \right)\frac{p}{\beta}+R_f\right]Z^{-1}\right\}^{\frac{1}{\alpha}}.
-\]
+\begin{align}
+    \frac{\left(1-l \right) p}{\beta} &= f^{\prime}(\hat{k})\left({1+\mu-\mu p}\right) + \left({p-\delta p - R_f l}\right) \nonumber\\
+    f^{\prime}(\hat{k})&=\frac{p -p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(1+\mu-\mu p\right)} \label{eq22}
+\end{align}
+using the Cobb Douglas production function \ref{eq15'} into \ref{eq22} we get:
+\begin{align}
+    Z \alpha\hat{k}^{\alpha-1} &= \frac{p -p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(1+\mu-\mu p\right)} \nonumber \\
+    \hat{k} &=\left[\frac{Z \alpha \beta \left(1+\mu-\mu p\right)}{p -p l - \beta p + \beta \delta p + \beta R_f l}\right]^{\frac{1}{1-\alpha}} \label{eq23}
+\end{align}
+As in the free debt case, if the firm has less capital than the steady-state level \(\hat{k}\), the firm is optimal
+to increase her dividends over time. When instead \(\hat{k}<k\),the firm should be better of shrinking the dividends
+over time. Indeed it's easy to prove that imposing monitoring cost \(1-\mu=1\), no debt \(l=0\), and no probability of
+default \(1-p=0\) we get the same capital level as in the debt-free case \ref{eq16}. Moreover its easy to see that the
+steady-state capital is higher compared to the debt-free:
+\begin{align*}
+    \left[\frac{Z \alpha \beta (1+\mu-\mu p)}{p - p l - \beta p + \beta \delta p + \beta R_f l}\right]^{\frac{1}{1-\alpha}} &\geq \left[\frac{\alpha \beta Z}{1 - \beta(1-\delta)}\right]^{\frac{1}{1-\alpha}} \\
+    \frac{(1+\mu(1-p))(1-\beta(1-\delta))}{p(1-l)+\beta(R_f l - p(1-\delta))} &\geq 0 \\
+    (1+\mu(1-p))(1-\beta(1-\delta)) &\geq 0 \\
+    p(1-l)+\beta(R_f l - p(1-\delta)) &\geq 0
+\end{align*}
+However, if we consider the case on which has no cost of monitoring \(\mu=1\) and on which has \(\mu=-.75\) ceteris
+paribus, \(\hat{k}\) will be higher for the frictionless case. 
 
-In this debt-financed case, the steady-state capital is lower than in a debt-free scenario due to the interest
-obligations. Marginal productivity of capital exceeds its marginal cost when capital is below \(\widehat{k}\),
-indicating an incentive for capital accumulation. Conversely, at the steady state, the capital adjustment  mechanism
-ensures that dividends align with the profitability and cost conditions:
+\paragraph{Steady state for capital}
+Imposing s.s. condition for capital (\(k_t=k_{t+1}=\hat{k}\)) into the flow of funds constraint \ref{eq:ff}:
 
-\[
-\widehat{d} =\frac{f(k)}{p} - k\left(\delta + \frac{R_f}{p}l -l\right).
-\]
+\begin{equation}
+    \widehat{d} =\frac{1+\mu-\mu p}{p}f(\hat{k})-\left(\frac{R_f+\delta p - l p}{p}\right)\hat{k} \label{eq:div_opt_path}
+\end{equation}
+It can be straightforwardly demonstrated that by setting the monitoring cost to \(1-\mu=1\), eliminating debt
+with \(l=0\), and removing the risk of default by setting \(1-p=0\), we arrive at an identical level of dividends as
+observed in the scenario without debt \ref{eq17}. 
 
+The dynamics are equal to the free debt case except for the fact that the coefficient that multiplied \(f(\hat{k})\) is
+higher since:
+\begin{align*}
+    \frac{1+\mu-\mu p}{p}&>1 \\
+    1+\mu(1- p) &> p
+\end{align*}
+This is valid also for the coefficient of \(\hat{k}\) in equation \ref{eq:div_opt_path}, which is higher than the free
+debt case:
+\begin{align*}
+    \frac{R_f+\delta p - l p}{p}&>(1-\delta) \\
+    \frac{R_f+\delta p - l p}{p(1-\delta)}&>0 \\
+    R_f &> p(l-\delta)\\
+    p(1-\delta)&>0
+\end{align*}
+
+\subsection{Phase diagram}
 In scenarios where dividends exceed their steady-state value, capital diminishes over time, suggesting a depletion of
 resources contrary to situations where capital is below the steady state, leading to an accumulation of capital. This
 dynamic illustrates the balancing act between leveraging debt for growth and the sustainable  management of capital and
