@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex theory"] 1709068657 "theory.aux" "theory.bbl" "theory" 1709070051 0
+["bibtex theory"] 1709119135 "theory.aux" "theory.bbl" "theory" 1709119549 0
   "./reference.bib" 1707833219 24211 9c9a5dc4ae84408f0e7bada1ed53a26b ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "theory.aux" 1709070046 28875 18ebc8a9bdbab4b24a99a4876b7abeb8 "xelatex"
+  "theory.aux" 1709119544 28650 565b38084c8b768602adb59dc05cfef6 "xelatex"
   (generated)
   "theory.bbl"
   "theory.blg"
   (rewritten before read)
-["xdvipdfmx"] 1709070046 "theory.xdv" "theory.pdf" "theory" 1709070051 0
-  "theory.xdv" 1709070046 2096856 73733ff5e82c3c566b3f4593beb7aa1a "xelatex"
+["xdvipdfmx"] 1709119545 "theory.xdv" "theory.pdf" "theory" 1709119549 0
+  "theory.xdv" 1709119544 2091396 48d5b7abd0b3094b763617fae30de480 "xelatex"
   (generated)
   "theory.pdf"
   (rewritten before read)
-["xelatex"] 1709070039 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/theory.tex" "theory.xdv" "theory" 1709070051 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/theory.tex" 1709070038 198174 d782bd3c0f9531948bd181fafdfa38f8 ""
+["xelatex"] 1709119537 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/theory.tex" "theory.xdv" "theory" 1709119549 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/theory.tex" 1709119536 200494 c048ac483daf04d2949bb68f1de47879 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -258,10 +258,10 @@
   "noexit_nofrictions.csv" 1708182248 17261 3329485fee09b5543df67e838242b6c7 ""
   "simulation.csv" 1707933053 1614 f72656526dbc46abdbd0ba1f4d95e79b ""
   "simulation_withoutfriction.csv" 1707933443 1739 75412b1273b3f8e09e6fc6245e888943 ""
-  "theory.aux" 1709070046 28875 18ebc8a9bdbab4b24a99a4876b7abeb8 "xelatex"
-  "theory.bbl" 1709068658 8531 b14322fcfaa05a1397cfe5f07a3e5ea8 "bibtex theory"
-  "theory.out" 1709070046 5163 dbfdc6c7430b3c26dbfd27fce48c8a86 "xelatex"
-  "theory.tex" 1709070038 198174 d782bd3c0f9531948bd181fafdfa38f8 ""
+  "theory.aux" 1709119544 28650 565b38084c8b768602adb59dc05cfef6 "xelatex"
+  "theory.bbl" 1709119135 8531 b14322fcfaa05a1397cfe5f07a3e5ea8 "bibtex theory"
+  "theory.out" 1709119544 5163 dbfdc6c7430b3c26dbfd27fce48c8a86 "xelatex"
+  "theory.tex" 1709119536 200494 c048ac483daf04d2949bb68f1de47879 ""
   (generated)
   "theory.aux"
   "theory.log"

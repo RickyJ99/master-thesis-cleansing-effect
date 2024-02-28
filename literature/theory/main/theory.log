@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  27 FEB 2024 22:40
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  28 FEB 2024 12:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,85 +797,85 @@ File: div_cap_exit.png Graphic file (type bmp)
 PGFPlots: reading {exit_nofrictions.csv}
 
 
-Package pgfplots Warning: Table 'exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2918.
+Package pgfplots Warning: Table 'exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2985.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {noexit_nofrictions.csv}
 
-Package pgfplots Warning: Table 'noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2919.
+Package pgfplots Warning: Table 'noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2986.
 
  [warning /pgfplots/warning/empty column name]
 [103]
 PGFPlots: reading {noexit_frictions.csv}
 
 
-Package pgfplots Warning: Table 'noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2961.
+Package pgfplots Warning: Table 'noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 3028.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {exit_frictions.csv}
 
-Package pgfplots Warning: Table 'exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2962.
+Package pgfplots Warning: Table 'exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 3029.
 
  [warning /pgfplots/warning/empty column name]
 [104]
 PGFPlots: reading {exit_frictions.csv}
 
 
-Package pgfplots Warning: Table 'exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2993.
+Package pgfplots Warning: Table 'exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 3060.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {noexit_frictions.csv}
 
-Package pgfplots Warning: Table 'noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2994.
+Package pgfplots Warning: Table 'noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 3061.
 
  [warning /pgfplots/warning/empty column name]
 [105]
-Overfull \hbox (2.03815pt too wide) in paragraph at lines 3011--3011
+Overfull \hbox (2.03815pt too wide) in paragraph at lines 3078--3078
 []\TU/lmr/bx/n/17.28 Solving the Belman with Benveniste-Scheinkman 
  []
 
 [106]
-Overfull \hbox (0.97949pt too wide) detected at line 3032
+Overfull \hbox (0.97949pt too wide) detected at line 3099
 \OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 c\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 k[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 )(1 + \OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + (\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 c \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 k[]\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^N\OT1/cmr/m/n/12 )
  []
 
 [107] [108]
-Overfull \hbox (11.09369pt too wide) detected at line 3070
+Overfull \hbox (11.09369pt too wide) detected at line 3137
 [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[] [] \OML/cmm/m/it/12 B[]
  []
 
 
-Overfull \hbox (122.83052pt too wide) detected at line 3074
+Overfull \hbox (122.83052pt too wide) detected at line 3141
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ [] [] \OML/cmm/m/it/12 B[]
  []
 
 
-Overfull \hbox (22.40384pt too wide) detected at line 3077
+Overfull \hbox (22.40384pt too wide) detected at line 3144
 [] \OT1/cmr/m/n/12 = [] [] \OMS/cmsy/m/n/12 ^^@ [][] []
  []
 
 
-Overfull \hbox (131.22702pt too wide) detected at line 3091
+Overfull \hbox (131.22702pt too wide) detected at line 3158
 [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z^^Kk[][] \OMS/cmsy/m/n/12 ^^@ [] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L [] \OT1/cmr/m/n/12 = 0
  []
 
 [109]
-Overfull \hbox (76.1803pt too wide) detected at line 3112
+Overfull \hbox (76.1803pt too wide) detected at line 3179
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 + []
  []
 
 
-Overfull \hbox (53.16032pt too wide) detected at line 3129
+Overfull \hbox (53.16032pt too wide) detected at line 3196
 [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z^^Kk[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L [] \OT1/cmr/m/n/12 = 0
  []
 
 [110]
-Overfull \hbox (96.3378pt too wide) detected at line 3143
+Overfull \hbox (96.3378pt too wide) detected at line 3210
 [] [][] \OT1/cmr/m/n/12 = [] []
  []
 
 
-Overfull \hbox (154.61467pt too wide) detected at line 3149
+Overfull \hbox (154.61467pt too wide) detected at line 3216
 [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@ [] [] [] [][] ^^@ \OML/cmm/m/it/12 ^^L [] [][]
  []
 
@@ -898,12 +898,12 @@ Package rerunfilecheck Info: File `theory.out' has not changed.
 (rerunfilecheck)             Checksum: DBFDC6C7430B3C26DBFD27FCE48C8A86;5163.
  ) 
 Here is how much of TeX's memory you used:
- 35465 strings out of 476684
- 830070 string characters out of 5804056
+ 35468 strings out of 476684
+ 830123 string characters out of 5804056
  1931018 words of memory out of 5000000
- 55077 multiletter control sequences out of 15000+600000
+ 55080 multiletter control sequences out of 15000+600000
  522535 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,18n,94p,1084b,2711s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on theory.xdv (119 pages, 2096856 bytes).
+Output written on theory.xdv (119 pages, 2091396 bytes).
