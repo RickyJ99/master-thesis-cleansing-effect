@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -19,59 +19,6 @@ F.~A. Hayek and Bruce Caldwell.
   University of Chicago Press, January 1941.
 \newblock ISBN ARRAY(0x42a86798).
 \newblock URL \url{https://ideas.repec.org/b/ucp/bkecon/9780226320991.html}.
-
-\bibitem[Keynes(1960)]{key60}
-John~Maynard Keynes.
-\newblock \emph{The theory of employment interest and money}.
-\newblock Macmillan, 1960.
-
-\bibitem[Phillips(1958)]{Phi58}
-Alban~W Phillips.
-\newblock The relation between unemployment and the rate of change of money
-  wage rates in the united kingdom, 1861-1957.
-\newblock \emph{economica}, 25\penalty0 (100):\penalty0 283--299, 1958.
-
-\bibitem[Friedman(1972)]{Fri72}
-Milton Friedman.
-\newblock Have monetary policies failed?
-\newblock \emph{The American Economic Review}, 62\penalty0 (1/2):\penalty0
-  11--18, 1972.
-
-\bibitem[Lucas(1976)]{Luc76}
-Robert~E. Lucas.
-\newblock Econometric policy evaluation: A critique.
-\newblock \emph{Carnegie-Rochester Conference Series on Public Policy},
-  1:\penalty0 19--46, 1976.
-\newblock ISSN 0167-2231.
-\newblock \doi{https://doi.org/10.1016/S0167-2231(76)80003-6}.
-\newblock URL
-  \url{https://www.sciencedirect.com/science/article/pii/S0167223176800036}.
-
-\bibitem[Mankiw and Romer(1991)]{ManRom91}
-N~Gregory Mankiw and David Romer.
-\newblock \emph{New Keynesian Economics: Coordination failures and real
-  rigidities}, volume~2.
-\newblock MIT press, 1991.
-
-\bibitem[Kydland and Prescott(1982)]{Pre82}
-Finn~E. Kydland and Edward~C. Prescott.
-\newblock Time to build and aggregate fluctuations.
-\newblock \emph{Econometrica}, 50\penalty0 (6):\penalty0 1345--1370, 1982.
-\newblock ISSN 00129682, 14680262.
-\newblock URL \url{http://www.jstor.org/stable/1913386}.
-
-\bibitem[Bernanke and Gertler(1986)]{BerGer86}
-Ben~S Bernanke and Mark Gertler.
-\newblock Agency costs, collateral, and business fluctuations.
-\newblock Working Paper 2015, National Bureau of Economic Research, September
-  1986.
-\newblock URL \url{http://www.nber.org/papers/w2015}.
-
-\bibitem[Mortensen and Pissarides(1994)]{MorDalPisChr94}
-Dale~T Mortensen and Christopher~A Pissarides.
-\newblock Job creation and job destruction in the theory of unemployment.
-\newblock \emph{The review of economic studies}, 61\penalty0 (3):\penalty0
-  397--415, 1994.
 
 \bibitem[Solow(1956)]{Sol56}
 Robert~M. Solow.
@@ -203,5 +150,12 @@ Ben~S Bernanke and Mark Gertler.
   transmission.
 \newblock \emph{Journal of Economic perspectives}, 9\penalty0 (4):\penalty0
   27--48, 1995.
+
+\bibitem[Bernanke and Gertler(1986)]{BerGer86}
+Ben~S Bernanke and Mark Gertler.
+\newblock Agency costs, collateral, and business fluctuations.
+\newblock Working Paper 2015, National Bureau of Economic Research, September
+  1986.
+\newblock URL \url{http://www.nber.org/papers/w2015}.
 
 \end{thebibliography}
