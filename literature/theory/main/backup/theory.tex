@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+\documentclass[12pt]{article}
 
  % Add this line to your preamble
 % Language setting
@@ -69,8 +69,7 @@
     recession, replicating the model in computer  simulation.
 \end{abstract}
 
-\tableofcontents
-\chapter{Introduction} 
+\section{Introduction} 
 
 
 In macroeconomic theory, the investigation of business cycles and long-term growth trajectories traditionally unfolds in
@@ -115,9 +114,96 @@ of thought regarding business cycles, to understand the context and development 
 theories. This exploration will provide a foundation for appreciating the diversity of perspectives and the progression
 of ideas that have shaped our understanding of the intricate relationship between short-term economic fluctuations and
 long-term growth trajectories. 
-\chapter{Literature review}
-\section{Business cycle history}
 
+\section{Business cycle history}
+\subsection{Hayek Schumpeter Keynes}
+The exploration of business cycle theories represents a cornerstone in the history of economic thought. A prominent
+exponent in this realm was Friedrich Hayek, who articulated the complexities of business cycles in relation to economic
+equilibrium theory. Hayek's perspective is encapsulated in his own words: 
+
+\begin{quote}
+    "The incorporation of cyclical phenomena into the system of economic equilibrium theory, with which they are in
+    apparent contradiction remains the crucial problem of Trade Cycle theory; 
+    By 'equilibrium theory' we primarily understand the modern theory of the general interdependence of all economic
+    quantities, which has been perfectly expressed by the Lausanne School of theoretical economics." \cite{Hay33} 
+\end{quote}
+
+
+In the turbulent era of the early 1930s, the exploration of business cycles was prominently shaped by the contrasting
+viewpoints of Friedrich Hayek and John Maynard Keynes, two of the twentieth century's most influential economists.
+Hayek's examination of business cycles, as delineated in his seminal work "Monetary Theory and the Trade Cycle,"
+\cite{Hay33}, and further elaborated in "The Pure Theory of Capital" \cite{Ha41}, provides a profound analysis
+through the lens of monetary theory and its ramifications on capital structure. Hayek posited that economic distortions,
+notably those stemming from the artificial depression of interest rates by central banks, precipitate malinvestments
+during periods of economic expansion. These malinvestments, especially prevalent in capital-intensive sectors, were
+deemed unsustainable, leading inevitably to economic downturns characterized by the correction of these misallocations. 
+
+Conversely, Keynes, in his "The General Theory of Employment, Interest, and Money" \cite{Key36},
+approached the business cycle issue from an equilibrium perspective, focusing on the role of aggregate demand in
+determining overall economic activity levels. Keynes argued that a shortfall in aggregate demand could lead to
+protracted periods of high unemployment, advocating for active government intervention to stimulate demand and
+re-establish economic equilibrium. 
+
+Hayek's theoretical framework underscores the intricate relationship between capital investment and monetary
+disequilibrium within the business cycle. He elucidates this connection through the concept of inter-temporal
+preferences, which dictate the pace of capital investment and the extent of capital accumulation. The decision-making
+process regarding the allocation of resources between present dividends and future investment is critical to
+understanding the cyclical nature of the economy. Hayek asserts: 
+
+\[ I_t = f(r_t, r_n) \]
+\[ r_t < r_n \rightarrow \text{Malinvestment} \]
+
+where \( I_t \) signifies investment at time \( t \), \( r_t \) represents the market interest rate, and \( r_n \)
+denotes the natural rate of interest. A divergence between \( r_t \) and \( r_n \), particularly when \( r_t \) is
+artificially maintained below \( r_n \), leads to malinvestments. This discrepancy between the market and natural rates
+of interest, exacerbated by the expansion of bank credit, serves as the cornerstone of Hayek's business cycle theory.
+Hayek further elaborates on the dynamic and temporal aspects of production and investment in "The Pure Theory of
+Capital" \cite{Ha41}, where he critically assesses the equilibrium-based economic theories and emphasizes the
+importance of understanding the temporal structure of capital. 
+
+Hayek's analysis of monetary disequilibrium and its impact on the business cycle is complemented by his insights into
+the mechanisms of bank credit creation and its influence on the natural state of equilibrium in the market for loanable
+funds. The expansion of bank credit, which decouples the market rate of interest from the natural rate, instigates
+cycles of over-investment and mal-investment, ultimately culminating in inter-temporal economic instability. 
+
+These theoretical perspectives offered by Hayek provide a nuanced understanding of the complexities inherent in the
+business cycle, challenging the Keynesian emphasis on aggregate demand and fiscal policy interventions. Hayek's
+contributions, particularly in "The Pure Theory of Capital," highlight the significance of capital theory in analyzing
+monetary disequilibria and underscore the dynamic and inter-temporal nature of economic activities. 
+
+Thus, while Keynes emphasized stabilizing aggregate demand to achieve equilibrium and mitigate business cycles, Hayek
+focused on the inherent dynamism and complexity of economic systems, criticizing equilibrium models for their
+oversimplification of the intricate processes that drive economic activities. This divergence in views marked a
+fundamental debate in economic theory, shaping the discourse on how economies respond to and recover from periods of
+economic downturns. 
+\par
+\vspace{2cm}
+Joseph Schumpeter, another influential economist of the early 20th century, brought a unique perspective to the
+discussion of business cycles, one that diverged significantly from both Hayek and Keynes. Schumpeter's approach,
+primarily outlined in his theory of "creative destruction," emphasized the role of innovation and entrepreneurial spirit
+in economic development and business cycles.  
+
+Schumpeter viewed business cycles as inherent and vital to capitalist economies, driven by the process of innovation.
+According to Schumpeter, the entrepreneur is the agent of change, introducing new technologies, products, and methods,
+which disrupt existing market equilibria. This process of innovation leads to the destruction of outdated industries and
+economic structures, paving the way for new ones. In Schumpeter's framework, the cyclical nature of the economy was a
+reflection of this ongoing process of creative destruction, where periods of economic downturns were seen not just as
+phases of correction, as Hayek might argue, or as failures of demand, as per Keynes, but as essential for clearing away
+the old to make way for the new. 
+
+While Hayek focused on the distortions in capital structure caused by monetary interventions and Keynes emphasized the
+role of aggregate demand and government intervention in stabilizing the economy, Schumpeter's perspective highlighted
+the evolutionary nature of capitalist economies. He argued that economic fluctuations were natural and necessary, a
+process through which economies evolve and adapt over time. Schumpeter's theory thus provided a more dynamic view of
+capitalism, recognizing the disruptive yet progressive role of innovation and entrepreneurship in shaping economic
+landscapes. 
+
+Schumpeter's contribution added a dimension of evolutionary change to the understanding of business cycles,
+contrasting with Hayek's emphasis on monetary theory and capital structure, and Keynes's focus on equilibrium and
+aggregate demand. Schumpeter's insights into the transformative power of innovation offered a more optimistic view of
+economic downturns, seeing them as opportunities for new growth and advancements, the predecessor of the idea of
+cleansing effect. 
+ 
 \subsection{Theories Connecting Business Cycles to Long-Term Growth}
 
 In the domain of economic theory, the relationship between business cycles (BC) and long-term growth is dissected into
@@ -298,39 +384,560 @@ analysis serves as a pivotal foundation for the new theoretical framework introd
 significant departure from traditional views and emphasizing the multifaceted impact of recessions on firm productivity
 and economic recovery. 
 
-In the forthcoming sections, / we will explore the
+In the forthcoming sections, we will delve into the empirical evidence presented by \cite{DavHalt92} in their
+seminal works from 1990 and 1992, which lay the groundwork for our discussion. Following this, we will explore the
 theoretical underpinnings that form the basis of the new, streamlined theoretical framework introduced in this thesis.
 Our examination begins with the insights of \cite{CabHarm94}, focusing on the interplay between the
 destruction and creation margins in economic cycles. Subsequently, we will delve into the work of \cite{OsePap17}
 (2017), which sheds light on the financial dimensions, particularly how capital lending frictions can precipitate
 misallocations. These studies collectively inform the development of our theoretical framework, setting the stage for a
 comprehensive analysis of economic dynamics and firm behavior during recessions. 
+\section{Literature review of empirical studies}
+\subsection{Emprical findings}
+This analysis juxtaposes two pivotal studies that dissect business cycle dynamics through the lens of labor market
+fluctuations and job reallocation. The first, by \cite{DavHalt92}, scrutinizes job reallocation during
+recessions, employing data from the U.S. manufacturing sector. The second study, by \cite{BlaDia90},
+concentrates on labor flows throughout business cycles. Both studies utilize labor data from the Current Population
+Survey (1968-1986) and manufacturing data from the Federal Bureau of Labor Statistics up to 1981, later complemented by
+the Longitudinal Research Database. These works collectively illuminate the dynamic interplay of job creation and
+destruction, offering a nuanced understanding of labor market volatility and its implications for economic cycles.
+Further exploration will include an analysis of Haltiwanger's findings and their application to understanding
+the Great Recession's impact on the labor market in his paper \cite{FosHal16}
+\paragraph{Reallocation cleansing or not?}
+This study meticulously investigates the variance in employment changes at the establishment level within the U.S.
+manufacturing sector from 1972 to 1986, focusing on the gross creation and destruction of jobs and the rate of job
+reallocation across plants. Leveraging an extensive dataset from the Annual Survey of Manufactures, it provides a
+detailed examination of how job and worker reallocation contribute to understanding employment dynamics and the cyclical
+nature of the labor market. The findings reveal significant rates of job turnover within specific industry sectors and
+elucidate the relationship between job reallocation and various plant characteristics such as age, size, and ownership
+type. Moreover, the research discusses the persistence and concentration of job creation and destruction, highlighting
+their implications for long-term employment trends and worker mobility. Through analyzing the interplay between
+establishment-level job flows and broader labor market states, this paper contributes valuable insights into the
+mechanisms of labor reallocation and the structural factors driving employment heterogeneity in the manufacturing
+sector. 
 
+The key concept behind the \cite{DAvHalt90,DavHalt92} studies is that the measure of reallocation is given by the sum of job
+or capital creation and destruction. In the first place lets get some definitions that are used in the paper:
+The analysis in this paper establishes a straightforward link between the gross job flow metrics and the size-weighted
+distribution of establishment growth rates. Gross job creation is determined by aggregating employment increases in both
+growing and newly established firms within a sector. In a similar vein, gross job destruction is assessed by totaling
+employment declines in contracting and ceasing operations. This methodological approach allows for a comprehensive
+evaluation of employment dynamics, highlighting the pivotal role of establishment size and growth in understanding
+sectoral labor market fluctuations. 
+To measure Total Factor Productivity (TFP) at the establishment level, they construct an index following the methodology
+similar to \cite{baily1992productivity} and subsequent studies. The formula for the index is:  
+
+\[ \ln(\text{TFP}_{et}) = \ln(Q_{et}) - a_K\ln(K_{et}) - a_L\ln(L_{et}) - a_M\ln(M_{et}) \]
+
+In this equation, \(Q\) represents real output, \(K\) stands for real capital, \(L\) denotes labor input, and \(M\)
+signifies real materials used, with \(a\) representing the factor elasticities. The subscript \(e\) refers to individual
+establishments, while \(t\) denotes time, allowing for a dynamic analysis of productivity changes across establishments. 
+The methodology for measuring Total Factor Productivity (TFP) at the establishment level involves detailed component
+measurements. Nominal output is calculated by summing total shipments with inventory
+changes, adjusted by industry-specific deflators from the NBER-CES Manufacturing Industry Database. Capital is
+quantified using the perpetual inventory method for structures and equipment, while labor input comprises total hours
+worked by both production and nonproduction workers. Materials, including physical materials and energy, are measured
+and deflated by industry-specific indices, with all values expressed in 1997 constant dollars. Factor elasticities are
+determined using industry-level cost shares, with adjustments made to account for industry differences in TFP
+calculations, ensuring comparisons control for sectoral disparities. 
+The first question they try to address is Did Reallocation Dynamics Change in the great recession?
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.6]{Plot1.1.png}
+    \caption{Figure Job ﬂows and the business cycle. Authors' calculations using Business
+    Dynamics Statistics (annual), Business Employment Dynamics (quarterly), and
+    the Current Population Survey. Cycle is the change in the unemployment rate.
+    }
+    \label{plot:1.1}
+\end{figure}
+The graph also depicts the fluctuations in the unemployment rate, clearly demonstrating that periods of rising
+unemployment are typically marked by increased job losses and decreased job creation. However, the trend took a notable
+turn during the Great Recession. Specifically, while job losses did surge in the 2008-2009 period, the most remarkable
+change was the significant drop in job creation beginning in 2007 and extending through 2010. Additionally, there is an
+observable long-term decline in job flow dynamics, a topic for further discussion. 
+
+To corroborate these findings and delve into more granular data, they utilized the Business Employment Dynamics (BED)
+statistics for the U.S. private sector. The BED's quarterly data from the second quarter of 1990 to the first quarter of
+2012 (Panel B of the figure) underscores the annual trends, showing that recessions typically involve higher job
+destruction and lower job creation rates. The period starting in 2007 stands out for a particularly steep decline in job
+creation, a trend that is more pronounced in the BED data. The BED series also highlights that the sluggish recovery
+from the Great Recession up to early 2012 is primarily attributable to weak job creation rather than enduringly high job
+destruction rates. This pattern, confirmed by other datasets such as the Job Openings and Labor Turnover Survey (JOLTS),
+persisted beyond the first quarter of 2012. 
+
+Adding to this, job creation during the Great Recession was as low as it has been at any time in the past 30 years, as
+illustrated in the figure. Moreover, job reallocation (the sum of job creation and destruction) reached its lowest point
+in 30 years during the Great Recession and its immediate aftermath. When comparing the Great Recession to the early
+1980s recession, the rate of job reallocation was 28* in 2009, in stark contrast to 35* in 1983 (both periods represent
+peaks in job destruction and are measured using March-to-March Business Dynamics Statistics data). These patterns are
+partly driven by significant downward trends in job flows, as evidenced in both the Business Dynamics Statistics (BDS)
+and the BED data. Although exploring the causes of these declining trends in job flows is beyond the scope of this
+analysis, it is clear that these trends are significant and have been taken into account in the analysis. 
+
+Moreover, the authors show how the patterns change considerably in the great recession, particularly regarding how the
+creation and destruction rate of jobs respond to the sharp fall in demand. They found as expected from \cite{CabHarm94}
+that the creation rate of new jobs is slower before the crisis spreads out and than the destruction rate increases when it is
+not possible to fully accommodate the decrease in demand only stopping new labor hiring. They asses that during the
+Great Recession this pattern changed in particular the fraction of net employment contraction accounted by a job
+reduction is higher than 0.5, while for all the previous recessions it was way below 0.4 as shown in the table.
+\begin{table}[H]
+    \centering
+    \caption{
+    Share of Change in Net Employment Growth Due to Change in Job Creation in Periods of Net Contraction}
+
+    \begin{tabular}{lccc}
+    \hline & \multicolumn{2}{c}{ National } & State \\
+    \cline { 2 - 3 } Period & BDS (Annual) & BED (Quarterly) & BDS (Annual) \\
+    \hline Pre-Great Recession & .21 & .28 & .39 \\
+    Post-2007 & .61 & .59 & .65 \\
+    \hline
+    \end{tabular}
+    \label{tab:1.2}
+\end{table}
+
+This analysis is based on the authors' computations using data from the Business Dynamics Statistics (BDS) and Business
+Employment Dynamics (BED). The methodology hinges on the principle that net employment change equals job creation minus
+job destruction. For any period(s) of net employment decrease lasting at least one period, both the total change in net
+employment growth and the total change in job creation are aggregated over the full duration of consecutive net
+contraction periods. Furthermore, these aggregated changes are then further combined within the periods outlined in the
+analysis. The proportion mentioned refers to the fraction of the total aggregated change in net employment growth during
+the specified timeframe that is attributed to the total change in job creation within the same timeframe. Specifically,
+the BDS data spans from 1981 to 2007 for the pre-Great Recession era and from 2008 to 2011 for the post-2007 era. For
+the BED, the pre-Great Recession period covers from the second quarter of 1990 to the third quarter of 2007, and the
+post-2007 era from the fourth quarter of 2007 to the first quarter of 2012. It's important to note that these
+calculations are applied solely to periods experiencing a net decrease in employment growth. For instance, this applies
+to the period from the fourth quarter of 2007 to the first quarter of 2010 for the BED data. Regarding the BDS National
+Annual data, there are six years of net employment contraction, with two of those years occurring after 2007. In the BED
+Quarterly data, there are twenty-two quarters of net contraction, with nine quarters following 2008. For the BDS State
+Annual data, there are 393 state-year instances of net contraction, with 112 of those instances occurring after 2007. 
+
+Another way to see this change in patterns is regressing job creation rate, job destruction rate, and Reallocation rate
+to Cyle an iteration between a Great Recession dummy and the cycle and a trend. The results are shown in the table 3.
+\begin{table}
+    \centering
+    \caption{Job Flows and Change in the Unemployment Rate at the State-Level (Annual), 1981-2011}
+    \begin{tabular}{|c|c|c|c|}
+    \hline & \begin{tabular}{l} 
+    Job Creation \\
+    Rate
+    \end{tabular} & \begin{tabular}{c} 
+    Job Destruction \\
+    Rate
+    \end{tabular} & Reallocation Rate \\
+    \hline Cycle & \begin{tabular}{l}
+    $-.631 ***$ \\
+    $(.046)$
+    \end{tabular} & \begin{tabular}{l}
+    $1.194 ***$ \\
+    $(.053)$
+    \end{tabular} & \begin{tabular}{l}
+    $.563 ***$ \\
+    $(.068)$
+    \end{tabular} \\
+    \hline GR $\times$ cycle & \begin{tabular}{l}
+    $-.371 ***$ \\
+    $(.079)$
+    \end{tabular} & \begin{tabular}{l}
+    $-.421^***$ \\
+    $(.079)$
+    \end{tabular} & \begin{tabular}{l}
+    $-.793 ***$ \\
+    $(.128)$
+    \end{tabular} \\
+    \hline Trend & \begin{tabular}{l}
+    $-.168***$ \\
+    $(.010)$
+    \end{tabular} & \begin{tabular}{l}
+    $-.136 ***$ \\
+    $(.011)$
+    \end{tabular} & \begin{tabular}{l}
+    $-.304***$ \\
+    $(.020)$
+    \end{tabular} \\
+    \hline
+    \end{tabular}
+    \footnote{$-N=1,581$. GR is a dummy variable equal to one for years from 2008 to 2010 (job flows from March 2007 to March 2010). The cycle is the state-year change in the unemployment rate. All specifications include state fixed effects. Standard errors in parentheses are clustered at the state level.
+    $$
+     because * \quad p<.01 \text {. }
+    $$}
+    \label{tab:1.2}
+\end{table}
+The authors delve into the nuances of state-level job flow dynamics by leveraging the variation in the relationship
+between cyclical economic indicators and job flows across different states. Their methodological approach is rooted in
+conducting descriptive regressions that not only link job flows to a selected cyclical indicator but also incorporate an
+interaction term that captures the distinctive economic conditions of the Great Recession period alongside the cyclical
+variable. To achieve this, they meticulously utilize changes in the unemployment rate at the state level as a proxy for
+economic cycles. Recognizing the persistent negative trend in job flows across the board, the authors judiciously
+incorporate a linear trend into their regression models to adequately account for this overarching pattern. 
+
+The findings from these regressions are illuminating, revealing that cyclical fluctuations predominantly explain a
+substantial portion of the variance observed in job flows, particularly with respect to the job destruction rate. This
+observation is in line with the theoretical framework posited by \cite{CabHarm94}, which suggests that the
+margin of job destruction exhibits a higher sensitivity to cyclical downturns compared to the job creation margin. A
+striking aspect of their analysis is the significant and negative interaction observed between the cyclical variable and
+the Great Recession dummy variable, indicating that this period was characterized by a pronounced decrease in the rate
+of new job openings, whereas the rate of job layoffs was not as severely affected as it had been in other recessions.
+This pattern underscores the profound and distinctive impact of the Great Recession, which led to a dramatic downturn in
+job creation, surpassing the declines observed in job destruction rates and deviating markedly from the trends seen in
+prior economic downturns. 
+
+Furthermore, the analysis sheds light on the behavior of the job reallocation rate during the Great Recession, which, in
+a departure from its traditionally pro-cyclical nature observed in earlier recessions, switched signs, indicating a
+contraction in job reallocation. This reversal is particularly noteworthy as it signifies a shift towards less job
+reallocation, thereby challenging the conventional understanding of job flow dynamics during economic downturns. 
+
+An important contribution to this discourse comes from studies that emphasize the significant role of young businesses
+in the observed decline in job creation rates, particularly highlighted in the research by \cite{fort2013firms}. These young
+businesses, defined as entities with less than five years of operation, exhibit a markedly higher responsiveness in
+their job creation margin, especially in the aftermath of the 2007 financial crisis. This responsiveness is contrasted
+with the behavior of older firms, which, although also experiencing shifts in their job creation and destruction
+margins, do not demonstrate the same level of sensitivity as their younger counterparts. The distinction between young
+and old firms becomes even more pronounced when examining the destruction margin, where young firms again show greater
+responsiveness, underscoring the differential impact of economic cycles based on firm age. 
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.54]{Plot1.2.png}
+    \caption{Job ﬂows by age, 1981-2011. Authors' calculations on Business Dy-
+    namics Statistics. Young is for establishments owned by ﬁrms less than 5 years old.
+    Mature is for establishments owned by ﬁrms 5 or more years old. Job ﬂows are
+    establishment-based and are classiﬁed by ﬁrm age characteristics.
+    }
+    \label{plot:1.1}
+\end{figure} 
+The second question that the authors try to address is: Did the Cleansing Effect change during the Great Recession?
+To address this question the authors use a regression that examines the relation between the growth and survival
+dynamics of the incumbent establishment to productivity. The specification that they imply is the following 
+The specification is defined as follows:
+\[ Y_{es,t+1} = \lambda_s + \lambda_{t+1} + \beta(\text{TFP}_{es,t}) + \gamma(\text{Cycle}_{s,t+1}) + \delta(\text{TFP}_{es,t} \times \text{Cycle}_{s,t+1}) + X'_{es,t}\mathbf{V} + \epsilon_{es,t+1}; \]
+where \(e\) represents the establishment, \(s\) denotes the state, and \(Y\) encompasses a series of outcomes. TFP
+refers to the deviations in total factor productivity from the average within each industry by year, and Cycle
+represents the variation in the state-specific unemployment rate from time \(t\) to \(t+1\). The model assesses three
+distinct outcomes (all calculated from \(t\) to \(t+1\)): "Overall Growth" (combining continuing operations and exits),
+"Exit," and "Conditional Growth" (considering only those that continue, i.e., no exiters). 
+They used data from 1981-2010 controlling per year and state effects. In order to assess if the Great Recession was
+different from previous recessions the added iteration terms with a dummy variable representing the Great Recession. 
+The specification became the following:
+The refined model is expressed as:
+\[ Y_{es,t+1} = \lambda_s + \lambda_{t+1} + \beta(\text{TFP}_{es,t}) + \gamma(\text{Cycle}_{s,t+1}) + \delta(\text{TFP}_{es,t} \times \text{Cycle}_{s,t+1}) + \xi(\text{GR}_{t+1} \times \text{TFP}_{es,t}) + \mu(\text{GR}_{t+1} \times \text{Cycle}_{s,t+1}) + \phi(\text{GR}_{t+1} \times \text{Cycle}_{s,t+1} \times \text{TFP}_{es,t}) + X'_{es,t}\mathbf{V} + \epsilon_{es,t+1}; \]
+where GR signifies a dummy variable for the Great Recession, assigned a value of 1 during the years 2007 to 2009. This
+the model takes into account the impact of the Great Recession by including interaction terms between the Great Recession
+dummy (GR), changes in the state-specific unemployment rate (Cycle), and deviations in total factor productivity (TFP)
+from the industry-year averages.
+ The results are shown in the following table
+ \begin{table}[H]
+    \centering
+    \caption{Reallocation and Productivity over the Business Cycle}
+    \begin{tabular}{|c|c c c c c c|}
+    \hline & \multicolumn{2}{c|}{Overall Gr.Rat. (Cont + Exit)} & \multicolumn{2}{c|}{Exit} &
+    \multicolumn{2}{c|}{Cond. Gr.Rat.(Cont.)} \\
+    & \multirow{2}{*}{prova}\\
+    \hline & (1) & (2) & (3) & (4) & (5) & (6) \\
+     \multirow{2}{*}{TFP} & $.157^{***}$ & $159^{***}$ & $-.060^{***}$ & $-.060^{**}$ & $.041^{**}$ & $.042^{*}$ \\
+    & $(.006)$ & $(.006)$ & $(.003)$ & $(.003)$ & $(.003)$ & $(.003)$ \\
+     \multirow{2}{*}{Cycle} & $-3.307^{**}$ & $-2.961^{*}$ & $.671^{*}$ & $.497^{*}$ & $-2.143^{**}$ & $-2.128$ \\
+    & $(.459)$ & $(.483)$ & $(.176)$ & $(.179)$ & $(.247)$ & $(.286)$ \\
+     \multirow{2}{*}{TFP $\times$ cycle} & $1.542^{***}$ & $2.182^{***}$ & $-.655^{***}$ & $-.927^{**}$ & $.494$ & $.534$ \\
+    & $(.643)$ & $(.862)$ & $(.226)$ & $(.265)$ & $(.412)$ & $(.567)$ \\
+     \multirow{2}{*}{GR $\times$ TFP} & & $.030$ & & $-.018^{*}$ & & $-.005$ \\
+    & & $(.023)$ & & $(.011)$ & & $(.011)$ \\
+     \multirow{2}{*}{GR $\times$ cycle} & & $-3.116^{*}$ & & $1.581$ & & $-.126$ \\
+    & & $(1.349)$ & & $(.523)$ & & $(.770)$ \\
+     \multirow{2}{*}{GR $\times$ TFP $\times$ cycle} & & $-2.961^{*}$ & & $1.466^{***}$ & & $.066$ \\
+    & & $(1.619)$ & & $(.684)$ & & $(.764)$ \\
+    \hline Year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+     State FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+     Firm size class FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+     $N$ (millions) & 2.2 & 2.2 & 2.2 & 2.2 & 2.1 & 2.1 \\
+    \hline
+    \end{tabular}
+    \footnote{SOURCE: Authors' calculations based on the Annual Survey of Manufactures, the Census of Manufactures, and the Longitudinal Business Database.}
+    \footnote{NOTE: Regressions are weighted using propensity score weights, detailed in the online appendix. Standard errors, in parentheses, are clustered at the state level. Employment growth and exit rates are measured from period $t$ to $t+1$. Exit regression employs a linear probability model, defining exit as 1 if the establishment is active in period $t$ but not in $t+1$. TFP represents the deviation of establishment-level log TFP from its industry-year mean. GR is a dummy variable for the years 2007 to 2009, reflecting the impact of the Great Recession from March 2007 to March 2010. Cycle measures the change in the state-year unemployment rate. Establishment size (log employment) at time $t$ is included as a control.}  
+\end{table}
+The regression analysis presented in the table offers insightful observations on how the Great Recession exacerbated the
+effects on overall growth rates compared to other periods of economic downturns. A critical aspect to highlight is the
+interaction between the Great Recession dummy variable (GR) and the cycle, which denotes changes in the state-year
+unemployment rate. This interaction is particularly important and statistically significant, with one coefficient
+significant at the 5\% level and the other at the 1\% level. This suggests that the economic dynamics during the Great
+Recession had a distinct and profound impact on reallocation and productivity across businesses. 
+
+The coefficient for the GR $\times$ cycle interaction being significant implies that the Great Recession intensified the
+negative effects of the business cycle on overall growth rates. This finding is notable because it underscores the
+unique severity of the Great Recession, distinguishing it from previous economic downturns. Specifically, the negative
+coefficient indicates that during the Great Recession, the adverse effects of an economic downturn on job creation and
+overall business growth were more pronounced. This could be attributed to a range of factors, including tighter credit
+conditions, greater uncertainty, and possibly more significant structural shifts in the economy that affected businesses
+more severely during this period. 
+
+Moreover, the presence of significant interaction terms involving TFP (total factor productivity), the cycle, and the
+Great Recession dummy highlights the complex relationship between productivity, economic cycles, and major economic
+crises. The analysis suggests that the Great Recession not only impacted the rate of job creation and destruction but
+also influenced how productivity interacts with the business cycle to affect economic outcomes. 
+
+To have a better comprehension the authors use the regression coefficients to estimate the difference in the outcomes
+between an establishment firm with one standard deviation above and below the industry year mean, differing between
+older and younger firms the results are depicted in the following plot.
+\begin{figure}{ht}
+    \centering
+    \title{A. Overall Growth(Cont. + Exiters)}
+    \includegraphics[scale = 0.35]{Plot1.3.png}
+    
+    \label{plot:1.3}
+\end{figure} 
+\begin{figure}{ht}
+    \centering
+    \title{B.Exit Rates}
+    \includegraphics[scale = 0.35]{Plot1.4.png}
+    
+    \label{plot:1.3}
+\end{figure} 
+\begin{figure}{ht}
+    \centering
+    \title{C.Conditional Growth (Continuers only)}
+    \includegraphics[scale = 0.35]{Plot1.5.png}
+    
+    \label{plot:1.3}
+    \caption{Differences in growth rates between high-productivity and low-
+    productivity establishments, normal times. Authors' calculations on Annual Survey
+    of Manufactures, Census of Manufactures, and Longitudinal Business Database.
+    Depicted are the predicted difference in growth rates (panels A and C, high minus
+    low) and the predicted difference in probability of exit (panel B, low minus high)
+    between an establishment one standard deviation above industry-by-year mean
+    productivity and an establishment one standard deviation below industry-by-year
+    mean productivity. Normal is zero change in state-level unemployment.
+    }
+\end{figure} 
+From the graph, it is evident that there is an 11 percentage point difference in overall growth between firms that are
+one standard deviation more productive than the average and those one standard deviation below the mean. When
+distinguishing between mature and younger firms, it becomes apparent that younger firms are more responsive to
+productivity differences. Specifically, younger firms that are more productive experience an overall growth that is 18
+percentage points higher compared to less productive counterparts. In contrast, this relationship between productivity
+and growth is weaker for mature firms, where those with higher productivity only see an overall growth of 0.11
+percentage points more than their less productive peers. The initial graph encompasses all firms, including those that
+survived the Great Recession and those that exited. 
+
+Focusing on exit rates, being more productive offers a smaller advantage in survival rate probabilities. While the
+patterns are consistent with the previous graph, the benefit of higher productivity is reduced across all categories.
+Notably, younger firms with higher productivity have a 6 percentage point greater chance of survival compared to their
+less productive counterparts, whereas, for mature firms, this productivity premium is reduced by 2 percentage points. 
+
+Looking exclusively at no-exiters, the growth rate is significantly less influenced by productivity,
+showing nearly half the sensitivity compared to the initial analysis, which includes exits. This indicates that less
+productive firms are more likely to exit the market, especially if they are younger. 
+This is largely consistent with \cite{OsePap17} since younger firms are less capitalize compared to older companies and
+this mechanism that is not included in the \cite{CabHarm94} can modify the strict relations between productivity and
+survival rate. 
+A final question remains from the empirical point of view; 
+Did these patterns change in the great Recession?
+That is an important question since as exposed in the model in this thesis financial frictions can reduce the cleansing
+effect of the economic downturn. 
+An answer to this question can be found in the regressions results exposed in table 3, in particular one can see
+that the interaction effects between cycle and TFP are larger for the period previous to the Great Recession. Indeed the
+three-way interaction terms between TFP, cycle and, Great Recession dummy are negative and statistically significant for
+exit and overall growth. Thus, instead of the cycle enhancing the impact of TFP
+on overall growth, it tends to diminish it on the margin in the Great
+Recession. A similar pattern is observed for exit. The estimated three-way
+the interaction effect is positive and larger in magnitude than the two-way
+interaction effect of TFP and the cycle. Instead of the cycle enhancing the
+impact of TFP on exit, it tends to diminish it on the margin in the Great
+Recession.
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.35]{Plot1.6.png}
+    \label{plot:1.6}
+\end{figure} 
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.35]{Plot1.7.png}
+    \label{plot:1.7}
+    \caption{Differences in growth and exit rates between high-productivity and
+    low-productivity establishments over the business cycle. Authors' calculations on
+    Annual Survey of Manufactures, Census of Manufactures, and Longitudinal Busi-
+    ness Database. Depicted is the predicted difference in growth rates (panel A, high
+    minus low) and the predicted difference in probability of exit (panel B, low minus
+    high) between an establishment one standard deviation above industry-by-year
+    mean productivity and an establishment one standard deviation below industry-by-
+    year mean productivity. Normal is zero change in state-level unemployment, mild
+    contraction is 1 percentage point increase in state-level unemployment, sharp
+    contraction is 3 percentage point increase in state-level unemployment, and GR is
+    for the period 2007-9.
+    }
+\end{figure} 
 \section{Literature review of theoretical models}
-\subsection{Introduction}
-This section of the literature review examines two influential theoretical models that analyze the cleansing effect of
-recessions on the economy. The first model, introduced by \cite{CabHarm94}, utilizes a vintage model of
-creative destruction to investigate how industries adapt to cyclical demand variations. This model is pioneering in its
-approach, highlighting how recessions can facilitate the removal of outdated and less efficient production units,
-potentially leading to an overall increase in industry productivity. The model's insights are derived from a framework
-where production units of varying vintages coexist, and the rate of technological adoption plays a crucial role in
-determining industry responses to economic fluctuations.
+\subsection{Cleansing effect in \cite{OsePap17}}
+The economy comprises risk-neutral firms with a constant discount rate represented by $0 < \beta < 1$. These firms
+exhibit heterogeneity in productivity and net worth. They employ a production technology that relies solely on capital
+(or production units) as input, featuring diminishing returns to scale.
+\\
+In each period, firms incur a fixed production cost denoted as $c$ to initiate production. After production, they decide
+how to allocate profits for the next period. The remaining profits are invested in a risk-free asset. Firms face a
+choice: they can either continue operating and reinvest their profits or exit the market, investing their entire net
+worth, denoted as $e$, in the risk-free asset.
+\\
+Firms opt to exit the market when expected profits no longer outweigh the fixed cost $c$, or when the value of
+production becomes inferior to the value they could gain by investing in the risk-free asset.
+\\
+The value obtained from investing in the risk-free asset is given by:
+\[
+q_t + \sum_{s=0}^{+\infty}\beta^s[\beta(1+r)-1]e_{t+s+1}.
+\]
 
-In contrast, the second model explored in this review, by \cite{OsePap17}, introduces financial frictions into
-the analysis of the cleansing effect of recessions. This addition brings a new layer of complexity to the understanding
-of how economic downturns affect firm dynamics, particularly by influencing the selection process through which firms
-enter and exit the market. The model underscores the role of credit constraints in mediating the impact of recessions,
-suggesting that financial frictions can dampen the potential productivity gains that might otherwise arise from the
-purging effects of a downturn.
+Notably, when the condition $\beta(1+r) \leq 1$ holds, this value simplifies to $q$. In such cases, firms are either
+indifferent regarding the timing of dividend distributions or have a preference for distributing their end-of-period net
+worth to shareholders or investors.
+\\
+In this economic model, the agents are the firms themselves, aiming to maximize their value over time by selecting an
+optimal level of capital denoted as $k$. The production function, accounting for the fixed cost $c$, is expressed as
+follows: $Y = Z(\theta + \epsilon)k^\alpha$.
+\\
+Key variables include:
+\begin{itemize}
+    \item $Z$: Stochastic aggregate productivity common across firms.
+    \item $\theta$: Persistent firm-specific productivity shock (modeled as a Markov Chain).
+    \item $\epsilon$: Firm-specific productivity shock with $\epsilon \sim \mathcal{N}(0,\delta)$.
+    \item $k^\alpha$: Capital or production units, as in Caballero and Hammour (AER).
+\end{itemize}
 
-Both models rely on numerical methods to solve their respective frameworks, acknowledging the intricate dynamics and
-non-linearities inherent in their analyses. By comparing these models, this review seeks to illuminate the diverse
-mechanisms through which recessions can influence economic outcomes, as well as the varying implications of introducing
-different types of market frictions into theoretical frameworks.
+The timeline of events is as follows:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        % Draw timeline
+        \draw[->,>=stealth] (0,0) -- (6,0);
+        
+        % Add timeline labels
+        \foreach \x/\label in {0,1, 2,3, 4, 5} {
+            \node[align=center, below] at (\x,0) {\label};
+        }
+    \end{tikzpicture}
+    \caption{Timeline of Events}
+\end{figure}
+
+The sequence of events includes:
+\begin{enumerate}
+    \item The firm possesses knowledge of $Z,\theta,k^\alpha,e$ (where $e$ represents its endowment, different from $k$ since the firm can borrow money with $d=c+k-e$).
+    \item The firm computes the optimal $k$ to maximize the expected value of the firm, with $k$ ranging from $[0,+\infty]$. If $k=0$, it indicates the firm's decision to exit.
+    \item At the end of the period, the firm observes $\epsilon$ and the aggregate shock.
+    \item The firm repays its debt and the fixed operating cost $(c+k-e)$, resulting in an end-of-period net worth $q$.
+    \item The firm decides on the amount of dividends to distribute $(q-e')$, observes the productivity shock $\theta', Z'$, and the process restarts from step 1.
+\end{enumerate}
+
+\paragraph{Frictionless economy}
+In a frictionless economy, firms have the option to borrow an amount denoted as \(c+k-e\) at the risk-free interest rate
+\(r=\frac{1}{\beta}-1\). Therefore, at the start of the period, the firm's value is determined by the following
+expression:
+
+\[V_{FL} = \max_{k} E \int \max[q,\max_{e'}(q - e' + \beta V_{FL}(e',\theta', Z'))]  \,d\Phi
+(\epsilon) \]
+where the end of period net worth is equal to:
+\[q=Z(\theta+\epsilon)k^\alpha + (1-\delta )k-(1+r)(c+k-e)\]
+
+Under the condition of survival, it can be demonstrated that:
+
+\[\widehat{V}_{FL}(\theta,Z) = \max_{k}E\int[Z(\theta+\epsilon)k^\alpha - (1+r)c\,d\Phi (\epsilon)] +
+\beta\max[0,\widehat{V}_{FL}(\theta',Z')]\]
+
+In the absence of market friction, firms choose to exit when their productivity reaches a certain threshold.
+Specifically, they exit if \(\theta'<\underline{\theta} _{FL}(Z')\), where \(\underline{\theta}
+_{FL}(Z')\) is defined as the value
+for which \(\widehat{V}_{FL}(\underline{\theta}_{FL},Z')=0\).
+
+\paragraph{Economy with Credit Market Frictions}
+
+After production, the firm privately observes the temporary shock $\epsilon$, while financial intermediaries can only
+observe it at a cost of $\mu k^\alpha$. For one-period debt contracts, financial intermediaries observe $\epsilon$ only
+if the firm faces financial distress, which occurs when the private shock is insufficient to repay its debt. The terms
+of the financial contract depend on the firm's net worth $e$, current productivity $\theta$, and aggregate productivity
+value $Z$, all observable by both the financial intermediary and the firm at no additional cost.
+
+\textbf{HP1 (Hypothesis 1):} The risk-free interest rate is $\beta < \frac{1}{1+r}$, which implies a lower risk-free
+rate in an economy with credit frictions compared to a frictionless one. It also ensures that firms do not always
+reinvest their profits.
+
+When a firm defaults, the financial intermediary incurs verification costs and seizes all of the firm's income. The
+default threshold $\overline{\epsilon}$ is determined by the equation:
+\[
+Z(\theta+\overline{\epsilon})k^\alpha + (1-\delta)k = (1+\widetilde{r} )(c+k+e)
+\]
+
+Default results in a zero net worth but does not necessarily force the firm to exit the market, depending on its
+persistent productivity component $\theta$.
+
+The financial intermediary lends $(c + k - e)$ to the firm only if the expected income from the loan equals the
+the opportunity cost of the funds, as expressed by the inequality:
+\[
+(1+\widetilde{r} )(k+c+e)(1-\Phi(\overline{\epsilon}))+\int_{-\infty}^{\overline{\epsilon}}[Z(\theta+\overline{\epsilon})
+k^\alpha+(1-\delta)k-\mu k^\alpha] \,d\Phi(\epsilon) \geq (1+r)(c+k+e)
+\]
+
+The financial contract is characterized by $(k,\overline{\epsilon})$. Given $Z,\theta,e$, the participation constraint
+indicates the default threshold $\overline{\epsilon}$ required by the financial intermediary to lend a given amount. For
+some firms, their net worth is too low for the participation constraint of the financial intermediary to be satisfied.
+In fact, given $\theta, Z$, there is a unique threshold $e_b(\theta,Z)$ below which the financial intermediary
+refuses to lend any amount:
+\[
+Z[\theta+G(\overline{\epsilon}_b )]k^\alpha+(1-\delta)k-uk_b^\alpha\Phi (\overline{\epsilon}_b)=(1+r)(k_b+c-\underline{e_b})
+\]
+where $\overline{\epsilon}_b$ maximizes the expected income of the financial intermediary. When the firm has a net worth
+below $\underline{e_b}$, the firm defaults.
+
+After production, the firm's end-of-period net worth is equal to:
+\[
+q = \begin{cases}
+  Z(\theta+\overline{\epsilon})k^\alpha +(1-\delta)k-(1+\widetilde{r})(k+c-e) & \text{if } \epsilon\geq \overline{\epsilon} \\
+  0 & \text{otherwise}
+\end{cases}
+\]
+Using the default condition we can rewrite as 
+\[q = \max[Zk^\alpha(\epsilon-\overline{\epsilon});0]\]
+
+\paragraph{The firm's problem}
+Define $V$ as the firm's value at the start of the period, which hinges on investment outcomes and exit decisions. If
+the end-of-period net worth falls below a threshold ($q < e_b(\theta', Z')$), the firm exits. Otherwise, it compares its
+continuing value to the end-of-period net worth ($q \geq e_b(\theta', Z')$) and exits if the continuing value is lower.
+
+The firm's value function is given by:
+\[
+V(e,\theta,Z) = \max_{(k,\overline{\epsilon})}E\left\{\int I(q)q + (1-I(q))\max[q,\max_{e'}q-e'+\beta V(e',\theta',
+\zeta')]\,d\Phi(\epsilon)\right\}
+\]
+
+Where:
+\[
+I(q)=
+\begin{cases}
+    0 & \text{if } q\geq e_b(\theta', Z')\\
+    1 & \text{if } q< e_b(\theta', Z')
+\end{cases}
+\]
+
+Subject to the following constraints:
+\begin{enumerate}
+    \item \label{con1}\[
+    Z[\theta+G(\overline{\epsilon}_b )]k^\alpha+(1-\delta)k-uk_b^\alpha\Phi (\overline{\epsilon}_b)\geq(1+r)(k_b+c-
+    \underline{e_b})
+    \]
+    \item \label{con2} \[
+    q = \max[Zk^\alpha(\epsilon-\overline{\epsilon});0]
+    \]
+    \item \label{con3}\[
+    \overline{e_b}(\theta',Z)\leq e'\leq q
+    \]
+\end{enumerate}
+
+The firm aims to maximize expected dividends while complying with the financial intermediary's participation constraint
+(constraint 1). Equation (constraint 2) characterizes the firm's end-of-period net worth, and
+Equation (constraint 3) ensures that the
+net worth
+is sufficiently high to satisfy the participation constraint.
+\par
+Furthermore, the firm is prohibited from issuing new shares and can only augment its net worth by reinvesting profits.
+This limitation presents a trade-off: increasing capital boosts production capacity but also raises the risk of default,
+as the default threshold set by the financial intermediary increases with borrowed amounts.
 \subsection{The cleansing effect by Caballero}
 
-In the first paper that rationalizes the cleansing effect of recessions, \cite{CabHarm94} and published in the American
-Economic Review in 1994, the primary aim was to investigate how
+In the first paper that rationalizes the cleansing effect of recessions, \cite{CabHarm94} and published in the American Economic Review in 1994, the primary aim was to investigate how
 industries respond to cyclical variations in demand. They did this by employing a vintage model of creative destruction.
 The underlying concept postulates that the processes of creation and destruction within an industry partially explain
 business cycles. Industries continuously experiencing creative destruction can adapt to demand fluctuations in two
@@ -366,7 +973,7 @@ destruction displays a high degree of asymmetry.
 The underlying concept driving the behavior of the destruction margin can be traced back to the theories of Schumpeter
 and Hayek.  They suggest that recessions represent periods during which unprofitable or outdated techniques are pruned
 from the economy, leaving behind the most efficient firms \citet{HaCa07}.
-\subsubsection{Theoretical model}
+\subsection{Theoretical model}
 The model in question is a vintage model that simulates an industry experiencing exogenous technological progress.
 Within this model, production units are constructed using a fixed proportion of labor and capital, and they are
 continually being created and phased out. Notice that only the creation of new production units
@@ -551,7 +1158,7 @@ Interestingly, assumptions such as perfect competition, industry-wide return to 
 necessary for these conclusions. The latter is particularly noteworthy as it asserts that fully accommodating demand on
 the creation side only requires knowledge of current conditions. As long as the non-negativity constraint on \(f(0,t)\)
 is never binding, implementing equilibrium behaviors does not necessitate expectations of future demand. 
-\subsubsection{Application of the model}
+\subsection{Application of the model}
 The model undergoes calibration utilizing Job-flow data and Industry production data. The former facilitates the
 replication of job creation dynamics, while the latter is employed to mimic the behaviors of firm creation and
 destruction in the manufacturing industry. To capture these dynamics, the marginal cost of creating new production units
@@ -706,239 +1313,58 @@ signifying the vulnerability of the insulation mechanism to breakdown.
     \caption{Figure 1. A employment driven job creation \(c_0=0.403, c_1=0.5\) B Employment job destruction \(c_0=0.403, c_1=0.5\)} 
     \label{plot:2.5}
 \end{figure}
-The model's simulations on employment and output, shown in Figure \ref{plot:2.5}, reveal discrepancies with actual data,
-particularly in the smoother job creation trends, likely due to the model's exclusion of uncertainty. Nonetheless, it
-successfully captures the volatility in job creation and destruction patterns, along with job creation's greater
-symmetry, providing insights into employment and output fluctuations. The model's examination of the creation margin's
-response and its impact on the destruction margin offers a baseline for understanding the cleansing effect's role in
-production unit distribution.
-
-However, the model overlooks the impact of financial frictions, which could significantly affect both creation and
-destruction margins. It also entertains the notion of recessions as "pit-stops" for strategic investment, adding depth
-to recession analysis. Despite the common view of procyclical labor productivity, the model, supported by
-\cite{GaHam92},  suggests that recessions can indirectly boost long-term productivity through the cleansing effect.
-
-A notable limitation is the assumption of constant marginal creation costs, which recent studies challenge, especially
-for larger firms known for substantial adjustments in response to demand drops. This observed behavior in larger firms,
-aligning with the model's predictions on downsizing, underscores its ability to reflect real-world dynamics despite  its
-simplifications.
-\subsection{Cleansing effect in \cite{OsePap17}}
-The economy comprises risk-neutral firms with a constant discount rate represented by $0 < \beta < 1$. These firms
-exhibit heterogeneity in productivity and net worth. They employ a production technology that relies solely on capital
-(or production units) as input, featuring diminishing returns to scale.
-\\
-In each period, firms incur a fixed production cost denoted as $c$ to initiate production. After production, they decide
-how to allocate profits for the next period. The remaining profits are invested in a risk-free asset. Firms face a
-choice: they can either continue operating and reinvest their profits or exit the market, investing their entire net
-worth, denoted as $e$, in the risk-free asset.
-\\
-Firms opt to exit the market when expected profits no longer outweigh the fixed cost $c$, or when the value of
-production becomes inferior to the value they could gain by investing in the risk-free asset.
-\\
-The value obtained from investing in the risk-free asset is given by:
-\[
-q_t + \sum_{s=0}^{+\infty}\beta^s[\beta(1+r)-1]e_{t+s+1}.
-\]
-
-Notably, when the condition $\beta(1+r) \leq 1$ holds, this value simplifies to $q$. In such cases, firms are either
-indifferent regarding the timing of dividend distributions or have a preference for distributing their end-of-period net
-worth to shareholders or investors.
-\\
-In this economic model, the agents are the firms themselves, aiming to maximize their value over time by selecting an
-optimal level of capital denoted as $k$. The production function, accounting for the fixed cost $c$, is expressed as
-follows: $Y = Z(\theta + \epsilon)k^\alpha$.
-\\
-Key variables include:
-\begin{itemize}
-    \item $Z$: Stochastic aggregate productivity common across firms.
-    \item $\theta$: Persistent firm-specific productivity shock (modeled as a Markov Chain).
-    \item $\epsilon$: Firm-specific productivity shock with $\epsilon \sim \mathcal{N}(0,\delta)$.
-    \item $k^\alpha$: Capital or production units, as in Caballero and Hammour (AER).
-\end{itemize}
-
-The timeline of events is as follows:
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        % Draw timeline
-        \draw[->,>=stealth] (0,0) -- (6,0);
-        
-        % Add timeline labels
-        \foreach \x/\label in {0,1, 2,3, 4, 5} {
-            \node[align=center, below] at (\x,0) {\label};
-        }
-    \end{tikzpicture}
-    \caption{Timeline of Events}
-\end{figure}
-
-The sequence of events includes:
-\begin{enumerate}
-    \item The firm possesses knowledge of $Z,\theta,k^\alpha,e$ (where $e$ represents its endowment, different from $k$ since the firm can borrow money with $d=c+k-e$).
-    \item The firm computes the optimal $k$ to maximize the expected value of the firm, with $k$ ranging from $[0,+\infty]$. If $k=0$, it indicates the firm's decision to exit.
-    \item At the end of the period, the firm observes $\epsilon$ and the aggregate shock.
-    \item The firm repays its debt and the fixed operating cost $(c+k-e)$, resulting in an end-of-period net worth $q$.
-    \item The firm decides on the amount of dividends to distribute $(q-e')$, observes the productivity shock $\theta', Z'$, and the process restarts from step 1.
-\end{enumerate}
-
-\paragraph{Frictionless economy}
-In a frictionless economy, firms have the option to borrow an amount denoted as \(c+k-e\) at the risk-free interest rate
-\(r=\frac{1}{\beta}-1\). Therefore, at the start of the period, the firm's value is determined by the following
-expression:
-
-\[V_{FL} = \max_{k} E \int \max[q,\max_{e'}(q - e' + \beta V_{FL}(e',\theta', Z'))]  \,d\Phi
-(\epsilon) \]
-where the end of period net worth is equal to:
-\[q=Z(\theta+\epsilon)k^\alpha + (1-\delta )k-(1+r)(c+k-e)\]
-
-Under the condition of survival, it can be demonstrated that:
-
-\[\widehat{V}_{FL}(\theta,Z) = \max_{k}E\int[Z(\theta+\epsilon)k^\alpha - (1+r)c\,d\Phi (\epsilon)] +
-\beta\max[0,\widehat{V}_{FL}(\theta',Z')]\]
-
-In the absence of market friction, firms choose to exit when their productivity reaches a certain threshold.
-Specifically, they exit if \(\theta'<\underline{\theta} _{FL}(Z')\), where \(\underline{\theta}
-_{FL}(Z')\) is defined as the value
-for which \(\widehat{V}_{FL}(\underline{\theta}_{FL},Z')=0\).
-
-\paragraph{Economy with Credit Market Frictions}
-
-After production, the firm privately observes the temporary shock $\epsilon$, while financial intermediaries can only
-observe it at a cost of $\mu k^\alpha$. For one-period debt contracts, financial intermediaries observe $\epsilon$ only
-if the firm faces financial distress, which occurs when the private shock is insufficient to repay its debt. The terms
-of the financial contract depend on the firm's net worth $e$, current productivity $\theta$, and aggregate productivity
-value $Z$, all observable by both the financial intermediary and the firm at no additional cost.
-
-\textbf{HP1 (Hypothesis 1):} The risk-free interest rate is $\beta < \frac{1}{1+r}$, which implies a lower risk-free
-rate in an economy with credit frictions compared to a frictionless one. It also ensures that firms do not always
-reinvest their profits.
-
-When a firm defaults, the financial intermediary incurs verification costs and seizes all of the firm's income. The
-default threshold $\overline{\epsilon}$ is determined by the equation:
-\[
-Z(\theta+\overline{\epsilon})k^\alpha + (1-\delta)k = (1+\widetilde{r} )(c+k+e)
-\]
-
-Default results in a zero net worth but does not necessarily force the firm to exit the market, depending on its
-persistent productivity component $\theta$.
-
-The financial intermediary lends $(c + k - e)$ to the firm only if the expected income from the loan equals the
-the opportunity cost of the funds, as expressed by the inequality:
-\[
-(1+\widetilde{r} )(k+c+e)(1-\Phi(\overline{\epsilon}))+\int_{-\infty}^{\overline{\epsilon}}[Z(\theta+\overline{\epsilon})
-k^\alpha+(1-\delta)k-\mu k^\alpha] \,d\Phi(\epsilon) \geq (1+r)(c+k+e)
-\]
-
-The financial contract is characterized by $(k,\overline{\epsilon})$. Given $Z,\theta,e$, the participation constraint
-indicates the default threshold $\overline{\epsilon}$ required by the financial intermediary to lend a given amount. For
-some firms, their net worth is too low for the participation constraint of the financial intermediary to be satisfied.
-In fact, given $\theta, Z$, there is a unique threshold $e_b(\theta,Z)$ below which the financial intermediary
-refuses to lend any amount:
-\[
-Z[\theta+G(\overline{\epsilon}_b )]k^\alpha+(1-\delta)k-uk_b^\alpha\Phi (\overline{\epsilon}_b)=(1+r)(k_b+c-\underline{e_b})
-\]
-where $\overline{\epsilon}_b$ maximizes the expected income of the financial intermediary. When the firm has a net worth
-below $\underline{e_b}$, the firm defaults.
-
-After production, the firm's end-of-period net worth is equal to:
-\[
-q = \begin{cases}
-  Z(\theta+\overline{\epsilon})k^\alpha +(1-\delta)k-(1+\widetilde{r})(k+c-e) & \text{if } \epsilon\geq \overline{\epsilon} \\
-  0 & \text{otherwise}
-\end{cases}
-\]
-Using the default condition we can rewrite as 
-\[q = \max[Zk^\alpha(\epsilon-\overline{\epsilon});0]\]
-
-\paragraph{The firm's problem}
-Define $V$ as the firm's value at the start of the period, which hinges on investment outcomes and exit decisions. If
-the end-of-period net worth falls below a threshold ($q < e_b(\theta', Z')$), the firm exits. Otherwise, it compares its
-continuing value to the end-of-period net worth ($q \geq e_b(\theta', Z')$) and exits if the continuing value is lower.
-
-The firm's value function is given by:
-\[
-V(e,\theta,Z) = \max_{(k,\overline{\epsilon})}E\left\{\int I(q)q + (1-I(q))\max[q,\max_{e'}q-e'+\beta V(e',\theta',
-\zeta')]\,d\Phi(\epsilon)\right\}
-\]
-
-Where:
-\[
-I(q)=
-\begin{cases}
-    0 & \text{if } q\geq e_b(\theta', Z')\\
-    1 & \text{if } q< e_b(\theta', Z')
-\end{cases}
-\]
-
-Subject to the following constraints:
-\begin{enumerate}
-    \item \label{con1}\[
-    Z[\theta+G(\overline{\epsilon}_b )]k^\alpha+(1-\delta)k-uk_b^\alpha\Phi (\overline{\epsilon}_b)\geq(1+r)(k_b+c-
-    \underline{e_b})
-    \]
-    \item \label{con2} \[
-    q = \max[Zk^\alpha(\epsilon-\overline{\epsilon});0]
-    \]
-    \item \label{con3}\[
-    \overline{e_b}(\theta',Z)\leq e'\leq q
-    \]
-\end{enumerate}
-
-The firm aims to maximize expected dividends while complying with the financial intermediary's participation constraint
-(constraint 1). Equation (constraint 2) characterizes the firm's end-of-period net worth, and
-Equation (constraint 3) ensures that the
-net worth
-is sufficiently high to satisfy the participation constraint.
+The outcomes stemming from the simulations driven by employment and output are disclosed and contrasted with the data in
+Figure \ref{plot:2.5}. Notably, the simulation of job creation displays a level of smoothness that diverges from the
+observed 
+data, with this discrepancy being attributed, in part, to the inherent absence of uncertainty in our model. Despite
+this, the model effectively elucidates the relative volatility discernible in the patterns of job creation and
+destruction. Moreover, it successfully captures the greater symmetry observed in the former, offering insights into the
+nuanced dynamics at play in employment and output fluctuations. 
 \par
-Furthermore, the firm is prohibited from issuing new shares and can only augment its net worth by reinvesting profits.
-This limitation presents a trade-off: increasing capital boosts production capacity but also raises the risk of default,
-as the default threshold set by the financial intermediary increases with borrowed amounts.
-\subsubsection{Findings}
-This study investigates the complex interplay between credit frictions and the cleansing effect of recessions on firm
-dynamics. By integrating models of firm dynamics with credit frictions, the authors examine how these frictions
-influence the selection process for entering and exiting firms, potentially leading to the premature exit of some
-high-productivity entities. Despite the impact of credit frictions on firm selection, an increase in average
-productivity is observed following an aggregate productivity shock. Mirroring the dynamics in a frictionless economy, a
-negative aggregate productivity shock enhances average productivity by predominantly increasing the net exit rate of
-low-productivity firms. 
+The model provides intriguing insights as it elucidates certain empirical findings found in \cite{DAvHalt90,DavHalt92}.
+Specifically, it delves into the dynamics of how the response of the creation margin contributes to an insulating effect
+on the destruction margin. The model's salient features lie in its incorporation of heterogeneity across production
+units and their turnover, rendering it a meaningful baseline for comprehending how the cleansing effect influences the
+distribution of production units. 
 
-The analysis underscores that the extent of the recession's cleansing effect significantly depends on the steady-state
-distributions of productivity and net worth among firms. The amplification in average productivity can be more
-substantial than in a frictionless context, depending on the severity of credit frictions and the productivity
-distribution of firms. Through calibration, the authors demonstrate that credit frictions generally mitigate the rise in
-average productivity, indicating a systematic diminution in the intensity of productivity enhancement for each
-percentage point increase in productivity, irrespective of the level of credit frictions and the productivity
-distribution. 
+However, it's essential to note that the model, in its current formulation, does not account for the potential impact of
+financial frictions arising from asymmetric information between borrowers and lenders. Such frictions could conceivably
+influence both the destruction and creation margins, introducing a layer of complexity not considered in the current
+framework. 
 
-Further exploration into the nature of economic shocks reveals that the type of shock critically influences the
-cleansing process. Specifically, while recessions can exert a cleansing effect, the intensity of this effect is
-attenuated when the downturn is triggered by a financial shock. This reduction is due to the financial shock affecting
-high-productivity firms as well, suggesting a nuanced relationship between the type of economic shock and the intensity
-of the cleansing effect: non-financial shocks tend to have a more significant cleansing impact compared to financial
-shocks. 
+An alternative perspective on recessions is captured by the concept of a "pit-stop," where a recession is characterized
+as a period during which improvement investments in production are undertaken due to temporarily low opportunity costs,
+as posited by \cite{DAvHalt90}. This viewpoint adds nuance to the understanding of recessions, emphasizing them as
+periods conducive to strategic investments. 
 
-Contributing to the literature on the cleansing effect of recessions, this study elucidates the role of credit frictions
-in affecting the average productivity of firms by facilitating the selective exit of low-productivity firms, even under
-credit constraints. It is imperative to note that the findings do not posit that recessions inherently enhance resource
-allocation efficiency. On the contrary, in the presence of credit frictions, many of the exiting firms could have
-remained operational in the absence of these constraints. This inefficiency is particularly evident during financial
-shocks, where the exit of potentially viable firms highlights the intricate dynamics governing the cleansing effect of
-recessions, emphasizing the importance of a nuanced understanding of economic downturns and their impact on firm
-dynamics. 
+One potential objection to the notion that recessions are times of cleansing is rooted in the implication of
+countercyclical productivity. Notably, labor productivity is often observed to be procyclical. However, this apparent
+inconsistency can be attributed to friction, as suggested by \cite{GaHam92}. Their findings provide evidence supporting
+the notion that the cleansing effect enhances productivity in the long term, offering a nuanced perspective on the
+relationship between economic downturns and productivity dynamics. 
+\par
+A crucial observation in the aforementioned model is the authors' reliance on a constant marginal cost of creation. Yet,
+recent literature has raised concerns about the reliability of this assumption, especially for larger firms. The
+dynamics of the business environment in recent years suggest that significant firms tend to favor substantial
+adjustments, particularly in terms of downsizing. 
+\par
+Interestingly, this deviation from the constant marginal adjustment cost for bigger firms can be interpreted as a
+validation of the model's predictions. When firms opt not to fully insulate themselves from a decline in demand using
+the creation margin, they tend to respond with intense layoffs. This alignment between the model's predictions and the
+observed behavior of larger firms underlines the model's relevance and its capacity to capture real-world dynamics. 
 
+\section{Theoretical model}
+\subsection{Introduction}
+This thesis presents a partial equilibrium model in which firms maximize dividends over an infinite period, under financial frictions,
+investigating how those frictions can affect the saddle paths of capital and dividends.
 
-
-\chapter{Theoretical model}
-\section{Introduction}
-This thesis presents a partial equilibrium model in which firms maximize utility of dividends over an infinite period, under financial frictions,
-investigating how those frictions can affect the saddle paths of capital and dividends. Compare to \cite{OsePap17} and
-\cite{CabHarm94}, this
-model allows to find a well defined optimal path for dividends and capital without using numerical approach.
 The subsequent sections delve into the formulation of the flow of funds and its dynamics. Following this, the focus
 shifts to scenarios  where financial frictions are present, examining their
-implications on firm behavior and market outcomes. 
+implications on firm behavior and market outcomes. %The final part of this study involves simulating the distribution of
+%exiting firms in relation to their capital and productivity levels under a sinusoidal demand pattern, aiming to provide
+%deeper insights into the interplay between  financial health and economic fluctuations.
 
-\section{Law of motion of capital and debt}
+\subsection{Law of motion of capital and debt}
 
 This model is set within a partial equilibrium framework where firms are differentiated by their productivity levels.
 They have the option to fund their operations by obtaining loans from financial intermediaries, as outlined by
@@ -948,7 +1374,7 @@ low of motion of the capital stock is:
 \begin{align*}
     k_t &= k_{t-1}(1 - \delta)  + I_t  
 \end{align*} 
-We can rearrange  the above equation and get the investment function
+The investment function is:
 \begin{align}
     I_t &= k_t - k_{t-1}\left(1-\delta\right) \label{eq1}
 \end{align} 
@@ -958,38 +1384,36 @@ The flow of funds constraint is:
     I_t + R b_{t-1} + d_t &= f(k_{t-1}) + b_t \label{eq2}
 \end{align}
 where \(R\) denotes the gross interest rate and \(b_{t-1}\) represents the debt from the preceding period.
-The components of the flow of funds (f-of-f) at time \(t\) include:
+The LHS of the f-of-f describes the resource outflows: 
 \begin{enumerate}
     \item \(I_t\) the net investment at time t
     \item \(R b_{t-1}\) repayment of debts (capital and interest) of the previous period
     \item \(d_t\) dividends distributed at time t
 \end{enumerate}
-
-Conversely, the right-hand side details the sources of fund inflows:
+On the other hand, the RHS represents the resources inflows, which are composed by:
 \begin{enumerate}
     \item \(f(k_{t-1}) \) output of production at time t
     \item  \(b_t\) debt contracted at time t
 \end{enumerate}
-
-The f-of-f constraints are further elaborated as the equation governing debt's movement, where \(S_t = f(k_{t-1}) -
-d_t\) represents the earnings  retained, with the application of equations:
+The f-of-f constraints can be rewritten as the low of motion of debt, where \(S_t = f(k_{t-1}) - d_t\) is the retained
+earnings, using \ref{eq1}, \ref{eq2}:
 \begin{align*} 
     b_t &= R b_{t-1} + I_t - S_t  \label{eq2'}
 \end{align*} 
-This formulation clarifies that the debt level at time \(t\) is the sum of the repayment for the previous period's debt
-(both capital and interest) and the net investment, adjusted for internal  financing.
-
-Utilizing these equations, we derive the law of motion for net worth as follows:
+The above equations state that the debt level at time t should be exactly equal to the repayment of the previous debt (capital +
+interest), plus the investment net of internal funding. 
+From \ref{eq1} and \ref{eq2'} follows, by definition, the low of motion of the net worth:
 \begin{align*}
     n_t & = k_t- b_t = k_{t-1}(1-\delta) + I_t - R b_{t-1} - I_t + S_t \\
     &= k_{t-1} - \delta k_{t-1} - b_{t-1} - r b_{t-1}+ S_t \\
     &= n_{t-1} - \delta k_{t-1} - r b_{t-1} + \left[f\left({k_t-1}\right) - d_t \right]
 \end{align*}
 
-Thus, the firm's net worth or equity at any given time is the previous period's net worth, adjusted for depreciation of
-capital and interest on the previous debt, increased by retained earnings. Therefore, a firm can enhance its net worth
-by either boosting retained earnings, which can be achieved by increasing output or reducing dividends. 
-\subsection{Steady State}
+The net worth or equity of the firm is given by the net worth of the previous period less the depreciated capital, less
+the interest matured from the previous period augmented by the retained earnings. Therefore a firm can increase its
+net worth only through increasing the retained earnings levels, thus increasing output or decreasing dividends.
+
+\paragraph{Steady State}
 
 From \ref{eq1} we can retrieve the locus in which capital (\(k_{t-1}=k_{t}=\widehat{k}\)) and debt (\(b_{t-1}=b_{t} = \widehat{b}\))
  and  for definition even dividends (\(d_t=d_{t-1} \)):
@@ -997,8 +1421,7 @@ From \ref{eq1} we can retrieve the locus in which capital (\(k_{t-1}=k_{t}=\wide
     \widehat{k}&=\widehat{k}\left(1-\delta\right) + \widehat{I}\\
     \widehat{I}&=\delta \widehat{k}  \label{eq4}
 \end{align}
-The \ref{eq4} stated that in the steady state, the firm will invest only to substitute depreciated capital(\(\delta
-\widehat{k}\)). From \ref{eq2'}  substituting the stationary conditions, we get:
+The \ref{eq4} stated that in the steady state, the firm will invest only to substitute depreciated capital(\(\delta \widehat{k}\)). From \ref{eq2'} substituting the stationary conditions, we get:
 \begin{align}
     \widehat{b} &= R \widehat{b} + \widehat{I} - \widehat{S} \\
     \widehat{S} - \widehat{I} &= r \widehat{b} \\
@@ -1010,9 +1433,10 @@ Equation \ref{eq5} can be rewritten as:
 \begin{align}
     f(\widehat{k}) = \delta \cdot \widehat{k} + r \cdot \widehat{b} + \widehat{d} \label{eq5'}
 \end{align}
-The equation referenced as \ref{eq5'} indicates that, at equilibrium, the output must cover the costs of interest,
-dividends, and depreciation. To illustrate the equilibrium locus, one can refer to the graph in \ref{fig:steadystate3d},
-which depicts the locus as defined by equation \ref{eq5'}, employing the specified production function. 
+The above equation \ref{eq5'} states that in the steady state, the production should be able to repay interest,
+dividends and depreciation. 
+To visualize the steady state locus, we can plot the graph \ref{fig:steadystate3d} of the locus described in the
+equation \ref{eq5'} using the following production function:
 \begin{align}
     f(k_{t-1}) = Z \cdot k_{t-1}^\alpha, \label{eq6} 
 \end{align}
@@ -1054,52 +1478,45 @@ For example, the firm starting with initial capital \(k_0 = 0.2\) and debt \(b_0
 capital and  debt, the dividends should be equal to \(\widehat{d} = 0.5 \times 0.2^{0.8} - 0.1 \times 0.2 - 0.1
 \times 0.1\). This specific combination of \(k= 0.2\), \(b = 0.1\), \(d \approx 0.11 \)represents a stationary point in the model.
 \vspace{1cm}
-\subsection{Dynamics of capital}
-This section aims to elucidate the dynamics of capital in the face of deviations from steady-state conditions, with a
-particular focus on how alterations in dividend policies influence capital accumulation and distribution. In the
-simplified scenario where a firm operates without incurring debt (\(b_t = 0\) for all \(t\)), the fundamental law of
-capital motion is modified as indicated by equation \ref{eq2}:
+\paragraph{Dynamics of capital}
+While the discussion thus far has focused on steady states, it is crucial to explore the system's behavior under
+perturbations,  particularly concerning the relationship between capital and dividends. If dividends are increased
+beyond the level consistent with a stationary path—where capital remains constant over time—the analysis shifts.
+Assuming the firm is debt-free (\(b_t = 0 \quad \forall t\)) for seek of simplicity, the law of motion of capital adjusts
+as follows from \ref{eq2}:
 \begin{align}
-    I_t + d_t &= f(k_{t-1}) \\
-    I_t &= S_t \label{eq7}
+    I_t + d_t &= f\left(k_{t-1}\right) \quad \\
+    I_t &= S_t  \label{eq7}
 \end{align}
-This setup posits that in a debt-free environment, a firm's investment is solely financed through retained earnings, as
-specified in equation \ref{eq7}. From this premise, we derive a finite difference equation describing how capital
-evolves over time:
+In the case of free debt, all the investment of firms is financed through internal funds as stated in the equation
+\ref{eq7}. From \ref{eq7} we can retrieve the finite difference equation describing the evolution of capital:
 \begin{align}
-    k_{t} &= k_{t-1} (1-\delta) + f(k_{t-1}) - d_{t-1}
+    k_{t} &= k_{t-1} (1-\delta) + f\left(k_{t-1}\right) - d_{t-1}
 \end{align}
-To delve into the operational mechanics of this equation, we apply the production function introduced in \ref{eq6} and
-differentiate with respect to \(k_{t-1}\):
+In order to understand how the above equation works, let's use the same production function as in the previous paragraph
+\ref{eq6}, derive with respect to \(k_{t-1}\):
 \begin{align}
-    \frac{\partial k_t}{\partial k_{t-1}} &= (1-\delta) + f'(k_{t-1}) \\
-    \frac{\partial k_t}{\partial k_{t-1}} &= (1-\delta) + \alpha Z k^{\alpha-1}_{t-1} \label{eq8}
+    \frac{\partial{k_t}}{\partial k_{t-1}} &= \left(1-\delta\right) + f^{\prime}\left(k_{t-1}\right) \\
+    \frac{\partial{k_t}}{\partial k_{t-1}} &= \left(1-\delta\right) + \alpha Z k^{\alpha-1}_{t-1}  \label{eq8}
 \end{align}
-Analysis reveals two distinct scenarios based on the derivative of capital with respect to \(k_{t-1}\):
-```latex
-\begin{enumerate}
-    \item \textbf{Exploding Path When Derivative Is Greater Than 1}: If the derivative with respect to \(k_{t-1}\) is
-    greater than  1 and dividends are positive, the capital's trajectory becomes unsustainable. Specifically, if
-    \(k_{t-1}\) is below the steady-state level (\(\widehat{k}\)), capital dwindles to zero. Conversely, if \(k_{t-1}\)
-    exceeds \(\widehat{k}\), capital increases without bound. The mathematical condition for this scenario is:
-    \begin{align}
-        (1-\delta) + \alpha Z k^{\alpha-1}_{t-1} &> 1, \\
-        \alpha Z k^{\alpha-1}_{t-1} &> \delta, \\
-        k_{t-1} &> \left(\frac{\delta}{\alpha Z}\right)^{\frac{1}{\alpha - 1}}. \label{eq9}
-    \end{align}
-    \item \textbf{Unbounded Path Without Steady State}: In cases where the partial derivative with respect to
-    \(k_{t-1}\) is less  than 1, despite positive dividends, capital at time \(t\) will be lower than at \(t-1\),
-    indicating a consistent decrease without achieving a steady state. The condition for this behavior is:
-    \begin{align}
-        (1-\delta) + \alpha Z k^{\alpha-1}_{t-1} &< 1, \\
-        \alpha Z k^{\alpha-1}_{t-1} &< \delta, \\
-        k_{t-1} &< \left(\frac{\delta}{\alpha Z}\right)^{\frac{1}{\alpha - 1}}. \label{eq9'}
-    \end{align}
-\end{enumerate}
-```
-These conditions illustrate the intricate relationship between capital's evolution and dividend policies under the
-absence of debt, clarifying the dynamics that lead to either unsustainable growth or contraction of capital based on the
-initial levels relative to a critical threshold.
+There exist two cases:
+if the partial derivatives with respect to \(k_{t-1}\) is greater than 1 and dividends are positive we have an exploding
+path: if capital is lower than the steady state \(k_{t-1} < \widehat{k}\) the capital will shrink to 0, while in the
+opposite case \(\widehat{k} < k_{t-1}\), the capital will explode to \(+\infty\). The condition for this first case is
+the following:
+\begin{align}
+    \left(1-\delta\right) &+ \alpha Z k^{\alpha-1}_{t-1} < 1 \\
+    \alpha Z k^{\alpha-1}_{t-1} &> - \left(1-\delta\right) +1 \\
+    k_{t-1} &> {\frac{\delta}{\alpha Z}}^{\frac{1}{\alpha - 1}}  \label{eq9}
+\end{align}
+Considering the second case in which the partial derivatives with respect to \(k_{t-1}\) is less than 1 and positive
+dividends, we have also an exploding path but without a steady state: for each level of capital at time t-1, the
+capital at time t will be less than the previous. The condition for the latter condition is the following:
+\begin{align}
+    \left(1-\delta\right) &+ \alpha Z k^{\alpha-1}_{t-1} > 1 \\
+    \alpha Z k^{\alpha-1}_{t-1} &< - \left(1-\delta\right) +1 \\
+    k_{t-1} &< {\frac{\delta}{\alpha Z}}^{\frac{1}{\alpha - 1}} \label{eq9'}
+\end{align}
 The following phase diagram represent the former case \(\frac{\partial{k_t}}{\partial k_{t-1}} \leq 1\), using the following
 parameters: \(\delta =
 0.1\), \(r = 0.1\), \(\alpha = 0.8\), \(Z = 0.5\), and \(d = 0.8\)
@@ -1153,32 +1570,27 @@ parameters: \(\delta =
 
         \end{axis}
     \end{tikzpicture}
-    \caption{The graph illustrates the evolution of capital in a scenario devoid of debt, under the specific parameters
-    \(\delta = 0.1\), \(r = 0.1\), \(\alpha = 0.8\), \(Z = 0.5\), and \(d = 0.8\). It features a blue line that
-    represents the capital's trajectory, computed based on the formula \(k_{t} = 0.5 \cdot k_{t-1}^{0.8} - 0.1 \cdot
-    k_{t-1} + k_{t-1} - 0.8\), which encapsulates the dynamics of capital accumulation and its interaction with
-    depreciation, return rate, and dividends within the system.  }
+    \caption{The graph depicts the trajectory of capital when there is no debt involved, given the parameters \(\delta =
+    0.1\), \(r = 0.1\), \(\alpha = 0.8\), \(Z = 0.5\), and \(d = 0.8\). The blue line traces the flow of funds according
+    to the equation \(k_{t} = 0.5 \cdot k_{t-1}^{0.8} - 0.1 \cdot k_{t-1} + k_{t-1} - 0.8\). }
 
 \end{figure}
-The graph vividly displays the behavior of capital relative to a critical point, represented by a red dot, denoting the
-steady-state capital level (\(\widehat{k}\)). When a firm's capital at time \(t\) is below this point, it signifies that
-the firm's capital is below the steady-state. This scenario leads to a diminishing capital trajectory, where the firm’s
-capital gradually decreases. This reduction in capital is driven by operational outflows, such as depreciation and
-dividends,  surpassing the firm's production output. In this context, maintaining constant and high dividend payouts
-necessitates a larger capital base to balance against production to prevent the depletion of capital towards zero.
-
-Conversely, if the firm's capital surpasses the steady-state level, it finds itself in a state of overcapitalization,
-setting off an explosive growth trajectory where capital amplifies without  limit. This pattern indicates that the
-firm's capital is in excess of the steady-state requirement, resulting in production significantly exceeding the
-operational outflows.
-
-Additionally, the slope of the blue line in the graph indicates the productivity factor \(Z\). A sharper slope signifies
-higher productivity, suggesting that firms with superior productivity can cover their operational expenses with less
-capital. This feature is particularly important for understanding a firm's ability to navigate through economic
-downturns, as it implies that more productive firms can sustain operations and remain viable with lower levels of
-capital, compared to less productive firms. 
+The graph distinctly demonstrates that when the capital at time \(t\) is below the red dot, it signifies that the
+capital is less than the steady-state capital, leading to a diminishing trajectory in the firm's capital. Conversely, if
+the capital is above the steady-state level, indicated by \(\widehat{k}\), the firm is overcapitalized, and the
+trajectory becomes explosive, with capital increasing without bound. 
+\\
+If a firm's capital is less than the steady-state, meaning it has less than the optimal amount, the outflows—such as
+depreciation and constant dividends—are disproportionately high compared to its production. This dynamic will inevitably
+cause the firm's capital to deplete towards zero. It's crucial to recognize that this path is predicated on the
+assumption of constant dividends; the higher the dividend payout, the greater the capital necessary to ensure that
+production can meet the outflows. 
+\\
+Furthermore, the steeper the slope of the blue line, the higher the productivity factor \(Z\), signifying a reduced need
+for capital. This plays a significant role since firms with greater productivity can sustain their expenses with less
+capital, which correlates with a higher likelihood of enduring economic downturns. 
 \vspace{1cm}
-\subsection{Dynamics of debts}
+\paragraph{Dynamics of debts}
 To examine the dynamics of debt, consider a scenario where capital remains constant \(k_t=k_{t-1}=\widehat{k}\), thus it is at the
 steady-state level. From equation \ref{eq5'} we get the finite difference equation for debt:
 \begin{align}
@@ -1261,7 +1673,17 @@ debt will shrink toward 0, while if the debt is over the steady state the dynami
 The phase diagram illustrates the relationship between a firm's current debt (\(b_t\)) and its capacity for future operations
 (\(k_{t+1}\)), within the context of constant dividends. The steady state is indicated by the red dot, signifying the
 juncture at which the firm's output is precisely adequate to cover dividends, depreciation, and interest on its
-steady-state debt. %r
+steady-state debt. 
+
+If dividends were to increase, this would necessitate a higher debt level to maintain the steady state, as the firm
+would have less equity. This change would be represented graphically by an elevated intercept on the curve, resulting in
+an increased debt burden. 
+
+As for productivity, firms with superior productivity require less debt to produce the same amount of dividends, as they
+operate more efficiently. This is depicted by their position on the \(b_t\) axis for a given \(k_{t+1}\). However, when
+the goal is to maximize dividends, highly productive firms will need more capital to reach the optimal dividend payout,
+a point that will be elaborated upon while discussing the maximization problem later in the analysis. 
+
 In essence, the graph conveys how steady-state conditions are shaped by dividend policy and productivity, with the
 former influencing the firm's financial leverage and the latter determining its capital efficiency. 
 
@@ -1281,7 +1703,7 @@ Consider a firm entirely financed by equity (\(b_t=0\)  for all \(t\)), leading 
     k_{t+1} = k_{t}(1 - \delta) + f(k_{t}) - d_{t}.  \label{eq13}
 \end{align}
 The maximization problem is tackled using a Lagrangian method, where the Lagrangian is defined as:
-\[L_0 = \sum_{t=0}^{+\infty}\left[{\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t+1} - k_{t}(1 - \delta) - f(k_t) + d_t\right]}\right].\]
+\[L_0 = \sum_{t=0}^{+\infty}\left[{\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t+1} - k_{t}(1 - \delta) + f(k_t) - d_t\right]}\right].\]
 
 The first-order conditions for \(d_{t}\), \(k_{t+1}\), and \(\lambda_t\) for all periods \(t=0,1,\ldots\) yield:
 \[
@@ -1297,7 +1719,13 @@ case.
 In the infinite horizon model, the transversality condition reads:
 $\lim _{T \rightarrow \infty} \beta^T U^{\prime}\left(d_{t}\right) k_{T+1}=0$. 
 Thus, policies promoting accelerated capital accumulation are ruled out.
+Differentiating  equation concerning dividend levels at time \(T+1\) yields the following set of first-order
+conditions:
 
+
+\begin{align}
+U'(d_{t}) &= \lambda_T.
+\end{align}
 
 
 Each Lagrange multiplier \(\lambda_t\) represents the marginal utility of dividends in period \(t\). 
@@ -1397,7 +1825,7 @@ This function starts at the origin since (\(f(0)=0\)), with a maximum in \(\unde
 such that \(f^{\prime}(\underline{k})=\delta\)). From equation \ref{eq15'} we can find the level of capital that maximizes dividends
 at the steady state of capital:
 \begin{align}
-    \underline{k} &= \left[\frac{\alpha Z}{\delta}\right]^{\frac{1}{1-\alpha}}  \label{eq19}
+    \underline{k} &= \left[\frac{\delta}{\alpha Z}\right]  \label{eq19}
 \end{align}
 While \(\bar{k}\) is the capital level such that (\(d_t=0\)), thus its obtained by solving (\(f_(\bar{k}) -\delta
 \bar{k} = 0\)) solving for the Cobb-Douglas production function \ref{eq15}, we get:
@@ -1451,7 +1879,7 @@ While \(\bar{k}\) is the capital level such that (\(d_t=0\)), thus its obtained 
 In the case in which a capital level \(\check{k} \in \left[0,\bar{k} \right]\), the corresponding dividends level that
 guarantee the stationarity of capital is:
 \begin{align}
-    \check{d} &= f(\check{k}) -\delta \check{k}
+    \check{d} &= f(\check{d}) -\delta \check{k}
 \end{align}
 If the firm distributes more dividends than \(\check{d}\) the capital stock must decrease over time: since the
 dividends are too high the firm is consuming part of her capital. More precisely the firm is distributing more dividends than
@@ -1563,7 +1991,7 @@ competition to maximize profits.
 
 According to \cite{BerGer86}, lending should yield a profit equivalent to the opportunity cost of capital. Lenders earn
 interest plus the principal if borrowers repay successfully (with probability \(p\)) or acquire the firm's production
-assets (net of monitoring cost: \(1-\mu\)) in case of bankruptcy. The lender's participation constraint is formulated as:
+assets (less depreciation) in case of bankruptcy. The lender's participation constraint is formulated as:
 \begin{align*}
     R_t \cdot b_t p + (1-p) \mu f(k_t) = R_f b_t, \
 \end{align*}
@@ -1649,7 +2077,7 @@ initial borrowing incorporates capital costs.
         \end{axis}
     \end{tikzpicture}
     \caption{The figure presents a graphical analysis of the returns on loans as a function of the loan amount under a fixed capital level of 
-    \(k=4\). The red curve models the scenario where the default risk probability is 
+    \(k=3\). The red curve models the scenario where the default risk probability is 
     \(1-p=0.05\)
     , implying a 5\% chance of default, while the blue curve corresponds to a higher default risk at 
     \(1-p=0.1\), a 10\% chance of default. Both curves reflect the increased interest rates required to compensate for
@@ -1674,7 +2102,7 @@ Another way to visualize the participation constraint of the financial intermedi
     \begin{tikzpicture}
         \begin{axis}[
             domain=0:5, y domain=0:1.5, % Corrected the domain specification
-            ymin=0, % Set the y-axis limits
+            ymin=0, ymax=, % Set the y-axis limits
             xmin=0, xmax=5, % Set the x-axis limits
             axis lines=left,
             xlabel=\(f(k)/b\),
@@ -1753,7 +2181,7 @@ model, the impact of debt on capital is mediated through the variable \( r \), e
 financial leverage influences and is influenced by the cost of borrowing. 
 
 
-
+\newpage
 
 \subsection{Steady state and phase diagram}
  The firm's objective is to maximize its value through the optimal selection of dividends over time:
@@ -2050,8 +2478,8 @@ maximization. The revised problem formulation becomes:
 
 
 \begin{align}
-    & V(k_0) = \max _{c_0} \left\{U(d_0) + \beta V(k_1)\right\} \\
-    & \text{s.t. } k_1 = \left\{k_{0}(1 - \delta) - \frac{R_f}{p} l k_{0} + \frac{f(k_0)}{p} - d_1\right\}(1-l)^{-1} \\
+    & V(k_0) = \max _{c_0} \left\{U(c_0) + \beta V(k_1)\right\} \\
+    & \text{s.t. } k_1 = f(k_0) + (1-\delta)k_0 - c_0 \\
     & k_0 \text{ given.}
 \end{align}
 
@@ -2269,6 +2697,468 @@ underscoring the impact of such frictions on diminishing returns. This compariso
 outcomes in capital and dividend paths under varying financial conditions, highlighting the broader implications of
 financial frictions on economic performance and firm-level profitability. 
 
+\subsection{heterogeneity and Aggregation Mechanism}
+
+To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity and leverage
+ratios.  Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
+the model. Additionally, we diversify leverage ratios, ensuring no direct correlation between a firm's productivity and
+its leverage. This heterogeneity is captured from the outset by simulating the initial distribution of capital,
+leverage, and productivity, setting the stage for a dynamic interplay of firm characteristics. The aggregate production
+is then represented as:
+\[
+\overline{K} = \int_{\underline{K} }^{\overline{k} }Z_i k_{i,t}^{\alpha}\,di
+\]
+
+Business cycles impact capital fluctuations, with each firm's changes being proportional to its existing capital. Less
+efficient firms endure more significant reductions during economic downturns, while all firms enjoy capital increases
+during upswings. Market exit is modeled through two avenues: voluntary exit for returns on equity below the risk-free
+rate, and bankruptcy due to failure to cover debts and depreciation. The model incorporates a sinusoidal business
+cycle affecting output as follows:
+\[
+\Delta \overline{K}_t = 1 + 0.05 \sin(t)
+\]
+
+Productivity (\( Z \)) and leverage (\( l \)) follow truncated normal distributions:
+\begin{align}
+    l &\sim \mathcal{N}(0.05, 0.1), \quad 0.01 \leq l \leq 1, \\
+    Z-1 &\sim \mathcal{N}(0.5, 0.1), \quad 1.01 \leq Z \leq 1.1.
+\end{align}
+
+The figure below demonstrates the results of a 20-step simulation for 10 firms, contrasting optimal and actual capital
+levels.  The actual capital adjusts in response to the business cycle:
+\[
+\Delta \overline{K}_t = 1 + 0.05 \sin(t)
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{OptimalK_noexit.png}
+    \caption{Illustrating a 20-step simulation of 10 firms, this plot compares the chosen optimal capital (\(k\))
+    against the
+     actual capital (\(k\)) post-business cycle adjustment.}
+    \label{fig:optKnoE}
+\end{figure}
+
+Following this, the distribution of dividends, based on actual capital, is visualized:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{div_cap_noexit.png}
+    \caption{Displaying a 20-step simulation for 10 firms, this plot highlights dividends (\( d \)) and the actual capital
+    (\(k\)) after business cycle
+     adjustments.}
+    \label{fig:divNoExit}
+\end{figure}
+
+Figure \ref{fig:divNoExit} distinctly shows that firms with superior productivity yield higher dividends. Moreover, upon
+achieving a steady state, both capital and dividends exhibit oscillations around a rising mean. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Output_noexit.png}
+    \caption{Showcasing a 20-step simulation of 10 firms, this plot reveals the adjusted output (\( K \)) following the business cycle impact.}
+    \label{fig:OutNoExit}
+\end{figure}
+
+
+\subsection{The Exit Mechanism}
+
+A firm is prompted to exit the market if its return on capital ranks as the lowest within the firm distribution, making
+way for a newcomer who inherits the minimum capital from the existing pool. Subsequently, the exiting firm's capital is
+reallocated proportionally among the remaining firms, based on their respective returns on capital. The return on
+capital for firm \( i \) at time \( t \) is defined as: 
+\[
+R_{i,t} = \frac{d_{i,t}}{k_{i,t}}
+\]
+Should a firm exhibit the \( \min{R} \), it is compelled to exit the market due to possessing the lowest return on capital
+among all firms.\footnote{This criterion is enforced at each step, effectively merging the concepts of reallocation and
+exit mechanisms henceforth.} 
+
+In the ensuing simulation, while all parameters remain consistent with prior examples, the distinctive feature now is
+the market exit of firms. The subsequent figure illustrates both the optimal and actual capital paths for each firm: 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{OptimalK_exit.png}
+    \caption{Displaying a 20-step simulation involving 10 firms: the optimal \( k \) represents the firm's capital choice,
+    whereas the actual \( k \) reflects capital post-adjustment for the business cycle
+     effect.}
+    \label{fig:optKE}
+\end{figure}
+
+Contrasting with previous outcomes, the introduction of an exit mechanism and the redistribution of residual
+capital—proportionate to returns, yet ensuring the new entrant retains the minimum capital from the firm
+distribution—markedly influences capital trajectory. These mechanisms facilitate incumbent firms in accruing additional
+capital, thus hastening their approach to a stationary state, particularly benefiting the most productive entities. This
+dynamic underscores the cleansing effect of recessions, as capital reallocation during economic downturns favors
+business continuity. The impact of reallocation manifests in the subsequent graph, which delineates a higher
+dividends trajectory compared to scenarios devoid of reallocation mechanisms: 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{div_cap_exit.png}
+    \caption{This figure showcases the results of a 20-step simulation with 10 firms, highlighting dividends (\( d \))
+    and actual 
+    capital (\( k \)) following business cycle adjustments.}
+    \label{fig:divExit}
+\end{figure}
+
+Ultimately, examining overall production reveals an uptick attributable to capital reallocation when juxtaposed with
+prior simulations, underscoring the efficiency of the exit and reallocation strategies in fostering economic resilience
+and growth.
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Path of Overall Output},
+        xlabel={Time},
+        ylabel={\( K \)},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+    ]
+    \addplot[blue] table [col sep=comma, x=Step, y=Total Production] {exit_nofrictions.csv}; % Blue line for exit mechanism
+    \addplot[red] table [col sep=comma, x=Step, y=Total Production] {noexit_nofrictions.csv}; % Red line for no exit mechanism
+    \legend{With Exit Mechanism, Without Exit Mechanism}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{This plot illustrates a 20-step simulation involving 10 firms and demonstrates the impact of business cycle
+    adjustments on overall output \( K \). The blue line represents the scenario incorporating an exit mechanism, whereas
+    the red line denotes the scenario without an exit mechanism, illustrating the variations in output across both
+     contexts.}
+    \label{fig:OutExit}
+\end{figure}
+
+Integrating the exit and reallocation mechanisms notably enhances both the dividends' trajectory and the aggregate
+output, distinctly highlighting how the cleansing effect bolsters productivity. 
+
+
+\subsection{Incorporating Financial Frictions into the Model}
+
+
+In keeping with the methodology set forth in \cite{OsePap17}, financial frictions are incorporated into the model,
+parameterized as  \(1-\mu = 0.25\). To discern the cleansing effect amidst financial frictions, an initial simulation is
+run where capital remains static due to the absence of a reallocation or exit mechanism. Subsequently, a contrasting
+simulation is performed where capital reallocation is possible, with both iterations subjected to financial frictions.
+
+The following plot illustrates the progression of total output over time, displaying two distinct scenarios. The red
+line delineates the case without financial frictions, and the blue line portrays the scenario with frictions in place.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Path of Overall Output},
+        xlabel={Time},
+        ylabel={K},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+        legend entries={No exit, Exit},
+        legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
+    ]
+    \addplot[red, mark=square*] table [col sep=comma, x=Step, y=Total Production] {noexit_frictions.csv};
+    \addplot[blue, mark=otimes*] table [col sep=comma, x=Step, y=Total Production] {exit_frictions.csv};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Evolution of the overall output over time. The red line represents the scenario without reallocation and
+    exit mechanisms, 
+     while the blue line represents the scenario with these mechanisms under financial frictions.}
+    \label{fig:output_evolution_frictions}
+\end{figure}
+
+Observations indicate that financial frictions attenuate overall production, akin to an effective reduction in
+productivity when firms operate with leverage. Although the cleansing effect is evident without financial frictions, it
+is imperative to examine whether this effect is sustained when frictions are introduced. To this end, the subsequent plot
+juxtaposes the overall output for two comparable financial friction scenarios: one with capital reallocation and one
+without.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Path of Overall Output with Financial Frictions},
+        xlabel={Time},
+        ylabel={K},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+        legend entries={Reallocation Allowed,No Reallocation},
+        legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
+    ]
+    \addplot[blue, mark=*] table [col sep=comma, x=Step, y=Total Production] {exit_frictions.csv};
+    \addplot[red, mark=x] table [col sep=comma, x=Step, y=Total Production] {noexit_frictions.csv};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Comparison of overall output with financial frictions over time. The blue line illustrates the output when
+    reallocation  
+    is allowed, while the red line indicates the output when it is not.}
+    \label{fig:output_comparison_frictions}
+\end{figure}
+Figure \ref{fig:output_comparison_frictions} demonstrates that, even under financial frictions where \(1- \mu =0.25\),
+there is a productivity-enhancing mechanism facilitated by capital reallocation due to firm exits. This occurs despite
+the presence of asymmetric information between financial intermediaries and firms, as discussed in \cite{OsePap17}.
+Furthermore, the cleansing effect on overall production appears to be cumulative, with its impact amplifying over time,
+as evidenced by the trend in the graph. Thus, it can be concluded that two economies, identical in their distribution of
+productivity and capital among firms and initialized with the same seed\footnote{All simulations were conducted with the
+same seed for consistency.}, will diverge in terms of output and productivity if one allows for capital reallocation
+through firm exits. This divergence is not only distinct but also grows as time progresses. 
+
+\section{Solving the Belman with Benveniste-Scheinkman}
+In this section, I will address the intertemporal maximization problem without the assumption of fixed leverage,
+utilizing the Benveniste-Scheinkman equation to derive the functional form of the solution. This approach aims to
+demonstrate that the optimal capital trajectory does not significantly deviate from the results obtained in the prior
+analysis. However, I will refrain from conducting simulations using the policy function derived through this method, as
+it yields only a series of optimal paths rather than a comprehensive simulation framework. 
+
+\[V(k_{t}) = \max_{k_{t+1}, e_{t+1}} d_t + \beta V(k_{t+1})\]
+\[s.t.\]
+\[f(k_t) = Z k_t^\alpha\]
+\[f(k_t) = d_t + (c+k_{t-1}-e_{t-1})(1+r) + k_{t} - (c + k_{t}- e_{t}) - k_{-1}(1-\delta)\]
+\[(1+r)(c+k_t -e_t)p + (1-p)f(k_t) = (1+r_f)(c+k_t -e_t) \]
+\[B_t = c+k_t-e_t; R= 1+r; R_f= 1 + r_f;  \]
+\[R=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{f(k_t)}{D_t}\]
+To understand the mechanism behind this optimization problem, I first solve the three times problem working
+backward.
+The value function in \(t=2\) is 
+\[ V_{t+2} =  \max d_{t+2}\]
+Since there firm will not exists in t+2, there are no investment \(B_{t+2}=0\), thus \(0=k_{t+2}+c-e_{t+2}\) as
+consequence \(k_{t+2} = e_{t+2} - c\). Then we can rewrite the value function:
+\[ V_{t+2} = \max Z(e_{t+2} - c)^\alpha - (c+k_{t+1}-e_{t+1})(1+r_{t+1}) - e_{t+2} + c + (c + e_{t+2} - c - e_{t+2}) +
+k_{t+1}(1-\delta) \]
+\[V_{t+2} = \max_{e_{t+2}} Z(e_{t+2} - c)^\alpha - B_{t+1}R_{l,t+1} - e_{t+2} + c + k_{t+1}(1-\delta) \]
+FOC:
+\[\frac{\partial V_{t+2}}{\partial e_{t+2}} = Z \alpha (e_{t+2} - c)^{\alpha-1} - 1 = 0\]
+\[ (e_{t+2} - c)^{\alpha-1}= (Z \alpha)^{-1}\]
+\[ e_{t+2} = (Z \alpha)^{\frac{1}{1-\alpha}}+c\]
+Thus:
+\[d_{t+2} = Z\left[(Z \alpha)^{\frac{\alpha}{1-\alpha}}\right]  - B_{t+1}R_{t+1} -  \left[(Z
+\alpha)^{\frac{1}{1-\alpha}}\right] + k_{t+1}(1-\delta) \]
+\[V_{t+2} = Z\left[(Z \alpha)^{\frac{\alpha}{1-\alpha}}\right]  - B_{t+1}R_{t+1} -  \left[(Z
+\alpha)^{\frac{1}{1-\alpha}}\right] + k_{t+1}(1-\delta) \]
+Writing the problem in t+1:
+\[V_{t+1} = \max_{e_{t+1},k_{t+1}} d_{t+1} + \beta V_{t+2}\]
+\[d_{t+1} = Zk^\alpha_{t+1} - B_t R_L - k_{t+1} + B_{t+1} + k_t(1-\delta)\]
+FOCs:
+\begin{align*}
+    \left\{\begin{array}{@{}l@{}}
+        \frac{\partial V_{t+1}}{\partial e_{t+1}} = \frac{\partial d_{t+1}}{\partial e_{t+1}} + \beta \frac{\partial
+            V_{t+2}}{\partial e_{t+1}} = 0  \\
+        \frac{\partial V_{t+1}}{\partial k_{t+1}} = \frac{\partial d_{t+1}}{\partial k_{t+1}} + \beta \frac{\partial
+            V_{t+2}}{\partial K_{t+1}} = 0 \\
+    \end{array} \right .\,
+\end{align*}
+solving \(\frac{\partial d_{t+1}}{\partial e_{t+1}}\):
+\[\frac{\partial d_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}}
+ - \frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial B_{t+1}}{\partial e_{t+1}}\]
+\[\frac{\partial B_{t+1}}{\partial e_{t+1}} = \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1\]
+\[\frac{\partial d_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}} -
+\frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1\]
+
+solving \(\frac{\partial V_{t+2}}{\partial e_{t+1}}\):
+\[\frac{\partial V_{t+2}}{\partial e_{t+1}} = - \left[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right) \right]\] 
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \frac{\partial B_{t+1}}{\partial e_{t+1}}R_{t+1} +
+B_{t+1}\frac{\partial R_{t+1}}{\partial e_{t+1}} \]
+\[\frac{\partial B_{t+1}}{\partial e_{t+1}} = \frac{\partial k_{t+1}}{\partial e_{t+1}}-1\]
+\[\frac{\partial R_{t+1}}{\partial e_{t+1}} = - \frac{1-p}{p}\left\{\left[Z\alpha k^{\alpha-1}_{t+1}\frac{\partial
+k_{t+1}}{\partial e_{t+1}} -\delta \frac{\partial k_{t+1}}{\partial e_{t+1}}\right] B_{t+1} - \left(\frac{\partial
+k_{t+1}}{\partial e_{t+1}} - 1\right) \left[Zk_{t+1}^{\alpha} - \delta k_{t+1}\right]\right\}B_{t+1}^{-2}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}-1 \right] R_{t+1}
+- \frac{1-p}{p}\left\{\left[Z\alpha k^{\alpha-1}_{t+1}\frac{\partial
+k_{t+1}}{\partial e_{t+1}} -\delta \frac{\partial k_{t+1}}{\partial e_{t+1}}\right] B_{t+1} - \left(\frac{\partial
+k_{t+1}}{\partial e_{t+1}} - 1\right) \left[Zk_{t+1}^{\alpha} - \delta k_{t+1}\right]\right\}B_{t+1}^{-1}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)\left[\left(zk^\alpha_{t+1} -\delta k_{t+1}\right)\frac{1-p}{p}B_{t+1}^{-1}+R_{t+1}\right] -
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right)\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial e_{t+1}} = \left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right)\]
+\[\frac{\partial V_{t+2}}{\partial e_{t+1}} = - \left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right]\]
+Substituting into the first FOC, we get:
+\[\frac{\partial V_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}} -
+\frac{\partial k_{t+1}}{\partial e_{t+1}} + \frac{\partial k_{t+1}}{\partial e_{t+1}} - 1 - \beta 
+\left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1 
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right] = 0\]
+second FOC: \\
+solving \(\frac{\partial d_{t+1}}{\partial k_{t+1}}\):
+\[\frac{\partial d_{t+1}}{\partial k_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1} - 1 + \frac{\partial B_{t+1}}{\partial
+k_{t+1}} \]
+\[\frac{\partial B_{t+1}}{\partial
+k_{t+1}} = 1 - \frac{\partial e_{t+1}}{\partial k_{t+1}} \]
+\[\frac{\partial d_{t+1}}{\partial k_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}}\]
+solving \(\frac{\partial V_{t+2}}{\partial k_{t+1}}\):
+\[\frac{\partial V_{t+2}}{\partial k_{t+1}} = -\left[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} -(1-\delta)\right] \]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} = \frac{\partial B_{t+1}}{\partial k_{t+1}}R_{t+1} +
+B_{t+1}\frac{\partial R_{t+1}}{\partial k_{t+1}}\]
+\[\frac{\partial B_{t+1}}{\partial k_{t+1}} = 1-\frac{\partial e_{t+1}}{\partial k_{t+1}} \]
+\[\frac{\partial R_{t+1}}{\partial k_{t+1}} =  - \frac{1-p}{p}\left[\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)B_{t+1} -
+\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)\left(Zk_{t+1}^{\alpha} - \delta k_{t+1}
+\right)\right]B_{t+1}^{-2} 
+\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} = \left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right) R_{t+1} +
+\left\{\frac{1-p}{p}\left[(Z \alpha k^{\alpha-1}_{t+1}-\delta)B_{t+1} -
+\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)\left(Zk_{t+1}^{\alpha} - \delta k_{t+1}
+\right)\right]B_{t+1}^{-1} \right\}\]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} =\left(1-\frac{\partial e_{t+}}{\partial k_{t+1}}\right)
+\left[R_{t+1} + \frac{1-p}{p}\left(Z k_{t+1}^{\alpha} - \delta k_{t+1}\right)B_{t+1}^{-1}\right]-
+\frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right) \]
+\[\frac{\partial B_{t+1}R_{t+1}}{\partial k_{t+1}} =\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right) \]
+\[\frac{\partial V_{t+2}}{\partial k_{t+1}} = -\left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right] \]
+Substituting into the FOC:
+\[\frac{\partial V_{t+1}}{\partial k_{t+1}} =Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}} - \beta \left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right]=0\]
+thus the FOCs are:
+\[\frac{\partial V_{t+1}}{\partial e_{t+1}} = Z \alpha k_{t+1} ^{\alpha-1}\frac{\partial k_{t+1}}{\partial e_{t+1}}  - 1 - \beta 
+\left[\left(\frac{\partial k_{t+1}}{\partial e_{t+1}} -1 
+\right)R_f-
+\frac{1-p}{p}\frac{\partial k_{t+1}}{\partial e_{t+1}} \left(Z\alpha k^{\alpha-1}_{t+1} - \delta\right) - \frac{\partial
+k_{t+1}}{\partial e_{t+1}} \left( 1-\delta \right)\right] = 0\]
+\[\frac{\partial V_{t+1}}{\partial k_{t+1}} =Z \alpha k_{t+1} ^{\alpha-1} - \frac{\partial e_{t+1}}{\partial
+k_{t+1}} - \beta \left[\left(1-\frac{\partial e_{t+1}}{\partial k_{t+1}}\right)
+R_f - \frac{1-p}{p}\left(Z\alpha k^{\alpha-1}_{t+1}-\delta\right)- \left(1-\delta\right)\right]=0\]
+rearranging \(\frac{\partial V_{t+1}}{\partial k_{t+1}} \) to isolate \(k_{t+1}\):
+\[k^{\alpha-1}_{t+1}=\left[\frac{\partial e_{t+1}}{\partial k_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1}\] 
+rearranging \(\frac{\partial V_{t+1}}{\partial e_{t+1}} \) to isolate \(k_{t+1}\):
+\[k^{\alpha-1}_{t+1}=\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
+Equating the two equations:
+\[\left[\frac{\partial e_{t+1}}{\partial k_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1} =
+\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta 
+\left(r_f+\delta\right) + \delta \frac{1-p}{p}\right]\frac{p}{Z\alpha}\]
+From this equation, you can isolate \(\frac{\partial e_{t+1}}{\partial k_{t+1}}\) to solve for it explicitly.
+
+\[\frac{\partial e_{t+1}}{\partial k_{t+1}} = -\left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right) + \beta
+\left(r_f+\delta\right) + \delta
+\frac{1-p}{p}\right]\frac{p}{Z\alpha}\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}\left(1-\beta
+R_f\right)^{-1} - \beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta R_f\right)^{-1}\] 
+\[\frac{\partial e_{t+1}}{\partial k_{t+1}} =- \left[\frac{\partial k_{t+1}}{\partial e_{t+1}}\left(1-\beta R_f\right)
++\delta\frac{1-p}{p}\right]\frac{\beta p +\beta -p}{1-\beta R_f} - \beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta
+R_f\right)^{-1} \]
+Since \(\frac{\partial e_{t+1}}{\partial k_{t+1}}\) is the reciprocal of \(\frac{\partial k_{t+1}}{\partial e_{t+1}}\),
+we can compute the optimal path of the networth as a function of the capital.
+Defining \(y =\frac{\partial e_{t+1}}{\partial k_{t+1}}\) and ths \(\frac{y^{-1}=\partial e_{t+1}}{\partial k_{t+1}}\):
+\[y= - \left[\frac{1}{y}\left(1-\beta R_f\right)
++\delta\frac{1-p}{p}\right]\frac{\beta p +\beta -p}{1-\beta R_f} - \beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta
+R_f\right)^{-1} \]
+To solve the given equation \[y= - \left[\frac{1}{y}\left(1-\beta R_f\right)
++\delta\frac{1-p}{p}\right]\frac{\beta p +\beta -p}{1-\beta R_f} - \beta \left(r_f+\frac{\delta}{p}\right)\left(1-\beta
+R_f\right)^{-1} \]
+
+
+Use Python and the sympy library to solve the equation:
+\begin{lstlisting}[language=Python]
+from sympy import symbols, Eq, solve
+
+# Define the symbols
+y, beta, R_f, delta, p, r_f = symbols('y beta R_f delta p r_f')
+
+# Define the equation
+equation = Eq(y, - ((1/y) * (1 - beta * R_f) + delta * (1 - p) / p) * (beta * p + beta - p) / (1 - beta * R_f) - beta * (r_f + delta / p) / (1 - beta * R_f))
+
+# Solve for y
+solution = solve(equation, y)
+\end{lstlisting}
+
+
+The equation for \(y\) is given by:
+
+\[y = \frac{\beta \delta \pm  \sqrt{\Delta}}{2 p (\beta  R_f - 1)}\]
+
+
+In the solutions provided, \( \Delta \) represents the discriminant of the quadratic equation that was formed during the
+solution process. It is the expression under the square root in the solutions. The discriminant \( \Delta \) in this
+case is a complex expression involving the variables \( R_f \), \( \beta \), \( p \), \( \delta \), and \( r_f \).
+Specifically, \( \Delta \) is given by: 
+
+\begin{align}
+    &\Delta = (-\beta \delta - \beta p^2 \delta\left(\frac{1}{p} - 1\right) + p^2 \delta\left(\frac{1}{p} - 1\right) \\
+    &- \beta p \delta\left(\frac{1}{p} - 1\right) - \beta p r_f)^2 \\
+    &- 4 (\beta p R_f - p) (\beta^2 p^2 R_f - \beta p^2 R_f + \beta^2 p R_f \\
+    &- \beta p^2 + p^2 - \beta p)
+\end{align}
+
+The discriminant \( \Delta \) is given by:
+\begin{align*}
+    \Delta = \text{[complex expression involving \( R_f \), \( \beta \), \( p \), \( \delta \), and \( r_f \)]}
+\end{align*}
+
+
+The sign of the solutions depends on:
+\begin{itemize}
+    \item The values of \( \beta \), \( \delta \), \( p \), \( R_f \), and \( r_f \).
+    \item The value and sign of \( \Delta \).
+\end{itemize}
+Since \( \Delta \) involves these parameters in a complex manner, the sign of the solutions can be:
+\begin{itemize}
+    \item Real and positive, real and negative, or complex (depending on the sign and magnitude of \( \Delta \) and other parameters).
+    \item Determined specifically only when actual values for the parameters are provided.
+\end{itemize}
+Since now we have a partial derivative as a function of parametrs we can retrive the relation between equity and
+capital.
+Rewriting the solutions as:
+\[y =\frac{\partial e_{t+1}}{\partial k_{t+1}}= \frac{N}{D}\]
+Given the partial derivative:
+\begin{align*}
+    \frac{\partial e_{t+1}}{\partial k_{t+1}} = \frac{N}{D}
+\end{align*}
+where \(N\) and \(D\) are constants with respect to \(k\), we want to integrate this with respect to \(k\).
+
+Since \(N\) and \(D\) do not depend on \(k\), the integral is straightforward:
+\begin{align*}
+    \int \frac{N}{D} \, dk
+\end{align*}
+
+Integrating a constant with respect to \(k\) yields:
+\begin{align*}
+    \int \frac{N}{D} \, dk = \frac{N}{D} \cdot k + C
+\end{align*}
+where \(C\) is the constant of integration.
+
+Thus, the set of possible solutions is:
+\begin{align*}
+    e_{t+1} = \frac{N}{D} \cdot k_{t+1} + C
+\end{align*}
+where \(C\) is determined based on boundary conditions or initial values.
+Given the relationship:
+\begin{align*}
+    k^{\alpha-1}_{t+1} = \left[\frac{\partial e_{t+1}}{\partial k_{t+1}}\left(1-\beta R_f\right) + \beta \left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1}
+\end{align*}
+we can retrieve \(k_{t+1}\).
+
+Substituting \(\frac{\partial e_{t+1}}{\partial k_{t+1}} = \frac{N}{D}\) into the equation, we get:
+\begin{align*}
+    k^{\alpha-1}_{t+1} = \left[\frac{N}{D}\left(1-\beta R_f\right) + \beta \left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1}
+\end{align*}
+Sine now we have the optimal k we can retrieve the optimal path of networth:
+\[e_{t+1} = \frac{N}{D} \cdot \left[\frac{N}{D}\left(1-\beta R_f\right) + \beta
+\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1} +
+C\]
+Thus the debt at time t+1 is:
+\begin{align}
+    B_{t+1} = & \left[\frac{N}{D}\left(1-\beta R_f\right) + \beta\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1} + c \nonumber \\
+    & - \left\{\frac{N}{D} \cdot \left[\frac{N}{D}\left(1-\beta R_f\right) + \beta\left(r_f+\frac{\delta}{p}\right)\right]\left\{Z\alpha\left[\left(1-\beta\right)-\frac{\beta}{p}\right]\right\}^{-1} + C\right\}
+\end{align}
 
 \medskip
 \bibliography{reference}
