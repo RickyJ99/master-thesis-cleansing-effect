@@ -575,7 +575,7 @@ to changes in demand.
 
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.4]{Plot2.1.png}
+    \includegraphics[scale = 0.4]{figure/Plot2.1.png}
     \caption{Figure 1. A Creation and destruction \(c_0=0.3, c_1=1\) B Change in demand (Symmetric)}
     \label{plot:2.1}
 \end{figure}
@@ -607,7 +607,7 @@ The figure below illustrates the data that the model seeks to replicate, showcas
 
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.4]{Plot2.2.png}
+    \includegraphics[scale = 0.4]{figure/Plot2.2.png}
     \caption{Figure 1. Job creation and job destruction in U.S. Manufacturing B Index of the industrial production}
     \label{plot:2.2}
 \end{figure}
@@ -617,7 +617,7 @@ and job destruction against leads and lags of the corresponding rates of growth.
 responsive to demand fluctuations, while job destruction exhibits a more countercyclical behavior. 
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.4]{Plot2.3.png}
+    \includegraphics[scale = 0.4]{figure/Plot2.3.png}
     \caption{Table 2.1. Job Creation and Job Destruction in U.S. Manufacturing Response to Output Growth}
     \label{Table 2.1.}
     \footnotesize textit{Notes}: The table presents the reaction of job creation to the growth rate of the industrial
@@ -655,7 +655,7 @@ In order to better understand the asymmetrical behavior the authors simulate an 
 The results are depicted in \ref{plot:2.4}
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.4]{Plot2.4.png}
+    \includegraphics[scale = 0.4]{figure/Plot2.4.png}
     \caption{A.  Creation and  Destruction B. Output Growth}
     \label{plot:2.4}
     \footnotesize \textit{Notes}: The figure depicts a simulation of asymmetrical supply growth.
@@ -702,7 +702,7 @@ creating a new unit, which is found to be 0.5. This aligns with a small elastici
 signifying the vulnerability of the insulation mechanism to breakdown. 
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.6]{Plot2.5.png}
+    \includegraphics[scale = 0.6]{figure/Plot2.5.png}
     \caption{Figure 1. A employment driven job creation \(c_0=0.403, c_1=0.5\) B Employment job destruction \(c_0=0.403, c_1=0.5\)} 
     \label{plot:2.5}
 \end{figure}
@@ -2230,8 +2230,8 @@ subsequent plots:
         width=0.8\textwidth,
         height=6cm,
     ]
-    \addplot[blue] table [col sep=comma, x=Time, y=Capital] {simulation.csv}; % With friction
-    \addplot[red] table [col sep=comma, x=Time, y=Capital] {simulation_withoutfriction.csv}; % Without friction
+    \addplot[blue] table [col sep=comma, x=Time, y=Capital] {output_data/simulation.csv}; % With friction
+    \addplot[red] table [col sep=comma, x=Time, y=Capital] {output_data/simulation_withoutfriction.csv}; % Without friction
     \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
@@ -2255,8 +2255,8 @@ The initial plot delineates the capital's transition function:
         width=0.8\textwidth,
         height=6cm,
     ]
-    \addplot[blue] table [col sep=comma, x=Time, y=Dividends] {simulation.csv}; % With friction
-    \addplot[red] table [col sep=comma, x=Time, y=Dividends] {simulation_withoutfriction.csv}; % Without friction
+    \addplot[blue] table [col sep=comma, x=Time, y=Dividends] {output_data/simulation.csv}; % With friction
+    \addplot[red] table [col sep=comma, x=Time, y=Dividends] {output_data/simulation_withoutfriction.csv}; % Without friction
     \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
