@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex theory"] 1709548216 "theory.aux" "theory.bbl" "theory" 1709548222 0
+["bibtex theory"] 1709713829 "theory.aux" "theory.bbl" "theory" 1709713829 0
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
   "reference.bib" 0 -1 0 ""
-  "theory.aux" 1709548222 27282 4f1aa77b15564071ec76e20847ff51dd "xelatex"
+  "theory.aux" 1709713825 27282 4f1aa77b15564071ec76e20847ff51dd "xelatex"
   (generated)
   "theory.bbl"
   "theory.blg"
   (rewritten before read)
-["xdvipdfmx"] 0 "theory.xdv" "theory.pdf" "theory" 0 -1
-  "theory.xdv" 1709548222 1542720 355d6846b302ca1492d1dc882af34caa "xelatex"
+["xdvipdfmx"] 1709713798 "theory.xdv" "theory.pdf" "theory" 1709713829 2
+  "theory.xdv" 1709713825 1542720 7606190e37aec2505379b84f6ffaf047 "xelatex"
   (generated)
   "theory.pdf"
   (rewritten before read)
-["xelatex"] 1709548216 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex" "theory.xdv" "theory" 1709548222 2
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex" 1709548208 187296 eebcc19d0d213e8aa72226a9df7e131c ""
+["xelatex"] 1709713819 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex" "theory.xdv" "theory" 1709713829 2
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex" 1709548208 187296 eebcc19d0d213e8aa72226a9df7e131c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -252,9 +252,9 @@
   "Plot2.5.png" 0 -1 0 ""
   "div_cap_exit.png" 0 -1 0 ""
   "div_cap_noexit.png" 0 -1 0 ""
-  "theory.aux" 1709548222 27282 4f1aa77b15564071ec76e20847ff51dd "xelatex"
+  "theory.aux" 1709713825 27282 4f1aa77b15564071ec76e20847ff51dd "xelatex"
   "theory.bbl" 0 -1 0 "bibtex theory"
-  "theory.out" 1709548222 5805 2438b1d3832b146d5bf4b1a5be5f002f "xelatex"
+  "theory.out" 1709713825 5805 2438b1d3832b146d5bf4b1a5be5f002f "xelatex"
   "theory.tex" 1709548208 187296 eebcc19d0d213e8aa72226a9df7e131c ""
   (generated)
   "theory.aux"

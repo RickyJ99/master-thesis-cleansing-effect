@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  4 MAR 2024 21:40
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  7 MAR 2024 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -583,7 +583,20 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count329
 \g__pdf_backend_annotation_int=\count330
 \g__pdf_backend_link_int=\count331
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `fig:capitalEvolution' multiply defined.
+
+
+LaTeX Warning: Label `fig:dividendsEvolution' multiply defined.
+
+
+LaTeX Warning: Label `fig:capitalEvolution' multiply defined.
+
+
+LaTeX Warning: Label `fig:dividendsEvolution' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
@@ -731,34 +744,114 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Chapter 3.
 [41
 
-] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59]
-Missing character: There is no ; ("3B) in font nullfont!
-NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
-[60] [61]
-Missing character: There is no ; ("3B) in font nullfont!
-[62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
-PGFPlots: reading {output_data/simulation.csv}
-PGFPlots: reading {output_data/simulation_withoutfriction.csv}
-PGFPlots: reading {output_data/simulation.csv}
-PGFPlots: reading {output_data/simulation_withoutfriction.csv}
- [75] (./main.bbl [76] [77
+] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55]
 
-] [78])
+LaTeX Warning: Reference `eq15' on page 56 undefined on input line 1404.
+
+[56] [57]
+
+LaTeX Warning: Reference `eq18' on page 58 undefined on input line 1466.
+
+
+LaTeX Warning: Reference `eq15' on page 58 undefined on input line 1485.
+
+[58] [59]
+
+LaTeX Warning: Reference `eq18' on page 60 undefined on input line 1628.
+
+[60] [61] [62]
+Missing character: There is no ; ("3B) in font nullfont!
+NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
+Missing character: There is no ; ("3B) in font nullfont!
+[63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+ [78]
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+ [79]
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+ [80]
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+ [81]
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+ [82] [83]
+File: figure/OptimalK_noexit.png Graphic file (type bmp)
+<figure/OptimalK_noexit.png>
+File: figure/div_cap_noexit.png Graphic file (type bmp)
+<figure/div_cap_noexit.png>
+ [84]
+File: figure/Output_noexit.png Graphic file (type bmp)
+<figure/Output_noexit.png>
+ [85]
+File: figure/OptimalK_exit.png Graphic file (type bmp)
+<figure/OptimalK_exit.png>
+ [86]
+File: figure/div_cap_exit.png Graphic file (type bmp)
+<figure/div_cap_exit.png>
+ [87]
+PGFPlots: reading {output_data/exit_nofrictions.csv}
+
+
+Package pgfplots Warning: Table 'output_data/exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2647.
+
+ [warning /pgfplots/warning/empty column name]
+PGFPlots: reading {output_data/noexit_nofrictions.csv}
+
+Package pgfplots Warning: Table 'output_data/noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2648.
+
+ [warning /pgfplots/warning/empty column name]
+[88] [89]
+PGFPlots: reading {output_data/noexit_frictions.csv}
+
+
+Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2690.
+
+ [warning /pgfplots/warning/empty column name]
+PGFPlots: reading {output_data/exit_frictions.csv}
+
+Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2691.
+
+ [warning /pgfplots/warning/empty column name]
+PGFPlots: reading {output_data/exit_frictions.csv}
+
+Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2722.
+
+ [warning /pgfplots/warning/empty column name]
+PGFPlots: reading {output_data/noexit_frictions.csv}
+
+Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2723.
+
+ [warning /pgfplots/warning/empty column name]
+[90] (./main.bbl [91] [92
+
+] [93])
 
 Package natbib Warning: There were undefined citations.
 
-[79] (./main.aux)
+[94] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3FFB4E1DC3A758206609A19A335C48C9;4681.
+(rerunfilecheck)             Checksum: 6BB23ED2EDD50FE9C532FC11F25EDF30;5609.
  ) 
 Here is how much of TeX's memory you used:
- 35079 strings out of 476684
- 823965 string characters out of 5804056
- 1866018 words of memory out of 5000000
- 54725 multiletter control sequences out of 15000+600000
- 520011 words of font info for 77 fonts, out of 8000000 for 9000
+ 35255 strings out of 476684
+ 828018 string characters out of 5804056
+ 1886018 words of memory out of 5000000
+ 54884 multiletter control sequences out of 15000+600000
+ 520664 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,18n,94p,1061b,2711s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,18n,94p,1862b,2728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (81 pages, 1216968 bytes).
+Output written on main.xdv (96 pages, 1766100 bytes).

@@ -1,8 +1,8 @@
-PWD /Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup
+PWD /Users/riccardodalcero/Desktop/Tesi/in_out_market/backup
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt
-INPUT /Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex
+INPUT /Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex
 OUTPUT theory.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -982,10 +982,3 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT theory.aux
-INPUT ./theory.out
-INPUT ./theory.out

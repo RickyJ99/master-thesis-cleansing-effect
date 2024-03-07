@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  4 MAR 2024 11:30
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  6 MAR 2024 09:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex
-(/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex
+**/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex
+(/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -764,7 +764,7 @@ Package natbib Warning: Citation `baily1992productivity' on page 16 undefined on
 
 LaTeX Warning: File `Plot1.1.png' not found on input line 446.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:446: Unable to load picture or PDF file 'Plot1.1.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:446: Unable to load picture or PDF file 'Plot1.1.png'.
 <to be read again> 
                    }
 l.446 ...includegraphics[scale = 0.6]{Plot1.1.png}
@@ -789,7 +789,7 @@ Package natbib Warning: Citation `fort2013firms' on page 22 undefined on input l
 
 LaTeX Warning: File `Plot1.2.png' not found on input line 599.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:599: Unable to load picture or PDF file 'Plot1.2.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:599: Unable to load picture or PDF file 'Plot1.2.png'.
 <to be read again> 
                    }
 l.599 ...ncludegraphics[scale = 0.54]{Plot1.2.png}
@@ -813,7 +813,7 @@ Overfull \hbox (73.28636pt too wide) in paragraph at lines 630--655
 
 LaTeX Warning: File `Plot1.3.png' not found on input line 682.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:682: Unable to load picture or PDF file 'Plot1.3.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:682: Unable to load picture or PDF file 'Plot1.3.png'.
 <to be read again> 
                    }
 l.682 ...ncludegraphics[scale = 0.35]{Plot1.3.png}
@@ -826,7 +826,7 @@ File: Plot1.3.png Graphic file (type bmp)
 
 LaTeX Warning: File `Plot1.4.png' not found on input line 689.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:689: Unable to load picture or PDF file 'Plot1.4.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:689: Unable to load picture or PDF file 'Plot1.4.png'.
 <to be read again> 
                    }
 l.689 ...ncludegraphics[scale = 0.35]{Plot1.4.png}
@@ -839,7 +839,7 @@ File: Plot1.4.png Graphic file (type bmp)
 
 LaTeX Warning: File `Plot1.5.png' not found on input line 696.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:696: Unable to load picture or PDF file 'Plot1.5.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:696: Unable to load picture or PDF file 'Plot1.5.png'.
 <to be read again> 
                    }
 l.696 ...ncludegraphics[scale = 0.35]{Plot1.5.png}
@@ -859,7 +859,7 @@ Package natbib Warning: Citation `CabHarm94' on page 26 undefined on input line 
 
 LaTeX Warning: File `Plot1.6.png' not found on input line 745.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:745: Unable to load picture or PDF file 'Plot1.6.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:745: Unable to load picture or PDF file 'Plot1.6.png'.
 <to be read again> 
                    }
 l.745 ...ncludegraphics[scale = 0.35]{Plot1.6.png}
@@ -873,7 +873,7 @@ File: Plot1.6.png Graphic file (type bmp)
 
 LaTeX Warning: File `Plot1.7.png' not found on input line 751.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:751: Unable to load picture or PDF file 'Plot1.7.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:751: Unable to load picture or PDF file 'Plot1.7.png'.
 <to be read again> 
                    }
 l.751 ...ncludegraphics[scale = 0.35]{Plot1.7.png}
@@ -999,7 +999,7 @@ LaTeX Warning: Reference `eq_2.6' on page 41 undefined on input line 1167.
 
 LaTeX Warning: File `Plot2.1.png' not found on input line 1185.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:1185: Unable to load picture or PDF file 'Plot2.1.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:1185: Unable to load picture or PDF file 'Plot2.1.png'.
 <to be read again> 
                    }
 l.1185 ...ncludegraphics[scale = 0.4]{Plot2.1.png}
@@ -1031,7 +1031,7 @@ Package natbib Warning: Citation `DavHal94' on page 43 undefined on input line 1
 
 LaTeX Warning: File `Plot2.2.png' not found on input line 1217.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:1217: Unable to load picture or PDF file 'Plot2.2.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:1217: Unable to load picture or PDF file 'Plot2.2.png'.
 <to be read again> 
                    }
 l.1217 ...ncludegraphics[scale = 0.4]{Plot2.2.png}
@@ -1044,7 +1044,7 @@ File: Plot2.2.png Graphic file (type bmp)
 
 LaTeX Warning: File `Plot2.3.png' not found on input line 1227.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:1227: Unable to load picture or PDF file 'Plot2.3.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:1227: Unable to load picture or PDF file 'Plot2.3.png'.
 <to be read again> 
                    }
 l.1227 ...ncludegraphics[scale = 0.4]{Plot2.3.png}
@@ -1076,671 +1076,8 @@ LaTeX Warning: Reference `plot:2.4' on page 45 undefined on input line 1262.
 
 LaTeX Warning: File `Plot2.4.png' not found on input line 1265.
 
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:1265: Unable to load picture or PDF file 'Plot2.4.png'.
+/Users/riccardodalcero/Desktop/Tesi/in_out_market/backup/theory.tex:1265: Unable to load picture or PDF file 'Plot2.4.png'.
 <to be read again> 
                    }
 l.1265 ...ncludegraphics[scale = 0.4]{Plot2.4.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-File: Plot2.4.png Graphic file (type bmp)
-<Plot2.4.png>
-
-LaTeX Warning: Reference `plot:2.4' on page 45 undefined on input line 1271.
-
-[45]
-
-LaTeX Warning: Reference `eq2.9' on page 46 undefined on input line 1304.
-
-
-LaTeX Warning: File `Plot2.5.png' not found on input line 1312.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:1312: Unable to load picture or PDF file 'Plot2.5.png'.
-<to be read again> 
-                   }
-l.1312 ...ncludegraphics[scale = 0.6]{Plot2.5.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-File: Plot2.5.png Graphic file (type bmp)
-<Plot2.5.png>
-
-LaTeX Warning: Reference `plot:2.5' on page 46 undefined on input line 1317.
-
-[46]
-
-Package natbib Warning: Citation `DAvHalt90' on page 47 undefined on input line 1324.
-
-
-Package natbib Warning: Citation `DavHalt92' on page 47 undefined on input line 1324.
-
-
-Package natbib Warning: Citation `DAvHalt90' on page 47 undefined on input line 1337.
-
-
-Package natbib Warning: Citation `GaHam92' on page 47 undefined on input line 1342.
-
-[47]
-
-Package natbib Warning: Citation `bernanke1995inside' on page 48 undefined on input line 1371.
-
-[48]
-
-LaTeX Warning: Reference `eq1' on page 49 undefined on input line 1381.
-
-[49]
-
-LaTeX Warning: Reference `eq1' on page 50 undefined on input line 1399.
-
-
-LaTeX Warning: Reference `eq2' on page 50 undefined on input line 1399.
-
-
-LaTeX Warning: Reference `eq1' on page 50 undefined on input line 1405.
-
-
-LaTeX Warning: Reference `eq2'' on page 50 undefined on input line 1405.
-
-
-LaTeX Warning: Reference `eq1' on page 50 undefined on input line 1418.
-
-
-LaTeX Warning: Reference `eq4' on page 50 undefined on input line 1424.
-
-
-LaTeX Warning: Reference `eq2'' on page 50 undefined on input line 1424.
-
-[50]
-
-LaTeX Warning: Reference `eq5' on page 51 undefined on input line 1430.
-
-
-LaTeX Warning: Reference `eq5' on page 51 undefined on input line 1432.
-
-
-LaTeX Warning: Reference `eq5'' on page 51 undefined on input line 1436.
-
-
-LaTeX Warning: Reference `fig:steadystate3d' on page 51 undefined on input line 1438.
-
-
-LaTeX Warning: Reference `eq5'' on page 51 undefined on input line 1439.
-
-
-Package natbib Warning: Citation `CabHarm94' on page 51 undefined on input line 1444.
-
-[51] [52]
-
-LaTeX Warning: Reference `eq2' on page 53 undefined on input line 1486.
-
-
-LaTeX Warning: Reference `eq7' on page 53 undefined on input line 1492.
-
-
-LaTeX Warning: Reference `eq7' on page 53 undefined on input line 1492.
-
-
-LaTeX Warning: Reference `eq6' on page 53 undefined on input line 1497.
-
-[53] [54] [55]
-
-LaTeX Warning: Reference `eq5'' on page 56 undefined on input line 1595.
-
-[56]
-
-LaTeX Warning: Reference `eq10' on page 57 undefined on input line 1603.
-
-[57] [58] [59]
-
-LaTeX Warning: Reference `eq14' on page 60 undefined on input line 1741.
-
-[60]
-
-LaTeX Warning: Reference `eq14' on page 61 undefined on input line 1756.
-
-
-LaTeX Warning: Reference `eq15'' on page 61 undefined on input line 1756.
-
-
-LaTeX Warning: Reference `eq13' on page 61 undefined on input line 1761.
-
-
-LaTeX Warning: Reference `eq16' on page 61 undefined on input line 1766.
-
-
-LaTeX Warning: Reference `eq15' on page 61 undefined on input line 1766.
-
-
-LaTeX Warning: Reference `eq17' on page 61 undefined on input line 1766.
-
-[61] [62]
-
-LaTeX Warning: Reference `eq17' on page 63 undefined on input line 1815.
-
-
-LaTeX Warning: Reference `eq18' on page 63 undefined on input line 1819.
-
-
-LaTeX Warning: Reference `eq15'' on page 63 undefined on input line 1825.
-
-
-LaTeX Warning: Reference `eq15' on page 63 undefined on input line 1831.
-
-[63] [64]
-
-LaTeX Warning: Reference `eq16' on page 65 undefined on input line 1962.
-
-
-LaTeX Warning: Reference `eq18' on page 65 undefined on input line 1962.
-
-
-LaTeX Warning: Reference `eq14' on page 65 undefined on input line 1965.
-
-
-LaTeX Warning: Reference `eq17' on page 65 undefined on input line 1965.
-
-[65]
-
-LaTeX Warning: Reference `eq20' on page 66 undefined on input line 1971.
-
-[66]
-
-Package natbib Warning: Citation `BerGer86' on page 67 undefined on input line 1992.
-
-Missing character: There is no ; ("3B) in font nullfont!
-NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
-
-LaTeX Warning: Reference `plot:part_constraint_r_lavarge' on page 67 undefined on input line 2090.
-
-[67] [68]
-Missing character: There is no ; ("3B) in font nullfont!
-
-LaTeX Warning: Reference `plot:part_constraint_r_fixlavarge' on page 69 undefined on input line 2173.
-
-[69] [70]
-
-LaTeX Warning: Reference `eq2' on page 71 undefined on input line 2195.
-
-
-LaTeX Warning: Reference `eq1' on page 71 undefined on input line 2196.
-
-
-LaTeX Warning: Reference `eq21' on page 71 undefined on input line 2198.
-
-[71]
-
-LaTeX Warning: Reference `eq15'' on page 72 undefined on input line 2242.
-
-
-LaTeX Warning: Reference `eq22' on page 72 undefined on input line 2242.
-
-
-LaTeX Warning: Reference `eq16' on page 72 undefined on input line 2250.
-
-[72]
-
-LaTeX Warning: Reference `eq:ff' on page 73 undefined on input line 2262.
-
-
-LaTeX Warning: Reference `eq17' on page 73 undefined on input line 2269.
-
-
-LaTeX Warning: Reference `eq:div_opt_path' on page 73 undefined on input line 2277.
-
-[73]
-
-Package natbib Warning: Citation `OsePap17' on page 74 undefined on input line 2289.
-
-
-Package natbib Warning: Citation `OsePap17' on page 74 undefined on input line 2305.
-
-[74]
-
-LaTeX Warning: Reference `pl_phase_b' on page 75 undefined on input line 2445.
-
-[75] [76] [77] [78] [79] [80]
-
-Package natbib Warning: Citation `OsePap17' on page 81 undefined on input line 2624.
-
-[81]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2661: Package pgfplots Error: Could not read table file 'simulation.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2661 ...ma, x=Time, y=Capital] {simulation.csv};
-                                                   % With friction
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-PGFPlots: reading {simulation.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2661.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2662: Package pgfplots Error: Could not read table file 'simulation_withoutfriction.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2662 ...pital] {simulation_withoutfriction.csv};
-                                                   % Without friction
-(That was another \errmessage.)
-
-PGFPlots: reading {simulation_withoutfriction.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2662.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-Package pgfplots Warning: You have an axis with empty range (in direction y). Replacing it with a default range and clearing all plots. on input line 2664.
-
- [warning /pgfplots/warning/empty range cleared axis]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2686: Package pgfplots Error: Could not read table file 'simulation.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2686 ..., x=Time, y=Dividends] {simulation.csv};
-                                                   % With friction
-(That was another \errmessage.)
-
-PGFPlots: reading {simulation.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2686.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2687: Package pgfplots Error: Could not read table file 'simulation_withoutfriction.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2687 ...dends] {simulation_withoutfriction.csv};
-                                                   % Without friction
-(That was another \errmessage.)
-
-PGFPlots: reading {simulation_withoutfriction.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2687.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-Package pgfplots Warning: You have an axis with empty range (in direction y). Replacing it with a default range and clearing all plots. on input line 2689.
-
- [warning /pgfplots/warning/empty range cleared axis]
-[82] [83]
-
-LaTeX Warning: File `OptimalK_noexit.png' not found on input line 2735.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2735: Unable to load picture or PDF file 'OptimalK_noexit.png'.
-<to be read again> 
-                   }
-l.2735 ...graphics[scale=0.4]{OptimalK_noexit.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-File: OptimalK_noexit.png Graphic file (type bmp)
-<OptimalK_noexit.png>
-
-LaTeX Warning: File `div_cap_noexit.png' not found on input line 2745.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2745: Unable to load picture or PDF file 'div_cap_noexit.png'.
-<to be read again> 
-                   }
-l.2745 ...egraphics[scale=0.4]{div_cap_noexit.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-File: div_cap_noexit.png Graphic file (type bmp)
-<div_cap_noexit.png>
-
-LaTeX Warning: Reference `fig:divNoExit' on page 84 undefined on input line 2752.
-
-
-LaTeX Warning: File `Output_noexit.png' not found on input line 2756.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2756: Unable to load picture or PDF file 'Output_noexit.png'.
-<to be read again> 
-                   }
-l.2756 ...degraphics[scale=0.4]{Output_noexit.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-File: Output_noexit.png Graphic file (type bmp)
-<Output_noexit.png>
-[84]
-
-LaTeX Warning: File `OptimalK_exit.png' not found on input line 2780.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2780: Unable to load picture or PDF file 'OptimalK_exit.png'.
-<to be read again> 
-                   }
-l.2780 ...degraphics[scale=0.4]{OptimalK_exit.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-File: OptimalK_exit.png Graphic file (type bmp)
-<OptimalK_exit.png>
-[85]
-
-LaTeX Warning: File `div_cap_exit.png' not found on input line 2797.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2797: Unable to load picture or PDF file 'div_cap_exit.png'.
-<to be read again> 
-                   }
-l.2797 ...udegraphics[scale=0.4]{div_cap_exit.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-File: div_cap_exit.png Graphic file (type bmp)
-<div_cap_exit.png>
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2823: Package pgfplots Error: Could not read table file 'exit_nofrictions.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2823 ...otal Production] {exit_nofrictions.csv};
-                                                   % Blue line for exit mech...
-(That was another \errmessage.)
-
-PGFPlots: reading {exit_nofrictions.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2823.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2824: Package pgfplots Error: Could not read table file 'noexit_nofrictions.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2824 ...al Production] {noexit_nofrictions.csv};
-                                                   % Red line for no exit me...
-(That was another \errmessage.)
-
-PGFPlots: reading {noexit_nofrictions.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2824.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-Package pgfplots Warning: You have an axis with empty range (in direction y). Replacing it with a default range and clearing all plots. on input line 2826.
-
- [warning /pgfplots/warning/empty range cleared axis]
-
-Package natbib Warning: Citation `OsePap17' on page 86 undefined on input line 2842.
-
-[86]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2866: Package pgfplots Error: Could not read table file 'noexit_frictions.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2866 ...otal Production] {noexit_frictions.csv};
-                                                  
-(That was another \errmessage.)
-
-PGFPlots: reading {noexit_frictions.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2866.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2867: Package pgfplots Error: Could not read table file 'exit_frictions.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2867 ...=Total Production] {exit_frictions.csv};
-                                                  
-(That was another \errmessage.)
-
-PGFPlots: reading {exit_frictions.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2867.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-Package pgfplots Warning: You have an axis with empty range (in direction y). Replacing it with a default range and clearing all plots. on input line 2868.
-
- [warning /pgfplots/warning/empty range cleared axis]
-Missing character: There is no ; ("3B) in font nullfont!
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2868: Missing } inserted.
-<inserted text> 
-                }
-l.2868     \end{axis}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2868: Missing } inserted.
-<inserted text> 
-                }
-l.2868     \end{axis}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2868: Missing } inserted.
-<inserted text> 
-                }
-l.2868     \end{axis}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2868: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2868     \end{axis}
-                     
-(That was another \errmessage.)
-
-[87]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2898: Package pgfplots Error: Could not read table file 'exit_frictions.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2898 ...=Total Production] {exit_frictions.csv};
-                                                  
-(That was another \errmessage.)
-
-PGFPlots: reading {exit_frictions.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2898.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2899: Package pgfplots Error: Could not read table file 'noexit_frictions.csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2899 ...otal Production] {noexit_frictions.csv};
-                                                  
-(That was another \errmessage.)
-
-PGFPlots: reading {noexit_frictions.csv}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 2899.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-Package pgfplots Warning: You have an axis with empty range (in direction y). Replacing it with a default range and clearing all plots. on input line 2900.
-
- [warning /pgfplots/warning/empty range cleared axis]
-Missing character: There is no ; ("3B) in font nullfont!
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2900: Missing } inserted.
-<inserted text> 
-                }
-l.2900     \end{axis}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2900: Missing } inserted.
-<inserted text> 
-                }
-l.2900     \end{axis}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2900: Missing } inserted.
-<inserted text> 
-                }
-l.2900     \end{axis}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-/Users/riccardodalcero/Desktop/Tesi/in_out_market/literature/theory/main/backup/theory.tex:2900: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2900     \end{axis}
-                     
-(That was another \errmessage.)
-
-
-LaTeX Warning: Reference `fig:output_comparison_frictions' on page 88 undefined on input line 2907.
-
-
-Package natbib Warning: Citation `OsePap17' on page 88 undefined on input line 2909.
-
-
-Overfull \hbox (2.03815pt too wide) in paragraph at lines 2916--2916
-[]\TU/lmr/bx/n/17.28 Solving the Belman with Benveniste-Scheinkman 
- []
-
-[88]
-Overfull \hbox (0.97949pt too wide) detected at line 2937
-\OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 c\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 k[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 )(1 + \OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + (\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 c \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 k[]\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^N\OT1/cmr/m/n/12 )
- []
-
-[89] [90]
-Overfull \hbox (11.09369pt too wide) detected at line 2975
-[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[] [] \OML/cmm/m/it/12 B[]
- []
-
-
-Overfull \hbox (122.83052pt too wide) detected at line 2979
-[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ [] [] \OML/cmm/m/it/12 B[]
- []
-
-
-Overfull \hbox (22.40384pt too wide) detected at line 2982
-[] \OT1/cmr/m/n/12 = [] [] \OMS/cmsy/m/n/12 ^^@ [][] []
- []
-
-
-Overfull \hbox (131.22702pt too wide) detected at line 2996
-[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z^^Kk[][] \OMS/cmsy/m/n/12 ^^@ [] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L [] \OT1/cmr/m/n/12 = 0
- []
-
-[91]
-Overfull \hbox (76.1803pt too wide) detected at line 3017
-[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 + []
- []
-
-
-Overfull \hbox (53.16032pt too wide) detected at line 3034
-[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z^^Kk[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^L [] \OT1/cmr/m/n/12 = 0
- []
-
-[92]
-Overfull \hbox (96.3378pt too wide) detected at line 3048
-[] [][] \OT1/cmr/m/n/12 = [] []
- []
-
-
-Overfull \hbox (154.61467pt too wide) detected at line 3054
-[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@ [] [] [] [][] ^^@ \OML/cmm/m/it/12 ^^L [] [][]
- []
-
-[93] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [94] [95] [96]
-No file theory.bbl.
-
-Package natbib Warning: There were undefined citations.
-
-[97] (./theory.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `theory.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `theory.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  2438B1D3832B146D5BF4B1A5BE5F002F;5805.
- ) 
-Here is how much of TeX's memory you used:
- 36066 strings out of 476684
- 843844 string characters out of 5804056
- 1931018 words of memory out of 5000000
- 55666 multiletter control sequences out of 15000+600000
- 522527 words of font info for 88 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 99i,18n,94p,1091b,2711s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on theory.xdv (97 pages, 1542720 bytes).
+                                         

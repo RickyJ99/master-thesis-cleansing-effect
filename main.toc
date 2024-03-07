@@ -17,23 +17,26 @@
 \contentsline {chapter}{\numberline {3}Theoretical model}{41}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Introduction}{41}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Law of motion of capital and debt}{41}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Steady State}{43}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.1}Steady State}{44}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Dynamics of capital}{46}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Dynamics of debts}{50}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Free debt case: Ramsey-Cass-Kooopmans reinterpreted}{52}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Steady State derivation}{52}{subsection.3.3.1}%
-\contentsline {paragraph}{Steady state condition for dividens}{53}{section*.9}%
-\contentsline {paragraph}{steady state condition for capital}{54}{section*.10}%
-\contentsline {subsection}{\numberline {3.3.2}Phase diagram}{55}{subsection.3.3.2}%
-\contentsline {paragraph}{Steady state for dividends}{55}{section*.11}%
-\contentsline {paragraph}{Steady state for capital}{56}{section*.12}%
-\contentsline {paragraph}{Steady state for capital and dividend}{58}{section*.13}%
-\contentsline {section}{\numberline {3.4}Introducing financial frictions}{59}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Participation constraint of the financial intermediaries }{59}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Steady state and phase diagram}{63}{subsection.3.4.2}%
-\contentsline {paragraph}{Steady state for capital}{65}{section*.14}%
-\contentsline {subsection}{\numberline {3.4.3}Phase diagram}{66}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Finding optimal path}{67}{section.3.5}%
-\contentsline {paragraph}{Guess and verify}{70}{section*.15}%
-\contentsline {subsection}{\numberline {3.5.1}Optimization Problem with Financial Frictions}{72}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Simulation Study}{74}{section.3.6}%
+\contentsline {section}{\numberline {3.3}Ramsey-Cass-Kooopmans reinterpreted}{53}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Steady State derivation}{53}{subsection.3.3.1}%
+\contentsline {paragraph}{Steady state condition for dividends}{54}{section*.9}%
+\contentsline {paragraph}{Steady state condition for capital}{55}{section*.10}%
+\contentsline {subsection}{\numberline {3.3.2}Phase diagram}{56}{subsection.3.3.2}%
+\contentsline {paragraph}{Steady state for capital and dividend}{60}{section*.11}%
+\contentsline {section}{\numberline {3.4}Introducing financial frictions}{62}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Participation constraint of the financial intermediaries }{62}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Steady state and phase diagram}{66}{subsection.3.4.2}%
+\contentsline {paragraph}{Steady state for capital}{69}{section*.12}%
+\contentsline {subsection}{\numberline {3.4.3}Phase diagram}{69}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Finding optimal path}{70}{section.3.5}%
+\contentsline {paragraph}{Guess and verify}{73}{section*.13}%
+\contentsline {subsection}{\numberline {3.5.1}Optimization Problem with Financial Frictions}{75}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Simulation Study}{77}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Simulation Study}{79}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Simulation Study}{81}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}heterogeneity and Aggregation Mechanism}{83}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}The Exit Mechanism}{86}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Incorporating Financial Frictions into the Model}{89}{subsection.3.8.3}%
