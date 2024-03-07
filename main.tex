@@ -44,9 +44,8 @@
 \lstset{style=mystyle}
 
 % Useful packages
-\usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
 \usepackage{tikz}
 \usepackage{natbib}
 \pgfplotsset{width=12cm,compat=1.9}
@@ -1397,8 +1396,6 @@ get:
 \begin{align}
     \widehat{d} & = f(k_t) - \delta k_t  \label{eq17}
 \end{align}
-Certainly! Here is a revised version of the passage for clarity and mathematical coherence:
-
 This locus represents the set of points where the capital stock remains constant over time. Hence, we can determine the
 level of dividends that ensures both capital and dividends are maintained at steady-state levels. By incorporating the
 steady-state level of capital  from Equation \ref{eq16} and the production function from Equation \ref{eq15} into the equilibrium
@@ -1444,13 +1441,11 @@ dividends.
 
         \end{axis}
     \end{tikzpicture}
-    \caption{The phase diagram illustrates the dynamic interplay between the firm's capital stock \(k_t\) and the
-    dividend payments \(d_t\). The vertical line at \( \hat{k} \) represents the steady-state level of capital, where
+    \caption{The phase diagram illustrates locus of points such that \(d_t=d_{t-1}\). The vertical line at \( \hat{k} \) represents the steady-state level of capital, where
     the rate of change in dividends \( \Delta d_t \) is zero. To the left of \( \hat{k} \), where capital is below its
     steady-state level, the firm increases dividend payments. Conversely, to the right of \( \hat{k} \), where capital
-    exceeds the steady state, dividend payments decrease. This visualization aids in understanding how firms adjust
-    dividend policies relative to their capital stock to achieve long-term equilibrium.}
-    \label{fig:dividend_dynamics}
+    exceeds the steady state, dividend payments decrease.}
+    \label{fig:ph_d_k_nod}
 \end{figure}
 
 The graph portrays the dynamics of dividends (\(d_t\)) in relation to the capital (\(k_t\)) of a firm, with a
@@ -1532,31 +1527,39 @@ For transitivity, the order for \(\underline{k},\hat{k},\bar{k}\) is the followi
         % Arrows on the right side
         \draw [-{Stealth[bend]}]  (axis cs:2.5,1)--(axis cs:3,1);
         \draw [-{Stealth[bend]}]  (axis cs:4,4) -- (axis cs:3.5,4);
-        \node at (axis cs:2,-0.2) {\(\bar{k}\)};
-        \node at (axis cs:4,-0.2) {\(\underline{k}\)};
+        \node at (axis cs:2,-0.2) {\(\underline{k}\)};
+        \node at (axis cs:4,-0.2) {\(\bar{k}\)};
 
         %vertical line at maximum
         \draw [dashed] (axis cs:2,0) -- (axis cs:2,4);
         \end{axis}
     \end{tikzpicture}
-    \caption{Phase diagram of dividends concerning capital, depicting the steady state level for capital.}
+    \caption{This phase diagram displays the set of points at which the capital stock \( k_t \) is
+    unchanging from one period to the next (\( k_t = k_{t-1} \)). The capital level at \( \underline{k} \) represents the
+    maximum sustainable dividend payout without affecting the capital stock. Arrows above the curve pointing leftward
+    indicate a reduction in capital resulting from dividend levels that exceed the sustainable steady state, while
+    arrows pointing to the right below the curve signify the accumulation of capital due to dividend levels that are
+    below the steady state, leading to an increase in capital stock over time. 
+    }
+    \label{fig:ph_d_k_nod}
 \end{figure}
 
-In the case in which a capital level \(\check{k} \in \left[0,\bar{k} \right]\), the corresponding dividends level that
+For a given level of capital \(k_0 \in [0,\bar{k}]\), the corresponding dividends level that
 guarantee the stationarity of capital is:
-\begin{align}
-    \check{d} &= f(\check{k}) -\delta \check{k}
-\end{align}
-If the firm distributes more dividends than \(\check{d}\) the capital stock must decrease over time: since the
+\begin{align*}
+    d_0 &= f(k_0) -\delta k_0
+\end{align*}
+If the firm distributes more dividends than \(d_0\) the capital stock must decrease over time: since
 dividends are too high the firm is consuming part of her capital. More precisely the firm is distributing more dividends than
-\(\check{d}\), which guarantees that the difference between gross production, and dividends is exactly equal to capital depreciation.
-This behavior is represented by the arrows above the curve pointing to the left. If the firm consumes fewer
-dividends than \(\check{d}\), the opposite happens: the firm increases its capital since there is a positive net
+\(d_0\), which guarantees that the difference between production, and dividends is exactly equal to the replacemnt of
+depreciated capital.
+This behavior is represented by the arrows above the curve pointing to the left. If the firm distributes less
+dividends than \(d_0\), the opposite happens: the firm increases its capital since there is a positive net
 investment. This behavior is represented by
 the arrows below the curve pointing toward the right. 
 
-\paragraph{Steady state for capital and dividend}
-Merging the plot above we get a phase diagram that represents the conditions for stationarity. 
+\paragraph{Steady state for capital and dividends}
+Plotting both loci we get a phase diagram that represents the condition for stationarity. 
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1586,7 +1589,7 @@ Merging the plot above we get a phase diagram that represents the conditions for
         \draw [dashed] (axis cs:2,0) -- (axis cs:2,4);
         \node at (axis cs:2.5,4.5) {\(\Delta k_t = 0\)};
         \node at (axis cs:3.5,3.5) {\(\Delta d_t = 0\)};
-        \node at (axis cs:4,-0.2) {\(\underline{k} \)};
+        \node at (axis cs:4,-0.2) {\(\bar{k} \)};
 
         \draw  (axis cs:1.8,0) -- (axis cs:1.8,5);
 
@@ -1618,21 +1621,27 @@ Merging the plot above we get a phase diagram that represents the conditions for
         \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:1,2) {};
         \node at (axis cs:1.7,4.2) {B};
         
-        \node at (axis cs:2,-0.2) {\(\bar{k}\)};
+        \node at (axis cs:2,-0.2) {\(\underline{k}\)};
         \end{axis}
     \end{tikzpicture}
-    \caption{Dynamics of consumption concerning capital accumulation, showing the points of stability and
-    instability along the curve.}
+    \caption{The phase diagram visualizes the relationship between dividends and capital. The vertical line marks
+    where the dividend level remains constant, and the solid concave curve traces where the capital remains constant.
+    Point B indicates the equilibrium where both dividends and capital are stationary, with the steady-state capital at
+    \( \hat{k} \). This value of \( \hat{k} \) is notably lower than \( \underline{k} \), which is the capital level
+    that would maximize dividends while maintaining a steady capital stock. \( \bar{k} \) represents the capital
+    quantity at which the system reaches a stationary state with zero dividends. The arrows illustrates the dynamics of dividends and capital in case of the firm finding itself outside the stable
+    loci. Point A is a possible starting point (\(k_0,d_0\)). The arrows depict the evolution of dividends and capital
+    when the firm is positioned away from the equilibrium points. Point A represents an initial position (\(k_0,d_0\)).
+    The blue arrows indicate a potential trajectory, known as a saddlepath, leading towards the saddlepoint B. 
+    }
+    \label{fig:ph_d_nodebt}
 \end{figure}
-Notice that there exits 3 steady states: one at the origins due to the assumption \(f(0)=0\), the point \((\bar{k};0)\),
-and finally point B. Point B was obtained in the previous paragraph \ref{eq16} and \ref{eq18} and represented the point in
-which dividends and capital are at a steady state, and both are strictly positive (this point is also referred to as saddlepoint).
-The blue line depicts a possible saddlepath towards the B. Starting at A, the firm chooses exactly the dividend level that
+Notice that there exits 3 steady states: one at the origin due to the assumption \(f(0)=0\), the point \((\bar{k};0)\),
+and finally point B \(=(\hat{k},\hat{d})\). Point B was obtained by equations \ref{eq16} and \ref{eq18} and represented the point in
+which dividends and capital are at a steady state, and both are strictly positive. This point is a saddlepoint.
+The blue line depicts a possible saddlepath towards B. Starting at A, the firm chooses exactly the dividend level that
 leads to the stationary point B. This path not only fulfills the difference equations \ref{eq14} and \ref{eq17}, but
-also, the transversality condition which states:
-\begin{align}
-    \lim _{T \rightarrow \infty} \beta^T U^{\prime}\left(d_{t}\right) k_{T+1}=0  \label{eq20}
-\end{align}
+also, the transversality condition \ref{eq26}
 Indeed as \(t \rightarrow \infty\), capital and dividends approach their steady-state level which are both positive and
 finite, thus the marginal utility of dividends at \(\hat{d}\) is also finite, hence \ref{eq20} is valid.
 

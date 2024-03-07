@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  7 MAR 2024 10:37
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  7 MAR 2024 13:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -585,6 +585,9 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__pdf_backend_link_int=\count331
 ) (./main.aux
 
+LaTeX Warning: Label `fig:ph_d_k_nod' multiply defined.
+
+
 LaTeX Warning: Label `fig:capitalEvolution' multiply defined.
 
 
@@ -599,30 +602,30 @@ LaTeX Warning: Label `fig:dividendsEvolution' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 62.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -661,16 +664,16 @@ LaTeX Font Info:    ... okay on input line 63.
 \c@lstlisting=\count332
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-Package hyperref Info: Link coloring ON on input line 63.
+Package hyperref Info: Link coloring ON on input line 62.
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -688,7 +691,7 @@ Chapter 1.
 ] [4] [5]
 Chapter 2.
 
-Overfull \hbox (19.30939pt too wide) in paragraph at lines 121--121
+Overfull \hbox (19.30939pt too wide) in paragraph at lines 120--120
 []\TU/lmr/bx/n/14.4 Theories Connecting Business Cycles to Long-Term Growth 
  []
 
@@ -699,7 +702,7 @@ File: figure/Plot2.1.png Graphic file (type bmp)
 <figure/Plot2.1.png>
  [25] [26]
 
-Package natbib Warning: Citation `DavHal94' on page 27 undefined on input line 598.
+Package natbib Warning: Citation `DavHal94' on page 27 undefined on input line 597.
 
 File: figure/Plot2.2.png Graphic file (type bmp)
 <figure/Plot2.2.png>
@@ -714,59 +717,65 @@ File: figure/Plot2.5.png Graphic file (type bmp)
  [32] [33]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 725.
+(hyperref)                removing `\begingroup' on input line 724.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 725.
+(hyperref)                removing `\<let>-command' on input line 724.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 725.
+(hyperref)                removing `\NAT@ctype' on input line 724.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 725.
+(hyperref)                removing `\z@' on input line 724.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 725.
+(hyperref)                removing `\let' on input line 724.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 725.
+(hyperref)                removing `\let' on input line 724.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 725.
+(hyperref)                removing `\new@ifnextchar' on input line 724.
 
 [34] [35] [36] [37] [38] [39] [40]
 Chapter 3.
 [41
 
-] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55]
+] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54]
 
-LaTeX Warning: Reference `eq15' on page 56 undefined on input line 1404.
+LaTeX Warning: Reference `fig:dividend_dynamics' on page 55 undefined on input line 1392.
+
+
+LaTeX Warning: Reference `eq15' on page 55 undefined on input line 1401.
+
+[55]
+
+LaTeX Warning: Reference `eq18' on page 56 undefined on input line 1461.
 
 [56] [57]
 
-LaTeX Warning: Reference `eq18' on page 58 undefined on input line 1466.
+LaTeX Warning: Reference `eq15' on page 58 undefined on input line 1480.
+
+[58]
+
+LaTeX Warning: Reference `eq18' on page 59 undefined on input line 1640.
 
 
-LaTeX Warning: Reference `eq15' on page 58 undefined on input line 1485.
+LaTeX Warning: Reference `eq20' on page 59 undefined on input line 1646.
 
-[58] [59]
-
-LaTeX Warning: Reference `eq18' on page 60 undefined on input line 1628.
-
-[60] [61] [62]
+[59] [60] [61] [62]
 Missing character: There is no ; ("3B) in font nullfont!
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
+[63] [64]
 Missing character: There is no ; ("3B) in font nullfont!
-[63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
-PGFPlots: reading {output_data/simulation.csv}
-PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+[65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
 PGFPlots: reading {output_data/simulation.csv}
 PGFPlots: reading {output_data/simulation_withoutfriction.csv}
  [78]
@@ -781,61 +790,64 @@ PGFPlots: reading {output_data/simulation_withoutfriction.csv}
  [81]
 PGFPlots: reading {output_data/simulation.csv}
 PGFPlots: reading {output_data/simulation_withoutfriction.csv}
- [82] [83]
+ [82]
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+ [83] [84]
 File: figure/OptimalK_noexit.png Graphic file (type bmp)
 <figure/OptimalK_noexit.png>
 File: figure/div_cap_noexit.png Graphic file (type bmp)
 <figure/div_cap_noexit.png>
- [84]
+ [85]
 File: figure/Output_noexit.png Graphic file (type bmp)
 <figure/Output_noexit.png>
- [85]
+ [86]
 File: figure/OptimalK_exit.png Graphic file (type bmp)
 <figure/OptimalK_exit.png>
- [86]
+ [87]
 File: figure/div_cap_exit.png Graphic file (type bmp)
 <figure/div_cap_exit.png>
- [87]
+ [88]
 PGFPlots: reading {output_data/exit_nofrictions.csv}
 
 
-Package pgfplots Warning: Table 'output_data/exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2647.
+Package pgfplots Warning: Table 'output_data/exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2656.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {output_data/noexit_nofrictions.csv}
 
-Package pgfplots Warning: Table 'output_data/noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2648.
+Package pgfplots Warning: Table 'output_data/noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2657.
 
  [warning /pgfplots/warning/empty column name]
-[88] [89]
+[89] [90]
 PGFPlots: reading {output_data/noexit_frictions.csv}
 
 
-Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2690.
+Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2699.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {output_data/exit_frictions.csv}
 
-Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2691.
+Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2700.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {output_data/exit_frictions.csv}
 
-Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2722.
+Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2731.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {output_data/noexit_frictions.csv}
 
-Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2723.
+Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2732.
 
  [warning /pgfplots/warning/empty column name]
-[90] (./main.bbl [91] [92
+[91] (./main.bbl [92] [93
 
-] [93])
+] [94])
 
 Package natbib Warning: There were undefined citations.
 
-[94] (./main.aux)
+[95] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -846,12 +858,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 6BB23ED2EDD50FE9C532FC11F25EDF30;5609.
  ) 
 Here is how much of TeX's memory you used:
- 35255 strings out of 476684
- 828018 string characters out of 5804056
- 1886018 words of memory out of 5000000
- 54884 multiletter control sequences out of 15000+600000
+ 35257 strings out of 476684
+ 828051 string characters out of 5804056
+ 1884018 words of memory out of 5000000
+ 54886 multiletter control sequences out of 15000+600000
  520664 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,18n,94p,1862b,2728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (96 pages, 1766100 bytes).
+Output written on main.xdv (97 pages, 1775496 bytes).
