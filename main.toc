@@ -28,12 +28,12 @@
 \contentsline {paragraph}{Steady state for capital and dividends}{61}{section*.11}%
 \contentsline {section}{\numberline {3.4}Introducing financial frictions}{61}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Participation constraint of the financial intermediaries }{63}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Steady state and phase diagram}{65}{subsection.3.4.2}%
-\contentsline {paragraph}{Steady state for capital}{69}{section*.12}%
+\contentsline {subsection}{\numberline {3.4.2}Steady state and phase diagram}{67}{subsection.3.4.2}%
+\contentsline {paragraph}{Steady state for capital}{70}{section*.12}%
 \contentsline {subsection}{\numberline {3.4.3}Phase diagram}{70}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Finding optimal path}{72}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Finding optimal path}{71}{section.3.5}%
 \contentsline {paragraph}{Guess and verify}{74}{section*.13}%
-\contentsline {subsection}{\numberline {3.5.1}Optimization Problem with Financial Frictions}{75}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.1}Optimization Problem with Financial Frictions}{76}{subsection.3.5.1}%
 \contentsline {section}{\numberline {3.6}Simulation Study}{78}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Simulation Study}{80}{section.3.7}%
 \contentsline {section}{\numberline {3.8}Simulation Study}{82}{section.3.8}%

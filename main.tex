@@ -1644,51 +1644,74 @@ leads to the stationary point B. This path not only fulfills the difference equa
 also, the transversality condition \ref{eq26}
 Indeed as \(t \rightarrow \infty\), capital and dividends approach their steady-state level which are both positive and
 finite, thus the marginal utility of dividends at \(\hat{d}\) is also finite, hence \ref{eq20} is valid.
+The sentence contains a few errors in grammar and clarity. Here's a corrected version:
+
 
 In conclusion, in this paragraph, we have derived the steady-state levels for both capital and dividends and plotted the
 steady-state conditions in a phase diagram. In the next section, we will repeat the same exercise introducing debt and financial friction depicting  
-
+Furthermore, in the steady state \(\hat{y}=f(\hat{k})\), the output is determined solely by \(Z\) due to its
+construction, indicating that financial factors do not influence the relationship between the production function and
+output. 
 
 \section{Introducing financial frictions}
-In this section we tackle the infinite maximization problem of the firm, introducing the possibility of financing through
-debt and two types of financial frictions. The first financial friction is a financing constraint (\(\forall t, b_t = l
-k_t\)), which implies fixed leverage for the firm. The second financial friction is introducing a participation
-constraint with monitoring cost \(1-\mu\) for the financial intermediaries. The goal is to understand how those frictions
+In this section we tackle the maximization problem of the firm, introducing the possibility of financing through
+debt and two types of financial frictions. The first financial friction is a financing constraint, which implies fixed
+leverage for the firm. The second financial friction is introducing a participation
+constraint with monitoring cost for the financial intermediaries. The goal is to understand how those frictions
 affect the steady state of capital and dividends.
 
 \subsection{Participation constraint of the financial intermediaries } 
-The subsection delves into the constraints facing financial intermediaries within the model, highlighting how firms can
-finance themselves either through retaining dividends or accruing debt. Initially, the model assumed an exogenous
-interest rate, unaffected by the volume of debt, leading to an unrealistic scenario where interest rates remain constant
-regardless of debt levels relative to equity. To address this, the model introduces a financial market where the
-interest rate is determined by market-clearing conditions, and financial intermediaries operate under perfect
-competition to maximize profits.
+The subsection delves into the constraints facing financial intermediaries within the model. Initially, the model assumed an exogenous
+interest rate, unaffected by the volume of debt, leading to an unrealistic scenario where interest rates remain
+constant.  To address this,  the model incorporates a financial market in which the interest rate is set based on
+market-clearing conditions, with financial intermediaries functioning in a perfectly competitive environment aimed at
+profit maximization. 
 
-According to \cite{BerGer86}, lending should yield a profit equivalent to the opportunity cost of capital. Lenders earn
+According to \cite{BerGer86}, lending should yield a profit equivalent to the opportunity cost. Lenders earn
 interest plus the principal if borrowers repay successfully (with probability \(p\)) or acquire the firm's production
-assets (net of monitoring cost: \(1-\mu\)) in case of bankruptcy. The lender's participation constraint is formulated as:
+assets (net of monitoring cost: \(1-\mu\)) in case of bankruptcy. Moreover, \((1-\mu)f(k_t)\)represents monitoring cost.
+The lender's participation constraint is:
 \begin{align*}
     R_t \cdot b_t p + (1-p) \mu f(k_t) = R_f b_t, \
 \end{align*}
 
-where \(r_f\) represents the risk-free rate, aligning the opportunity cost of capital with risk-free returns. This
+where \(R_f\) represents the risk-free rate, the opportunity cost of lending. This
 framework allows for  the derivation of the interest rate as a function of \(p\) and \(f(k_t)\), assuming no financial
 frictions and perfect information for lenders to accurately estimate recoverable amounts in all firm states.
 
-The revised participation constraint is expressed as:
+The participation constraint can be rewritten as follows:
 \begin{align}
     R_t=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_t)}{b_t}. \label{eq21}
 \end{align}
 
+Investigating the asymptotic behavior of \( R_t \) with respect to \( p \) provides critical economic insights.
+Specifically, as \( p \rightarrow 0 \), indicating an increasingly likely default, \( R_t \) escalates without bound,
+reflecting the infinitely rising premium a lender would require to counterbalance the heightened risk. Conversely, as \(
+p \rightarrow 1 \), the default risk vanishes, and \( R_t \) converges to \( R_f \), the risk-free rate, consonant with
+the absence of default risk necessitating no premium above the risk-free return. 
 
+The breakeven threshold for \( R_t \), where the return on the loan is nonnegative, is formalized by the condition
 
-For illustration, consider parameters \(mu = 1\), \(p = \{0.95,0.9\}\), \(\delta = 0.1\), \(\alpha = 0.8\), \(Z = 0.5\), \(d =
-0.8\), \(\widehat{k} = 4\), and \(R_f=\{0.05,0.1\}\). The graphical representation suggests that as debt levels
+\begin{align}
+    R_f b_t \geq b_t  p +(1-p) \mu  f(k_t). 
+\end{align}
+This inequality dictates that to achieve a return rate on the loan that is greater than or equal to one, the opportunity
+cost of capital must be greater than expected profit from the firm's production, adjusted for default probability and asset
+recoverability post-default. This ensures the lender receives a return that compensates for the risk undertaken,
+juxtaposed with the risk-free alternative.
+Let's present a specific scenario for clarity: Imagine we have a constant capital level \(k\), and the recovery rate in
+case of default \(\mu\) is complete, meaning \(\mu=1\). In this instance, the depreciation rate \(\delta\) is 0.1, the
+output elasticity of capital \(\alpha\) is set at 0.8, while the technology factor \(Z\) is 0.5. Additionally, the
+firm's dividends level \(d\) is 0.8, and the capital stock at time \(t\), \(k_t\), equals 4. The risk-free rate \(R_f\) is given as
+1.05.
+
+Within this framework, consider two firms that are identical in every aspect except for their probability of returning
+profit, denoted by \(p\). For the first firm, \(p\) is 0.95, suggesting a 5\% default risk. For the second firm, \(p\)
+drops to 0.9, indicating a higher default risk of 10\%. The graphical representation suggests that as debt levels
 increase, so do interest rates, reflecting the risk-return dilemma for lenders. A higher risk profile, denoted by a more
 elevated red line necessitates greater returns to compensate for default risks. It's important to note that while the
 the graph assumes constant capital, real-world scenarios often see debt increases leading to higher capital and,
-consequently, greater production capacities. This reasoning clarifies why  the curves do not start from the origin, as
-initial borrowing incorporates capital costs.
+consequently, greater production capacities. 
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1711,7 +1734,7 @@ initial borrowing incorporates capital costs.
         \draw [dotted, color=black] (axis cs:0,1.1) -- (axis cs:1.1,1.1);
         
         % Vertical line at x=1.1
-        \draw [dotted, color=black] (axis cs:1.1,0) -- (axis cs:1.1,1.1);
+        %\draw [dotted, color=black] (axis cs:1.5,0) -- (axis cs:1.5,1.1);
         
         % Here the blue curve is defined with arrows
         \addplot [
@@ -1728,7 +1751,7 @@ initial borrowing incorporates capital costs.
                 }
             }
         ]
-        {(1.1/0.90)-((0.1/0.9)*(0.5*((4)^0.8))/x)-1};
+        {(1.05/0.90)-((0.1/0.9)*(0.5*((4)^0.8))/x)-1};
 
         \addplot [
              % Corrected the domain specification
@@ -1794,7 +1817,7 @@ Another way to visualize the participation constraint of the financial intermedi
         \draw [dotted, color=black] (axis cs:0,1.1) -- (axis cs:1.1,1.1);
         
         % Vertical line at x=1.1
-        \draw [dotted, color=black] (axis cs:1.1,0) -- (axis cs:1.1,1.1);
+        \draw [dotted, color=black] (axis cs:1.05,0) -- (axis cs:1.05,1);
         
         % Here the blue curve is defined with arrows
         \addplot [
@@ -1811,7 +1834,7 @@ Another way to visualize the participation constraint of the financial intermedi
                 }
             }
         ]
-        {(1.1/0.90)-((0.1/0.9)*x)-1};
+        {(1.05/0.90)-((0.1/0.9)*x)-1};
 
         \addplot [
              % Corrected the domain specification
