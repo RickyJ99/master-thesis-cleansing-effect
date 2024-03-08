@@ -1489,7 +1489,7 @@ It is easy to see that \(\underline{k}<\bar{k}\), since:
     1&>\alpha \nonumber \\
     \text{for definition} \quad \blacksquare 
 \end{align}
-For transitivity, the order for \(\underline{k},\hat{k},\bar{k}\) is the following:
+Considering transitivity, the sequence for \(\underline{k}, \hat{k}, \bar{k}\) is:
 \begin{align*}
     \hat{k} < \underline{k} < \bar{k}
 \end{align*}
@@ -1551,7 +1551,7 @@ guarantee the stationarity of capital is:
 \end{align*}
 If the firm distributes more dividends than \(d_0\) the capital stock must decrease over time: since
 dividends are too high the firm is consuming part of her capital. More precisely the firm is distributing more dividends than
-\(d_0\), which guarantees that the difference between production, and dividends is exactly equal to the replacemnt of
+\(d_0\), which guarantees that the difference between production, and dividends is exactly equal to the replacement of
 depreciated capital.
 This behavior is represented by the arrows above the curve pointing to the left. If the firm distributes less
 dividends than \(d_0\), the opposite happens: the firm increases its capital since there is a positive net
@@ -1629,9 +1629,8 @@ Plotting both loci we get a phase diagram that represents the condition for stat
     Point B indicates the equilibrium where both dividends and capital are stationary, with the steady-state capital at
     \( \hat{k} \). This value of \( \hat{k} \) is notably lower than \( \underline{k} \), which is the capital level
     that would maximize dividends while maintaining a steady capital stock. \( \bar{k} \) represents the capital
-    quantity at which the system reaches a stationary state with zero dividends. The arrows illustrates the dynamics of dividends and capital in case of the firm finding itself outside the stable
-    loci. Point A is a possible starting point (\(k_0,d_0\)). The arrows depict the evolution of dividends and capital
-    when the firm is positioned away from the equilibrium points. Point A represents an initial position (\(k_0,d_0\)).
+    quantity at which the system reaches a stationary state for k with zero dividends. The arrows illustrates the dynamics of dividends and capital in case of the firm finding itself outside the stable
+    loci. Point A is a possible starting point (\(k_0,d_0\)). 
     The blue arrows indicate a potential trajectory, known as a saddlepath, leading towards the saddlepoint B. 
     }
     \label{fig:ph_d_nodebt}
@@ -1644,14 +1643,13 @@ leads to the stationary point B. This path not only fulfills the difference equa
 also, the transversality condition \ref{eq26}
 Indeed as \(t \rightarrow \infty\), capital and dividends approach their steady-state level which are both positive and
 finite, thus the marginal utility of dividends at \(\hat{d}\) is also finite, hence \ref{eq20} is valid.
-The sentence contains a few errors in grammar and clarity. Here's a corrected version:
 
-
-In conclusion, in this paragraph, we have derived the steady-state levels for both capital and dividends and plotted the
-steady-state conditions in a phase diagram. In the next section, we will repeat the same exercise introducing debt and financial friction depicting  
-Furthermore, in the steady state \(\hat{y}=f(\hat{k})\), the output is determined solely by \(Z\) due to its
-construction, indicating that financial factors do not influence the relationship between the production function and
-output. 
+To conclude, this section has outlined the derivation of steady-state levels for capital and dividends, and these
+conditions have been visually represented in a phase diagram. The upcoming section will undertake a similar analysis but
+will incorporate debt and financial friction into the model. Additionally, it is important to note that in the steady
+state, where output \(\hat{y}\) is given by \(f(\hat{k})\), the production level is exclusively influenced by the
+productivity parameter \(Z\), signifying that financial elements do not alter the fundamental connection between the
+production function and output. 
 
 \section{Introducing financial frictions}
 In this section we tackle the maximization problem of the firm, introducing the possibility of financing through
@@ -1676,10 +1674,9 @@ The lender's participation constraint is:
 \end{align*}
 
 where \(R_f\) represents the risk-free rate, the opportunity cost of lending. This
-framework allows for  the derivation of the interest rate as a function of \(p\) and \(f(k_t)\), assuming no financial
-frictions and perfect information for lenders to accurately estimate recoverable amounts in all firm states.
+framework allows for  the derivation of the interest rate as a function of \(p\),\(f(k_t)\),\(\mu\),\(\b_t\) and \(R_f\).
 
-The participation constraint can be rewritten as follows:
+The participation constraint can be rewritten as:
 \begin{align}
     R_t=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_t)}{b_t}. \label{eq21}
 \end{align}
@@ -1689,8 +1686,27 @@ Specifically, as \( p \rightarrow 0 \), indicating an increasingly likely defaul
 reflecting the infinitely rising premium a lender would require to counterbalance the heightened risk. Conversely, as \(
 p \rightarrow 1 \), the default risk vanishes, and \( R_t \) converges to \( R_f \), the risk-free rate, consonant with
 the absence of default risk necessitating no premium above the risk-free return. 
+When examining the behavior of the interest rate formula as the debt amount \(b_t\) trends towards infinity, the resulting limit is given by:
 
-The breakeven threshold for \( R_t \), where the return on the loan is nonnegative, is formalized by the condition
+\[
+\lim_{{b_t \rightarrow +\infty}} \frac{R_f}{p} - \frac{1-p}{p}\frac{\mu f(k_t)}{b_t} = \frac{R_f}{p}
+\]
+
+As the denominator \(b_t\), representing the total
+debt, increases without bound, the term involving the firm's productive output adjusted for recovery rate (\(\mu
+f(k_t)/b_t\)) diminishes to zero. This indicates that, in scenarios of very large debt volumes, the fraction of
+recoverable assets (\(\mu f(k_t)\)) compared to the outstanding debt becomes negligible in determining the interest rate
+\(R_t\).
+
+Therefore, under such conditions, the interest rate formula simplifies to \(\frac{R_f}{p}\), underscoring that the
+loan's interest rate is fundamentally determined by the risk-free rate adjusted for the probability of successful
+repayment \(p\), independent of the firm's asset recoverability or productivity levels. This elucidates an important
+economic principle: for vast sums of debt, the critical factors shaping lending rates pivot away from the specifics of
+asset recovery towards broader financial metrics—namely, the prevailing risk-free rate and the inherent risk of default.
+
+
+
+The breakeven threshold for \( R_t \), where the return on the loan is nonnegative, is formalized by the condition:
 
 \begin{align}
     R_f b_t \geq b_t  p +(1-p) \mu  f(k_t). 
@@ -1711,7 +1727,32 @@ drops to 0.9, indicating a higher default risk of 10\%. The graphical representa
 increase, so do interest rates, reflecting the risk-return dilemma for lenders. A higher risk profile, denoted by a more
 elevated red line necessitates greater returns to compensate for default risks. It's important to note that while the
 the graph assumes constant capital, real-world scenarios often see debt increases leading to higher capital and,
-consequently, greater production capacities. 
+consequently, greater production capacities.
+
+The analysis indicates that the blue curve, representing the rate of return for a riskier firm, is positioned above the red curve under a specific condition:
+
+\begin{equation}
+    \mu f(k_t) < R_f b_t
+\end{equation}
+
+This condition implies that the net output from employing capital \(k_t\), after accounting for monitoring costs, must
+be less than the opportunity cost associated with lending the sum \(b_t\). Should this not hold true, firms with a
+higher risk profile would end up incurring lower interest charges on their loans. To elucidate, consider the following
+scenario where \(p_h\),  denoting the probability of avoiding default for the less risky firm, is higher than \(p_l\),
+the corresponding probability for the riskier firm. All other factors are assumed to remain constant across both firms:
+
+\begin{align*}
+    \frac{R_f}{p_h}  -\frac{1 - p_h}{p_h}\frac{\mu f(k_t)}{b_t} &< \frac{R_f}{p_l} - \frac{1 - p_l}{p_l}\frac{\mu f(k_t)}{b_t}, \\
+    \left[R_f - (1 - p_h) \mu \frac{f(k_t)}{b_t}\right] p_l &< \left[R_f - (1 - p_l) \mu \frac{f(k_t)}{b_t}\right] p_h,\\
+    \left[-(1 - p_h)p_l + (1 - p_l)p_h\right] \mu \frac{f(k_t)}{b_t} &< R_f (p_h - p_l),\\
+    \mu \frac{f(k_t)}{b_t} &< R_f,\\
+    \mu f(k_t) &< R_f b_t.
+\end{align*}
+
+This sequence of steps demonstrates that for the gross rate of return on loans to be positioned favorably for riskier firms,
+the expected output from the investment (after subtracting monitoring costs) must not exceed the lending opportunity
+cost.
+
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1721,7 +1762,7 @@ consequently, greater production capacities.
             xmin=0, xmax=5, % Set the x-axis limits
             axis lines=left,
             xlabel=\(b_t\),
-            ylabel={\(r\)},
+            ylabel={\(r_t\)},
         ];
         % Below the black line is defined
         % Horizontal line at y=2.5 is outside the y-axis limit and should be removed or adjusted
@@ -1785,16 +1826,15 @@ consequently, greater production capacities.
     \label{plot:part_constraint_r_lavarge}
 \end{figure}
 
-The graph \ref{plot:part_constraint_r_lavarge} captures the dynamics between the debt stock \(b_t\) and the return on capital \(r\). An
+The graph \ref{plot:part_constraint_r_lavarge} captures the dynamics between the debt stock \(b_t\) and the interest
+rate applied to the loan \(r_t\). An
 increase in the debt stock leads to a rise in the interest rate, reflecting the augmented risk
 perceived by lenders. Displayed are two distinct lines: one representing a riskier loan with a higher probability of
 default and the other indicating a safer loan with a lower default probability. As anticipated, the riskier loan
-scenario is characterized by a curve that lies above, dictating higher interest rates at each level of debt. The
-constant capital assumption underpins this model; however, in reality, an increase in debt usually translates into an
-increase in capital, thereby enhancing production potential. This factor accounts for the curves not starting at the
-origin. 
+scenario is characterized by a curve that lies above, dictating higher interest rates, if \(\mu f(k_t) < R_f b_t\) holds. 
 
-Another way to visualize the participation constraint of the financial intermediaries is by defining \(x=f(k)/b\).
+An alternative approach to illustrating the participation constraint of financial intermediaries involves graphing the gross
+interest rate, \( R \), against the ratio of output to debt, \( \frac{f(k)}{b} \), directly. 
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1803,8 +1843,8 @@ Another way to visualize the participation constraint of the financial intermedi
             ymin=0, % Set the y-axis limits
             xmin=0, xmax=5, % Set the x-axis limits
             axis lines=left,
-            xlabel=\(f(k)/b\),
-            ylabel={\(r\)},
+            xlabel=\(f(k_t)/b_t\),
+            ylabel={\(r_t\)},
         ];
         % Below the black line is defined
         % Horizontal line at y=2.5 is outside the y-axis limit and should be removed or adjusted
@@ -1859,12 +1899,11 @@ Another way to visualize the participation constraint of the financial intermedi
     \end{tikzpicture}
     \caption{The figure presents a graphical analysis of the returns on loans as a function of the production over the
     debt level while keeping the level of capital at
-    \(k=3\). The red curve models the scenario where the default risk probability is 
+    \(k=4\). The red curve models the scenario where the default risk probability is 
     \(1-p=0.05\)
     , implying a 5\% chance of default, while the blue curve corresponds to a higher default risk at 
     \(1-p=0.1\), a 10\% chance of default. Both curves reflect the increased interest rates required to compensate for
-    the heightened risk as the production-debt ratio grows. Notably, the opportunity cost of capital is maintained at 0.05 for the
-    red one, while at 0.1 for the higher risk curve.
+    the heightened risk as the production-debt ratio grows. Notably, the opportunity cost of capital is maintained at 0.05.
     }
     \label{plot:part_constraint_r_fixlavarge}
 \end{figure}
@@ -1875,14 +1914,14 @@ probability of default, denoted by \( p \), remains fixed and does not escalate 
 
 Ultimately, the participation constraint internalizes the interest rate of a loan as a function of the leverage, the
 opportunity cost of capital, and the default risk probability. By integrating this mechanism into the flow of funds
-model, the impact of debt on capital is mediated through the variable \( r \), establishing a feedback loop where
+model, the impact of debt on capital is mediated through the variable \( R \), establishing a feedback loop where
 financial leverage influences and is influenced by the cost of borrowing. 
 
 
 
 
-\subsection{Steady state and phase diagram}
- The firm's objective is to maximize its value through the optimal selection of dividends over time:
+\subsection{The problem of the firm in presence of financial frictions}
+ The firm's objective is to maximize:
 
 \[
 \max_{{\{d_{t}\}}_{t=0}^{+\infty}}V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)}
@@ -1890,23 +1929,21 @@ financial leverage influences and is influenced by the cost of borrowing.
 
 subject to:
 \begin{enumerate}
-    \item the flow of funds constraint \ref{eq2},
-    \item the investment function \ref{eq1}, \
-    \item the financing constraint \(b_t=l k_t \quad \forall t\)
-    \item the participation constraint of borrower \ref{eq21}
+    \item the flow of funds constraint: \(I_t + R b_{t} + d_t = f(k_t) + b_{t+1}\)
+    \item the investment function \(I_t = k_{t+1} - k_{t}\left(1-\delta\right)\) 
+    \item the financing constraint \(b_t=l k_t\)
+    \item the participation constraint of borrower \(R_t=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_t)}{b_t}\)
 \end{enumerate}
 Consolidating the constraints we get the flow of funds constraints:
-
-
 \begin{align}
     k_t &= \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_{t-1})}{l  k_{t-1}}\right] \cdot l k_{t-1} + f(k_{t-1}) - d_{t} \right \}{\left(1-l\right)}^{-1} \nonumber \\
-    k_t &= \left[ \frac{1 + \mu - \mu p}{p}f(k_{t-1}) + \frac{p - \delta p - R_f l}{p} k_{t-1}  - d_{t} \right](1-l)^{-1} \label{eq:ff}
+    k_t &= \left[ \frac{p + \mu - \mu p}{p}f(k_{t-1}) + \frac{p - \delta p - R_f l}{p} k_{t-1}  - d_{t} \right](1-l)^{-1} \label{eq:ff}
 \end{align}
 
 The Lagrangian for this optimization problem is formulated as:
 
 \begin{align}
-L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[ \frac{1 + \mu - \mu p}{p}f(k_{t-1}) + \frac{p - \delta p - R_f l}{p} k_{t-1}  - d_{t} \right](1-l)^{-1},
+L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[ k_t - \frac{p + \mu - \mu p}{p}f(k_{t-1}) - \frac{p - \delta p - R_f l}{p} k_{t-1}  + d_{t} \right](1-l)^{-1},
 \end{align}
 
 leading to the first-order conditions for optimizing dividends and capital over time:
@@ -1921,65 +1958,48 @@ and the dynamic optimality conditions for capital allocation:
 
 
 \begin{align}
-    \lambda_t = \beta \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t-1})\frac{1 + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right], \quad \forall t.
+    \lambda_t = \beta \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t-1})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right], \quad \forall t.
 \end{align}
 
 
 This formulation yields the Euler equation for dividends:
 
 \begin{align}
-U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[ f'(k_{t-1})\frac{1 + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right],
+U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[ f'(k_{t-1})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right],
 \end{align}
 
 imposing (\(d_t = d_{t+1} =\hat{d}\)), we get:
 
 \begin{align}
-    \frac{\left(1-l \right) p}{\beta} &= f^{\prime}(\hat{k})\left({1+\mu-\mu p}\right) + \left({p-\delta p - R_f l}\right) \nonumber\\
-    f^{\prime}(\hat{k})&=\frac{p -p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(1+\mu-\mu p\right)} \label{eq22}
+    \frac{\left(1-l \right) p}{\beta} &= f^{\prime}(\hat{k})\left({p+\mu-\mu p}\right) + \left({p-\delta p - R_f l}\right) \nonumber\\
+    f^{\prime}(\hat{k})&=\frac{p -p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(p+\mu-\mu p\right)} \label{eq22}
 \end{align}
 using the Cobb Douglas production function \ref{eq15'} into \ref{eq22} we get:
 \begin{align}
-    Z \alpha\hat{k}^{\alpha-1} &= \frac{p -p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(1+\mu-\mu p\right)} \nonumber \\
-    \hat{k} &=\left[\frac{Z \alpha \beta \left(1+\mu-\mu p\right)}{p -p l - \beta p + \beta \delta p + \beta R_f l}\right]^{\frac{1}{1-\alpha}} \label{eq23}
+    Z \alpha\hat{k}^{\alpha-1} &= \frac{p -p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(p+\mu-\mu p\right)} \nonumber \\
+    \hat{k} &=\left[\frac{Z \alpha \beta \left(p+\mu-\mu p\right)}{p -p l - \beta p + \beta \delta p + \beta R_f l}\right]^{\frac{1}{1-\alpha}} \label{eq23}
 \end{align}
-As in the free debt case, if the firm has less capital than the steady-state level \(\hat{k}\), the firm is optimal
-to increase her dividends over time. When instead \(\hat{k}<k\),the firm should be better of shrinking the dividends
-over time. Indeed it's easy to prove that imposing monitoring cost \(1-\mu=1\), no debt \(l=0\), and no probability of
-default \(1-p=0\) we get the same capital level as in the debt-free case \ref{eq16}. Moreover its easy to see that the
-steady-state capital is higher compared to the debt-free:
+Similar to the scenario without debt, when the firm's capital falls below the steady-state threshold \( \hat{k} \), it
+is advantageous for the firm to incrementally raise its dividend payouts over time. Conversely, when the firm's capital
+surpasses \( \hat{k} \), it would be more beneficial for the firm to gradually reduce dividends. It can be readily
+demonstrated that when monitoring costs become entirely ineffective (\(1-\mu=1\)), the firm operates without debt
+(\(l=0\)), and the probability of default is eliminated (\(1-p=0\)), the resulting capital level aligns with that of the
+debt-free situation as specified in equation \ref{eq16}: 
 \begin{align*}
-    \left[\frac{Z \alpha \beta (1+\mu-\mu p)}{p - p l - \beta p + \beta \delta p + \beta R_f l}\right]^{\frac{1}{1-\alpha}} &\geq \left[\frac{\alpha \beta Z}{1 - \beta(1-\delta)}\right]^{\frac{1}{1-\alpha}} \\
-    \frac{(1+\mu(1-p))(1-\beta(1-\delta))}{p(1-l)+\beta(R_f l - p(1-\delta))} &\geq 0 \\
-    (1+\mu(1-p))(1-\beta(1-\delta)) &\geq 0 \\
-    p(1-l)+\beta(R_f l - p(1-\delta)) &\geq 0
+    \hat{k} &=\left[\frac{Z \alpha \beta \left(1+1-1\right)}{1 -0 - \beta + \beta \delta + 0}\right]^{\frac{1}{1-\alpha}},\\
+    \hat{k} &=\left[\frac{Z \alpha \beta}{1 - \beta(1-\delta)}\right]^{\frac{1}{1-\alpha}}.  \quad \blacksquare
 \end{align*}
-However, if we consider the case on which has no cost of monitoring \(\mu=1\) and on which has \(\mu=-.75\) ceteris
-paribus, \(\hat{k}\) will be higher for the frictionless case. 
 
-\paragraph{Steady state for capital}
 Imposing s.s. condition for capital (\(k_t=k_{t+1}=\hat{k}\)) into the flow of funds constraint \ref{eq:ff}:
 
 \begin{equation}
-    \widehat{d} =\frac{1+\mu-\mu p}{p}f(\hat{k})-\left(\frac{l R_f+\delta p - l p}{p}\right)\hat{k} \label{eq:div_opt_path}
+    \widehat{d} =\frac{p+\mu-\mu p}{p}f(\hat{k})-\left(\frac{l R_f+\delta p - l p}{p}\right)\hat{k} \label{eq:div_opt_path}
 \end{equation}
 It can be straightforwardly demonstrated that by setting the monitoring cost to \(1-\mu=1\), eliminating debt
 with \(l=0\), and removing the risk of default by setting \(1-p=0\), we arrive at an identical level of dividends as
 observed in the scenario without debt \ref{eq17}. 
 
-The dynamics are equal to the free debt case except for the fact that the coefficient that multiplied \(f(\hat{k})\) is
-higher since:
-\begin{align*}
-    \frac{1+\mu-\mu p}{p}&>1 \\
-    1+\mu(1- p) &> p
-\end{align*}
-This is valid also for the coefficient of \(\hat{k}\) in equation \ref{eq:div_opt_path}, which is higher than the free
-debt case:
-\begin{align*}
-    \frac{l R_f+\delta p - l p}{p}&>(1-\delta) \\
-    \frac{l R_f+\delta p - l p}{p(1-\delta)}&>0 \\
-    R_f l &> p(l-\delta)\\
-    p(1-\delta)&>0
-\end{align*}
+
 
 \subsection{Phase diagram}
 The goal of this section is to portray the phase diagram in two cases: one with monitoring costs and one without.
