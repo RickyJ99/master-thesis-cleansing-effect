@@ -1587,8 +1587,8 @@ Plotting both loci we get a phase diagram that represents the condition for stat
         
         % Vertical line at k hat
         \draw [dashed] (axis cs:2,0) -- (axis cs:2,4);
-        \node at (axis cs:2.5,4.5) {\(\Delta k_t = 0\)};
-        \node at (axis cs:3.5,3.5) {\(\Delta d_t = 0\)};
+        \node at (axis cs:2.5,4.5) {\(\Delta d_t = 0\)};
+        \node at (axis cs:3.5,3.5) {\(\Delta k_t = 0\)};
         \node at (axis cs:4,-0.2) {\(\bar{k} \)};
 
         \draw  (axis cs:1.8,0) -- (axis cs:1.8,5);
@@ -1869,7 +1869,7 @@ interest rate, \( R \), against the ratio of output to debt, \( \frac{f(k)}{b} \
                 decoration={
                     markings,
                     % mark=at position 0.1 with {\arrow{>}},
-                    % %mark=at position 0.5 with {\arrow{>}}, % Commented out as not needed
+                    mark=at position 0.5 with {\arrow{>}}, % Commented out as not needed
                     % mark=at position 0.3 with {\arrow{<}},
                 }
             }
@@ -1885,7 +1885,7 @@ interest rate, \( R \), against the ratio of output to debt, \( \frac{f(k)}{b} \
                 decoration={
                     markings,
                     % mark=at position 0.1 with {\arrow{>}},
-                    % %mark=at position 0.5 with {\arrow{>}}, % Commented out as not needed
+                    mark=at position 0.5 with {\arrow{>}}, % Commented out as not needed
                     % mark=at position 0.3 with {\arrow{<}},
                 }
             }
@@ -1936,14 +1936,14 @@ subject to:
 \end{enumerate}
 Consolidating the constraints we get the flow of funds constraints:
 \begin{align}
-    k_t &= \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_{t-1})}{l  k_{t-1}}\right] \cdot l k_{t-1} + f(k_{t-1}) - d_{t} \right \}{\left(1-l\right)}^{-1} \nonumber \\
-    k_t &= \left[ \frac{p + \mu - \mu p}{p}f(k_{t-1}) + \frac{p - \delta p - R_f l}{p} k_{t-1}  - d_{t} \right](1-l)^{-1} \label{eq:ff}
+    k_{t+1} &= \left\{k_{t}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_{t})}{l  k_{t}}\right] \cdot l k_{t} + f(k_{t}) - d_{t} \right \}{\left(1-l\right)}^{-1} \nonumber \\
+    k_{t+1} &= \left[ \frac{p + \mu - \mu p}{p}f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t}  - d_{t} \right](1-l)^{-1} \label{eq:ff}
 \end{align}
 
 The Lagrangian for this optimization problem is formulated as:
 
 \begin{align}
-L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[ k_t - \frac{p + \mu - \mu p}{p}f(k_{t-1}) - \frac{p - \delta p - R_f l}{p} k_{t-1}  + d_{t} \right](1-l)^{-1},
+L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[ k_{t+1} - \frac{p + \mu - \mu p}{p}f(k_{t}) - \frac{p - \delta p - R_f l}{p} k_{t}  + d_{t} \right](1-l)^{-1},
 \end{align}
 
 leading to the first-order conditions for optimizing dividends and capital over time:
@@ -1958,14 +1958,14 @@ and the dynamic optimality conditions for capital allocation:
 
 
 \begin{align}
-    \lambda_t = \beta \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t-1})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right], \quad \forall t.
+    \lambda_t = \beta \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right], \quad \forall t.
 \end{align}
 
 
 This formulation yields the Euler equation for dividends:
 
 \begin{align}
-U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[ f'(k_{t-1})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right],
+U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[ f'(k_{t})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right],
 \end{align}
 
 imposing (\(d_t = d_{t+1} =\hat{d}\)), we get:
@@ -2020,7 +2020,7 @@ for parameters similar to \cite{OsePap17}:
     Probability of default & $1-p $&0.6 \\
     \hline
     \end{tabular}
-    \caption{Parameters used in \cite{OsePap17}}
+    \caption{Parameters}
 \end{table}
 Moreover, we assume a fixed leverage of \(l=0.8\), since for the moment we want to understand the effect of monitoring
 cost leaving all the other parameters equal.
@@ -2050,9 +2050,13 @@ cost leaving all the other parameters equal.
             thick,
         ]
         {0.5*x^0.8-0.22*x};
-
+        \node at (axis cs:11,1.2) {\(\Delta{k_0}=0\)};
         %optimal capital without monitoring costs
-        \draw  (axis cs:6.9296,0) -- (axis cs:6.9296,0.83);
+        \draw [color=red] (axis cs:6.9296,0) -- (axis cs:6.9296,1.3);
+        \node at (axis cs:7.3,1.4) {\(\Delta{d_0}=0\)};
+        \node at (axis cs:7.3,-0.08) {\(\hat{k}_0\)};
+        \node[draw, circle, fill=red, inner sep=2pt] at (axis cs:6.9296,0.826) {};
+        \node at (axis cs:7.25,0.9) {\(B\)};
          % Parabolic curve with monitoring costs
          \addplot [
             color=blue,
@@ -2061,16 +2065,27 @@ cost leaving all the other parameters equal.
             thick,
         ]
         {0.367*x^0.8-0.22*x};
+        \node at (axis cs:11,0.2) {\(\Delta{k_1}=0\)};
         %optimal capital with monitoring costs
-        \draw  (axis cs:2.1,0) -- (axis cs:2.1,0.2);
-        
-        
+        \draw  [color=blue] (axis cs:2.1,0) -- (axis cs:2.1,1.3);
+        \node at (axis cs:2.3,1.4) {\(\Delta{d_1}=0\)};
+        \node at (axis cs:2.1,-0.08) {\(\hat{k}_1\)};
 
+        % Draw a green dot at coordinates 
+        \node[draw, circle, fill=blue, inner sep=2pt] at (axis cs:2.1,0.203) {};
+        \node at (axis cs:2.5,0.28) {\(B^{\prime}\)};
         \end{axis}
     \end{tikzpicture}
-    \caption{This phase diagram depicts the dividends dynamics as they relate to capital. The red line corresponds to a
-    firm that is carrying debt without monitoring costs, whereas the blue-line
-    represents the same firm but with monitoring costs} 
+    \caption{This phase diagram illustrates the relationship between dividends (\(d_t\)) and capital (\(k_t\)) for two different
+    scenarios of a firm. The red curve represents a firm (Firm 0) that has debt but incurs no monitoring costs, while
+    the blue curve represents another firm (Firm 1) that does have monitoring costs. The curves, labeled
+    \(\Delta d_1 = 0\) and \(\Delta d_0 = 0\), represent the loci where dividends remain constant. The vertical lines,
+    labeled \(\Delta k_1 = 0\) and \(\Delta k_0 = 0\), denote the loci where capital is
+    stationary. The intersection point B on the red curve indicates the equilibrium for Firm 0 where both capital and
+    dividends are stationary, located at (\(7.25, 0.9\)). In contrast, the intersection point \(B'\) on the blue curve
+    represents the corresponding equilibrium for Firm 1 with monitoring costs, positioned at (\(2.5, 0.28\)). It is
+    evident that Firm 1, which bears monitoring costs, sustains lower dividends while keeping capital constant, and also
+    requires a lower level of capital to maintain constant dividends when compared to Firm 0.}
     \label{pl_phase_b}
 \end{figure}
 % \begin{figure}
@@ -2167,175 +2182,117 @@ costs. As a result, firms with monitoring costs settle into a steady state equil
 leads to diminished dividend distributions compared to firms that do not bear these costs. 
 
 \section{Finding optimal path}
-Addressing the dynamic optimization problem with an initial condition \(k_0\), we employ a logarithmic utility function
-and frame the issue through a Bellman equation:
+ Addressing the dynamic optimization problem with an initial condition \(k_0\), we employ a logarithmic utility function
+ and frame the issue through a Bellman equation:
 
 
-\begin{align*}
-    \max _{\{d_t\}_{t=0}^{\infty}} V_0 = \max _{\{d_t\}_{t=0}^{\infty}} \left\{U(d_0) + \beta \left[\sum_{t=1}^{\infty} \beta^{t-1} U(c_t)\right]\right\}
+ \begin{align*}
+     \max _{\{d_t\}_{t=0}^{\infty}} V_0 = \max _{\{d_t\}_{t=0}^{\infty}} \left\{U(d_0) + \beta \left[\sum_{t=1}^{\infty} \beta^{t-1} U(d_t)\right]\right\}
+ \end{align*}
+
+
+ subject to a dynamic capital accumulation constraint:
+
+ \begin{align*}
+    k_{t+1} &= \left[ \frac{p + \mu - \mu p}{p}f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t}  - d_{t} \right] \cdot \left(1-l\right)^{-1} \, \forall t,
 \end{align*}
 
-
-subject to a dynamic capital accumulation constraint:
-
-\[
-k_t = \left\{k_{t-1}(1 - \delta) - \left[\frac{R_f}{p} - \frac{1-p}{p} \frac{f(k_{t-1})}{l \cdot k_t}\right] l k_{t-1} + f(k_{t-1}) - d_{t-1}\right\}(1-l)^{-1} \, \forall t.
-\]
-
-The aim is to determine the optimal dividend strategy \(d_t^*\) and the consequent capital levels \(k_{t+1}^*\) across
-all periods. The optimal policy \(\varphi(.)\) links dividends and capital in a time-invariant manner, deduced from the
-constraint:
-
-\[
-k_t = \left\{k_{t-1}(1 - \delta) - \frac{R_f}{p} l k_{t-1} + \frac{f(k_{t-1})}{p} - \varphi(k_{t-1})\right\}(1-l)^{-1} = \zeta(k_1).
-\]
-
-Given the continuous and differentiable nature of capital and dividends, the optimal dividend path can be represented as
-a function of initial capital, thereby defining the maximum value function \(V(k_1)\) in terms of overall utility
-maximization. The revised problem formulation becomes:
-
-
-\begin{align}
-    & V(k_0) = \max _{c_0} \left\{U(d_0) + \beta V(k_1)\right\} \\
-    & \text{s.t. } k_1 = \left\{k_{0}(1 - \delta) - \frac{R_f}{p} l k_{0} + \frac{f(k_0)}{p} - d_1\right\}(1-l)^{-1} \\
-    & k_0 \text{ given.}
-\end{align}
-
-
-Before proceeding, it's critical to verify the solvability of the problem, adhering to the criteria for the existence and uniqueness of the solution: 
-\begin{enumerate}
-    \item \(0 < \beta < 1\),
-    \item The utility function is continuous, bounded, and strictly concave,
-    \item The capital transition function is concave.
-
-\end{enumerate}
-
-
-These conditions ensure the solution's uniqueness and strict concavity, although the logarithmic utility function
-\(U(d_t) = \ln{d_t}\) might  not strictly meet these criteria. Utilizing alternative theorems allows for the relaxation of
-the strict concavity requirement.
-
-The optimal strategy is derived from the first order condition \(U'(d_0^*) + \beta V'(k_1) \frac{\partial k_1}{\partial d_0} = 0\), with  the  capital transition function implying \(\frac{\partial k_1}{\partial d_0} = -1\). The solution
-encompasses:
-
-
-\begin{align*}
-    \begin{cases}
-        V(k_0) = U(d_0^*) + \beta V(k_1), \\
-        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - d_0^*\right\}(1-l)^{-1}, \\
-        U'(d_0^*) = \beta V'(k_1), \\
-        k_0 \text{ given.}
-    \end{cases}
+ The aim is to determine the optimal dividend strategy \(d_t^*\) and the consequent capital levels \(k_{t+1}^*\) across
+ all periods. The optimal policy \(d_t^{\star}=\varphi(k_t)\) links dividends and capital in a time-invariant manner, deduced from the
+ constraint:
+ \begin{align*}
+    k_{t+1} &= \left[ \frac{p + \mu - \mu p}{p}f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t}  - \varphi(k_{t}) \right] \cdot \left(1-l\right)^{-1} 
 \end{align*}
+ Given the continuous and differentiable nature of capital and dividends, the optimal dividend path can be represented as
+ a function of initial capital, thereby defining the maximum value function \(V(k_1)\) in terms of overall utility
+ maximization. The revised problem formulation becomes:
 
 
-This system guides us towards the optimal path of dividends and capital levels, underpinning the dynamic economic analysis.
+ \begin{align}
+     & V(k_0) = \max_{d_0} \left\{U(d_0) + \beta V(k_1)\right\} \\
+     & \text{s.t. } k_1 = \left[ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}  - \varphi(k_{0}) \right] \cdot \left(1-l\right)^{-1} \nonumber  \\
+     & k_0 \text{ given.} \nonumber
+ \end{align}
 
-\paragraph{Guess and verify}
-The method of "guess and verify" involves proposing a return function \(U(d_t) = \ln{d_t}\) and working through a
-transition equation defined as \(k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} -
-d^*_0\right\}{(1-l)}^{-1}\). The first order condition (FOC) is specified as \(d_0 = [\beta V'(k_{1})]^{-1}\). When this
-FOC is incorporated into the transition equation, the formulation of the problem becomes a system of equations outlined
-as follows:
-
-
-\begin{align*}
-    \begin{cases}
-        V(k_0) = \ln(d_0^*) + \beta V(k_0), \\
-        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - [\beta V'(k_{t+1})]^{-1} \right\}{(1-l)}^{-1}, \\
-        U'(d_0^*) = \beta V'(k_1), \\
-        k_0 \text{ given.}
-    \end{cases}
-\end{align*}
-
-
+ The method of "guess and verify" involves working through the
+ transition equation defined as:
+ \begin{align*}
+     k_1 = \left[ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}  - d^*_0 \right] \cdot \left(1-l\right)^{-1}
+ \end{align*}
+The first order condition (FOC) is specified as \(d^*_0 = [\beta V'(k_{1})]^{-1}\). When this
+ FOC is incorporated into the transition equation, the formulation of the problem becomes a system of equations outlined
+ as follows:
+ \begin{align*}
+     \begin{cases}
+         V(k_0) = U(d_0^*) + \beta V(k_1), \\
+         k_1 = \left[ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}  - d^*_0 \right] \cdot \left(1-l\right)^{-1}, \\
+         d^*_0 = [\beta V'(k_{1})]^{-1},\\
+         k_0 \text{ given.}
+     \end{cases}
+ \end{align*}
 Our initial guess for the solution is:
 
+ \begin{align*}
+     V(k_t) = e + f \ln{k_t},
+ \end{align*}
 
-\begin{align*}
-    V(k_t) = e + f \ln{k_t},
-\end{align*}
-
-
-which leads to a refined system:
-
-
-\begin{align*}
-    \begin{cases}
-        e + f \ln{k_0} = \ln{\left(\frac{k_1}{\beta f}\right)} + \beta [e + f \ln{k_1}], \\
-        k_1 = \left\{k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - \left[ \frac{k_1}{\beta f}\right] \right\}{(1-l)}^{-1}.
-    \end{cases}
-\end{align*}
+%%ricontrollare 
+ which leads to a refined system:
 
 
-Assuming a condition to simplify the analysis, \(p - \delta p - R_f l=0\), we solve for \(k_1\) and \(d_1\), leading to
-expressions that relate capital and dividends directly to the parameters of the problem. These solutions indicate that
-dividends are a proportion of the output, dependent on the firm's productivity, leverage, and risk-free rate. The
-formulation highlights how dividends and capital evolve over time,  with dividends being a constant share of the
-period's production.
-
-Under conditions of no debt (\(l=0\) and thus \(p=1\)) and ignoring depreciation, we obtain simplified expressions for
-capital and dividends in the steady state. This scenario suggests higher capital accumulation for a debt-free firm, as
-it does not bear interest expenses. The policy function derived reflects the relationship between dividends, firm
-productivity, and leverage, offering insights into the management of capital and dividends in different financial
-states of a firm.
-
-\subsection{Optimization Problem with Financial Frictions}
-
-Following the derivation of a closed-form solution for our policy function, we now integrate financial frictions
-stemming from information asymmetry between lenders and firms. We model this by introducing a discount factor \(\mu\)
-on the perceived value of production, where \(0 \leq \mu \leq 1\); a value closer to 0 indicates higher friction levels.
-Consequently, the lending activity modifies the optimization problem as follows:
-
-\begin{align*}
-    \max _{\left\{d_t\right\}_{t=0}^{\infty}} V_0 = \max _{\left\{d_t\right\}_{t=0}^{\infty}} \left\{ U(d_0) + \beta \left[ \sum_{t=1}^{\infty} \beta^{t-1} U(c_t) \right] \right\}
-\end{align*}
-subject to
-\begin{align*}
-    k_t = \left\{ k_{t-1}(1 - \delta) - \left[ \frac{R_f}{p} - \frac{1-p}{p} \frac{\mu f(k_{t-1})}{l \cdot k_t} \right] l k_{t-1} + f(k_{t-1}) - d_{t-1} \right\} \cdot \left(1-l\right)^{-1} \, \forall t.
-\end{align*}
-
-Adapting our approach from the frictionless scenario, we propose:
-\begin{align*}
-    V(k_0) = \ln(d_0^*) + \beta V(k_1),
-\end{align*}
-where
-\begin{align*}
-    k_1 = \left\{ k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - \left[ \beta V'(k_{t+1}) \right]^{-1} \right\} \cdot \left(1-l\right)^{-1},
-\end{align*}
-and
-\begin{align*}
-    U'(d_0^*) = \beta V'(k_1).
-\end{align*}
-
-Our hypothetical solution takes the form:
-\begin{align*}
-    V(k_t) = e + f \ln(k_t),
-\end{align*}
-leading to:
-\begin{align}
-    e + f \ln(k_0) &= \ln\left( \frac{k_1}{\beta f} \right) + \beta \left[ e + f \ln(k_1) \right], \\
-    k_1 &= \left\{ k_0(1 - \delta) - \frac{R_f}{p} l k_0 + \frac{f(k_0)}{p} - \left[ \frac{k_1}{\beta f} \right] \right\} \cdot \left(1-l\right)^{-1}.
+ \begin{align}
+    &e + f \ln(k_0) = \ln\left( \frac{k_1}{\beta f} \right) + \beta \left[ e + f \ln(k_1) \right] \label{eq28}\\
+    &k_1 = \left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0} - \left[ \frac{k_1}{\beta f} \right] \right\} \cdot \left(1-l\right)^{-1}. \nonumber
 \end{align}
-
-Assuming \(p - \delta p - R_f l = 0\) simplifies to:
-\begin{align}
-    k_1 &= \left[ k_0(p - p\delta - R_f l) + \mu Z k_0^{\alpha} \right] \cdot \left( \frac{\beta f}{\beta f - l\beta f + 1} \right) p^{-1}, \\
-    d_1 &= \left[ k_0(p - p\delta - R_f l) + \mu Z k_0^{\alpha} \right] \cdot \left( \frac{p}{\beta f - l\beta f + 1} \right), \\
-    e + f \ln(k_0) &= \ln \left\{ \left[ k_0(p - p\delta - R_f l) + \mu Z k_0^{\alpha} \right] \cdot \left( \frac{p}{\beta f - l\beta f + 1} \right) \right\} \nonumber \\
-    &\quad + \beta \left[ e + f \ln \left\{ \left[ k_0(p - p\delta - R_f l) + \mu Z k_0^{\alpha} \right] \cdot \left( \frac{\beta f}{\beta f - l\beta f + 1} \right) p^{-1} \right\} \right].
-\end{align}
+Solving the above system we find:
+\begin{align*}
+    &k_1 = \frac{\beta f}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}\right\}\\
+    &d_1 =\frac{1}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}\right\}
+\end{align*}
+Assuming \(p - \delta p - R_f l = 0\), and using the Cobb-Douglas production function \ref{eq7}simplifies to:
+\begin{align*}
+    &k_1 = \frac{\beta f}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\\
+    &d_1 =\frac{1}{\beta f (1-l)+1}\left\{  \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\\
+    &e + f \ln(k_0) = \ln \left\{ \frac{1}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\right\} \nonumber \\
+    &\quad + \beta \left\{ e + f \ln \left[ \frac{1}{\beta f (1-l)+1}\left(  \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right)\right]  \right\},\\
+    &e + f \ln(k_0) = -\ln{(1+(1-l)\beta f)} + \ln{(p + \mu - \mu p)} - \ln{p} +\\
+    &+({\alpha}\ln{Z} + {\alpha}\ln{k_0}) + \beta e - \beta f \ln{(1+(1-l)\beta f)} +\\
+    &+\beta f \ln{(p + \mu - \mu p)} - \beta f \ln{p} + \beta f ({\alpha}\ln{Z} + {\alpha}\ln{k_0})
+\end{align*}
+The above equation must be satisfied for any \(k_0\) and for any admissible value of the parameters \(Z, \beta, \alpha,
+\mu, p, R_f,l\). Therefore, must be true that:
+\begin{align*}
+    &f = \frac{\alpha}{1-\alpha \beta} \\
+    &e = \left[ -\ln(1+(1-l)\beta f) + \ln(p + \mu - \mu p) - \ln(p) \right.\\
+    &\quad + \alpha\ln(Z) - \beta f \ln(1+(1-l)\beta f) \\
+    &\quad \left. + \beta f \ln(p + \mu - \mu p) - \beta f \ln(p) + \beta f (\alpha\ln(Z)) \right](1-\beta)^{-1}
+\end{align*}
 
 Hence, the transition and policy functions under financial frictions are formalized as:
 \begin{align}
-    k_1 &= \frac{Z \mu k_0^{\alpha} (1-\delta)}{l R_f} \frac{\alpha\beta}{1-l\alpha\beta}, \\
-    d_0 &= \frac{Z \mu k_0^{\alpha} (1-\delta)}{l R_f} \frac{1-\alpha\beta}{1-l\alpha\beta} \beta, \\
-    \widehat{k} &= \left[ \frac{Z \mu (1-\delta)}{l R_f} \frac{\alpha\beta}{1-l\alpha\beta} \right]^{\frac{1}{1-\alpha}}.
+    k_1 &= \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{\alpha\beta}{1-l\alpha\beta}, \label{eq29} \\
+    d_0 &= \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{1-\alpha\beta}{1-l\alpha\beta} \beta.
 \end{align}
+Imposing \(k_1=k_0=\hat{k}\) in equation \ref{eq29}, we get:
+\begin{equation}
+    \hat{k} = \left(\frac{p(\alpha \beta l - 1)}{Z \alpha \beta (\mu p - \mu - p)}\right)^{-\frac{1}{1-\alpha }}
+\end{equation}
+This represents the steady-state level of capital, \(\hat{k}\), in terms of the parameters \(\alpha\), \(\beta\), \(l\),
+\(p\), \(\mu\), and \(Z\). 
 
-This analysis elucidates that financial frictions equate to a de facto reduction in productivity, which in turn
-diminishes dividends, capital levels, and the rate at which firms accumulate capital. 
+ Assuming a condition to simplify the analysis, \(p - \delta p - R_f l=0\), we solve for \(k_1\) and \(d_1\), leading to
+ expressions that relate capital and dividends directly to the parameters of the problem. These solutions indicate that
+ dividends are a proportion of the output, dependent on the firm's productivity, leverage, and risk-free rate. The
+ formulation highlights how dividends and capital evolve over time,  with dividends being a constant share of the
+ period's production.
 
+ Under conditions of no debt (\(l=0\) and thus \(p=1\)) and ignoring depreciation, we obtain simplified expressions for
+ capital and dividends in the steady state. This scenario suggests higher capital accumulation for a debt-free firm, as
+ it does not bear interest expenses. The policy function derived reflects the relationship between dividends, firm
+ productivity, and leverage, offering insights into the management of capital and dividends in different financial
+ states of a firm.
+
+ 
 \section{Simulation Study}
 
 To explore the distinctions between scenarios with and without financial frictions, we conduct a simulation exercise
