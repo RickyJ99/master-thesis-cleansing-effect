@@ -2254,45 +2254,51 @@ Assuming \(p - \delta p - R_f l = 0\), and using the Cobb-Douglas production fun
     &k_1 = \frac{\beta f}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\\
     &d_1 =\frac{1}{\beta f (1-l)+1}\left\{  \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\\
     &e + f \ln(k_0) = \ln \left\{ \frac{1}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\right\} \nonumber \\
-    &\quad + \beta \left\{ e + f \ln \left[ \frac{1}{\beta f (1-l)+1}\left(  \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right)\right]  \right\},\\
+    &\quad + \beta \left\{ e + f \ln \left[ \frac{\beta f}{\beta f (1-l)+1}\left(  \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right)\right]  \right\},\\
     &e + f \ln(k_0) = -\ln{(1+(1-l)\beta f)} + \ln{(p + \mu - \mu p)} - \ln{p} +\\
     &+({\alpha}\ln{Z} + {\alpha}\ln{k_0}) + \beta e - \beta f \ln{(1+(1-l)\beta f)} +\\
-    &+\beta f \ln{(p + \mu - \mu p)} - \beta f \ln{p} + \beta f ({\alpha}\ln{Z} + {\alpha}\ln{k_0})
+    &+\beta f \ln{(p + \mu - \mu p)} - \beta f \ln{p} +\beta f \ln{(\beta f)}+ \beta f ({\alpha}\ln{Z} + {\alpha}\ln{k_0})
 \end{align*}
 The above equation must be satisfied for any \(k_0\) and for any admissible value of the parameters \(Z, \beta, \alpha,
 \mu, p, R_f,l\). Therefore, must be true that:
-\begin{align*}
-    &f = \frac{\alpha}{1-\alpha \beta} \\
-    &e = \left[ -\ln(1+(1-l)\beta f) + \ln(p + \mu - \mu p) - \ln(p) \right.\\
-    &\quad + \alpha\ln(Z) - \beta f \ln(1+(1-l)\beta f) \\
-    &\quad \left. + \beta f \ln(p + \mu - \mu p) - \beta f \ln(p) + \beta f (\alpha\ln(Z)) \right](1-\beta)^{-1}
-\end{align*}
-
-Hence, the transition and policy functions under financial frictions are formalized as:
 \begin{align}
-    k_1 &= \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{\alpha\beta}{1-l\alpha\beta}, \label{eq29} \\
-    d_0 &= \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{1-\alpha\beta}{1-l\alpha\beta} \beta.
+    &f = \frac{\alpha}{1-\alpha \beta} \label{eq30}\\
+    &e = \left[ -\ln(1+(1-l)\beta f) + \ln(p + \mu - \mu p) - \ln(p) \right.\nonumber\\
+    &\quad + \alpha\ln(Z) - \beta f \ln(1+(1-l)\beta f) \nonumber\\
+    &\quad \left. + \beta f \ln(p + \mu - \mu p) - \beta f \ln(p) + \beta f (\alpha\ln(Z)) +\beta f \ln{(\beta f)} \right](1-\beta)^{-1}\nonumber
 \end{align}
-Imposing \(k_1=k_0=\hat{k}\) in equation \ref{eq29}, we get:
+
+
+Therefore, the transition and policy functions under financial frictions can be articulated as follows:
 \begin{equation}
-    \hat{k} = \left(\frac{p(\alpha \beta l - 1)}{Z \alpha \beta (\mu p - \mu - p)}\right)^{-\frac{1}{1-\alpha }}
+    k_1 = \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{\alpha\beta}{1-l\alpha\beta}, \label{eq29}
 \end{equation}
-This represents the steady-state level of capital, \(\hat{k}\), in terms of the parameters \(\alpha\), \(\beta\), \(l\),
-\(p\), \(\mu\), and \(Z\). 
+Utilizing \(d^*_0 = k_1(\beta f)^{-1}\) and in conjunction with \autoref{eq30}, we can deduce:
+\begin{equation}
+    d^*_0 = \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{1-\alpha\beta}{1-l\alpha\beta},
+\end{equation}
+By setting \(k_1 = k_0 = \hat{k}\) in \autoref{eq29}, the equation simplifies to:
+\begin{equation}
+    \hat{k} = \left(\frac{Z \alpha \beta (p + \mu - \mu p)}{p(1 - \alpha \beta l)}\right)^{\frac{1}{1-\alpha}}
+\end{equation}
+This expression elucidates the steady-state capital level, \(\hat{k}\), in relation to the parameters \(\alpha\), \(\beta\), \(l\), \(p\), \(\mu\), and \(Z\).
 
- Assuming a condition to simplify the analysis, \(p - \delta p - R_f l=0\), we solve for \(k_1\) and \(d_1\), leading to
- expressions that relate capital and dividends directly to the parameters of the problem. These solutions indicate that
- dividends are a proportion of the output, dependent on the firm's productivity, leverage, and risk-free rate. The
- formulation highlights how dividends and capital evolve over time,  with dividends being a constant share of the
- period's production.
+To derive the optimal trajectories for capital and dividends, as well as the steady-state locus for capital in the context of no debt and financial friction (assuming \(l = 0\), \(\mu = 1\), and \(p = 1\)), the following expressions are obtained:
+\begin{align}
+    k_1 &= Z k_0^{\alpha}\alpha\beta, \\
+    d^*_0 &= Z k_0^{\alpha}(1-\alpha\beta), \\
+    \hat{k} &= \left[Z \alpha \beta \right]^{\frac{1}{1-\alpha}}.
+\end{align}
+In conclusion, the optimal capital and dividend paths have been derived under specific financial conditions. Key
+assumptions, particularly \( p - \delta p - R_f l = 0 \), critically simplify the dynamics, implying that the net effect
+of the discount rate, the probability of repayment, and the cost of debt on capital growth is neutral. This assumption
+allows for a direct relationship between the capital level and the dividend policy, as depicted by the transition and
+policy functions. The closed-form expressions for \( k_1 \), \( d_1 \), and \( \hat{k} \) emphasize the steady-state
+capital level's sensitivity to these parameters, underscoring the pivotal role of \( p \) in shaping the firm's
+financial trajectory. Under the no-debt and no-financial-friction scenario (\( l = 0 \), \( \mu = 1 \), \( p = 1 \)),
+the model further reflects how the absence of these frictions leads to straightforward growth dynamics, reinforcing the
+importance of these financial parameters in determining the firm's optimal strategies. 
 
- Under conditions of no debt (\(l=0\) and thus \(p=1\)) and ignoring depreciation, we obtain simplified expressions for
- capital and dividends in the steady state. This scenario suggests higher capital accumulation for a debt-free firm, as
- it does not bear interest expenses. The policy function derived reflects the relationship between dividends, firm
- productivity, and leverage, offering insights into the management of capital and dividends in different financial
- states of a firm.
-
- 
 \section{Simulation Study}
 
 To explore the distinctions between scenarios with and without financial frictions, we conduct a simulation exercise
@@ -2316,7 +2322,7 @@ employing  parameters consistent with those used in the \cite{OsePap17} study:
 
 Our aim is to ascertain the impact of incorporating financial frictions into the model. Therefore, we set the leverage
 ratio (\(l=0.5\))  and the initial capital (\(k_0=1\)). This allows us to examine capital evolution along the optimal
-path. For instance, we calculate \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx 0.559\), with the outcomes depicted in the
+path. For instance, we calculate \(p=\frac{l Rf}{1-\delta}\frac{0.5 \cdot 1.04}{1-0.07} \approx 0.559\), with the outcomes depicted in the
 subsequent plots:
 
 \begin{figure}[H]
