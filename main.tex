@@ -2270,11 +2270,11 @@ Therefore, the transition and policy functions under financial frictions can be 
 \end{equation}
 Utilizing \(d^*_0 = k_1(\beta f)^{-1}\) and in conjunction with \autoref{eq30}, we can deduce:
 \begin{equation}
-    d^*_0 = \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{1-\alpha\beta}{1-l\alpha\beta},
+    d^*_0 = \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{1-\alpha\beta}{1-l\alpha\beta} \label{eq31},
 \end{equation}
 By setting \(k_1 = k_0 = \hat{k}\) in \autoref{eq29}, the equation simplifies to:
 \begin{equation}
-    \hat{k} = \left(\frac{Z \alpha \beta (p + \mu - \mu p)}{p(1 - \alpha \beta l)}\right)^{\frac{1}{1-\alpha}}
+    \hat{k} = \left(\frac{Z \alpha \beta (p + \mu - \mu p)}{p(1 - \alpha \beta l)}\right)^{\frac{1}{1-\alpha}} \label{eq33}
 \end{equation}
 This expression elucidates the steady-state capital level, \(\hat{k}\), in relation to the parameters \(\alpha\), \(\beta\), \(l\), \(p\), \(\mu\), and \(Z\).
 
@@ -2299,7 +2299,7 @@ importance of these financial parameters in determining the firm's optimal strat
 \section{Simulation Study}
 
 To explore the distinctions between scenarios with and without financial frictions, we conduct a simulation exercise
-employing  parameters consistent with those used in the \cite{OsePap17} study:
+employing  parameters similar with those used in the \cite{OsePap17} study:
 
 \begin{table}[H]
     \centering
@@ -2311,16 +2311,20 @@ employing  parameters consistent with those used in the \cite{OsePap17} study:
     Depreciation rate & $\delta$ & 0.07 \\
     Returns to scale & $\alpha$ & 0.70 \\
     Aggregate productivity & $\bar{Z}$ & 1 \\
-    Monitoring cost & $1-\mu$ & 0.25 \\
     \hline
     \end{tabular}
     \caption{Benchmark calibration}
 \end{table}
 
-Our aim is to ascertain the impact of incorporating financial frictions into the model. Therefore, we set the leverage
-ratio (\(l=0.5\))  and the initial capital (\(k_0=1\)). This allows us to examine capital evolution along the optimal
-path. For instance, we calculate \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx 0.559\), with the outcomes depicted in the
-subsequent plots:
+
+This section presents a simulation study to compare scenarios with and without financial frictions, employing parameters
+from the \cite{OsePap17} study. The simulation explores the effects of financial frictions by setting different
+monitoring costs for two firms, with firm 0 facing no monitoring cost and firm 1 experiencing a monitoring cost of
+25\%\(\mu =0.75 \).
+The key assumption for the simulation is \( p - \delta p - R_f l = 0 \), leading to a calculated probability of
+repayment (\(p\)) of approximately 0.559 for both firms.
+
+
 
 \begin{figure}[H]
     \centering
@@ -2341,11 +2345,22 @@ subsequent plots:
     \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
-    \caption{Evolution of capital over time.}
+    \caption{The plot depicts the optimal path for capital following equation \ref{eq29}. The red line, which is above
+    the blue line for all periods, represents the optimal path for captial toward the steady state level, in absence of
+    monitoring costs. While the optimal trajectory for the firm facing 25\% of monitoring cost is depicted by the blue
+    line. All the other parameters, exception for monitoring cost, are left equal. Clearly monitoring costs affects
+    affects the steady state by lowering it.}
     \label{fig:capitalEvolution}
 \end{figure}
+Figure \ref{fig:capitalEvolution} explicitly demonstrates the impact of monitoring costs on reducing the steady-state capital level. The observed discrepancy in steady-state capital levels between the two firms is quantified as follows:
+\begin{align*}
+    &\hat{k_0} = 7.077, \\
+    &\hat{k_1} = 2.713, \\
+    &\Delta\hat{k} = \hat{k_0} - \hat{k_1} = 4.364.
+\end{align*}
+Hence, imposing a 25\% monitoring cost on the output, under a fixed leverage ratio of 0.5, results in a 69\% reduction in the steady-state level of capital.
 
-The initial plot delineates the capital's transition function:
+Additionally, Figure \ref{fig:dividendsEvolution} illustrates the optimal dividend paths for the same two firms, one burdened by monitoring costs and the other not. Following the policy function detailed in \autoref{eq31}, derived from the solution to the Bellman equation.
 
 \begin{figure}[H]
     \centering
@@ -2366,34 +2381,38 @@ The initial plot delineates the capital's transition function:
     \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
-    \caption{Evolution of dividends over time.}
+    \caption{The plot depicts the optimal path for dividends following equation \ref{eq31}. The red line, which is above
+    the blue line for all periods, represents the optimal path toward the steady state level, in absence of
+    monitoring costs. While the optimal trajectory for the firm facing 25\% of monitoring cost is depicted by the blue
+    line. All the other parameters, exception for monitoring cost, are left equal. Clearly monitoring costs affects
+    affects the steady state by lowering it.}
     \label{fig:dividendsEvolution}
 \end{figure}
 
-It is apparent that the trajectory of dividends is consistently higher in scenarios devoid of financial frictions,
-underscoring the impact of such frictions on diminishing returns. This comparison vividly demonstrates the differential
-outcomes in capital and dividend paths under varying financial conditions, highlighting the broader implications of
-financial frictions on economic performance and firm-level profitability. 
+The dividend trajectory is notably higher in scenarios without financial frictions, emphasizing the significant role
+these frictions play in reducing returns. In a steady-state analysis, monitoring costs lead to a 78\% decrease in
+dividend levels, given a constant leverage ratio of 0.5. 
+In the forthcoming sections, the analysis will expand to simulate an economy with heterogeneous agents, aiming to
+dissect the broader implications of financial frictions on overall output. This simulation will contrast environments
+with and without financial frictions, with a particular focus on the cleansing effect that such frictions may exert in
+economic systems. Through this comparative approach, we aim to deepen our understanding of how financial frictions
+influence economic resilience, performance, and the potential for innovation and growth amidst challenges. 
+Next, we will simulate an economy with heterogeneous agents to assess the overall output in environments with and without financial frictions. This analysis aims to explore the cleansing effect of financial frictions, providing insights into their influence on economic performance and growth potential.
 
 \subsection{Heterogeneity and Aggregation Mechanism}
 
-To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity and leverage
-ratios.  Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
+To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity.  Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
 the model. Additionally, we diversify leverage ratios, ensuring no direct correlation between a firm's productivity and
 its leverage. This heterogeneity is captured from the outset by simulating the initial distribution of capital,
-leverage, and productivity, setting the stage for a dynamic interplay of firm characteristics. The aggregate production
+leverage, and productivity, setting the stage for a dynamic interplay of firm characteristics. The aggregate output
 is then represented as:
 \[
-\overline{K} = \int_{\underline{K} }^{\overline{k} }Z_i k_{i,t}^{\alpha}\,di
+\overline{K} = \sum_{i=N }^{i=0 }Z_i k_{i,t}^{\alpha}
 \]
 
-Business cycles impact capital fluctuations, with each firm's changes being proportional to its existing capital. Less
-efficient firms endure more significant reductions during economic downturns, while all firms enjoy capital increases
-during upswings. Market exit is modeled through two avenues: voluntary exit for returns on equity below the risk-free
-rate, and bankruptcy due to failure to cover debts and depreciation. The model incorporates a sinusoidal business
-cycle affecting output as follows:
+Business cycles are model through a sine function, which shock the productivity level of each firm in the same way.
 \[
-\Delta \overline{K}_t = 1 + 0.05 \sin(t)
+\Delta \overline{Z}_t = 1 + 0.05 \sin(t)
 \]
 
 Productivity (\( Z \)) and leverage (\( l \)) follow truncated normal distributions:
@@ -2405,7 +2424,7 @@ Productivity (\( Z \)) and leverage (\( l \)) follow truncated normal distributi
 The figure below demonstrates the results of a 20-step simulation for 10 firms, contrasting optimal and actual capital
 levels.  The actual capital adjusts in response to the business cycle:
 \[
-\Delta \overline{K}_t = 1 + 0.05 \sin(t)
+\Delta \overline{Z}_{i,t} = 1 + 0.05 \sin(t)
 \]
 
 \begin{figure}[H]
