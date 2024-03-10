@@ -1005,14 +1005,6 @@ INPUT output_data/simulation.csv
 INPUT output_data/simulation_withoutfriction.csv
 INPUT output_data/simulation.csv
 INPUT output_data/simulation_withoutfriction.csv
-INPUT output_data/simulation.csv
-INPUT output_data/simulation_withoutfriction.csv
-INPUT output_data/simulation.csv
-INPUT output_data/simulation_withoutfriction.csv
-INPUT output_data/simulation.csv
-INPUT output_data/simulation_withoutfriction.csv
-INPUT output_data/simulation.csv
-INPUT output_data/simulation_withoutfriction.csv
 INPUT ./figure/OptimalK_noexit.png
 INPUT ./figure/OptimalK_noexit.png
 INPUT figure/OptimalK_noexit.png

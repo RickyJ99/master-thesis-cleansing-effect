@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1709994934 "main.aux" "main.bbl" "main" 1709995787 0
+["bibtex main"] 1709999680 "main.aux" "main.bbl" "main" 1709999691 0
   "./reference.bib" 1707833219 24211 9c9a5dc4ae84408f0e7bada1ed53a26b ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "main.aux" 1709995783 32368 4d6aa336d2259dea08e5e004d6f56de2 "xelatex"
+  "main.aux" 1709999686 32230 1c7e738edff750c4685a3e8ecdc3129b "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1709995784 "main.xdv" "main.pdf" "main" 1709995787 0
-  "main.xdv" 1709995783 1802160 1a407aa697f10345583100e9f0247709 "xelatex"
+["xdvipdfmx"] 1709999687 "main.xdv" "main.pdf" "main" 1709999691 0
+  "main.xdv" 1709999686 1688476 5631ae4bb7a1bb583c84b51bb34b5ecc "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1709995774 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" "main.xdv" "main" 1709995787 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" 1709995773 155531 d12ae1dd60fab550e15dc5dfc0c145f2 ""
+["xelatex"] 1709999680 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" "main.xdv" "main" 1709999691 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" 1709999659 149085 95398d73768d3ca1e896ae9e11ea9583 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -238,11 +238,11 @@
   "figure/Plot2.5.png" 1706091819 228182 d5205c6f5c2e5056424ea485d3fe1789 ""
   "figure/div_cap_exit.png" 1708178619 188413 344f5749c35c3be074ca08b4394a6846 ""
   "figure/div_cap_noexit.png" 1708178467 188413 344f5749c35c3be074ca08b4394a6846 ""
-  "main.aux" 1709995783 32368 4d6aa336d2259dea08e5e004d6f56de2 "xelatex"
-  "main.bbl" 1709994934 5418 5c3206039e0bd7f50bbdf09577f92363 "bibtex main"
-  "main.out" 1709995783 5465 afb5ad6e15e583f4d8040d1af1b37b53 "xelatex"
-  "main.tex" 1709995773 155531 d12ae1dd60fab550e15dc5dfc0c145f2 ""
-  "main.toc" 1709995783 3326 f17cc5392263e5c212fcab6b6516db5a "xelatex"
+  "main.aux" 1709999686 32230 1c7e738edff750c4685a3e8ecdc3129b "xelatex"
+  "main.bbl" 1709999680 5418 5c3206039e0bd7f50bbdf09577f92363 "bibtex main"
+  "main.out" 1709999686 5189 5b0d4a19cbb8165e2d8b2f775cf9903d "xelatex"
+  "main.tex" 1709999659 149085 95398d73768d3ca1e896ae9e11ea9583 ""
+  "main.toc" 1709999686 3172 0dc393e775730e2508a4080eabf7e6bc "xelatex"
   "output_data/exit_frictions.csv" 1708181081 17306 67bd7c9023d88c12419b84b00fbb107a ""
   "output_data/exit_nofrictions.csv" 1708181207 17253 79f834b3ae6258827e3d7c81cabaf9ec ""
   "output_data/noexit_frictions.csv" 1708183308 17418 386bd4aaadd87616fd4c24139fdf0519 ""

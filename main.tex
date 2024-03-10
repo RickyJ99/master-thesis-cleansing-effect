@@ -942,16 +942,16 @@ implications on firm behavior and market outcomes.
 This model is set within a partial equilibrium framework where firms are differentiated by their productivity levels.
 They have the option to fund their operations by obtaining loans from financial intermediaries, as outlined by
 \cite{bernanke1995inside}, or by retaining dividends. The capital at any time \(t\) is calculated by
-adjusting the capital from the previous period for depreciation (\(\delta\)), then adding the gross investment (\(I\)), thus the
-low of motion of the capital stock is: 
+adjusting the capital from the previous period for depreciation (\(\delta\)), then adding gross investment (\(I\)), thus the
+low of motion of capital stock is: 
 \begin{align*}
     k_{t+1} &= k_{t}(1 - \delta)  + I_t  
 \end{align*} 
-We can rearrange  the above equation and get the gross investment at time t
+We can rearrange  the above equation and get gross investment at time t
 \begin{align}
     I_t &= k_{t+1} - k_{t}\left(1-\delta\right) \label{eq1}
 \end{align} 
-The \ref{eq1} equation states the gross investment at time t is equal to the net capital formation plus the replacement
+The \ref{eq1} equation states gross investment at time t is equal to the net capital formation plus replacement
 of depreciated capital. 
 The flow of funds constraint is:
 \begin{align}
@@ -960,7 +960,7 @@ The flow of funds constraint is:
 where \(R\) denotes the gross interest rate and \(b_{t}\) represents the debt from period t.
 The components of the flow of funds (f-of-f) at time \(t\) include:
 \begin{enumerate}
-    \item \(I_t\) the gross investment at time t
+    \item \(I_t\) gross investment at time t
     \item \(R b_{t}\) repayment of debts (principal and interest) 
     \item \(d_t\) dividends distributed at time t
 \end{enumerate}
@@ -975,12 +975,11 @@ The f-of-f constraint can be rewritten as the law of motion of debt:
 \begin{align} 
     b_{t+1} &= R b_{t} + I_{t} - S_{t}  \label{eq2'}
 \end{align} 
-where \(S_{t} = f(k_{t}) -
-d_t\) represents the earnings  retained, with the application of equations:
+where \(S_{t} = f(k_{t}) - d_t\) represents  earnings  retained.
 This formulation clarifies that the debt level at time \(t+1\) is the sum of the repayment for the previous period's debt
 (both principal and interest) and the net investment, adjusted for internal financing.
 
-Utilizing equations \ref{eq1}, \ref{eq2'} and the definition of net worth \(n_{t+1}=k_{t+1}-b_{t+1}\), we derive the law of motion for net worth as follows:
+From equations \ref{eq1}, \ref{eq2'} and the definition of net worth \(n_{t+1}=k_{t+1}-b_{t+1}\), we derive the law of motion for net worth as follows:
 \begin{align*}
     n_{t+1}&=k_{t+1}-b_{t+1} = k_{t}(1-\delta) + I_t - R b_{t} - I_t + S_{t} \\
     &= k_{t} - \delta k_{t} - b_{t} - r b_{t}+ S_t \\
@@ -994,8 +993,8 @@ Using equations \ref{eq1} and \ref{eq2}, we get the flow of funds constraint for
 \begin{align}
     k_{t+1}=k_{t}(1-\delta)- R b_{t} - d_t + f(k_{t})+b_{t+1} \label{eq3}
 \end{align}
-The above equation describes how capital evolves over time: capital at time \(t+1\) is equal to the capital at time t
-net of the depreciation, less the repayment of debt (principal + interest), augmented by the retained earnings. %rewrite
+The above equation describes how capital evolves over time: capital at time \(t+1\) is equal to capital at time t
+net of depreciation, less the repayment of debt (principal + interest), augmented by retained earnings. 
 
 \subsection{Steady State}
 
@@ -1005,7 +1004,7 @@ From \ref{eq1}, assuming (\(k_{t+1}=k_{t}=\widehat{k}\)), we get the steady stat
     \widehat{k}&=\widehat{k}\left(1-\delta\right) + \widehat{I} \nonumber\\
     \widehat{I}&=\delta \widehat{k}  \label{eq4}
 \end{align}
-The \ref{eq4} states that in the steady state, the firm will invest only to substitute depreciated capital(\(\delta
+\ref{eq4} states that in the steady state, the firm will invest only to substitute depreciated capital(\(\delta
 \widehat{k}\)). From \ref{eq2'},  assuming (\(b_{t+1}=b_{t} = \widehat{b}\)) and \(d_t=d_{t+1}=\hat{d} \), we get:
 \begin{align}
     \widehat{b} &= R \widehat{b} + \widehat{I} - \widehat{S} \nonumber \\
@@ -1014,7 +1013,7 @@ where \(\widehat{S} = r \widehat{b} - \widehat{I}  \), therefore:
 \begin{align}
     f\left(\widehat{k}\right) - \widehat{d} - \delta \widehat{k} &= r \widehat{b} \label{eq5}
 \end{align}
-The above equation \ref{eq5} states that in the steady state, retained earnings should be used to repay
+Equation \ref{eq5} states that in the steady state, retained earnings should be used to repay
 interest over debt.
 Equation \ref{eq5} can be rewritten as:
 \begin{align}
@@ -1054,7 +1053,7 @@ which depicts the locus as defined by equation \ref{eq5'}, employing the followi
 
 The figure illustrates the steady state relationships among debt (\(\widehat{b}\)), capital (\(\widehat{k}\)), and
 dividends  (\(\widehat{d}\)) in a three-dimensional plot. The graph demonstrates how various combinations of debt and
-capital influence the distribution of dividends. It is evident that, for any given level of \(\hat{k}\) the level of debt results in lower
+capital influence the distribution of dividends. It is evident that, for any given level of \(\hat{k}\), a higher level of debt results in lower
 dividends, as a larger portion of resources is allocated towards servicing interest payments. Conversely, the
 relationship between capital and dividends, given \(\hat{b}\) is depicted as concave, highlighting an increase in dividends with higher
 capital levels, under the specified model parameters: \(\delta = 0.1\), \(\alpha = 0.8\), and \(Z = 0.5\).
@@ -1073,9 +1072,9 @@ positive dividends (\(d_t=d>0\)), the flow of funds constraint changes as follow
 In the absence of debt, a firm's investment is solely financed through retained earnings, as
 specified in equation \ref{eq7}. From \ref{eq7}, we derive the difference equation describing the evolution of capital:
 \begin{align}
-    \Delta{k_{t+1}} &=  -\delta k_t + f(k_{t}) - d \label{eq24}
+    \Delta{k_{t+1}} &= f(k_{t}) - d -\delta k_t +  \label{eq24}
 \end{align}
-The equation presented implies that the variation in capital stock depends on the balance between retained earnings and
+Equation \autoref{eq24} presented implies that variation in capital stock depends on balance between retained earnings and
 depreciated capital. Thus, for a positive increase in capital \(\Delta{k_{t+1}} > 0\), it is necessary for a company to
 hold back earnings in excess of what is required to offset depreciated capital:
 \begin{align*}
@@ -1104,7 +1103,7 @@ Analysis reveals two distinct scenarios based on the derivative of capital with 
     steady-state level (\(\widehat{k}\)) will lead to increasing divergence rather than convergence back to
     \(\widehat{k}\). This scenario can be characterized by potentially unstable dynamics. The condition is:
     \[
-    (1-\delta) + \alpha Z k_{t}^{\alpha-1} > 1, \quad \alpha Z k_{t}^{\alpha-1} > \delta, \quad k_{t} > \left(\frac{\delta}{\alpha Z}\right)^{\frac{1}{\alpha - 1}}
+    (1-\delta) + \alpha Z k_{t}^{\alpha-1} > 1, \quad \alpha Z k_{t}^{\alpha-1} > \delta, \quad k_{t} > \left(\frac{\alpha Z}{\delta}\right)^{\frac{1}{1-\alpha}}
     \]
 
     \item \textbf{Convergence to Steady State}: Conversely, if the derivative is less than 1, this indicates
@@ -1112,7 +1111,7 @@ Analysis reveals two distinct scenarios based on the derivative of capital with 
     diminish over time, leading to a stable equilibrium. This scenario reflects a stable path where the system tends to
     return to its steady state following a perturbation.   The condition is:
     \[
-    (1-\delta) + \alpha Z k_{t}^{\alpha-1} < 1, \quad \alpha Z k_{t}^{\alpha-1} < \delta, \quad k_{t} < \left(\frac{\delta}{\alpha Z}\right)^{\frac{1}{\alpha - 1}}
+    (1-\delta) + \alpha Z k_{t}^{\alpha-1} < 1, \quad \alpha Z k_{t}^{\alpha-1} < \delta, \quad k_{t} < \left(\frac{\alpha Z}{\delta}\right)^{\frac{1}{1-\alpha}}
     \]
 
 \end{enumerate}
@@ -1199,7 +1198,7 @@ cause the firm's capital to go down towards zero. It's crucial to recognize that
 assumption of constant dividends.
 \\
 Furthermore, the steeper the slope of the blue line, the higher the productivity factor \(Z\), signifying a reduced need
-for capital. This plays a significant role since firms with greater productivity can 
+for capital.
 \vspace{1cm}
 \subsection{Dynamics of debts}
 To examine the dynamics of debt, consider a scenario where capital remains constant \(k_t=k_{t+1}=\widehat{k}\), thus it is at the
@@ -1230,7 +1229,7 @@ Isolating \( \widehat{b} \) to find the steady-state level of debt, we get:
     \widehat{b} &= \frac{Z \widehat{k}^\alpha - \delta \widehat{k} - d}{r}
 \end{align}
 This equation gives us the steady-state level of debt \( \widehat{b} \), assuming that the output of the firm is enough
-to cover depreciation and dividends, with the remaining used to service the debt. If the output is insufficient, the
+to cover depreciation and dividends, with the remaining used to service debt. If output is insufficient, the
 firm would need to borrow more, and the steady-state debt would be higher. If the output exceeds the depreciation and
 dividends, the firm can pay down the debt, and the steady-state debt would be lower. 
 Let's determine the condition for a stable path taking the partial derivatives with respect to \(b_{t-1}\):
@@ -1241,7 +1240,7 @@ Since \(r >0\), the partial derivative will always be greater than one, thus the
 difference equation for debt will always be steeper than one. Adding a negative intercept due to positive dividends we
 get that under those conditions there exists a steady state of debt. Moreover, if the debt is below the steady state, the
 debt will shrink toward 0, while if the debt is over the steady state the dynamics of debt will explode toward
-\(+\infty\). This is represented in the following phase diagram:
+\(+\infty\).
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1313,8 +1312,9 @@ debt will shrink toward 0, while if the debt is over the steady state the dynami
     equity buffer, serving as a measure of financial health and resilience against market fluctuations. This diagram is
     pivotal in understanding how dividend policies and productivity rates interlink to shape the firm's leverage
     strategy and long-term financial stability.}
+    \label{fig:ph_k}
 \end{figure}
-The phase diagram illustrates the relationship between a firm's current debt (\(b_t\)) and its capacity for future operations
+The phase diagram \autoref{fig:ph_k} illustrates the relationship between a firm's current debt (\(b_t\)) and its capacity for future operations
 (\(k_{t+1}\)), within the context of constant dividends. The steady state is indicated by the red dot, signifying the
 juncture at which the firm's output is precisely adequate to cover dividends, depreciation, and interest on its
 steady-state debt. %r
@@ -1326,19 +1326,19 @@ former influencing the firm's financial leverage and the latter determining its 
 
 \section{Ramsey-Cass-Kooopmans reinterpreted}
 This section outlines the intertemporal maximization problem faced by the firm in the absence of debt, which is a
-Ramsey-Cass-Kooopmans revisited model where there is a firm that seeks to maximize the utility of dividends consumption of the shareholders.
+Ramsey-Cass-Kooopmans revisited model, where there is a firm that seeks to maximize the utility of dividends consumption of the shareholders.
 The objective function is:
 \[V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)},\]
 where \(U^{\prime}>0, U^{\prime \prime}<0\).
 \subsection{Steady State derivation}
-Let's assume that the firm's investment is entirely financed by equity (\(b_t=0\)  for all \(t\)), this leads to a simpliied flow-of-funds constraint equation:
+Let's assume that the firm's investment is entirely financed by equity (\(b_t=0\)  for all \(t\)), this leads to a simplified flow-of-funds constraint equation:
 \begin{align}
     k_{t+1} = k_{t}(1 - \delta) + f(k_{t}) - d_{t}.  \label{eq13}
 \end{align}
 The maximization problem is tackled using a Lagrangian method, where the Lagrangian is defined as:
 \[L_0 = \sum_{t=0}^{+\infty}\left[{\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t+1} - k_{t}(1 - \delta) - f(k_t) + d_t\right]}\right].\]
 
-The first-order conditions for \(d_{t}\), \(k_{t+1}\), and \(\lambda_t\) for all periods \(t=0,1,\ldots\) yield:
+The first-order conditions for \(d_{t}\), \(k_{t}\), for all periods \(t=0,1,\ldots\) yield:
 \[
 U^{\prime}(d_{t}) = \lambda_t, \quad \forall t,
 \]
@@ -1353,20 +1353,13 @@ In the infinite horizon model, the transversality condition reads:
 \begin{align}
     \lim _{t \rightarrow \infty} \beta^T U^{\prime}\left(d_{t}\right) k_{T+1}=0 \label{eq26}
 \end{align}
-
-
-
-
-Each Lagrange multiplier \(\lambda_t\) represents the marginal utility of dividends in period \(t\). 
-
 From these first-order conditions (FOCs), we derive the Euler equation for dividends:
 \begin{align}
     U^{\prime}(d_{t}) = \beta U^{\prime}(d_{t+1})[f^{\prime}(k_{t+1}) + (1-\delta)]  \label{eq14}
 \end{align}
 indicating that the marginal utility of distributing 1 unit of output as dividends at time \(t\) should match the discounted marginal
 utility of not distributing  dividends in t,saving, investing in t, using the additional capital to produce and
-distribute the corresponding dividends at time t+1 adjusted for the net marginal product of capital after accounting
-for depreciation.
+distribute the corresponding dividends at time t+1.
 \paragraph{Steady state condition for dividends}
 Imposing the steady state condition for dividends \( d_t = d_{t+1} = \widehat{d} \) in \ref{eq14} , we
 equate the marginal  utilities across two consecutive periods:
@@ -1389,7 +1382,7 @@ From \ref{eq27}, we get:
     \widehat{k} &= \left[\frac{\alpha \beta Z}{1 - \beta\left(1-\delta\right)}\right]^{\frac{1}{1-\alpha}}.  \label{eq16}
 \end{align}
 The locus of points on the (\(k_t,d_t\)) plane such that dividends are constant is therefore
-\(k_t=\hat{k}\), whose representation in the vertical line in figure \ref{fig:dividend_dynamics}.
+\(k_t=\hat{k}\), whose representation in the vertical line in figure \ref{fig:ph_d_k_nod_1}.
 \paragraph{Steady state condition for capital}
 Imposing steady state condition for capital (\(k_t = k_{t-1} = \widehat{k}\)) in the law of motion of capital \ref{eq13} we
 get:
@@ -1398,7 +1391,7 @@ get:
 \end{align}
 This locus represents the set of points where the capital stock remains constant over time. Hence, we can determine the
 level of dividends that ensures both capital and dividends are maintained at steady-state levels. By incorporating the
-steady-state level of capital  from Equation \ref{eq16} and the production function from Equation \ref{eq15} into the equilibrium
+steady-state level of capital  from Equation \ref{eq16} and the production function from Equation \ref{eq6} into the equilibrium
 condition for capital from Equation \ref{eq17}, the steady-state level of dividends, denoted as \( \widehat{d} \), can be
 deduced:
 
@@ -1445,10 +1438,10 @@ dividends.
     the rate of change in dividends \( \Delta d_t \) is zero. To the left of \( \hat{k} \), where capital is below its
     steady-state level, the firm increases dividend payments. Conversely, to the right of \( \hat{k} \), where capital
     exceeds the steady state, dividend payments decrease.}
-    \label{fig:ph_d_k_nod}
+    \label{fig:ph_d_k_nod_1}
 \end{figure}
 
-The graph portrays the dynamics of dividends (\(d_t\)) in relation to the capital (\(k_t\)) of a firm, with a
+The graph \autoref{fig:ph_d_k_nod_1} portrays the dynamics of dividends (\(d_t\)) in relation to the capital (\(k_t\)) of a firm, with a
 particular focus on the behavior when capital is below or above the steady-state level,  denoted by \(\hat{k}\).
 
 When the capital is below the steady-state level (\(k_t < \hat{k}\)), thus on the left of the vertical line, for the
@@ -1458,7 +1451,7 @@ Lets look at the locus in which capital is stationary \(\Delta k = 0 \) is given
 \begin{align}
     d_t & = f(k_t) - \delta k_t
 \end{align}
-In our case, as obtained in the above section, the locus in which capital is stationary becomes \ref{eq18}:
+In our case, as obtained in the above section, the locus in which capital is stationary becomes \ref{eq17}:
 \begin{align}
     d_t &=Z k^{\alpha}_t-\delta k_t
 \end{align}
@@ -1470,14 +1463,14 @@ such that \(f^{\prime}(\underline{k})=\delta\)). The level of capital \(\underli
 \end{align}
 It is easy to see that \(\hat{k}<\underline{k}\):
 \begin{align*}
-    \frac{\alpha \beta Z}{1-\beta-\beta \delta}&<\frac{\alpha Z}{\delta},\\
-    \frac{\beta}{1-\beta-\beta \delta}&<\frac{1}{\delta},\\
+    \frac{\alpha \beta Z}{1-\beta+\beta \delta}&<\frac{\alpha Z}{\delta},\\
+    \frac{\beta}{1-\beta+\beta \delta}&<\frac{1}{\delta},\\
     \beta \delta &<1-\beta + \beta \delta, \\
     1-\beta&>0 \\
     \text{for definition} \quad \blacksquare 
 \end{align*}
 We denote \(\bar{k}\) the capital level such that \(d_t=0\), thus it's obtained by solving \(f(\bar{k}) -\delta
-\bar{k} = 0\), using the Cobb-Douglas production function \ref{eq15}, we get:
+\bar{k} = 0\), using the Cobb-Douglas production function \ref{eq6}, we get:
 \begin{align}
     Z \bar{k}^{\alpha} &= \delta \bar{k}, \nonumber\\
     \bar{k}&=\left[\frac{Z}{\delta}\right]^{\frac{1}{1-\alpha}}
@@ -1636,13 +1629,13 @@ Plotting both loci we get a phase diagram that represents the condition for stat
     \label{fig:ph_d_nodebt}
 \end{figure}
 Notice that there exits 3 steady states: one at the origin due to the assumption \(f(0)=0\), the point \((\bar{k};0)\),
-and finally point B \(=(\hat{k},\hat{d})\). Point B was obtained by equations \ref{eq16} and \ref{eq18} and represented the point in
+and finally point B \(=(\hat{k},\hat{d})\). Point B was obtained by equations \ref{eq16} and \ref{eq17} and represented the point in
 which dividends and capital are at a steady state, and both are strictly positive. This point is a saddlepoint.
 The blue line depicts a possible saddlepath towards B. Starting at A, the firm chooses exactly the dividend level that
 leads to the stationary point B. This path not only fulfills the difference equations \ref{eq14} and \ref{eq17}, but
 also, the transversality condition \ref{eq26}
 Indeed as \(t \rightarrow \infty\), capital and dividends approach their steady-state level which are both positive and
-finite, thus the marginal utility of dividends at \(\hat{d}\) is also finite, hence \ref{eq20} is valid.
+finite, thus the marginal utility of dividends at \(\hat{d}\) is also finite, hence \ref{eq26} is valid.
 
 To conclude, this section has outlined the derivation of steady-state levels for capital and dividends, and these
 conditions have been visually represented in a phase diagram. The upcoming section will undertake a similar analysis but
@@ -1898,8 +1891,7 @@ interest rate, \( R \), against the ratio of output to debt, \( \frac{f(k)}{b} \
         \end{axis}
     \end{tikzpicture}
     \caption{The figure presents a graphical analysis of the returns on loans as a function of the production over the
-    debt level while keeping the level of capital at
-    \(k=4\). The red curve models the scenario where the default risk probability is 
+    debt level. The red curve models the scenario where the default risk probability is 
     \(1-p=0.05\)
     , implying a 5\% chance of default, while the blue curve corresponds to a higher default risk at 
     \(1-p=0.1\), a 10\% chance of default. Both curves reflect the increased interest rates required to compensate for
@@ -2003,8 +1995,7 @@ observed in the scenario without debt \ref{eq17}.
 
 \subsection{Phase diagram}
 The goal of this section is to portray the phase diagram in two cases: one with monitoring costs and one without.
-However, we will use a less heuristic approach compared to the phase diagram of the free debt case, using the same value
-for parameters similar to \cite{OsePap17}:
+However, we will use a less heuristic approach compared to the phase diagram of the free debt case, using  parameters similar to \cite{OsePap17}:
 \begin{table}[H]
     \centering
     \begin{tabular}{lcc}
@@ -2237,7 +2228,7 @@ Our initial guess for the solution is:
  \end{align*}
 
 %%ricontrollare 
- which leads to a refined system:
+leading to a refined system:
 
 
  \begin{align}
@@ -2245,10 +2236,14 @@ Our initial guess for the solution is:
     &k_1 = \left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0} - \left[ \frac{k_1}{\beta f} \right] \right\} \cdot \left(1-l\right)^{-1}. \nonumber
 \end{align}
 Solving the above system we find:
-\begin{align*}
-    &k_1 = \frac{\beta f}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}\right\}\\
-    &d_1 =\frac{1}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}\right\}
-\end{align*}
+\begin{align}
+    k_1 = \frac{\beta f}{\beta f (1-l) + 1} \left( \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0} \right)
+\end{align}
+
+Using \(d_0^*=k_1(\beta f)^{-1}\) in the above equation we get:
+\begin{align}
+    d_1 =\frac{1}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}\right\}
+\end{align}
 Assuming \(p - \delta p - R_f l = 0\), and using the Cobb-Douglas production function \ref{eq7}simplifies to:
 \begin{align*}
     &k_1 = \frac{\beta f}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\\
@@ -2299,163 +2294,7 @@ financial trajectory. Under the no-debt and no-financial-friction scenario (\( l
 the model further reflects how the absence of these frictions leads to straightforward growth dynamics, reinforcing the
 importance of these financial parameters in determining the firm's optimal strategies. 
 
-\section{Simulation Study}
 
-To explore the distinctions between scenarios with and without financial frictions, we conduct a simulation exercise
-employing  parameters consistent with those used in the \cite{OsePap17} study:
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{lcc}
-    \hline Parameter & Symbol & Value \\
-    \hline \hline
-    Discount factor & $\beta$ & 0.956 \\
-    Risk-free rate & $R_f$ & 1.04 \\
-    Depreciation rate & $\delta$ & 0.07 \\
-    Returns to scale & $\alpha$ & 0.70 \\
-    Aggregate productivity & $\bar{Z}$ & 1 \\
-    Monitoring cost & $1-\mu$ & 0.25 \\
-    \hline
-    \end{tabular}
-    \caption{Benchmark calibration}
-\end{table}
-
-Our aim is to ascertain the impact of incorporating financial frictions into the model. Therefore, we set the leverage
-ratio (\(l=0.5\))  and the initial capital (\(k_0=1\)). This allows us to examine capital evolution along the optimal
-path. For instance, we calculate \(p=\frac{l Rf}{1-\delta}\frac{0.5 \cdot 1.04}{1-0.07} \approx 0.559\), with the outcomes depicted in the
-subsequent plots:
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[
-        title={Optimal Path of Capital},
-        xlabel={Time},
-        ylabel={Capital},
-        grid=both,
-        minor tick num=1,
-        major grid style={lightgray},
-        minor grid style={lightgray!25},
-        width=0.8\textwidth,
-        height=6cm,
-    ]
-    \addplot[blue] table [col sep=comma, x=Time, y=Capital] {output_data/simulation.csv}; % With friction
-    \addplot[red] table [col sep=comma, x=Time, y=Capital] {output_data/simulation_withoutfriction.csv}; % Without friction
-    \legend{With Friction, Without Friction}
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Evolution of capital over time.}
-    \label{fig:capitalEvolution}
-\end{figure}
-
-The initial plot delineates the capital's transition function:
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[
-        title={Path of Dividends},
-        xlabel={Time},
-        ylabel={Dividends},
-        grid=both,
-        minor tick num=1,
-        major grid style={lightgray},
-        minor grid style={lightgray!25},
-        width=0.8\textwidth,
-        height=6cm,
-    ]
-    \addplot[blue] table [col sep=comma, x=Time, y=Dividends] {output_data/simulation.csv}; % With friction
-    \addplot[red] table [col sep=comma, x=Time, y=Dividends] {output_data/simulation_withoutfriction.csv}; % Without friction
-    \legend{With Friction, Without Friction}
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Evolution of dividends over time.}
-    \label{fig:dividendsEvolution}
-\end{figure}
-
-It is apparent that the trajectory of dividends is consistently higher in scenarios devoid of financial frictions,
-underscoring the impact of such frictions on diminishing returns. This comparison vividly demonstrates the differential
-outcomes in capital and dividend paths under varying financial conditions, highlighting the broader implications of
-financial frictions on economic performance and firm-level profitability. 
-
-\section{Simulation Study}
-
-To explore the distinctions between scenarios with and without financial frictions, we conduct a simulation exercise
-employing  parameters consistent with those used in the \cite{OsePap17} study:
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{lcc}
-    \hline Parameter & Symbol & Value \\
-    \hline \hline
-    Discount factor & $\beta$ & 0.956 \\
-    Risk-free rate & $R_f$ & 1.04 \\
-    Depreciation rate & $\delta$ & 0.07 \\
-    Returns to scale & $\alpha$ & 0.70 \\
-    Aggregate productivity & $\bar{Z}$ & 1 \\
-    Monitoring cost & $1-\mu$ & 0.25 \\
-    \hline
-    \end{tabular}
-    \caption{Benchmark calibration}
-\end{table}
-
-We aim to ascertain the impact of incorporating financial frictions into the model. Therefore, we set the leverage
-ratio (\(l=0.5\))  and the initial capital (\(k_0=1\)). This allows us to examine capital evolution along the optimal
-path. For instance, we calculate \(p=\frac{0.5 \cdot 1.04}{1-0.07} \approx 0.559\), with the outcomes depicted in the
-subsequent plots:
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[
-        title={Optimal Path of Capital},
-        xlabel={Time},
-        ylabel={Capital},
-        grid=both,
-        minor tick num=1,
-        major grid style={lightgray},
-        minor grid style={lightgray!25},
-        width=0.8\textwidth,
-        height=6cm,
-    ]
-    \addplot[blue] table [col sep=comma, x=Time, y=Capital] {output_data/simulation.csv}; % With friction
-    \addplot[red] table [col sep=comma, x=Time, y=Capital] {output_data/simulation_withoutfriction.csv}; % Without friction
-    \legend{With Friction, Without Friction}
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Evolution of capital over time.}
-    \label{fig:capitalEvolution}
-\end{figure}
-
-The initial plot delineates the capital's transition function:
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[
-        title={Path of Dividends},
-        xlabel={Time},
-        ylabel={Dividends},
-        grid=both,
-        minor tick num=1,
-        major grid style={lightgray},
-        minor grid style={lightgray!25},
-        width=0.8\textwidth,
-        height=6cm,
-    ]
-    \addplot[blue] table [col sep=comma, x=Time, y=Dividends] {output_data/simulation.csv}; % With friction
-    \addplot[red] table [col sep=comma, x=Time, y=Dividends] {output_data/simulation_withoutfriction.csv}; % Without friction
-    \legend{With Friction, Without Friction}
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Evolution of dividends over time.}
-    \label{fig:dividendsEvolution}
-\end{figure}
-
-It is apparent that the trajectory of dividends is consistently higher in scenarios devoid of financial frictions,
-underscoring the impact of such frictions on diminishing returns. This comparison vividly demonstrates the differential
-outcomes in capital and dividend paths under varying financial conditions, highlighting the broader implications of
-financial frictions on economic performance and firm-level profitability. 
 
 \section{Simulation Study}
 
@@ -2536,7 +2375,7 @@ underscoring the impact of such frictions on diminishing returns. This compariso
 outcomes in capital and dividend paths under varying financial conditions, highlighting the broader implications of
 financial frictions on economic performance and firm-level profitability. 
 
-\subsection{heterogeneity and Aggregation Mechanism}
+\subsection{Heterogeneity and Aggregation Mechanism}
 
 To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity and leverage
 ratios.  Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  9 MAR 2024 15:49
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  9 MAR 2024 16:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -583,23 +583,7 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count329
 \g__pdf_backend_annotation_int=\count330
 \g__pdf_backend_link_int=\count331
-) (./main.aux
-
-LaTeX Warning: Label `fig:ph_d_k_nod' multiply defined.
-
-
-LaTeX Warning: Label `fig:capitalEvolution' multiply defined.
-
-
-LaTeX Warning: Label `fig:dividendsEvolution' multiply defined.
-
-
-LaTeX Warning: Label `fig:capitalEvolution' multiply defined.
-
-
-LaTeX Warning: Label `fig:dividendsEvolution' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
@@ -747,123 +731,86 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Chapter 3.
 [41
 
-] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54]
+] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61]
 
-LaTeX Warning: Reference `fig:dividend_dynamics' on page 55 undefined on input line 1392.
-
-
-LaTeX Warning: Reference `eq15' on page 55 undefined on input line 1401.
-
-[55]
-
-LaTeX Warning: Reference `eq18' on page 56 undefined on input line 1461.
-
-[56] [57]
-
-LaTeX Warning: Reference `eq15' on page 58 undefined on input line 1480.
-
-[58]
-
-LaTeX Warning: Reference `eq18' on page 59 undefined on input line 1639.
-
-
-LaTeX Warning: Reference `eq20' on page 59 undefined on input line 1645.
-
-[59] [60] [61] [62]
-
-LaTeX Warning: Command \b invalid in math mode on input line 1677.
+LaTeX Warning: Command \b invalid in math mode on input line 1670.
 
 Missing character: There is no ̲ ("332) in font cmmi8!
-[63] [64] [65]
+[62] [63] [64]
 Missing character: There is no ; ("3B) in font nullfont!
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
+[65] [66]
 Missing character: There is no ; ("3B) in font nullfont!
-[66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
 PGFPlots: reading {output_data/simulation.csv}
 PGFPlots: reading {output_data/simulation_withoutfriction.csv}
 PGFPlots: reading {output_data/simulation.csv}
 PGFPlots: reading {output_data/simulation_withoutfriction.csv}
- [79] [80]
-PGFPlots: reading {output_data/simulation.csv}
-PGFPlots: reading {output_data/simulation_withoutfriction.csv}
-PGFPlots: reading {output_data/simulation.csv}
-PGFPlots: reading {output_data/simulation_withoutfriction.csv}
- [81] [82]
-PGFPlots: reading {output_data/simulation.csv}
-PGFPlots: reading {output_data/simulation_withoutfriction.csv}
-PGFPlots: reading {output_data/simulation.csv}
-PGFPlots: reading {output_data/simulation_withoutfriction.csv}
- [83] [84]
+ [78] [79]
 File: figure/OptimalK_noexit.png Graphic file (type bmp)
 <figure/OptimalK_noexit.png>
- [85]
+ [80]
 File: figure/div_cap_noexit.png Graphic file (type bmp)
 <figure/div_cap_noexit.png>
 File: figure/Output_noexit.png Graphic file (type bmp)
 <figure/Output_noexit.png>
- [86] [87]
+ [81] [82]
 File: figure/OptimalK_exit.png Graphic file (type bmp)
 <figure/OptimalK_exit.png>
- [88]
+ [83]
 File: figure/div_cap_exit.png Graphic file (type bmp)
 <figure/div_cap_exit.png>
 PGFPlots: reading {output_data/exit_nofrictions.csv}
 
 
-Package pgfplots Warning: Table 'output_data/exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2662.
+Package pgfplots Warning: Table 'output_data/exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2501.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {output_data/noexit_nofrictions.csv}
 
-Package pgfplots Warning: Table 'output_data/noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2663.
+Package pgfplots Warning: Table 'output_data/noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2502.
 
  [warning /pgfplots/warning/empty column name]
-[89] [90]
+[84] [85]
 PGFPlots: reading {output_data/noexit_frictions.csv}
 
 
-Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2705.
+Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2544.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {output_data/exit_frictions.csv}
 
-Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2706.
+Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2545.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {output_data/exit_frictions.csv}
 
-Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2737.
+Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2576.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {output_data/noexit_frictions.csv}
 
-Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2738.
+Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2577.
 
  [warning /pgfplots/warning/empty column name]
-[91] (./main.bbl [92] [93
+[86] (./main.bbl [87] [88
 
-] [94])
+] [89])
 
 Package natbib Warning: There were undefined citations.
 
-[95] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+[90] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AFB5AD6E15E583F4D8040D1AF1B37B53;5465.
+(rerunfilecheck)             Checksum: 5B0D4A19CBB8165E2D8B2F775CF9903D;5189.
  ) 
 Here is how much of TeX's memory you used:
- 35263 strings out of 476684
- 828136 string characters out of 5804056
+ 35213 strings out of 476684
+ 827211 string characters out of 5804056
  1885018 words of memory out of 5000000
- 54892 multiletter control sequences out of 15000+600000
+ 54842 multiletter control sequences out of 15000+600000
  520664 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,18n,94p,1862b,2728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (97 pages, 1802160 bytes).
+Output written on main.xdv (92 pages, 1688476 bytes).
