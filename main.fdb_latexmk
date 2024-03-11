@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1710157105 "main.aux" "main.bbl" "main" 1710157115 0
+["bibtex main"] 1710181946 "main.aux" "main.bbl" "main" 1710184811 0
   "./reference.bib" 1707833219 24211 9c9a5dc4ae84408f0e7bada1ed53a26b ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "main.aux" 1710157111 31414 34ae4088892cff7d7828d8a0f6023891 "xelatex"
+  "main.aux" 1710184807 31414 4cc8e2b415d8676cc60de57615d22a87 "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1710157112 "main.xdv" "main.pdf" "main" 1710157115 0
-  "main.xdv" 1710157111 1445548 aa992ae8ea242f01df62deab790f959f "xelatex"
+["xdvipdfmx"] 1710184808 "main.xdv" "main.pdf" "main" 1710184811 0
+  "main.xdv" 1710184807 2190848 dce94a03428a4c774b523968b8558a14 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1710157106 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" "main.xdv" "main" 1710157115 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" 1710156110 153372 fdf6fd4295e2cf950ddc8c008464851e ""
+["xelatex"] 1710184793 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" "main.xdv" "main" 1710184811 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" 1710184793 156211 b622cbbbcd27dcc33c689f93a303d271 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -137,6 +137,8 @@
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex" 1452211337 13828 11d1b09335a4a8baa693dd1e6cac3edf ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex" 1496704190 24373 6544c1554e5da33118301011eb03058d ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex" 1364427911 18861 7dc35832c8ccea3aa73cdcd75ec0a60b ""
+  "/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code.tex" 1620507943 123343 4a8309b5b481da7f7ea452c1469d7e10 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.coltype.code.tex" 1394061421 2713 fd4cc0a81e533baadca64f656777ffd6 ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex" 1583276309 83469 f77a7d8a23834d4c2472f8dba8e67bff ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex" 1583276309 12347 43d867ea29e34d528123d9ef750aa146 ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex" 1496704190 8008 3bb2d07671e6afab7dcb90dfaec572a4 ""
@@ -220,9 +222,11 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty" 1601326656 274 5ae372b7df79135d240456a1c6f2cf9a ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1601326656 325 f9f16d12354225b7dd52a3321f085955 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgfplots/pgfplots.sty" 1496704190 4904 ee78b44e85d6fccf08cd99370557481e ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty" 1407365279 1440 4c1495abf57fc4dd215ebbf2a95b1cf8 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657483315 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty" 1670275497 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty" 1667332637 12691 5b542990fe866f3d772f71346cf85b95 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty" 1655066402 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
@@ -234,13 +238,14 @@
   "figure/Plot2.3.png" 1705308692 231481 97634c4666632841e59ce6b5a0aa660c ""
   "figure/Plot2.4.png" 1705320086 180321 7445abad82723d3fed79460063a4588a ""
   "figure/Plot2.5.png" 1706091819 228182 d5205c6f5c2e5056424ea485d3fe1789 ""
-  "figure/div_cap_noexit.png" 1708178467 188413 344f5749c35c3be074ca08b4394a6846 ""
-  "main.aux" 1710157111 31414 34ae4088892cff7d7828d8a0f6023891 "xelatex"
-  "main.bbl" 1710157106 5418 5c3206039e0bd7f50bbdf09577f92363 "bibtex main"
-  "main.out" 1710157111 5189 5b0d4a19cbb8165e2d8b2f775cf9903d "xelatex"
-  "main.tex" 1710156110 153372 fdf6fd4295e2cf950ddc8c008464851e ""
-  "main.toc" 1710157111 3172 c1ccbf3cc42033eb61b5648e8804eac6 "xelatex"
-  "output_data/noexit_nofriction_stats.csv" 1710157069 101788 5b31c438538a1c16b111e2a8617b496f ""
+  "main.aux" 1710184807 31414 4cc8e2b415d8676cc60de57615d22a87 "xelatex"
+  "main.bbl" 1710181946 5418 5c3206039e0bd7f50bbdf09577f92363 "bibtex main"
+  "main.out" 1710184807 5189 5b0d4a19cbb8165e2d8b2f775cf9903d "xelatex"
+  "main.tex" 1710184793 156211 b622cbbbcd27dcc33c689f93a303d271 ""
+  "main.toc" 1710184807 3172 c1ccbf3cc42033eb61b5648e8804eac6 "xelatex"
+  "output_data/diff.csv" 1710181598 16098 aed2f7a4bf5029382a5b05045a918e55 ""
+  "output_data/exit_nofriction_stats.csv" 1710178841 102752 b45ea66d601913fd70e7c53dd5902d27 ""
+  "output_data/noexit_nofriction_stats.csv" 1710178271 102161 538b41d261a14dfde011662d5b515e2f ""
   "output_data/simulation.csv" 1710146702 1614 f72656526dbc46abdbd0ba1f4d95e79b ""
   "output_data/simulation_withoutfriction.csv" 1710146680 1739 75412b1273b3f8e09e6fc6245e888943 ""
   (generated)

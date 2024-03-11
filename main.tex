@@ -18,6 +18,7 @@
 \usepackage{multirow}
 \usepackage{amssymb}
 \usepackage{pgfplots}
+\usepackage{pgfplotstable}
 \usepackage{float}
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{arrows.meta, bending}
@@ -2078,6 +2079,7 @@ cost leaving all the other parameters equal.
     evident that Firm 1, which bears monitoring costs, sustains lower dividends while keeping capital constant, and also
     requires a lower level of capital to maintain constant dividends when compared to Firm 0.}
     \label{pl_phase_b}
+
 \end{figure}
 % \begin{figure}
 %     \centering
@@ -2437,35 +2439,61 @@ variance for each variable. The subsequent plot \autoref{fig:optKnoE} illustrate
         \begin{axis}[
             title={Total Production: Actual vs. Optimal},
             xlabel={Step},
-            xmin=0,ymin=0,
+            xmin=1, ymin=0,
             ylabel={Total Production},
             legend pos=north west,
             ymajorgrids=true,
             grid style=dashed,
         ]
         
-        % Import data from CSV
-        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/noexit_nofriction_stats.csv}\datatable
+        % Import data from the first CSV (noexit_nofriction_stats.csv)
+        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/noexit_nofriction_stats.csv}\datatableNoExit
         
-        % Plot mean Total_production_actual
-        \addplot [name path=mean_actual, blue, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatable};
-        \addlegendentry{Actual Mean}
+        % Plot mean Total_production_actual from the first dataset
+        \addplot [name path=mean_actual_noexit, blue, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableNoExit};
+        \addlegendentry{Actual Mean (No Exit)}
         
-        % Plot mean Total_production_optimal
-        \addplot [name path=mean_optimal, red, mark=none] table [x=Step, y=Total_Production_optimal_mean] {\datatable};
-        \addlegendentry{Optimal Mean}
         
-        % Plot CI for Total_production_optimal as grey area
-        \addplot [name path=upper_optimal, draw=none] table [x=Step, y=Total_Production_optimal_CI_Upper] {\datatable};
-        \addplot [name path=lower_optimal, draw=none] table [x=Step, y=Total_Production_optimal_CI_Lower] {\datatable};
-        \addplot [fill=gray!40] fill between[of=upper_optimal and lower_optimal];
-        \addlegendentry{Optimal CI}
+        % CI for Total_production_actual as grey area (No Exit)
+        \addplot [name path=upper_actual_noexit, draw=none] table [x=Step, y=Total_Production_actual_CI_Upper] {\datatableNoExit};
+        \addplot [name path=lower_actual_noexit, draw=none] table [x=Step, y=Total_Production_actual_CI_Lower] {\datatableNoExit};
+        \addplot [fill=gray!40] fill between[of=upper_actual_noexit and lower_actual_noexit];
         
-        % Plot CI for Total_production_actual as grey area
-        \addplot [name path=upper_actual, draw=none] table [x=Step, y=Total_Production_actual_CI_Upper] {\datatable};
-        \addplot [name path=lower_actual, draw=none] table [x=Step, y=Total_Production_actual_CI_Lower] {\datatable};
-        \addplot [fill=gray!40] fill between[of=upper_actual and lower_actual];
-        \addlegendentry{Actual CI}
+        % Import data from the second CSV (exit_nofriction_stats.csv)
+        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/exit_nofriction_stats.csv}\datatableExit
+        
+        % Plot mean Total_production_actual from the second dataset
+        \addplot [name path=mean_actual_exit, blue!50!red, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableExit};
+        \addlegendentry{Actual Mean (Exit)}
+        
+        % CI for Total_production_actual as lighter grey area (Exit)
+        \addplot [name path=upper_actual_exit, draw=none] table [x=Step, y=Total_Production_actual_CI_Upper] {\datatableExit};
+        \addplot [name path=lower_actual_exit, draw=none] table [x=Step, y=Total_Production_actual_CI_Lower] {\datatableExit};
+        \addplot [fill=gray!20] fill between[of=upper_actual_exit and lower_actual_exit];
+        
+        % Plot differences with error bars from diff.csv
+        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/diff.csv}\datatableDiff
+        \addplot+ [
+            black, % Color of the line
+            mark=none, % No marks at data points; use mark=* if you want marks
+            line width=1pt, % Adjust line width as needed
+            error bars/.cd,
+            y dir=both, y explicit,
+            error bar style={color=black},
+            error mark options={
+                rotate=90,
+                mark size=2pt, % Adjust size of the marks at the tips of the error bars
+                color=black
+            }
+        ] table [
+            x=Step,
+            y=Total_Production_actual_diff_mean,
+            y error plus expr=\thisrow{Total_Production_actual_diff_CI_Upper}-\thisrow{Total_Production_actual_diff_mean},
+            y error minus expr=\thisrow{Total_Production_actual_diff_mean}-\thisrow{Total_Production_actual_diff_CI_Lower}
+        ] {\datatableDiff};
+
+
+        
         \end{axis}
     \end{tikzpicture}
     \caption{Illustrating a 20-step simulation of 10 firms, this plot compares the chosen overall optimal output
@@ -2479,7 +2507,44 @@ variance for each variable. The subsequent plot \autoref{fig:optKnoE} illustrate
 Following this, the distribution of dividends, based on actual capital, is visualized:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{figure/div_cap_noexit.png}
+    \begin{tikzpicture}
+        \begin{axis}[
+            title={Total Production: Actual vs. Optimal},
+            xlabel={Step},
+            xmin=1, ymin=0,
+            ylabel={Total Production},
+            legend pos=north west,
+            ymajorgrids=true,
+            grid style=dashed,
+        ]
+        
+       
+        
+        % Plot differences with error bars from diff.csv
+        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/diff.csv}\datatableDiff
+        \addplot+ [
+            black, % Color of the line
+            mark=none, % No marks at data points; use mark=* if you want marks
+            line width=1pt, % Adjust line width as needed
+            error bars/.cd,
+            y dir=both, y explicit,
+            error bar style={color=black},
+            error mark options={
+                rotate=90,
+                mark size=2pt, % Adjust size of the marks at the tips of the error bars
+                color=black
+            }
+        ] table [
+            x=Step,
+            y=Total_Production_actual_diff_mean,
+            y error plus expr=\thisrow{Total_Production_actual_diff_CI_Upper}-\thisrow{Total_Production_actual_diff_mean},
+            y error minus expr=\thisrow{Total_Production_actual_diff_mean}-\thisrow{Total_Production_actual_diff_CI_Lower}
+        ] {\datatableDiff};
+
+        \addlegendentry{Difference with CI}
+        
+        \end{axis}
+    \end{tikzpicture}
     \caption{Displaying a 20-step simulation for 10 firms, this plot highlights dividends (\( d \)) and the actual capital
     (\(k\)) after business cycle
      adjustments.}
@@ -2502,9 +2567,11 @@ A firm is prompted to exit the market if its return on capital ranks as the lowe
 way for a newcomer who inherits the minimum capital from the existing pool. Subsequently, the exiting firm's capital is
 reallocated proportionally among the remaining firms, based on their respective returns on capital. The return on
 capital for firm \( i \) at time \( t \) is defined as: 
-\[
-R_{i,t} = \frac{d_{i,t}}{k_{i,t}}
-\]
+\begin{equation}
+    R_{i,t} = \frac{d_{i,t-1}}{k_{i,t}} + \frac{k_{i,t}-k_{i,t-1}}{k_{i,t}} 
+\end{equation}
+
+
 Should a firm exhibit the \( \min{R} \), it is compelled to exit the market due to possessing the lowest return on capital
 among all firms.\footnote{This criterion is enforced at each step, effectively merging the concepts of reallocation and
 exit mechanisms henceforth.} 

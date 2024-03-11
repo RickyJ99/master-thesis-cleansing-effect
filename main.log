@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  11 MAR 2024 12:38
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  11 MAR 2024 20:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -424,37 +424,48 @@ Package pgfplots: loading complementary utilities for your pgf version...
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing (1.18.1)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.coltype.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen286
+\ar@mcellbox=\box67
+\extrarowheight=\dimen287
+\NC@list=\toks43
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box68
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count312
-\float@exts=\toks43
-\float@box=\box67
-\@float@everytoks=\toks44
-\@floatcapt=\box68
+\float@exts=\toks44
+\float@box=\box69
+\@float@everytoks=\toks45
+\@floatcapt=\box70
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetween.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
 \pgf@intersect@solutions=\count313
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.softclip.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.code.tex))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen286
-\pgfarrowlength=\dimen287
-\pgfarrowwidth=\dimen288
-\pgfarrowlinewidth=\dimen289
+\pgfarrowinset=\dimen288
+\pgfarrowlength=\dimen289
+\pgfarrowwidth=\dimen290
+\pgfarrowlinewidth=\dimen291
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
 File: tikzlibrarybending.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
 File: pgfmodulebending.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgftransformnonlinearflatness=\dimen290
+\pgftransformnonlinearflatness=\dimen292
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
 File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@curvilinear@time@a=\dimen291
-\pgf@curvilinear@length@a=\dimen292
-\pgf@curvilinear@length@b=\dimen293
-\pgf@curvilinear@length@c=\dimen294
-\pgf@curvilinear@length@d=\dimen295
+\pgf@curvilinear@time@a=\dimen293
+\pgf@curvilinear@length@a=\dimen294
+\pgf@curvilinear@length@b=\dimen295
+\pgf@curvilinear@length@c=\dimen296
+\pgf@curvilinear@length@d=\dimen297
 )
-\pgf@arrows@the@rigidity=\dimen296
+\pgf@arrows@the@rigidity=\dimen298
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
  (/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -490,7 +501,7 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count314
 )
-\@linkdim=\dimen297
+\@linkdim=\dimen299
 \Hy@linkcounter=\count315
 \Hy@pagecounter=\count316
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
@@ -518,15 +529,15 @@ Package hyperref Info: Bookmarks ON on input line 4425.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen298
+\XeTeXLinkMargin=\dimen300
  (/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count319
-\Field@Width=\dimen299
-\Fld@charsize=\dimen300
+\Field@Width=\dimen301
+\Fld@charsize=\dimen302
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -548,7 +559,7 @@ File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
  (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\pdfm@box=\box69
+\pdfm@box=\box71
 \c@Hy@AnnotLevel=\count323
 \HyField@AnnotCount=\count324
 \Fld@listcount=\count325
@@ -563,11 +574,11 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip55
+\Hy@SectionHShift=\skip57
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip56
-\bibsep=\skip57
+\bibhang=\skip58
+\bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count327
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
@@ -579,37 +590,37 @@ File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__graphics_track_int=\count328
-\l__pdf_internal_box=\box70
+\l__pdf_internal_box=\box72
 \g__pdf_backend_object_int=\count329
 \g__pdf_backend_annotation_int=\count330
 \g__pdf_backend_link_int=\count331
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 63.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -648,16 +659,16 @@ LaTeX Font Info:    ... okay on input line 62.
 \c@lstlisting=\count332
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-Package hyperref Info: Link coloring ON on input line 62.
+Package hyperref Info: Link coloring ON on input line 63.
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -675,7 +686,7 @@ Chapter 1.
 ] [4] [5]
 Chapter 2.
 
-Overfull \hbox (19.30939pt too wide) in paragraph at lines 120--120
+Overfull \hbox (19.30939pt too wide) in paragraph at lines 121--121
 []\TU/lmr/bx/n/14.4 Theories Connecting Business Cycles to Long-Term Growth 
  []
 
@@ -686,7 +697,7 @@ File: figure/Plot2.1.png Graphic file (type bmp)
 <figure/Plot2.1.png>
  [25] [26]
 
-Package natbib Warning: Citation `DavHal94' on page 27 undefined on input line 597.
+Package natbib Warning: Citation `DavHal94' on page 27 undefined on input line 598.
 
 File: figure/Plot2.2.png Graphic file (type bmp)
 <figure/Plot2.2.png>
@@ -701,31 +712,31 @@ File: figure/Plot2.5.png Graphic file (type bmp)
  [32] [33]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 724.
+(hyperref)                removing `\begingroup' on input line 725.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 724.
+(hyperref)                removing `\<let>-command' on input line 725.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 724.
+(hyperref)                removing `\NAT@ctype' on input line 725.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 724.
+(hyperref)                removing `\z@' on input line 725.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 724.
+(hyperref)                removing `\let' on input line 725.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 724.
+(hyperref)                removing `\let' on input line 725.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 724.
+(hyperref)                removing `\new@ifnextchar' on input line 725.
 
 [34] [35] [36] [37] [38] [39] [40]
 Chapter 3.
@@ -733,7 +744,7 @@ Chapter 3.
 
 ] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61]
 
-LaTeX Warning: Command \b invalid in math mode on input line 1670.
+LaTeX Warning: Command \b invalid in math mode on input line 1671.
 
 Missing character: There is no ̲ ("332) in font cmmi8!
 [62] [63] [64]
@@ -750,35 +761,36 @@ PGFPlots: reading {output_data/simulation.csv}
 PGFPlots: reading {output_data/simulation_withoutfriction.csv}
  [80] [81]
 PGFPlots: reading {output_data/noexit_nofriction_stats.csv}
-Package pgfplots info on input line 2469: fill between: activating layered graphics
-\pgf@layerbox@axis background=\box71
-\pgf@layerboxsaved@axis background=\box72
-\pgf@layerbox@axis grid=\box73
-\pgf@layerboxsaved@axis grid=\box74
-\pgf@layerbox@axis ticks=\box75
-\pgf@layerboxsaved@axis ticks=\box76
-\pgf@layerbox@axis lines=\box77
-\pgf@layerboxsaved@axis lines=\box78
-\pgf@layerbox@axis tick labels=\box79
-\pgf@layerboxsaved@axis tick labels=\box80
-\pgf@layerbox@pre main=\box81
-\pgf@layerboxsaved@pre main=\box82
-\pgf@layerbox@axis descriptions=\box83
-\pgf@layerboxsaved@axis descriptions=\box84
-\pgf@layerbox@axis foreground=\box85
-\pgf@layerboxsaved@axis foreground=\box86
-Package pgfplots info on input line 2469: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
+PGFPlots: reading {output_data/exit_nofriction_stats.csv}
+PGFPlots: reading {output_data/diff.csv}
+Package pgfplots info on input line 2497: fill between: activating layered graphics
+\pgf@layerbox@axis background=\box73
+\pgf@layerboxsaved@axis background=\box74
+\pgf@layerbox@axis grid=\box75
+\pgf@layerboxsaved@axis grid=\box76
+\pgf@layerbox@axis ticks=\box77
+\pgf@layerboxsaved@axis ticks=\box78
+\pgf@layerbox@axis lines=\box79
+\pgf@layerboxsaved@axis lines=\box80
+\pgf@layerbox@axis tick labels=\box81
+\pgf@layerboxsaved@axis tick labels=\box82
+\pgf@layerbox@pre main=\box83
+\pgf@layerboxsaved@pre main=\box84
+\pgf@layerbox@axis descriptions=\box85
+\pgf@layerboxsaved@axis descriptions=\box86
+\pgf@layerbox@axis foreground=\box87
+\pgf@layerboxsaved@axis foreground=\box88
+Package pgfplots info on input line 2497: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
  [82]
-File: figure/div_cap_noexit.png Graphic file (type bmp)
-<figure/div_cap_noexit.png>
+PGFPlots: reading {output_data/diff.csv}
  [83]
 File: figure/Output_noexit.png Graphic file (type bmp)
 <figure/Output_noexit.png>
- [84] [85]
+ [84] [85] [86]
 
-LaTeX Warning: Reference `fig:output_comparison_frictions' on page 86 undefined on input line 2628.
+LaTeX Warning: Reference `fig:output_comparison_frictions' on page 87 undefined on input line 2695.
 
-(./main.bbl [86] [87] [88
+(./main.bbl [87] [88
 
 ] [89])
 
@@ -792,12 +804,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5B0D4A19CBB8165E2D8B2F775CF9903D;5189.
  ) 
 Here is how much of TeX's memory you used:
- 35472 strings out of 476684
- 836083 string characters out of 5804056
- 1866018 words of memory out of 5000000
- 55110 multiletter control sequences out of 15000+600000
+ 36280 strings out of 476684
+ 863750 string characters out of 5804056
+ 2548264 words of memory out of 5000000
+ 55902 multiletter control sequences out of 15000+600000
  520664 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,18n,94p,1862b,2728s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,18n,94p,1862b,2731s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (92 pages, 1445548 bytes).
+Output written on main.xdv (92 pages, 2190848 bytes).
