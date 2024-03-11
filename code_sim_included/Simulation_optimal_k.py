@@ -20,7 +20,7 @@ R_f = 1.04
 delta = 0.07
 alpha = 0.70
 Z = 1
-mu = 1  # Since 1 - mu = 0.25
+mu = 0.75  # Since 1 - mu = 0.25
 l = 0.5
 k_0 = 1
 
@@ -94,7 +94,7 @@ simulation_data_adjusted = pd.DataFrame(
 )
 
 # Save the adjusted data to a CSV file for LaTeX/TikZ plotting
-# csv_file_path_adjusted = "simulation.csv"
-# simulation_data_adjusted.to_csv(csv_file_path_adjusted, index=False)
+csv_file_path_adjusted = "in_out_market/output_data/simulation.csv"
+simulation_data_adjusted.to_csv(csv_file_path_adjusted, index=False)
 
 # csv_file_path_adjusted

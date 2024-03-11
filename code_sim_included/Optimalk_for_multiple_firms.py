@@ -6,30 +6,57 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import truncnorm
+from scipy import stats
 import matplotlib.pyplot as plt
 
-np.random.seed(42)
-
+def calculate_p(R_f,l,delta):
+    #compute p
+    return (R_f * l) / (1 - delta)
+def f(Z,k_0,alpha):
+    """
+    Placeholder for the production function f, dependent on capital k_0.
+    This function needs to be defined based on your economic model.
+    """
+    return Z*(k_0**alpha)
 
 # Transtion function and policy function for capital and dividends
 def transition_and_policy(k_0, Z, mu, alpha, beta, delta, R_f, l):
-    k_1 = (
-        (Z * mu * k_0**alpha * (1 - delta))
-        / (l * R_f)
-        * (alpha * beta)
-        / (1 - l * alpha * beta)
-    )
-    d_0 = (
-        (Z * mu * k_0**alpha * (1 - delta))
-        / (l * R_f)
-        * (1 - alpha * beta)
-        / (1 - l * alpha * beta)
-        * beta
-    )
-    k_hat = (
-        (Z * mu * (1 - delta)) / (l * R_f) * (alpha * beta) / (1 - l * alpha * beta)
-    ) ** (1 / (1 - alpha))
-    return k_1, d_0, k_hat
+    p = calculate_p(R_f,l,delta)
+    # Calculate the common term in both equations for simplification
+    common_term = ((p + mu - mu * p) / p) * Z * k_0**alpha
+
+    # Calculate next period's capital (k_1) based on the given equation
+    k_1 = common_term * (alpha * beta / (1 - l * alpha * beta))
+
+    # Calculate optimal current period's dividends (d*_0) based on the given equation
+    d_0 = common_term * ((1 - alpha * beta) / (1 - l * alpha * beta))
+    return k_1, d_0
+def transition_equation(Z,k_0,alpha, mu, delta, R_f, l, d_0_star):
+    """
+    Computes the next period's capital (k_1) based on the given transition equation.
+
+    Parameters:
+    - k_0: Current period's capital.
+    - p: Price level.
+    - mu: Marginal utility of consumption.
+    - delta: Depreciation rate.
+    - R_f: Risk-free rate.
+    - l: Leverage.
+    - d_0_star: Optimal current period's dividends.
+    
+    Returns:
+    - k_1: Next period's capital.
+    """
+    p = calculate_p(R_f,l,delta)
+    # Calculate the terms inside the brackets
+    term_1 = ((p + mu - mu * p) / p) * f(Z,k_0,alpha)
+    term_2 = ((p - delta * p - R_f * l) / p) * k_0
+    inside_brackets = term_1 + term_2 - d_0_star
+    
+    # Calculate next period's capital (k_1)
+    k_1 = inside_brackets * (1 - l)
+    
+    return k_1
 
 
 def reinvest_capital_with_min_return_exit(
@@ -100,31 +127,38 @@ def main():
     k_path_opt = [np.array(K0)]
     k_path_act = [np.array(K0)]
     d_path_act = []
-    K_path = [np.sum(Z * np.array(K0) ** alpha)]
+    K_path_act = [np.sum(Z * np.array(K0) ** alpha)]
+    K_path_opt = [np.sum(Z * np.array(K0) ** alpha)]
     exit_rate = [0]
     for t in range(STEP):
         k_next_step = []
+        k_next_step_act = []
+        K_next_step_opt = []
+        K_next_step_act = []
         d_current_step = []
-        if (False == False) and (t != 0):
+        exit_r=0
+        if (False is not False) and (t != 0):
             k_exit, exit_r = reinvest_capital_with_min_return_exit(
-                k_path_act[-1], d_path_act[-1], k_path_act[-2], Z, t, R_f
+                k_path_opt[-1], d_path_act[-1], k_path_opt[-2], Z, t, R_f
             )
             k_path_act[-1] = k_exit
         for i in range(NFIRM):
             k_current = k_path_act[-1][i]  # Use the last known capital for each firm
-            k_next, d_current, k_hat = transition_and_policy(
+            k_next, d_current = transition_and_policy(
                 k_current, Z[i], mu, alpha, beta, delta, R_f, L[i]
             )
             k_next_step.append(k_next)
             d_current_step.append(d_current)
+            # Apply business cycle effects before moving to the next step
+            K_opt,K_act = calculate_diffs(Z[i], k_next, t)
+            k_act       = transition_equation(Z[i],k_current,alpha, mu, delta, R_f, L[i], d_current)
+            k_next_step_act.append(k_act)
+            K_next_step_act.append(K_act)
+            K_next_step_opt.append(K_opt)
         k_path_opt.append(np.array(k_next_step))
-
-        # Apply business cycle effects before moving to the next step
-        k_next_step_adjusted, K = distribute_effect(Z, np.array(k_next_step), t)
-        exit_r = 0
-
-        k_path_act.append(k_next_step_adjusted)
-        K_path.append(K)
+        k_path_act.append(np.array(k_next_step_act))
+        K_path_opt.append(np.array(K_next_step_opt))
+        K_path_act.append(np.array(K_next_step_act))
         exit_rate.append(exit_r)
         d_path_act.append(np.array(d_current_step))
 
@@ -134,50 +168,80 @@ def main():
 
     for i in range(NFIRM):
         k_current = k_path_act[-1][i]  # Use the last known capital for each firm
-        k_next, d_current, k_hat = transition_and_policy(
+        k_next, d_current = transition_and_policy(
             k_current, Z[i], mu, alpha, beta, delta, R_f, L[i]
         )
         # k_next_step.append(k_next)
         d_current_step.append(d_current)
     d_path_act.append(np.array(d_current_step))
     # k_path_opt.append(np.array(k_next_step))
-    return k_path_opt, d_path_act, k_path_act, Z, K_path, exit_rate
+    return K_path_opt, d_path_act, K_path_act, Z, k_path_opt, k_path_act, exit_rate
 
 
-def BC(K, t):
+def BC(Z, t):
     """Business Cycle effect on capital."""
-    return K * (1 + 0.1 * math.sin(t))
+    return Z * (1 + 0 * math.sin(t))
 
 
 def calculate_diffs(Z, k, t):
     """Calculate the diffs for all firms."""
     k = k**alpha
-    K = np.sum(Z * k)  # Element-wise multiplication
-    K_bc = BC(K, t)
-    diff = K_bc - K
-    return diff, K_bc
+    K_opt = Z * k  # Element-wise multiplication
+    Z_bc = BC(Z, t)
+    K_bc = Z_bc * k
+    return K_opt, K_bc
 
 
-def distribute_effect(Z, k, t):
-    """Distribute the total effect of the business cycle inversely by productivity."""
-    total_diff, K = calculate_diffs(Z, k, t)
 
-    # Calculate proportional effects based on productivity (or some rule)
-    proportions = Z / np.sum(
-        Z
-    )  # For simplicity, directly proportional to productivity here
 
-    # You might want to adjust this to make it inversely proportional or follow another distribution rule
 
-    # Calculate how much each firm's capital should be adjusted
-    adjustment = (
-        total_diff * proportions
-    )  # This will be an array of adjustments for each firm
+def compute_stats_by_step_and_firm_with_ci(df, confidence_level=0.95):
+    """
+    Compute the mean, variance, and confidence intervals at each step for each firm for specified columns.
 
-    # Adjust capital for each firm
-    new_k = k - adjustment
+    Parameters:
+    - df: pandas DataFrame containing simulation data.
+    - confidence_level: The confidence level for the confidence interval calculation.
 
-    return new_k, K
+    Returns:
+    - A pandas DataFrame with the mean, variance, and confidence intervals of specified columns for each step and firm.
+    """
+    # Define columns to calculate mean and variance for
+    columns = [
+        "Optimal_k",
+        "Actual_k",
+        "Dividends",
+        "Total_Production_actual",
+        "Total_Production_optimal",
+        "Exit_Rate",
+    ]
+
+    # Group by 'Step' and 'Firm', then calculate mean and variance
+    grouped = df.groupby(["Step", "Firm"])[columns].agg(["mean", "var"]).reset_index()
+
+    # Flatten the column MultiIndex
+    grouped.columns = [" ".join(col).strip() for col in grouped.columns.values]
+
+    # Merge with sample sizes. Ensure 'Step' and 'Firm' are in the correct format before merge
+    sample_sizes = df.groupby(["Step", "Firm"]).size().reset_index(name="N")
+    grouped = pd.merge(grouped, sample_sizes, on=["Step", "Firm"])
+
+    z_score = stats.norm.ppf((1 + confidence_level) / 2.0)
+
+    for col in columns:
+        # Adding SEM and CI calculations
+        mean_col = f"{col} mean"
+        var_col = f"{col} var"
+        sem_col = f"{col} SEM"
+        ci_lower_col = f"{col} CI Lower"
+        ci_upper_col = f"{col} CI Upper"
+
+        # Calculate SEM, CI Lower, and CI Upper
+        grouped[sem_col] = np.sqrt(grouped[var_col]) / np.sqrt(grouped["N"])
+        grouped[ci_lower_col] = grouped[mean_col] - z_score * grouped[sem_col]
+        grouped[ci_upper_col] = grouped[mean_col] + z_score * grouped[sem_col]
+
+    return grouped
 
 
 mu = 1  # 0.75  # Since 1 - mu = 0.25
@@ -186,118 +250,81 @@ R_f = 1.04
 delta = 0.07
 alpha = 0.70
 
-k_path_opt, d_path_act, k_path_act, Z, K, exit_rate = main()
-k_path_opt = np.array(k_path_opt)
-k_path_act = np.array(k_path_act)
-d_path_act = np.array(d_path_act)
-K = np.array(K)
-exit_rate = np.array(exit_rate)
+num_runs = 100  # Number of simulations to run
 
-# Flatten the arrays to create a long format DataFrame
-num_steps = len(k_path_opt)
-num_firms = k_path_opt.shape[1]
-steps = np.repeat(np.arange(num_steps), num_firms)
-firms = np.tile(np.arange(num_firms), num_steps)
-k_tot = np.repeat(K, num_firms)
-exit_rate = np.repeat(exit_rate, num_firms)
+# Lists to accumulate data
+steps_list = []
+firms_list = []
+runs_list = []
+k_path_opt_list = []
+k_path_act_list = []
+d_path_act_list = []
+K_path_opt_list = []
+K_path_act_list = []
+exit_rate_list = []
 
-# Prepare the data dictionary
+# Initialize lists to store the simulation data
+runs_list, steps_list, firms_list = [], [], []
+k_path_opt_list, k_path_act_list, d_path_act_list = [], [], []
+k_tot_list, exit_rate_list, total_production_optimal_list = [], [], []
+
+for run_id in range(num_runs):
+    K_path_opt, d_path_act, K_path_act, Z,k_path_opt,k_path_act, exit_rate = main() #K_path_opt, d_path_act, K_path_act, Z, k_path_opt, k_path_act, exit_rate
+    k_path_opt = np.array(k_path_opt)
+    k_path_act = np.array(k_path_act)
+    K_path_opt = np.array(K_path_opt)
+    K_path_act = np.array(K_path_act)
+    d_path_act = np.array(d_path_act)
+    exit_rate = np.array(exit_rate)
+
+    # Flatten and repeat as necessary for long format
+    num_steps = len(k_path_opt)
+    num_firms = k_path_opt.shape[1]
+    steps = np.repeat(np.arange(num_steps), num_firms)
+    firms = np.tile(np.arange(num_firms), num_steps)
+    exit_rate = np.repeat(exit_rate, num_firms)
+
+    # Calculate Total_Production_optimal at each step (sum of Optimal_K for all firms)
+    total_production_optimal = np.sum(K_path_opt, axis=1)
+    # Repeat the Total_Production_optimal for each firm
+    total_production_optimal_repeated = np.repeat(total_production_optimal, num_firms)
+
+    # Calculate Total_Production_optimal at each step (sum of Optimal_K for all firms)
+    total_production_actual = np.sum(K_path_act, axis=1)
+    # Repeat the Total_Production_optimal for each firm
+    total_production_actual_repeated = np.repeat(total_production_optimal, num_firms)
+
+    # Append data for this run
+    runs_list.extend([run_id] * num_steps * num_firms)
+    steps_list.extend(steps)
+    firms_list.extend(firms)
+    k_path_opt_list.extend(k_path_opt.flatten())
+    k_path_act_list.extend(k_path_act.flatten())
+    d_path_act_list.extend(d_path_act.flatten())
+    K_path_opt_list.extend(total_production_optimal_repeated)
+    K_path_act_list.extend(total_production_actual_repeated)
+    exit_rate_list.extend(exit_rate)
+
+# Prepare the data dictionary including Total_Production_optimal
 data = {
-    "Step": steps,
-    "Firm": firms,
-    "Optimal K": k_path_opt.flatten(),
-    "Actual K": k_path_act.flatten(),
-    "Dividends": d_path_act.flatten(),
-    "Total Production": k_tot,
-    "Exit Rate": exit_rate,
+    "Run": runs_list,
+    "Step": steps_list,
+    "Firm": firms_list,
+    "Optimal_k": k_path_opt_list,
+    "Actual_k": k_path_act_list,
+    "Dividends": d_path_act_list,
+    "Total_Production_actual": K_path_act_list,
+    "Total_Production_optimal": K_path_opt_list,
+    "Exit_Rate": exit_rate_list,
 }
 
 # Create the DataFrame
 df = pd.DataFrame(data)
-# df.to_csv("in_out_market/literature/theory/main/noexit_frictions.csv")
-
-# Set up the plot
-plt.figure(figsize=(14, 7))
-
-# Plot Optimal and Actual K for each firm
-for firm_id in df["Firm"].unique():
-    firm_data = df[df["Firm"] == firm_id]
-
-    plt.plot(
-        firm_data["Step"],
-        firm_data["Optimal K"],
-        label=f"Optimal K Firm {firm_id}",
-        linestyle="-",
-        alpha=0.5,
-    )
-    plt.plot(
-        firm_data["Step"],
-        firm_data["Actual K"],
-        label=f"Actual K Firm {firm_id}",
-        linestyle="--",
-        alpha=0.5,
-    )
-
-plt.xlabel("Step")
-plt.ylabel("Capital")
-plt.title("Optimal and Actual Capital Over Time for All Firms")
-plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
-plt.tight_layout()
-# plt.show()
-plt.savefig("in_out_market/literature/theory/main/OptimalK_exit.png")
-
-# Set up the plot for dividends
-plt.figure(figsize=(14, 7))
-
-# Plot Optimal and Actual K for each firm
-for firm_id in df["Firm"].unique():
-    firm_data = df[df["Firm"] == firm_id]
-
-    plt.plot(
-        firm_data["Step"],
-        firm_data["Dividends"],
-        label=f"Dividends {firm_id}",
-        linestyle="-",
-        alpha=0.5,
-    )
-    plt.plot(
-        firm_data["Step"],
-        firm_data["Actual K"],
-        label=f"Actual K Firm {firm_id}",
-        linestyle="--",
-        alpha=0.5,
-    )
-
-plt.xlabel("Step")
-plt.ylabel("d,k")
-plt.title("Dividends and Actual Capital Over Time for All Firms")
-plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
-plt.tight_layout()
-# plt.savefig("in_out_market/literature/theory/main/div_cap_exit_friction.png")
-# plt.show()
-plt.clf()
-
-plt.figure(figsize=(14, 7))
-# Plot Optimal and Actual K for each firm
-for firm_id in df["Firm"].unique():
-    firm_data = df[df["Firm"] == firm_id]
-
-    plt.plot(
-        firm_data["Step"],
-        firm_data["Total Production"],
-        label=f"K",
-        linestyle="-",
-        alpha=0.5,
-    )
-
-    break
 
 
-plt.xlabel("Step")
-plt.ylabel("Output")
-plt.title("Overall output Over Time for All Firms")
-plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
-plt.tight_layout()
+df.to_csv("output_data/noexit_nofriction.csv", index=False)
 
-# plt.show()
-# plt.savefig("in_out_market/literature/theory/main/Output_noexit.png")
+print("Data from all runs saved to 'noexit_nofriction.csv'")
+stats_df = compute_stats_by_step_and_firm_with_ci(df)
+# Specify your path correctly, especially if you're using directories
+stats_df.to_csv("output_data/noexit_nofriction_stats.csv", index=False)

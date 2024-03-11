@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  10 MAR 2024 18:04
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  11 MAR 2024 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -749,70 +749,55 @@ PGFPlots: reading {output_data/simulation_withoutfriction.csv}
 PGFPlots: reading {output_data/simulation.csv}
 PGFPlots: reading {output_data/simulation_withoutfriction.csv}
  [80] [81]
-File: figure/OptimalK_noexit.png Graphic file (type bmp)
-<figure/OptimalK_noexit.png>
+PGFPlots: reading {output_data/noexit_nofriction_stats.csv}
+Package pgfplots info on input line 2469: fill between: activating layered graphics
+\pgf@layerbox@axis background=\box71
+\pgf@layerboxsaved@axis background=\box72
+\pgf@layerbox@axis grid=\box73
+\pgf@layerboxsaved@axis grid=\box74
+\pgf@layerbox@axis ticks=\box75
+\pgf@layerboxsaved@axis ticks=\box76
+\pgf@layerbox@axis lines=\box77
+\pgf@layerboxsaved@axis lines=\box78
+\pgf@layerbox@axis tick labels=\box79
+\pgf@layerboxsaved@axis tick labels=\box80
+\pgf@layerbox@pre main=\box81
+\pgf@layerboxsaved@pre main=\box82
+\pgf@layerbox@axis descriptions=\box83
+\pgf@layerboxsaved@axis descriptions=\box84
+\pgf@layerbox@axis foreground=\box85
+\pgf@layerboxsaved@axis foreground=\box86
+Package pgfplots info on input line 2469: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
+ [82]
 File: figure/div_cap_noexit.png Graphic file (type bmp)
 <figure/div_cap_noexit.png>
- [82]
+ [83]
 File: figure/Output_noexit.png Graphic file (type bmp)
 <figure/Output_noexit.png>
- [83]
-File: figure/OptimalK_exit.png Graphic file (type bmp)
-<figure/OptimalK_exit.png>
- [84]
-File: figure/div_cap_exit.png Graphic file (type bmp)
-<figure/div_cap_exit.png>
- [85]
-PGFPlots: reading {output_data/exit_nofrictions.csv}
+ [84] [85]
 
+LaTeX Warning: Reference `fig:output_comparison_frictions' on page 86 undefined on input line 2628.
 
-Package pgfplots Warning: Table 'output_data/exit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2520.
+(./main.bbl [86] [87] [88
 
- [warning /pgfplots/warning/empty column name]
-PGFPlots: reading {output_data/noexit_nofrictions.csv}
-
-Package pgfplots Warning: Table 'output_data/noexit_nofrictions.csv' has an empty column name; replacing it by '0'' on input line 2521.
-
- [warning /pgfplots/warning/empty column name]
-[86] [87]
-PGFPlots: reading {output_data/noexit_frictions.csv}
-
-
-Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2563.
-
- [warning /pgfplots/warning/empty column name]
-PGFPlots: reading {output_data/exit_frictions.csv}
-
-Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2564.
-
- [warning /pgfplots/warning/empty column name]
-PGFPlots: reading {output_data/exit_frictions.csv}
-
-Package pgfplots Warning: Table 'output_data/exit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2595.
-
- [warning /pgfplots/warning/empty column name]
-PGFPlots: reading {output_data/noexit_frictions.csv}
-
-Package pgfplots Warning: Table 'output_data/noexit_frictions.csv' has an empty column name; replacing it by '0'' on input line 2596.
-
- [warning /pgfplots/warning/empty column name]
-[88] (./main.bbl [89] [90
-
-] [91])
+] [89])
 
 Package natbib Warning: There were undefined citations.
 
-[92] (./main.aux)
+[90] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5B0D4A19CBB8165E2D8B2F775CF9903D;5189.
  ) 
 Here is how much of TeX's memory you used:
- 35215 strings out of 476684
- 827223 string characters out of 5804056
- 1884018 words of memory out of 5000000
- 54844 multiletter control sequences out of 15000+600000
+ 35472 strings out of 476684
+ 836083 string characters out of 5804056
+ 1866018 words of memory out of 5000000
+ 55110 multiletter control sequences out of 15000+600000
  520664 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,18n,94p,1862b,2728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (94 pages, 1709368 bytes).
+Output written on main.xdv (92 pages, 1445548 bytes).

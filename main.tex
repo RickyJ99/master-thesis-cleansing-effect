@@ -2404,35 +2404,75 @@ Next, we will simulate an economy with heterogeneous agents to assess the overal
 To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity.  Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
 the model. Additionally, we diversify leverage ratios, ensuring no direct correlation between a firm's productivity and
 its leverage. This heterogeneity is captured from the outset by simulating the initial distribution of capital,
-leverage, and productivity, setting the stage for a dynamic interplay of firm characteristics. The aggregate output
-is then represented as:
-\[
-\overline{K} = \sum_{i=N }^{i=0 }Z_i k_{i,t}^{\alpha}
-\]
+leverage, and productivity, setting the stage for a dynamic interplay of firm characteristics. The aggregate output at
+time t for a population of N firms
+is :
+\begin{equation}
+    K_t = \sum_{i=0}^{N}{Z_{i,t}k_{i,t^\alpha}} \label{eq:K_bar}
+\end{equation}
+The business cycle is modeled through a sine function, impacting the productivity factor \(Z\) uniformly across all firms in the economy. Furthermore, the maximum influence the business cycles can exert on productivity is limited to 5\% of \(Z\). Consequently, the cycle is represented as follows:
+\begin{equation}
+    \Delta Z_t = 1 + 0.05 \sin(t) \label{eq:bc}
+\end{equation}
+The firm determines an optimal level of output at time \(t_0\) for the subsequent time \(t_1\), based on equation
+\ref{eq29}. However, the actual output may deviate from this optimal level due to fluctuations in the productivity
+factor \(Z\), which is influenced by the business cycle, as described in Equation \ref{eq:bc}. To clearly differentiate
+between these two scenarios, the term "optimal" will refer to the firm's chosen level of output, while "actual" will
+describe the output level that the firm ultimately achieves. 
 
-Business cycles are model through a sine function, which shock the productivity level of each firm in the same way.
-\[
-\Delta \overline{Z}_t = 1 + 0.05 \sin(t)
-\]
-
-Productivity (\( Z \)) and leverage (\( l \)) follow truncated normal distributions:
+Productivity (\(Z\)) and leverage (\(l\)) follow truncated normal distributions:
 \begin{align}
-    l &\sim \mathcal{N}(0.05, 0.1), \quad 0.01 \leq l \leq 1, \\
-    Z-1 &\sim \mathcal{N}(0.5, 0.1), \quad 1.01 \leq Z \leq 1.1.
+    l &\sim \mathcal{N}(0.05, 0.1), & 0.01 \leq l \leq 1, \\
+    Z-1 &\sim \mathcal{N}(0.5, 0.1), & 1.01 \leq Z \leq 1.1.
 \end{align}
 
-The figure below demonstrates the results of a 20-step simulation for 10 firms, contrasting optimal and actual capital
-levels.  The actual capital adjusts in response to the business cycle:
-\[
-\Delta \overline{Z}_{i,t} = 1 + 0.05 \sin(t)
-\]
+The following analysis includes 100 Monte Carlo simulations of the model, during which we calculate the sample mean and
+variance for each variable. The subsequent plot \autoref{fig:optKnoE} illustrate both the overall optimal production, as defined by equation
+\ref{eq:K_bar}, and the overall actual production, presented in terms of levels. 
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{figure/OptimalK_noexit.png}
-    \caption{Illustrating a 20-step simulation of 10 firms, this plot compares the chosen optimal capital (\(k\))
+    \begin{tikzpicture}
+        \begin{axis}[
+            title={Total Production: Actual vs. Optimal},
+            xlabel={Step},
+            xmin=0,ymin=0,
+            ylabel={Total Production},
+            legend pos=north west,
+            ymajorgrids=true,
+            grid style=dashed,
+        ]
+        
+        % Import data from CSV
+        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/noexit_nofriction_stats.csv}\datatable
+        
+        % Plot mean Total_production_actual
+        \addplot [name path=mean_actual, blue, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatable};
+        \addlegendentry{Actual Mean}
+        
+        % Plot mean Total_production_optimal
+        \addplot [name path=mean_optimal, red, mark=none] table [x=Step, y=Total_Production_optimal_mean] {\datatable};
+        \addlegendentry{Optimal Mean}
+        
+        % Plot CI for Total_production_optimal as grey area
+        \addplot [name path=upper_optimal, draw=none] table [x=Step, y=Total_Production_optimal_CI_Upper] {\datatable};
+        \addplot [name path=lower_optimal, draw=none] table [x=Step, y=Total_Production_optimal_CI_Lower] {\datatable};
+        \addplot [fill=gray!40] fill between[of=upper_optimal and lower_optimal];
+        \addlegendentry{Optimal CI}
+        
+        % Plot CI for Total_production_actual as grey area
+        \addplot [name path=upper_actual, draw=none] table [x=Step, y=Total_Production_actual_CI_Upper] {\datatable};
+        \addplot [name path=lower_actual, draw=none] table [x=Step, y=Total_Production_actual_CI_Lower] {\datatable};
+        \addplot [fill=gray!40] fill between[of=upper_actual and lower_actual];
+        \addlegendentry{Actual CI}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Illustrating a 20-step simulation of 10 firms, this plot compares the chosen overall optimal output
+    (\(K\)) (red line)
     against the
-     actual capital (\(k\)) post-business cycle adjustment.}
+    overall actual capital (\(k\)) post-business cycle adjustment (blue line). The confidence intervals are set at 95\%.
+    }
     \label{fig:optKnoE}
 \end{figure}
 
@@ -2472,14 +2512,14 @@ exit mechanisms henceforth.}
 In the ensuing simulation, while all parameters remain consistent with prior examples, the distinctive feature now is
 the market exit of firms. The subsequent figure illustrates both the optimal and actual capital paths for each firm: 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.4]{figure/OptimalK_exit.png}
-    \caption{Displaying a 20-step simulation involving 10 firms: the optimal \( k \) represents the firm's capital choice,
-    whereas the actual \( k \) reflects capital post-adjustment for the business cycle
-     effect.}
-    \label{fig:optKE}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.4]{figure/OptimalK_exit.png}
+%     \caption{Displaying a 20-step simulation involving 10 firms: the optimal \( k \) represents the firm's capital choice,
+%     whereas the actual \( k \) reflects capital post-adjustment for the business cycle
+%      effect.}
+%     \label{fig:optKE}
+% \end{figure}
 
 Contrasting with previous outcomes, the introduction of an exit mechanism and the redistribution of residual
 capital—proportionate to returns, yet ensuring the new entrant retains the minimum capital from the firm
@@ -2489,45 +2529,29 @@ dynamic underscores the cleansing effect of recessions, as capital reallocation 
 business continuity. The impact of reallocation manifests in the subsequent graph, which delineates a higher
 dividends trajectory compared to scenarios devoid of reallocation mechanisms: 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.4]{figure/div_cap_exit.png}
-    \caption{This figure showcases the results of a 20-step simulation with 10 firms, highlighting dividends (\( d \))
-    and actual 
-    capital (\( k \)) following business cycle adjustments.}
-    \label{fig:divExit}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.4]{figure/div_cap_exit.png}
+%     \caption{This figure showcases the results of a 20-step simulation with 10 firms, highlighting dividends (\( d \))
+%     and actual 
+%     capital (\( k \)) following business cycle adjustments.}
+%     \label{fig:divExit}
+% \end{figure}
 
 Ultimately, examining overall production reveals an uptick attributable to capital reallocation when juxtaposed with
 prior simulations, underscoring the efficiency of the exit and reallocation strategies in fostering economic resilience
 and growth.
 
 
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[
-        title={Path of Overall Output},
-        xlabel={Time},
-        ylabel={\( K \)},
-        grid=both,
-        minor tick num=1,
-        major grid style={lightgray},
-        minor grid style={lightgray!25},
-        width=0.8\textwidth,
-        height=6cm,
-    ]
-    \addplot[blue] table [col sep=comma, x=Step, y=Total Production] {output_data/exit_nofrictions.csv}; % Blue line for exit mechanism
-    \addplot[red] table [col sep=comma, x=Step, y=Total Production] {output_data/noexit_nofrictions.csv}; % Red line for no exit mechanism
-    \legend{With Exit Mechanism, Without Exit Mechanism}
-    \end{axis}
-    \end{tikzpicture}
-    \caption{This plot illustrates a 20-step simulation involving 10 firms and demonstrates the impact of the business cycle
-    adjustments on overall output \( K \). The blue line represents the scenario incorporating an exit mechanism, whereas
-    the red line denotes the scenario without an exit mechanism, illustrating the variations in output across both
-     contexts.}
-    \label{fig:OutExit}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+    
+%     \caption{This plot illustrates a 20-step simulation involving 10 firms and demonstrates the impact of the business cycle
+%     adjustments on overall output \( K \). The blue line represents the scenario incorporating an exit mechanism, whereas
+%     the red line denotes the scenario without an exit mechanism, illustrating the variations in output across both
+%      contexts.}
+%     \label{fig:OutExit}
+% \end{figure}
 
 Integrating the exit and reallocation mechanisms notably enhances both the dividends' trajectory and the aggregate
 output, distinctly highlighting how the cleansing effect bolsters productivity. 
@@ -2544,31 +2568,31 @@ simulation is performed where capital reallocation is possible, with both iterat
 The following plot illustrates the progression of total output over time, displaying two distinct scenarios. The red
 line delineates the case without financial frictions, and the blue line portrays the scenario with frictions in place.
 
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[
-        title={Path of Overall Output},
-        xlabel={Time},
-        ylabel={K},
-        grid=both,
-        minor tick num=1,
-        major grid style={lightgray},
-        minor grid style={lightgray!25},
-        width=0.8\textwidth,
-        height=6cm,
-        legend entries={No exit, Exit},
-        legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
-    ]
-    \addplot[red, mark=square*] table [col sep=comma, x=Step, y=Total Production] {output_data/noexit_frictions.csv};
-    \addplot[blue, mark=otimes*] table [col sep=comma, x=Step, y=Total Production] {output_data/exit_frictions.csv};
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Evolution of the overall output over time. The red line represents the scenario without reallocation and
-    exit mechanisms, 
-     while the blue line represents the scenario with these mechanisms under financial frictions.}
-    \label{fig:output_evolution_frictions}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \begin{tikzpicture}
+%     \begin{axis}[
+%         title={Path of Overall Output},
+%         xlabel={Time},
+%         ylabel={K},
+%         grid=both,
+%         minor tick num=1,
+%         major grid style={lightgray},
+%         minor grid style={lightgray!25},
+%         width=0.8\textwidth,
+%         height=6cm,
+%         legend entries={No exit, Exit},
+%         legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
+%     ]
+%     \addplot[red, mark=square*] table [col sep=comma, x=Step, y=Total Production] {output_data/noexit_frictions.csv};
+%     \addplot[blue, mark=otimes*] table [col sep=comma, x=Step, y=Total Production] {output_data/exit_frictions.csv};
+%     \end{axis}
+%     \end{tikzpicture}
+%     \caption{Evolution of the overall output over time. The red line represents the scenario without reallocation and
+%     exit mechanisms, 
+%      while the blue line represents the scenario with these mechanisms under financial frictions.}
+%     \label{fig:output_evolution_frictions}
+% \end{figure}
 
 Observations indicate that financial frictions attenuate overall production, akin to an effective reduction in
 productivity when firms operate with leverage. Although the cleansing effect is evident without financial frictions, it
@@ -2576,31 +2600,31 @@ is imperative to examine whether this effect is sustained when frictions are int
 juxtaposes the overall output for two comparable financial friction scenarios: one with capital reallocation and one
 without.
 
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    \begin{axis}[
-        title={Path of Overall Output with Financial Frictions},
-        xlabel={Time},
-        ylabel={K},
-        grid=both,
-        minor tick num=1,
-        major grid style={lightgray},
-        minor grid style={lightgray!25},
-        width=0.8\textwidth,
-        height=6cm,
-        legend entries={Reallocation Allowed,No Reallocation},
-        legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
-    ]
-    \addplot[blue, mark=*] table [col sep=comma, x=Step, y=Total Production] {output_data/exit_frictions.csv};
-    \addplot[red, mark=x] table [col sep=comma, x=Step, y=Total Production] {output_data/noexit_frictions.csv};
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Comparison of overall output with financial frictions over time. The blue line illustrates the output when
-    reallocation  
-    is allowed, while the red line indicates the output when it is not.}
-    \label{fig:output_comparison_frictions}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \begin{tikzpicture}
+%     \begin{axis}[
+%         title={Path of Overall Output with Financial Frictions},
+%         xlabel={Time},
+%         ylabel={K},
+%         grid=both,
+%         minor tick num=1,
+%         major grid style={lightgray},
+%         minor grid style={lightgray!25},
+%         width=0.8\textwidth,
+%         height=6cm,
+%         legend entries={Reallocation Allowed,No Reallocation},
+%         legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
+%     ]
+%     \addplot[blue, mark=*] table [col sep=comma, x=Step, y=Total Production] {output_data/exit_frictions.csv};
+%     \addplot[red, mark=x] table [col sep=comma, x=Step, y=Total Production] {output_data/noexit_frictions.csv};
+%     \end{axis}
+%     \end{tikzpicture}
+%     \caption{Comparison of overall output with financial frictions over time. The blue line illustrates the output when
+%     reallocation  
+%     is allowed, while the red line indicates the output when it is not.}
+%     \label{fig:output_comparison_frictions}
+% \end{figure}
 Figure \ref{fig:output_comparison_frictions} demonstrates that, even under financial frictions where \(1- \mu =0.25\),
 there is a productivity-enhancing mechanism facilitated by capital reallocation due to firm exits. This occurs despite
 the presence of asymmetric information between financial intermediaries and firms, as discussed in \cite{OsePap17}.
