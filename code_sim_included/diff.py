@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # Define the paths to the two CSV files
 file_path_1 = "output_data/exit_nofriction_stats.csv"
@@ -10,24 +11,25 @@ df2 = pd.read_csv(file_path_2)
 
 # Ensure both DataFrames have the same length
 if len(df1) == len(df2):
-    # Calculate the difference between the 'Total_Production_actual' columns (mean)
-    df_diff_mean = df1["Total_Production_actual_mean"] - df2["Total_Production_actual_mean"]
+    # Calculate the log difference between the 'Total_Production_actual' columns (mean)
+    df_log_diff_mean = np.log(df1["Total_Production_actual_mean"] / df2["Total_Production_actual_mean"])
     
-    # Calculate the differences for CI upper and lower bounds
-    # Note: This calculation assumes you want the diff of bounds themselves, not the recalculation of bounds for the diff
-    df_diff_ci_upper = df1["Total_Production_actual_CI_Upper"] - df2["Total_Production_actual_CI_Upper"]
-    df_diff_ci_lower = df1["Total_Production_actual_CI_Lower"] - df2["Total_Production_actual_CI_Lower"]
+    # Calculate the log differences for CI upper and lower bounds
+    # For log differences, the bounds calculation needs adjustment to reflect the percentage change interpretation
+    df_log_diff_ci_upper = np.log(df1["Total_Production_actual_CI_Upper"] / df2["Total_Production_actual_CI_Upper"])
+    df_log_diff_ci_lower = np.log(df1["Total_Production_actual_CI_Lower"] / df2["Total_Production_actual_CI_Lower"])
     
-    # Calculate the combined SEM for the differences using the formula for the difference between two means
+    # For SEM, you might want to keep the original calculation or adjust according to your methodological preferences
+    # Here we keep the original calculation as an example
     df_diff_sem = ((df1["Total_Production_actual_SEM"] ** 2) + (df2["Total_Production_actual_SEM"] ** 2)) ** 0.5
 
-    # Create a new DataFrame to store the result including diff mean, CI bounds, and SEM
+    # Create a new DataFrame to store the result including log diff mean, CI bounds, and SEM
     df_result = pd.DataFrame({
         'Step': df1['Step'],
-        "Total_Production_actual_diff_mean": df_diff_mean,
-        "Total_Production_actual_diff_CI_Upper": df_diff_ci_upper,
-        "Total_Production_actual_diff_CI_Lower": df_diff_ci_lower,
-        "Total_Production_actual_diff_SEM": df_diff_sem,
+        "Total_Production_actual_log_diff_mean": df_log_diff_mean,
+        "Total_Production_actual_log_diff_CI_Upper": df_log_diff_ci_upper,
+        "Total_Production_actual_log_diff_CI_Lower": df_log_diff_ci_lower,
+        "Total_Production_actual_diff_SEM": df_diff_sem,  # Kept as original; consider adjustments for log interpretation
     })
 
     # Save the result to a new CSV file

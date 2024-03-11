@@ -2412,9 +2412,11 @@ is :
 \begin{equation}
     K_t = \sum_{i=0}^{N}{Z_{i,t}k_{i,t^\alpha}} \label{eq:K_bar}
 \end{equation}
-The business cycle is modeled through a sine function, impacting the productivity factor \(Z\) uniformly across all firms in the economy. Furthermore, the maximum influence the business cycles can exert on productivity is limited to 5\% of \(Z\). Consequently, the cycle is represented as follows:
+The business cycle is modeled through a sine function, impacting the productivity factor \(Z\) uniformly across all
+firms in the economy. Furthermore, the maximum influence the business cycles can exert on productivity is limited to 10\%
+of \(Z\). Consequently, the cycle is represented as follows: 
 \begin{equation}
-    \Delta Z_t = 1 + 0.05 \sin(t) \label{eq:bc}
+    \Delta Z_t = 1 + 0.1 \sin(t) \label{eq:bc}
 \end{equation}
 The firm determines an optimal level of output at time \(t_0\) for the subsequent time \(t_1\), based on equation
 \ref{eq29}. However, the actual output may deviate from this optimal level due to fluctuations in the productivity
@@ -2428,9 +2430,53 @@ Productivity (\(Z\)) and leverage (\(l\)) follow truncated normal distributions:
     Z-1 &\sim \mathcal{N}(0.5, 0.1), & 1.01 \leq Z \leq 1.1.
 \end{align}
 
-The following analysis includes 100 Monte Carlo simulations of the model, during which we calculate the sample mean and
-variance for each variable. The subsequent plot \autoref{fig:optKnoE} illustrate both the overall optimal production, as defined by equation
-\ref{eq:K_bar}, and the overall actual production, presented in terms of levels. 
+
+\subsection{The Exit Mechanism}
+
+The exit mechanism is activated if a firm's return on capital is not only below the risk-free rate but also the lowest
+compared to all other firms, necessitating its market exit. A new firm then enters the market, acquiring the minimum
+available capital from the collective pool of the existing firms. The exiting firm's capital is proportionally
+distributed among the remaining firms based on their returns on capital. Additionally, the incoming firm begins with a
+starting capital that matches the minimum from the distribution of the capitals of exiting firms. 
+
+The formula for calculating the return on capital for a firm \(i\) at time \(t\) is as follows:
+\begin{equation}
+    R_{i,t} = \frac{d_{i,t-1}}{k_{i,t}} + \frac{k_{i,t}-k_{i,t-1}}{k_{i,t}} 
+\end{equation}
+
+A firm is compelled to exit the market if its return on capital is the lowest (\( \min{R_{i,t}} \)) and is less than the
+risk-free rate (\(R_f\)). This rule is applied at each time step in the simulation.\footnote{The exit criterion is
+evaluated at every step of the simulation to determine if a firm must exit.} 
+
+
+
+\subsection{Results}
+
+In our investigation, financial frictions are integrated into the economic model, characterized by a monitoring cost
+parameter \(1-\mu = 0.25\). The aim is to discern the repercussions of such frictions on the economic dynamics. To this
+end, we conduct two distinct simulations within the environment of financial frictions: one where an economy is subject
+to an exit and capital reallocation mechanism, and another where this mechanism is absent, inhibiting the movement of
+capital. 
+
+The analysis is robust, comprising 100 Monte Carlo simulations to determine the sample mean and variance of each
+variable. Central to our inquiry is whether a recession induces a 'cleansing effect,' wherein less efficient firms exit
+the market, leading to a potential increase in aggregate productivity. Accordingly, we simulate two economic setups: one
+where firms operate without an enforced exit, and another where firms are mandated to exit under certain conditions. In
+both setups, firms face financial frictions manifested as monitoring costs, consistent with \(1-\mu=0.25\), in
+accordance with the findings presented in \cite{OsePap17}. The ensuing figures present the sample mean and 95\%
+confidence intervals for total output, comparing scenarios where exits are permitted to those where no reallocation
+occurs.
+
+Visual representation of total output over a 20-step horizon, including 100 iterations among a group of 10 firms,
+illustrates the comparative trajectories. Under financial frictions, the economy with the exit mechanism in play
+consistently registers a superior aggregate output level. This finding corroborates the notion of a market-driven
+'cleansing effect'—the process through which less productive firms are culled, freeing up resources for redistribution
+to more efficient entities. Notably, this effect is not merely sustained amidst financial frictions; it is measurably
+impactful, enhancing production output. This observed phenomenon underscores the potential for policy-driven capital
+reallocation mechanisms to bolster economic efficiency, even when financial barriers are present.
+
+
+
 
 
 \begin{figure}[H]
@@ -2439,7 +2485,7 @@ variance for each variable. The subsequent plot \autoref{fig:optKnoE} illustrate
         \begin{axis}[
             title={Total Production: Actual vs. Optimal},
             xlabel={Step},
-            xmin=1, ymin=0,
+            xmin=0, ymin=0,
             ylabel={Total Production},
             legend pos=north west,
             ymajorgrids=true,
@@ -2451,7 +2497,7 @@ variance for each variable. The subsequent plot \autoref{fig:optKnoE} illustrate
         
         % Plot mean Total_production_actual from the first dataset
         \addplot [name path=mean_actual_noexit, blue, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableNoExit};
-        \addlegendentry{Actual Mean (No Exit)}
+        \addlegendentry{\(K\) No Exit}
         
         
         % CI for Total_production_actual as grey area (No Exit)
@@ -2464,35 +2510,13 @@ variance for each variable. The subsequent plot \autoref{fig:optKnoE} illustrate
         
         % Plot mean Total_production_actual from the second dataset
         \addplot [name path=mean_actual_exit, blue!50!red, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableExit};
-        \addlegendentry{Actual Mean (Exit)}
+        \addlegendentry{\(K\) Exit}
         
         % CI for Total_production_actual as lighter grey area (Exit)
         \addplot [name path=upper_actual_exit, draw=none] table [x=Step, y=Total_Production_actual_CI_Upper] {\datatableExit};
         \addplot [name path=lower_actual_exit, draw=none] table [x=Step, y=Total_Production_actual_CI_Lower] {\datatableExit};
         \addplot [fill=gray!20] fill between[of=upper_actual_exit and lower_actual_exit];
         
-        % Plot differences with error bars from diff.csv
-        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/diff.csv}\datatableDiff
-        \addplot+ [
-            black, % Color of the line
-            mark=none, % No marks at data points; use mark=* if you want marks
-            line width=1pt, % Adjust line width as needed
-            error bars/.cd,
-            y dir=both, y explicit,
-            error bar style={color=black},
-            error mark options={
-                rotate=90,
-                mark size=2pt, % Adjust size of the marks at the tips of the error bars
-                color=black
-            }
-        ] table [
-            x=Step,
-            y=Total_Production_actual_diff_mean,
-            y error plus expr=\thisrow{Total_Production_actual_diff_CI_Upper}-\thisrow{Total_Production_actual_diff_mean},
-            y error minus expr=\thisrow{Total_Production_actual_diff_mean}-\thisrow{Total_Production_actual_diff_CI_Lower}
-        ] {\datatableDiff};
-
-
         
         \end{axis}
     \end{tikzpicture}
@@ -2504,202 +2528,69 @@ variance for each variable. The subsequent plot \autoref{fig:optKnoE} illustrate
     \label{fig:optKnoE}
 \end{figure}
 
-Following this, the distribution of dividends, based on actual capital, is visualized:
-\begin{figure}[H]
+The presence of a forced reallocation mechanism contributes to a higher overall capital (\(k\)) at each step,
+substantiating the notion that a cleansing effect persists even amidst financial frictions, resulting in greater
+production compared to scenarios where firms are barred from exiting. Evidently, these variations in overall capital are
+markedly pro-cyclical, aligning with the findings in \cite{DavHalt92}.
+In the subsequent figure \ref{fig:output_comparison_frictions}, we delve into the nuances of this impact by examining the mean log difference in total
+production between the two scenarios, accompanied by a 95\% confidence interval.  The data underscores a positive and
+a statistically significant difference in overall output, indicative of the beneficial role played by the exit mechanism
+in the context of financial frictions. This effect echoes the theoretical insights discussed earlier, where the exit
+mechanism serves as a pivotal driver of economic efficiency and productivity.
+\begin{figure}
     \centering
     \begin{tikzpicture}
         \begin{axis}[
-            title={Total Production: Actual vs. Optimal},
+            title={Difference in \(K\): exit vs noexit},
             xlabel={Step},
-            xmin=1, ymin=0,
-            ylabel={Total Production},
+            xmin=0, ymin=0,
+            ylabel={K},
             legend pos=north west,
             ymajorgrids=true,
             grid style=dashed,
         ]
         
-       
-        
         % Plot differences with error bars from diff.csv
         \pgfplotstableread[col sep=comma, row sep=newline]{output_data/diff.csv}\datatableDiff
         \addplot+ [
-            black, % Color of the line
-            mark=none, % No marks at data points; use mark=* if you want marks
-            line width=1pt, % Adjust line width as needed
+            black, mark=*, mark options={fill=black},
             error bars/.cd,
             y dir=both, y explicit,
             error bar style={color=black},
             error mark options={
                 rotate=90,
-                mark size=2pt, % Adjust size of the marks at the tips of the error bars
+                mark size=3pt,
                 color=black
             }
         ] table [
             x=Step,
-            y=Total_Production_actual_diff_mean,
-            y error plus expr=\thisrow{Total_Production_actual_diff_CI_Upper}-\thisrow{Total_Production_actual_diff_mean},
-            y error minus expr=\thisrow{Total_Production_actual_diff_mean}-\thisrow{Total_Production_actual_diff_CI_Lower}
+            y=Total_Production_actual_log_diff_mean,
+            y error plus expr=\thisrow{Total_Production_actual_log_diff_CI_Upper}-\thisrow{Total_Production_actual_log_diff_mean},
+            y error minus expr=\thisrow{Total_Production_actual_log_diff_mean}-\thisrow{Total_Production_actual_log_diff_CI_Lower}
         ] {\datatableDiff};
-
-        \addlegendentry{Difference with CI}
+        \addlegendentry{\(K_E - K_NE\) with CI}
         
         \end{axis}
     \end{tikzpicture}
-    \caption{Displaying a 20-step simulation for 10 firms, this plot highlights dividends (\( d \)) and the actual capital
-    (\(k\)) after business cycle
-     adjustments.}
-    \label{fig:divNoExit}
-\end{figure}
+    \caption{The graph depicts the log difference in total output \(K\) between two economies over a 20-step simulation
+    with 100 iterations for 10 firms each. In one economy, underperforming firms are allowed to exit and their capital
+    is reallocated, while in the other, there is no exit mechanism in place. Both economies experience financial
+    frictions characterized by monitoring costs (\(1-\mu=0.25\)) and maintain fixed leverage. The data presented above
+    illustrates a positive and statistically significant difference in overall output; the economy with an exit
+    mechanism consistently demonstrates a higher level of total output.} 
 
-Figure \ref{fig:divNoExit} distinctly shows that firms with superior productivity yield higher dividends. Moreover, upon
-achieving a steady state, both capital and dividends exhibit oscillations around a rising mean. 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.4]{figure/Output_noexit.png}
-    \caption{Showcasing a 20-step simulation of 10 firms, this plot reveals the adjusted output (\( K \)) following the business cycle impact.}
-    \label{fig:OutNoExit}
+    \label{fig:output_comparison_frictions}
 \end{figure}
 
 
-\subsection{The Exit Mechanism}
-
-A firm is prompted to exit the market if its return on capital ranks as the lowest within the firm distribution, making
-way for a newcomer who inherits the minimum capital from the existing pool. Subsequently, the exiting firm's capital is
-reallocated proportionally among the remaining firms, based on their respective returns on capital. The return on
-capital for firm \( i \) at time \( t \) is defined as: 
-\begin{equation}
-    R_{i,t} = \frac{d_{i,t-1}}{k_{i,t}} + \frac{k_{i,t}-k_{i,t-1}}{k_{i,t}} 
-\end{equation}
-
-
-Should a firm exhibit the \( \min{R} \), it is compelled to exit the market due to possessing the lowest return on capital
-among all firms.\footnote{This criterion is enforced at each step, effectively merging the concepts of reallocation and
-exit mechanisms henceforth.} 
-
-In the ensuing simulation, while all parameters remain consistent with prior examples, the distinctive feature now is
-the market exit of firms. The subsequent figure illustrates both the optimal and actual capital paths for each firm: 
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[scale=0.4]{figure/OptimalK_exit.png}
-%     \caption{Displaying a 20-step simulation involving 10 firms: the optimal \( k \) represents the firm's capital choice,
-%     whereas the actual \( k \) reflects capital post-adjustment for the business cycle
-%      effect.}
-%     \label{fig:optKE}
-% \end{figure}
-
-Contrasting with previous outcomes, the introduction of an exit mechanism and the redistribution of residual
-capital—proportionate to returns, yet ensuring the new entrant retains the minimum capital from the firm
-distribution—markedly influences capital trajectory. These mechanisms facilitate incumbent firms in accruing additional
-capital, thus hastening their approach to a stationary state, particularly benefiting the most productive entities. This
-dynamic underscores the cleansing effect of recessions, as capital reallocation during economic downturns favors
-business continuity. The impact of reallocation manifests in the subsequent graph, which delineates a higher
-dividends trajectory compared to scenarios devoid of reallocation mechanisms: 
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[scale=0.4]{figure/div_cap_exit.png}
-%     \caption{This figure showcases the results of a 20-step simulation with 10 firms, highlighting dividends (\( d \))
-%     and actual 
-%     capital (\( k \)) following business cycle adjustments.}
-%     \label{fig:divExit}
-% \end{figure}
-
-Ultimately, examining overall production reveals an uptick attributable to capital reallocation when juxtaposed with
-prior simulations, underscoring the efficiency of the exit and reallocation strategies in fostering economic resilience
-and growth.
-
-
-% \begin{figure}[H]
-%     \centering
-    
-%     \caption{This plot illustrates a 20-step simulation involving 10 firms and demonstrates the impact of the business cycle
-%     adjustments on overall output \( K \). The blue line represents the scenario incorporating an exit mechanism, whereas
-%     the red line denotes the scenario without an exit mechanism, illustrating the variations in output across both
-%      contexts.}
-%     \label{fig:OutExit}
-% \end{figure}
-
-Integrating the exit and reallocation mechanisms notably enhances both the dividends' trajectory and the aggregate
-output, distinctly highlighting how the cleansing effect bolsters productivity. 
-
-
-\subsection{Incorporating Financial Frictions into the Model}
-
-
-In keeping with the methodology set forth in \cite{OsePap17}, financial frictions are incorporated into the model,
-parameterized as  \(1-\mu = 0.25\). To discern the cleansing effect amidst financial frictions, an initial simulation is
-run where capital remains static due to the absence of a reallocation or exit mechanism. Subsequently, a contrasting
-simulation is performed where capital reallocation is possible, with both iterations subjected to financial frictions.
-
-The following plot illustrates the progression of total output over time, displaying two distinct scenarios. The red
-line delineates the case without financial frictions, and the blue line portrays the scenario with frictions in place.
-
-% \begin{figure}[H]
-%     \centering
-%     \begin{tikzpicture}
-%     \begin{axis}[
-%         title={Path of Overall Output},
-%         xlabel={Time},
-%         ylabel={K},
-%         grid=both,
-%         minor tick num=1,
-%         major grid style={lightgray},
-%         minor grid style={lightgray!25},
-%         width=0.8\textwidth,
-%         height=6cm,
-%         legend entries={No exit, Exit},
-%         legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
-%     ]
-%     \addplot[red, mark=square*] table [col sep=comma, x=Step, y=Total Production] {output_data/noexit_frictions.csv};
-%     \addplot[blue, mark=otimes*] table [col sep=comma, x=Step, y=Total Production] {output_data/exit_frictions.csv};
-%     \end{axis}
-%     \end{tikzpicture}
-%     \caption{Evolution of the overall output over time. The red line represents the scenario without reallocation and
-%     exit mechanisms, 
-%      while the blue line represents the scenario with these mechanisms under financial frictions.}
-%     \label{fig:output_evolution_frictions}
-% \end{figure}
-
-Observations indicate that financial frictions attenuate overall production, akin to an effective reduction in
-productivity when firms operate with leverage. Although the cleansing effect is evident without financial frictions, it
-is imperative to examine whether this effect is sustained when frictions are introduced. To this end, the subsequent plot
-juxtaposes the overall output for two comparable financial friction scenarios: one with capital reallocation and one
-without.
-
-% \begin{figure}[H]
-%     \centering
-%     \begin{tikzpicture}
-%     \begin{axis}[
-%         title={Path of Overall Output with Financial Frictions},
-%         xlabel={Time},
-%         ylabel={K},
-%         grid=both,
-%         minor tick num=1,
-%         major grid style={lightgray},
-%         minor grid style={lightgray!25},
-%         width=0.8\textwidth,
-%         height=6cm,
-%         legend entries={Reallocation Allowed,No Reallocation},
-%         legend style={at={(0.5,-0.2)},anchor=north,legend cell align=left}
-%     ]
-%     \addplot[blue, mark=*] table [col sep=comma, x=Step, y=Total Production] {output_data/exit_frictions.csv};
-%     \addplot[red, mark=x] table [col sep=comma, x=Step, y=Total Production] {output_data/noexit_frictions.csv};
-%     \end{axis}
-%     \end{tikzpicture}
-%     \caption{Comparison of overall output with financial frictions over time. The blue line illustrates the output when
-%     reallocation  
-%     is allowed, while the red line indicates the output when it is not.}
-%     \label{fig:output_comparison_frictions}
-% \end{figure}
 Figure \ref{fig:output_comparison_frictions} demonstrates that, even under financial frictions where \(1- \mu =0.25\),
 there is a productivity-enhancing mechanism facilitated by capital reallocation due to firm exits. This occurs despite
 the presence of asymmetric information between financial intermediaries and firms, as discussed in \cite{OsePap17}.
 Furthermore, the cleansing effect on overall production appears to be cumulative, with its impact amplifying over time,
 as evidenced by the trend in the graph. Thus, it can be concluded that two economies, identical in their distribution of
-productivity and capital among firms and initialized with the same seed\footnote{All simulations were conducted with the
-same seed for consistency.}, will diverge in terms of output and productivity if one allows for capital reallocation
+productivity and capital among firms will diverge in terms of output and productivity if one allows for capital reallocation
 through firm exits. This divergence is not only distinct but also grows as time progresses. 
+
 \medskip
 \bibliography{reference}
 

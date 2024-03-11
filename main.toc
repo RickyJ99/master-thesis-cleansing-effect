@@ -33,5 +33,5 @@
 \contentsline {section}{\numberline {3.5}Finding optimal path}{73}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Simulation Study}{77}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Heterogeneity and Aggregation Mechanism}{81}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}The Exit Mechanism}{85}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Incorporating Financial Frictions into the Model}{86}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.2}The Exit Mechanism}{82}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Results}{83}{subsection.3.6.3}%

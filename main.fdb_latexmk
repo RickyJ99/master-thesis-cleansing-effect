@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1710181946 "main.aux" "main.bbl" "main" 1710184811 0
+["bibtex main"] 1710193950 "main.aux" "main.bbl" "main" 1710194357 0
   "./reference.bib" 1707833219 24211 9c9a5dc4ae84408f0e7bada1ed53a26b ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "main.aux" 1710184807 31414 4cc8e2b415d8676cc60de57615d22a87 "xelatex"
+  "main.aux" 1710194353 31925 d6b40779d5cbc377befdce1a9f2a8c1e "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1710184808 "main.xdv" "main.pdf" "main" 1710184811 0
-  "main.xdv" 1710184807 2190848 dce94a03428a4c774b523968b8558a14 "xelatex"
+["xdvipdfmx"] 1710194354 "main.xdv" "main.pdf" "main" 1710194357 0
+  "main.xdv" 1710194353 1862504 af75cf907ab12dd949ce8caf904283e2 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1710184793 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" "main.xdv" "main" 1710184811 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" 1710184793 156211 b622cbbbcd27dcc33c689f93a303d271 ""
+["xelatex"] 1710194342 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" "main.xdv" "main" 1710194357 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" 1710194341 151857 bfbf9d731893b006ee099fa25a3a9c80 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -232,18 +232,17 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "figure/Output_noexit.png" 1708183309 40669 2d8928a6a8f66d25851e7c624642fc92 ""
   "figure/Plot2.1.png" 1705069830 736899 1a6b59caf671966e8f0aaf9a8eb31110 ""
   "figure/Plot2.2.png" 1705072685 620735 f49d9e6e00cd21dac4a1a4f2602bf03b ""
   "figure/Plot2.3.png" 1705308692 231481 97634c4666632841e59ce6b5a0aa660c ""
   "figure/Plot2.4.png" 1705320086 180321 7445abad82723d3fed79460063a4588a ""
   "figure/Plot2.5.png" 1706091819 228182 d5205c6f5c2e5056424ea485d3fe1789 ""
-  "main.aux" 1710184807 31414 4cc8e2b415d8676cc60de57615d22a87 "xelatex"
-  "main.bbl" 1710181946 5418 5c3206039e0bd7f50bbdf09577f92363 "bibtex main"
-  "main.out" 1710184807 5189 5b0d4a19cbb8165e2d8b2f775cf9903d "xelatex"
-  "main.tex" 1710184793 156211 b622cbbbcd27dcc33c689f93a303d271 ""
-  "main.toc" 1710184807 3172 c1ccbf3cc42033eb61b5648e8804eac6 "xelatex"
-  "output_data/diff.csv" 1710181598 16098 aed2f7a4bf5029382a5b05045a918e55 ""
+  "main.aux" 1710194353 31925 d6b40779d5cbc377befdce1a9f2a8c1e "xelatex"
+  "main.bbl" 1710193950 5418 5c3206039e0bd7f50bbdf09577f92363 "bibtex main"
+  "main.out" 1710194353 4969 76d8e12dc34c26f8cbd221b78f04aae5 "xelatex"
+  "main.tex" 1710194341 151857 bfbf9d731893b006ee099fa25a3a9c80 ""
+  "main.toc" 1710194353 3131 1dbdc4446ad294b3f86738c4fbaf6558 "xelatex"
+  "output_data/diff.csv" 1710191833 17230 3b8e0d7951304d662090b3248b223b35 ""
   "output_data/exit_nofriction_stats.csv" 1710178841 102752 b45ea66d601913fd70e7c53dd5902d27 ""
   "output_data/noexit_nofriction_stats.csv" 1710178271 102161 538b41d261a14dfde011662d5b515e2f ""
   "output_data/simulation.csv" 1710146702 1614 f72656526dbc46abdbd0ba1f4d95e79b ""
