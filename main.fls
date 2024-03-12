@@ -1036,13 +1036,7 @@ INPUT output_data/simulation_withoutfriction.csv
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT output_data/noexit_nofriction_stats.csv
-INPUT output_data/exit_nofriction_stats.csv
+INPUT output_data/noexit_friction_stats.csv
+INPUT output_data/exit_friction_stats.csv
+INPUT output_data/diff_fri.csv
 INPUT output_data/diff.csv
-INPUT ./main.bbl
-INPUT main.bbl
-INPUT ./main.bbl
-INPUT main.bbl
-INPUT main.aux
-INPUT ./main.out
-INPUT ./main.out

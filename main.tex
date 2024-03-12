@@ -65,8 +65,7 @@
 \maketitle
 
 \begin{abstract}
-    The main idea is to study how and whether the asymmetry of information have an impact on the cleansing effect of
-    recession, replicating the model in computer  simulation.
+    
 \end{abstract}
 
 \tableofcontents
@@ -90,13 +89,13 @@ recessions. A key inquiry here is the investigation of policy interventions, suc
 potential effect in attenuating the 'cleansing effect' of recessions. This exploration is pivotal in understanding
 whether such policies might inadvertently lead to a reduced economic baseline or steady state in the long term. 
  
-The conceptual foundation of this investigation is inspired by an ecological analogy the cyclical dynamics observed
+The conceptual foundation of this investigation is inspired by an ecological analogy of the cyclical dynamics observed
 between predator and prey populations in nature. This natural cycle, when observed over extended periods, reveals not
 just self-contained oscillations but also underlying trends of population growth for both predators and prey. This
 observation leads to a compelling analogy for economic cycles: while they appear as short-term fluctuations, they might
 be underpinned by long-term growth trajectories. 
 
-In natural ecosystems, interventions aimed at stabilizing these cycles  such as protecting prey during times of
+In natural ecosystems, interventions aimed at stabilizing these cycles such as protecting prey during times of
 increased predation might seem beneficial in the short term. However, such interventions often neglect the critical and
 natural process of selection. This interference disrupts evolutionary mechanisms, potentially leading to unforeseen
 consequences over time, such as the propagation of traits detrimental to the species' survival and adaptability in
@@ -371,8 +370,8 @@ The model in question is a vintage model that simulates an industry experiencing
 Within this model, production units are constructed using a fixed proportion of labor and capital, and they are
 continually being created and phased out. Notice that only the creation of new production units
 incurs a cost. This simplification is plausible, particularly in the context of the United States, where the expense
-associated with hiring is typically higher than the cost of termination, as demonstrated by Abdulkadiroğlu and Kranton
-(2003) \cite{AbdKra03}. 
+associated with hiring is typically higher than the cost of termination, as demonstrated by 
+ \cite{AbdKra03}. 
 \par
 In this model, when a production unit is created at a specific time \(t_0\), it embodies the most advanced technology
 available at that moment and consistently generates a uniform output represented by \(A(t_0)\) throughout its
@@ -1325,13 +1324,13 @@ former influencing the firm's financial leverage and the latter determining its 
 
 
 
-\section{Ramsey-Cass-Kooopmans reinterpreted}
+\section{Ramsey-Cass-Koopmans reinterpreted}
 This section outlines the intertemporal maximization problem faced by the firm in the absence of debt, which is a
-Ramsey-Cass-Kooopmans revisited model, where there is a firm that seeks to maximize the utility of dividends consumption of the shareholders.
+Ramsey-Cass-Koopmans revisited model, where there is a firm that seeks to maximize the utility of consumption of the
+shareholders (= dividends).
 The objective function is:
 \[V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)},\]
 where \(U^{\prime}>0, U^{\prime \prime}<0\).
-\subsection{Steady State derivation}
 Let's assume that the firm's investment is entirely financed by equity (\(b_t=0\)  for all \(t\)), this leads to a simplified flow-of-funds constraint equation:
 \begin{align}
     k_{t+1} = k_{t}(1 - \delta) + f(k_{t}) - d_{t}.  \label{eq13}
@@ -1372,7 +1371,7 @@ This condition is satisfied if:
 \begin{align}
     f^{\prime}(k_{t+1}) &= \frac{1}{\beta} - (1-\delta), 
 \end{align}
-Using the Cobb Douglas production function and take the derivative respect to capital, we get:
+Using the Cobb Douglas production function and taking the derivative with respect to capital, we get:
 \begin{align}
     f^{\prime}(k_{t+1}) &= Z \alpha k^{\alpha-1}_{t+1},  \label{eq15'}
 \end{align}
@@ -1547,7 +1546,7 @@ If the firm distributes more dividends than \(d_0\) the capital stock must decre
 dividends are too high the firm is consuming part of her capital. More precisely the firm is distributing more dividends than
 \(d_0\), which guarantees that the difference between production, and dividends is exactly equal to the replacement of
 depreciated capital.
-This behavior is represented by the arrows above the curve pointing to the left. If the firm distributes less
+This behavior is represented by the arrows above the curve pointing to the left. If the firm distributes fewer
 dividends than \(d_0\), the opposite happens: the firm increases its capital since there is a positive net
 investment. This behavior is represented by
 the arrows below the curve pointing toward the right. 
@@ -1623,9 +1622,9 @@ Plotting both loci we get a phase diagram that represents the condition for stat
     Point B indicates the equilibrium where both dividends and capital are stationary, with the steady-state capital at
     \( \hat{k} \). This value of \( \hat{k} \) is notably lower than \( \underline{k} \), which is the capital level
     that would maximize dividends while maintaining a steady capital stock. \( \bar{k} \) represents the capital
-    quantity at which the system reaches a stationary state for k with zero dividends. The arrows illustrates the dynamics of dividends and capital in case of the firm finding itself outside the stable
+    quantity at which the system reaches a stationary state for k with zero dividends. The arrows illustrate the dynamics of dividends and capital in case of the firm finding itself outside the stable
     loci. Point A is a possible starting point (\(k_0,d_0\)). 
-    The blue arrows indicate a potential trajectory, known as a saddlepath, leading towards the saddlepoint B. 
+    The blue arrows indicate a potential trajectory, known as a saddlepath, leading towards saddlepoint B. 
     }
     \label{fig:ph_d_nodebt}
 \end{figure}
@@ -1645,14 +1644,14 @@ state, where output \(\hat{y}\) is given by \(f(\hat{k})\), the production level
 productivity parameter \(Z\), signifying that financial elements do not alter the fundamental connection between the
 production function and output. 
 
-\section{Introducing financial frictions}
+\chapter{Introducing financial frictions}
 In this section we tackle the maximization problem of the firm, introducing the possibility of financing through
 debt and two types of financial frictions. The first financial friction is a financing constraint, which implies fixed
 leverage for the firm. The second financial friction is introducing a participation
 constraint with monitoring cost for the financial intermediaries. The goal is to understand how those frictions
 affect the steady state of capital and dividends.
 
-\subsection{Participation constraint of the financial intermediaries } 
+\section{Participation constraint of the financial intermediaries } 
 The subsection delves into the constraints facing financial intermediaries within the model. Initially, the model assumed an exogenous
 interest rate, unaffected by the volume of debt, leading to an unrealistic scenario where interest rates remain
 constant.  To address this,  the model incorporates a financial market in which the interest rate is set based on
@@ -1706,7 +1705,7 @@ The breakeven threshold for \( R_t \), where the return on the loan is nonnegati
     R_f b_t \geq b_t  p +(1-p) \mu  f(k_t). 
 \end{align}
 This inequality dictates that to achieve a return rate on the loan that is greater than or equal to one, the opportunity
-cost of capital must be greater than expected profit from the firm's production, adjusted for default probability and asset
+cost of capital must be greater than the expected profit from the firm's production, adjusted for default probability and asset
 recoverability post-default. This ensures the lender receives a return that compensates for the risk undertaken,
 juxtaposed with the risk-free alternative.
 Let's present a specific scenario for clarity: Imagine we have a constant capital level \(k\), and the recovery rate in
@@ -1720,10 +1719,11 @@ profit, denoted by \(p\). For the first firm, \(p\) is 0.95, suggesting a 5\% de
 drops to 0.9, indicating a higher default risk of 10\%. The graphical representation suggests that as debt levels
 increase, so do interest rates, reflecting the risk-return dilemma for lenders. A higher risk profile, denoted by a more
 elevated red line necessitates greater returns to compensate for default risks. It's important to note that while the
-the graph assumes constant capital, real-world scenarios often see debt increases leading to higher capital and,
+graph assumes constant capital, real-world scenarios often see debt increases leading to higher capital and,
 consequently, greater production capacities.
 
-The analysis indicates that the blue curve, representing the rate of return for a riskier firm, is positioned above the red curve under a specific condition:
+The analysis indicates that the blue curve, representing the rate of return for a riskier firm, is positioned above the
+red curve under a specific condition:
 
 \begin{equation}
     \mu f(k_t) < R_f b_t
@@ -1913,7 +1913,7 @@ financial leverage influences and is influenced by the cost of borrowing.
 
 
 
-\subsection{The problem of the firm in presence of financial frictions}
+\section{The problem of the firm in the presence of financial frictions}
  The firm's objective is to maximize:
 
 \[
@@ -1994,7 +1994,7 @@ observed in the scenario without debt \ref{eq17}.
 
 
 
-\subsection{Phase diagram}
+\section{Phase diagram}
 The goal of this section is to portray the phase diagram in two cases: one with monitoring costs and one without.
 However, we will use a less heuristic approach compared to the phase diagram of the free debt case, using  parameters similar to \cite{OsePap17}:
 \begin{table}[H]
@@ -2383,11 +2383,11 @@ Additionally, Figure \ref{fig:dividendsEvolution} illustrates the optimal divide
     \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
-    \caption{The plot depicts the optimal path for dividends following equation \ref{eq31}. The red line, which is above
-    the blue line for all periods, represents the optimal path toward the steady state level, in absence of
-    monitoring costs. While the optimal trajectory for the firm facing 25\% of monitoring cost is depicted by the blue
-    line. All the other parameters, exception for monitoring cost, are left equal. Clearly monitoring costs affects
-    affects the steady state by lowering it.}
+    \caption{The figure illustrates the optimal trajectory of dividends as derived from equation \ref{eq31}. Here, the
+    red line, consistently above the blue across all periods, indicates the optimal progression toward the steady-state
+    level when monitoring costs are not factored in. In contrast, the blue line represents the trajectory under the
+    influence of a 25\% monitoring cost. With all other parameters held constant, it is evident that monitoring costs
+    exert a downward pressure on the steady-state level of dividends.}
     \label{fig:dividendsEvolution}
 \end{figure}
 
@@ -2399,11 +2399,14 @@ dissect the broader implications of financial frictions on overall output. This 
 with and without financial frictions, with a particular focus on the cleansing effect that such frictions may exert in
 economic systems. Through this comparative approach, we aim to deepen our understanding of how financial frictions
 influence economic resilience, performance, and the potential for innovation and growth amidst challenges. 
-Next, we will simulate an economy with heterogeneous agents to assess the overall output in environments with and without financial frictions. This analysis aims to explore the cleansing effect of financial frictions, providing insights into their influence on economic performance and growth potential.
+Next, we will simulate an economy with heterogeneous agents to assess the overall output in environments with and
+without financial frictions. This analysis aims to explore the cleansing effect of financial frictions, providing
+insights into their influence on economic performance and growth potential.
 
 \subsection{Heterogeneity and Aggregation Mechanism}
 
-To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity.  Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
+To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity.
+Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
 the model. Additionally, we diversify leverage ratios, ensuring no direct correlation between a firm's productivity and
 its leverage. This heterogeneity is captured from the outset by simulating the initial distribution of capital,
 leverage, and productivity, setting the stage for a dynamic interplay of firm characteristics. The aggregate output at
@@ -2437,7 +2440,7 @@ The exit mechanism is activated if a firm's return on capital is not only below 
 compared to all other firms, necessitating its market exit. A new firm then enters the market, acquiring the minimum
 available capital from the collective pool of the existing firms. The exiting firm's capital is proportionally
 distributed among the remaining firms based on their returns on capital. Additionally, the incoming firm begins with a
-starting capital that matches the minimum from the distribution of the capitals of exiting firms. 
+starting capital that matches the minimum from the distribution of the capital of exiting firms. 
 
 The formula for calculating the return on capital for a firm \(i\) at time \(t\) is as follows:
 \begin{equation}
@@ -2453,7 +2456,7 @@ evaluated at every step of the simulation to determine if a firm must exit.}
 \subsection{Results}
 
 In our investigation, financial frictions are integrated into the economic model, characterized by a monitoring cost
-parameter \(1-\mu = 0.25\). The aim is to discern the repercussions of such frictions on the economic dynamics. To this
+parameter \(1-\mu = 0.15\). The aim is to discern the repercussions of such frictions on the economic dynamics. To this
 end, we conduct two distinct simulations within the environment of financial frictions: one where an economy is subject
 to an exit and capital reallocation mechanism, and another where this mechanism is absent, inhibiting the movement of
 capital. 
@@ -2462,8 +2465,7 @@ The analysis is robust, comprising 100 Monte Carlo simulations to determine the 
 variable. Central to our inquiry is whether a recession induces a 'cleansing effect,' wherein less efficient firms exit
 the market, leading to a potential increase in aggregate productivity. Accordingly, we simulate two economic setups: one
 where firms operate without an enforced exit, and another where firms are mandated to exit under certain conditions. In
-both setups, firms face financial frictions manifested as monitoring costs, consistent with \(1-\mu=0.25\), in
-accordance with the findings presented in \cite{OsePap17}. The ensuing figures present the sample mean and 95\%
+both setups, firms face financial frictions manifested as monitoring costs, consistent with \(1-\mu=0.15\). The ensuing figures present the sample mean and 95\%
 confidence intervals for total output, comparing scenarios where exits are permitted to those where no reallocation
 occurs.
 
@@ -2485,7 +2487,7 @@ reallocation mechanisms to bolster economic efficiency, even when financial barr
         \begin{axis}[
             title={Total Production: Actual vs. Optimal},
             xlabel={Step},
-            xmin=0, ymin=0,
+            xmin=1, ymin=0,
             ylabel={Total Production},
             legend pos=north west,
             ymajorgrids=true,
@@ -2493,7 +2495,7 @@ reallocation mechanisms to bolster economic efficiency, even when financial barr
         ]
         
         % Import data from the first CSV (noexit_nofriction_stats.csv)
-        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/noexit_nofriction_stats.csv}\datatableNoExit
+        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/noexit_friction_stats.csv}\datatableNoExit
         
         % Plot mean Total_production_actual from the first dataset
         \addplot [name path=mean_actual_noexit, blue, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableNoExit};
@@ -2506,7 +2508,7 @@ reallocation mechanisms to bolster economic efficiency, even when financial barr
         \addplot [fill=gray!40] fill between[of=upper_actual_noexit and lower_actual_noexit];
         
         % Import data from the second CSV (exit_nofriction_stats.csv)
-        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/exit_nofriction_stats.csv}\datatableExit
+        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/exit_friction_stats.csv}\datatableExit
         
         % Plot mean Total_production_actual from the second dataset
         \addplot [name path=mean_actual_exit, blue!50!red, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableExit};
@@ -2543,7 +2545,7 @@ mechanism serves as a pivotal driver of economic efficiency and productivity.
         \begin{axis}[
             title={Difference in \(K\): exit vs noexit},
             xlabel={Step},
-            xmin=0, ymin=0,
+            xmin=1, ymin=0,
             ylabel={K},
             legend pos=north west,
             ymajorgrids=true,
@@ -2551,9 +2553,28 @@ mechanism serves as a pivotal driver of economic efficiency and productivity.
         ]
         
         % Plot differences with error bars from diff.csv
+        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/diff_fri.csv}\datatableDifffri
+        \addplot+ [
+            red, mark=*, mark options={fill=black},
+            error bars/.cd,
+            y dir=both, y explicit,
+            error bar style={color=black},
+            error mark options={
+                rotate=90,
+                mark size=3pt,
+                color=black
+            }
+        ] table [
+            x=Step,
+            y=Total_Production_actual_log_diff_mean,
+            y error plus expr=\thisrow{Total_Production_actual_log_diff_CI_Upper}-\thisrow{Total_Production_actual_log_diff_mean},
+            y error minus expr=\thisrow{Total_Production_actual_log_diff_mean}-\thisrow{Total_Production_actual_log_diff_CI_Lower}
+        ] {\datatableDifffri};
+        \addlegendentry{\(K_E - K_NE\) with \(\mu=0.85\)}
+        
         \pgfplotstableread[col sep=comma, row sep=newline]{output_data/diff.csv}\datatableDiff
         \addplot+ [
-            black, mark=*, mark options={fill=black},
+            blue, mark=*, mark options={fill=black},
             error bars/.cd,
             y dir=both, y explicit,
             error bar style={color=black},
@@ -2568,41 +2589,100 @@ mechanism serves as a pivotal driver of economic efficiency and productivity.
             y error plus expr=\thisrow{Total_Production_actual_log_diff_CI_Upper}-\thisrow{Total_Production_actual_log_diff_mean},
             y error minus expr=\thisrow{Total_Production_actual_log_diff_mean}-\thisrow{Total_Production_actual_log_diff_CI_Lower}
         ] {\datatableDiff};
-        \addlegendentry{\(K_E - K_NE\) with CI}
-        
+        \addlegendentry{\(K_E - K_NE\) with \(\mu=1\)}
         \end{axis}
     \end{tikzpicture}
-    \caption{The graph depicts the log difference in total output \(K\) between two economies over a 20-step simulation
-    with 100 iterations for 10 firms each. In one economy, underperforming firms are allowed to exit and their capital
-    is reallocated, while in the other, there is no exit mechanism in place. Both economies experience financial
-    frictions characterized by monitoring costs (\(1-\mu=0.25\)) and maintain fixed leverage. The data presented above
-    illustrates a positive and statistically significant difference in overall output; the economy with an exit
-    mechanism consistently demonstrates a higher level of total output.} 
+    \caption{The graph presents the percentage difference in total output between two economic scenarios: one with firm
+    exit and capital reallocation and another with no firm exit, with a consideration of monitoring costs. The red line
+    indicates economies where monitoring costs amount to 15\% of recoverable assets (\(1-\mu=0.15\)), and the blue line
+    represents economies without monitoring costs (\(1-\mu=0\)). The 'cleansing effect' of market exit on overall output
+    is depicted by the difference between these lines. In the absence of monitoring costs, the cleansing effect results
+    in a 20\% increase in output, while in the presence of monitoring costs, the increase in output is positive but
+    smaller, at approximately 10\%. Additionally, the error bars indicate a 95\% confidence interval (CI), highlighting
+    the statistical reliability of the observed differences.}
+
 
     \label{fig:output_comparison_frictions}
 \end{figure}
 
 
-Figure \ref{fig:output_comparison_frictions} demonstrates that, even under financial frictions where \(1- \mu =0.25\),
+Figure \ref{fig:output_comparison_frictions} demonstrates that, even under financial frictions where \(1- \mu =0.15\),
 there is a productivity-enhancing mechanism facilitated by capital reallocation due to firm exits. This occurs despite
 the presence of asymmetric information between financial intermediaries and firms, as discussed in \cite{OsePap17}.
 Furthermore, the cleansing effect on overall production appears to be cumulative, with its impact amplifying over time,
 as evidenced by the trend in the graph. Thus, it can be concluded that two economies, identical in their distribution of
 productivity and capital among firms will diverge in terms of output and productivity if one allows for capital reallocation
-through firm exits. This divergence is not only distinct but also grows as time progresses. 
+through firm exits. 
 
+\chapter{Conclusions}
+
+This thesis develops a theoretical model that provides a closed-form solution for the intertemporal optimization problem
+faced by firms operating under financial frictions. It integrates financing through retained earnings, as conceptualized
+in the Ramsey-Cass-Koopmans model, and debt. The analysis begins with the application of Lagrangian methods to determine
+the steady state, followed by the employment of the Bellman equation, combined with guess and verify methods, to derive
+solutions for capital and dividends over an infinite horizon. This approach allows for a detailed examination of
+financial frictions, including monitoring costs and financing constraints, and their effects on firms' optimal
+strategies for capital accumulation and dividend distribution. Through this methodology, the thesis advances the
+understanding of how financial frictions influence firm behavior and decision-making processes related to capital and
+dividends. Drawing upon parameterization aligned with the study
+by
+\cite{OsePap17}, our analysis reveals that monitoring costs amounting to 25\% of recoverable assets significantly
+diminish the steady-state level of capital by as much as 69\%. This finding underscores the substantial influence of
+financial frictions on firm dynamics and asset valuation.
+
+Further, through the application of Monte Carlo simulations to a heterogeneously composed firm population—distinguished
+by variations in productivity and leverage ratios—we have quantitatively assessed the repercussions of capital
+reallocation triggered by firm exits in an environment characterized by financial frictions. The simulations indicate
+that such capital reallocation can enhance the total output of the economy by approximately 10\% under financial
+constraints involving 15\% monitoring costs. Intriguingly, in the absence of monitoring costs, the cleansing effect
+observed through capital reallocation increases to around 20\%, suggesting that while financial frictions may attenuate
+the magnitude of the cleansing effect, its overall impact remains decidedly positive. These results are in alignment
+with the findings presented in \cite{OsePap17}, further substantiating the nuanced interplay between financial frictions,
+firm exit mechanisms, and economic productivity.
+
+In essence, our findings contribute to a deeper understanding of the dynamic interplay between financial frictions, firm
+behavior,  and market mechanisms. We demonstrate that financial frictions, though challenging, do not entirely negate
+the benefits conferred by market-driven capital reallocation. Instead, the inherent exit and entry dynamics within
+markets serve as a significant counterbalance to the dampening effects of such frictions, preserving, and in certain
+conditions, enhancing economic output.
+
+Building upon the findings of this thesis, future research can significantly broaden our understanding by incorporating
+uncertainty into the model, thereby enhancing its realism and applicability to diverse economic environments. A
+promising avenue involves introducing stochastic shocks to the productivity levels of firms and the severity of
+financial frictions. This extension would enable an examination of how firms navigate uncertainty and the effectiveness
+of strategic decision-making under risk.
+
+Additionally, the analysis of various policy interventions designed to support firms facing financial constraints could
+offer valuable insights and recommendations. For instance, evaluating policies that provide financial support to
+high-productivity firms experiencing temporary liquidity issues could illuminate their impact on reducing unnecessary
+firm exits and preserving economic output.
+
+Expanding the model to include endogenous exit and entry decisions based on economic conditions and firm performance
+could also reveal dynamic interactions between firm dynamics and the overall economy. This would allow for a nuanced
+understanding of the cleansing effect and its implications for economic resilience and growth.
+
+Incorporating a broader range of heterogeneity among firms, including differences in access to financial markets, market
+power, and innovation capacity, could provide a comprehensive picture of the economy. This approach would enable
+exploration of how financial frictions affect different segments of the economy and the distributional impacts of policy
+interventions.
+
+Furthermore, exploring the role of financial institutions in mediating the effects of financial frictions on firms could
+shed light on the mechanisms through which financial markets impact real economic activity. Examining changes in
+lending practices, interest rates, and financial regulation could offer insights into how financial institutions
+influence firm behavior and economic outcomes.
+
+By addressing these areas, future research can build on this thesis to offer a detailed and nuanced understanding of the
+interplay between financial frictions, firm dynamics, and economic policy. Such studies have the potential to inform
+policymaking by identifying strategies to mitigate the negative impacts of financial frictions, enhance economic
+resilience, and foster sustainable economic growth, thus expanding the horizon of economic research in meaningful and
+impactful ways. This thesis, therefore, sheds light on the nuanced roles of financial frictions and market dynamics in shaping firm
+strategies and overall economic outcomes. By elucidating the conditions under which financial frictions exert their
+influence and identifying pathways for mitigating their effects, this work contributes valuable perspectives to the
+discourse on financial economics and firm-level decision-making. As such, it lays the groundwork for future research
+aimed at further unraveling the complexities of financial markets and the strategic responses of firms within them,
+enhancing our understanding of the resilience mechanisms that underpin economic growth in the face of financial
+adversities.
 \medskip
 \bibliography{reference}
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-

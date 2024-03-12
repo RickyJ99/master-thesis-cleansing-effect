@@ -1,8 +1,9 @@
+# difference  under no monitoring costs
 import pandas as pd
 import numpy as np
 
 # Define the paths to the two CSV files
-file_path_1 = "output_data/exit_nofriction_stats.csv"
+file_path_1 = "output_data/exit_friction_stats.csv"
 file_path_2 = "output_data/noexit_nofriction_stats.csv"
 
 # Read the CSV files into pandas DataFrames
@@ -15,8 +16,7 @@ if len(df1) == len(df2):
     df_log_diff_mean = round(
         np.log(
             df1["Total_Production_actual_mean"] / df2["Total_Production_actual_mean"]
-        ),
-        4,
+        ),4
     )
 
     # Calculate the log differences for CI upper and lower bounds
@@ -59,7 +59,7 @@ if len(df1) == len(df2):
     )
 
     # Save the result to a new CSV file
-    result_path = "output_data/diff.csv"
+    result_path = "output_data/diff_fri.csv"
     df_result = df_result[df_result["Step"] != 0]
     df_result.to_csv(result_path, index=False)
 

@@ -37,7 +37,7 @@ def transition_and_policy(k_0, Z, mu, alpha, beta, delta, R_f, l):
     return k_1, d_0
 
 
-def transition_equation(Z, k_0, alpha, mu, delta, R_f, l, d_0_star,t):
+def transition_equation(Z, k_0, alpha, mu, delta, R_f, l, d_0_star, t):
     """
     Computes the next period's capital (k_1) based on the given transition equation.
 
@@ -54,7 +54,7 @@ def transition_equation(Z, k_0, alpha, mu, delta, R_f, l, d_0_star,t):
     - k_1: Next period's capital.
     """
     p = calculate_p(R_f, l, delta)
-    Z_b= BC(Z,t)
+    Z_b = BC(Z, t)
     # Calculate the terms inside the brackets
     term_1 = ((p + mu - mu * p) / p) * f(Z_b, k_0, alpha)
     term_2 = ((p - delta * p - R_f * l) / p) * k_0
@@ -74,14 +74,8 @@ def reinvest_capital_with_min_return_exit(
         k_path_act - k_path_opt, k_path_opt
     )
 
-    # Identify the firm with the lowest return on capital
-    min_return_index = np.argmin(return_on_capital)
-
-    # Check if the lowest return is below the risk-free rate
-    if return_on_capital[min_return_index] < R_f:
-        exit_indices = [min_return_index]  # Only the firm with the lowest return exits
-    else:
-        exit_indices = []  # No firm exits if all are above the risk-free rate
+    sorted_indices = np.argsort(return_on_capital)
+    exit_indices = [i for i in sorted_indices if return_on_capital[i] < R_f][:2]
 
     exit_rate = len(exit_indices) / len(k_path_act) if exit_indices else 0
 
@@ -115,7 +109,7 @@ def reinvest_capital_with_min_return_exit(
     return k_path_act, exit_rate
 
 
-def main():
+def main(exit):
     STEP = 20
     NFIRM = 10
     K0 = np.ones(NFIRM) * 2
@@ -135,7 +129,7 @@ def main():
     k_path_act = [np.array(K0)]
     d_path_act = []
     K_path_act = [np.array(Z * np.array(K0) ** alpha)]
-    K_path_opt = [] #[np.array(Z * np.array(K0) ** alpha)]
+    K_path_opt = []  # [np.array(Z * np.array(K0) ** alpha)]
     exit_rate = [0]
     for t in range(STEP):
         k_next_step = []
@@ -144,8 +138,8 @@ def main():
         K_next_step_act = []
         d_current_step = []
         exit_r = 0
-        
-        if (False is False) and (t != 0):
+
+        if (exit) and (t != 0):
             k_exit, exit_r = reinvest_capital_with_min_return_exit(
                 k_path_act[-1], d_path_act[-1], k_path_act[-2], Z, t, R_f
             )
@@ -160,7 +154,7 @@ def main():
             # Apply business cycle effects before moving to the next step
             K_opt, K_act = calculate_diffs(Z[i], k_current, t)
             k_act = transition_equation(
-                Z[i], k_current, alpha, mu, delta, R_f, L[i], d_current,t
+                Z[i], k_current, alpha, mu, delta, R_f, L[i], d_current, t
             )
             k_next_step_act.append(k_act)
             K_next_step_act.append(K_act)
@@ -186,7 +180,7 @@ def main():
         d_current_step.append(d_current)
     d_path_act.append(np.array(d_current_step))
     K_path_opt.append(K_path_opt[-1])
-    
+
     return K_path_opt, d_path_act, K_path_act, Z, k_path_opt, k_path_act, exit_rate
 
 
@@ -259,12 +253,12 @@ def compute_stats_by_step_and_firm_with_ci(df, confidence_level=0.95):
     return grouped
 
 
-mu = 1  # 0.75  # Since 1 - mu = 0.25
+mu = float(input("1-mu:"))  # 0.75  # Since 1 - mu = 0.25
 beta = 0.956
 R_f = 1.04
 delta = 0.07
 alpha = 0.70
-
+exit = bool(int(input("Exit (0 or 1): ")))
 num_runs = 100  # Number of simulations to run
 
 # Lists to accumulate data
@@ -284,8 +278,8 @@ k_path_opt_list, k_path_act_list, d_path_act_list = [], [], []
 k_tot_list, exit_rate_list, total_production_optimal_list = [], [], []
 
 for run_id in range(num_runs):
-    K_path_opt, d_path_act, K_path_act, Z, k_path_opt, k_path_act, exit_rate = (
-        main()
+    K_path_opt, d_path_act, K_path_act, Z, k_path_opt, k_path_act, exit_rate = main(
+        exit
     )  # K_path_opt, d_path_act, K_path_act, Z, k_path_opt, k_path_act, exit_rate
     k_path_opt = np.array(k_path_opt)
     k_path_act = np.array(k_path_act)
@@ -337,11 +331,13 @@ data = {
 
 # Create the DataFrame
 df = pd.DataFrame(data)
+exit_str = "exit_" if exit else "noexit_"
+friction_str = "nofriction" if mu == 1 else "friction"
+
+df.to_csv(f"output_data/{exit_str}{friction_str}.csv", index=False)
 
 
-df.to_csv("output_data/exit_nofriction.csv", index=False)
-
-print("Data from all runs saved to 'exit_nofriction.csv'")
+print(f"Data from all runs saved to {exit_str}{friction_str}.csv")
 stats_df = compute_stats_by_step_and_firm_with_ci(df)
 # Specify your path correctly, especially if you're using directories
-stats_df.to_csv("output_data/exit_nofriction_stats.csv", index=False)
+stats_df.to_csv(f"output_data/{exit_str}{friction_str}_stats.csv", index=False)
