@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  12 MAR 2024 18:56
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  13 MAR 2024 19:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -683,7 +683,120 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Chapter 1.
 [3
 
-] [4] [5]
+] [4]
 Chapter 2.
+[5
 
-Overfull \hbox (19.30939pt too wid
+] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+File: figure/Plot2.1.png Graphic file (type bmp)
+<figure/Plot2.1.png>
+ [22] [23]
+
+Package natbib Warning: Citation `DavHal94' on page 24 undefined on input line 602.
+
+File: figure/Plot2.2.png Graphic file (type bmp)
+<figure/Plot2.2.png>
+File: figure/Plot2.3.png Graphic file (type bmp)
+<figure/Plot2.3.png>
+[24] [25] [26] [27]
+File: figure/Plot2.4.png Graphic file (type bmp)
+<figure/Plot2.4.png>
+ [28]
+File: figure/Plot2.5.png Graphic file (type bmp)
+<figure/Plot2.5.png>
+ [29] [30]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 729.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 729.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 729.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 729.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 729.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 729.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 729.
+
+[31] [32] [33] [34] [35] [36] [37]
+Chapter 3.
+[38
+
+] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]
+Chapter 4.
+[58
+
+] [59] [60] [61]
+Missing character: There is no ; ("3B) in font nullfont!
+NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (in y). (see also unbounded coords=jump). 
+Missing character: There is no ; ("3B) in font nullfont!
+[62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73]
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+ [74]
+PGFPlots: reading {output_data/simulation.csv}
+PGFPlots: reading {output_data/simulation_withoutfriction.csv}
+ [75] [76] [77] [78]
+PGFPlots: reading {output_data/noexit_friction_stats.csv}
+PGFPlots: reading {output_data/exit_friction_stats.csv}
+Package pgfplots info on input line 2553: fill between: activating layered graphics
+\pgf@layerbox@axis background=\box73
+\pgf@layerboxsaved@axis background=\box74
+\pgf@layerbox@axis grid=\box75
+\pgf@layerboxsaved@axis grid=\box76
+\pgf@layerbox@axis ticks=\box77
+\pgf@layerboxsaved@axis ticks=\box78
+\pgf@layerbox@axis lines=\box79
+\pgf@layerboxsaved@axis lines=\box80
+\pgf@layerbox@axis tick labels=\box81
+\pgf@layerboxsaved@axis tick labels=\box82
+\pgf@layerbox@pre main=\box83
+\pgf@layerboxsaved@pre main=\box84
+\pgf@layerbox@axis descriptions=\box85
+\pgf@layerboxsaved@axis descriptions=\box86
+\pgf@layerbox@axis foreground=\box87
+\pgf@layerboxsaved@axis foreground=\box88
+Package pgfplots info on input line 2553: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
+ [79]
+PGFPlots: reading {output_data/diff_fri.csv}
+PGFPlots: reading {output_data/diff.csv}
+ [80] [81] [82]
+Chapter 5.
+[83
+
+] (./main.bbl [84] [85
+
+] [86])
+
+Package natbib Warning: There were undefined citations.
+
+[87] (./main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 45C9A9018E8F41A495FF24E333837E74;4747.
+ ) 
+Here is how much of TeX's memory you used:
+ 36341 strings out of 476684
+ 864238 string characters out of 5804056
+ 2556523 words of memory out of 5000000
+ 55962 multiletter control sequences out of 15000+600000
+ 520664 words of font info for 81 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 99i,18n,94p,1862b,2728s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.xdv (89 pages, 2277240 bytes).

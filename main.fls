@@ -1040,3 +1040,10 @@ INPUT output_data/noexit_friction_stats.csv
 INPUT output_data/exit_friction_stats.csv
 INPUT output_data/diff_fri.csv
 INPUT output_data/diff.csv
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT main.aux
+INPUT ./main.out
+INPUT ./main.out
