@@ -20,6 +20,8 @@
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepackage{float}
+
+
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{arrows.meta, bending}
 \pgfplotsset{compat=newest}
@@ -68,7 +70,7 @@
     This thesis formulates a Ramsey-Cass-Koopmans theoretical model, addressing the complex scenario
     wherein firms, intent on dividend maximization, grapple with financial frictions encompassing both monitoring costs
     and fixed leverage constraints. A pivotal achievement of this work is the derivation of a closed-form solution to
-    the firms' infinite intertemporal maximization dilemma, encapsulated within the participation constraints of
+    the firms' infinite intertemporal maximization problem, encapsulated within the participation constraints of
     financial lenders,  underpinned by monitoring expenditures and financing constraints.
     Employing a Lagrangian framework, I extract the Euler equation for dividends, thereby
     uncovering the fundamental principles guiding optimal dividend policies in the face of financial constraints. 
@@ -78,7 +80,15 @@
     that the 'cleansing effect,' which fosters a reallocation of resources during economic downturns, leads to a 20\%
     augmentation in the overall output of the economy in scenarios devoid of monitoring costs. However, this effect is
     attenuated to a 7\% increase when firms are subject to a 15\% monitoring cost.
+    This empirical evidence, aligning with insights from \cite{OsePap17}, confirms the theoretical propositions
+    regarding the modulating role of financial frictions on the cleansing effect.
+    
+    In conclusion, this thesis contributes significantly to the literature by providing a comprehensive analysis of how
+    financial frictions impact firm behavior and the overall economic landscape. By developing a
+    model that captures the effects of such frictions on firm dynamics and leveraging empirical evidence to
+    validate theoretical insights. This endeavor sets the stage for subsequent investigative efforts in the field.
 \end{abstract}
+
 
 \tableofcontents
 \chapter{Introduction} 
@@ -92,8 +102,8 @@ implications of short-term economic policies for the broader economic trajectory
 
 This thesis focuses on the dynamics of firm optimization amidst financial frictions, bridging theoretical constructs
 with practical economic phenomena. A significant portion of this research is devoted to understanding how financial
-market frictions during economic downturns, particularly through policy interventions like demand stabilizers, might
-influence the recession's 'cleansing effect'. This effect, akin to natural selection, is scrutinized for its potential
+market frictions might
+influence the 'cleansing effect' of reallocation. This effect, akin to natural selection, is scrutinized for its potential
 long-term impacts on economic stability and growth.
 
 Inspired by biological cycles and their long-term trends, described in Lotka-Volterra equations, this work draws an analogy to economic cycles, suggesting that
@@ -107,18 +117,85 @@ Carlo simulations, this research endeavors to elucidate the relationship between
 long-term growth. The thesis particularly emphasizes solving firms' intertemporal maximization problems under financial
 constraints through a closed-form solution, spotlighting the significant influence of financial frictions.
 
-Building on established models like those of \cite{CabHarm94}, which discuss resource reallocation during
-recessions, and extending the discussion to incorporate financial frictions as in \cite{OsePap17}'s work, this thesis
-offers a unique perspective. Unlike previous studies that rely on numerical solutions, this research achieves a
-methodological breakthrough by deriving a closed-form solution for the optimal paths of capital and dividends within the
-Ramsey-Cass-Koopmans framework, providing a more precise understanding of firms' intertemporal maximization problems.
+Recessions are characterized by increased instances of bankruptcies and business shutdowns. Notably, during the Great
+Recession, the annual establishment exit rate in the US escalated from 11.8\% to 13.5\% from March 2008 to March 2009.
+This surge in firm exit rates during economic contractions has propelled the notion that
+recessions serve a 'cleansing' role in the economy: inefficient firms, becoming unprofitable, are phased out, thereby
+facilitating the redistribution of resources to more productive entities.
 
-Monte Carlo simulations further explore the behavior of heterogeneous firms—varying in productivity and leverage—under
-business cycle pressures. These simulations underscore the 'cleansing effect' of recessions, demonstrating a significant
-efficiency boost in the economy's output in the absence of monitoring costs and a moderated effect when such costs are
-introduced. This empirical evidence, aligning with insights from \cite{OsePap17}, confirms the theoretical propositions
-regarding the modulating role of financial frictions on the cleansing effect.
+This traditional perspective, highlighted in the work of \cite{CabHarm94}, presupposes that markets
+inherently favor the survival of the most productive firms. Nonetheless, this premise has been contested by numerous
+studies indicating that a firm's likelihood of exiting is influenced not just by its productivity but also by its
+ability to secure credit. These
+insights imply that, amidst credit frictions, even highly productive firms that are financially strained might be
+compelled to leave the market. Consequently, credit frictions could potentially undermine the productivity-boosting
+impact of recessions as found in \cite{OsePap17}. 
 
+This thesis marks a significant departure from prior studies that predominantly rely on numerical methods by offering a
+closed-form solution for determining the optimal trajectories of capital and dividends. Such a breakthrough provides a
+nuanced understanding of the intertemporal maximization challenges faced by firms. This research delves into the
+repercussions of credit frictions on the cleansing effect observed during recessions within a framework encompassing
+firm dynamics, credit restrictions, and mechanisms for firm exit. It is found that, even in the presence of credit
+frictions, recessions exert a cleansing effect by enabling the redistribution of resources to more efficient entities. 
+
+Credit constraints within the model are endogenously driven by asymmetric information and the costs associated with
+verifying states. Incorporating a one-period financial contract, mirroring the methodology proposed by \cite{BerGer86},
+into the model of firm dynamics, allows for the delineation of borrowing capabilities and the determination of interest
+rates by financial intermediaries, which are contingent upon each firm's productivity and leverage. Additionally, the
+model imposes a borrowing constraint on firms, stipulating that leverage is exogenous and remains constant over time. 
+
+Following the theoretical developments, this thesis employs Monte Carlo simulations to rigorously analyze the behavior
+of firms differentiated by their productivity and leverage ratios in the face of business cycle fluctuations. These
+fluctuations are modeled as continuous sinusoidal shocks to the productivity component, simulating the dynamic pressures
+of economic cycles. A key feature of the model is the exit mechanism, which compels firms to exit the market if their
+return on capital falls below the risk-free rate, directly engaging with the discourse on the cleansing effect of
+recessions. 
+
+The heterogeneity in firm characteristics, notably in terms of productivity and leverage, allows for a detailed
+examination of how diverse firms respond to economic cycles and credit constraints. Firms with higher leverage may face
+greater financial stress during downturns, influencing their survival and contributing to the market's cleansing
+process. Similarly, variations in productivity affect firms' ability to withstand economic shocks, further delineating
+the selection process during recessions. 
+
+The simulations reveal that recessions facilitate a significant enhancement in the economy's overall output by enabling
+the reallocation of resources towards more efficient firms, particularly in scenarios devoid of monitoring costs.
+However, the introduction of such costs tempers this efficiency gain, underscoring the nuanced role that financial
+frictions play in influencing the economy's adaptive capacity during downturns. This observed cleansing effect, albeit
+modulated by the presence of financial frictions, substantiates the theoretical assertions posited earlier in the
+thesis. 
+
+Moreover, this empirical evidence, resonating with the findings from \cite{OsePap17}, affirms the contention that,
+despite the dampening influence of credit constraints, recessions retain an inherent capacity to purge the economy of
+less efficient firms. This mechanism, facilitated by a well-defined exit criterion based on returns relative to the
+risk-free rate and nuanced by firm-specific attributes of productivity and leverage exemplifies the complex interplay
+between financial frictions, firm dynamics, and economic resilience under cyclical pressures. 
+
+The initial segment of this thesis introduces the theoretical frameworks of \cite{CabHarm94} and \cite{OsePap17}, aiming
+to highlight how the incorporation of financial frictions alters previously established results in the literature.
+Following this introduction, the thesis delves into the formulation of theoretical models that explore the dynamics of
+capital flow and debt in financial contracts. An examination of the firm's problem in the absence of debt, mirroring the
+Ramsey-Cass-Koopmans model where consumption is represented by dividends and leverage, employs a Lagrangian approach to
+derive the Euler equation for dividends. This equation serves as the cornerstone for determining the optimal policies
+for dividends and investment. Utilizing the derived solution, a phase diagram for capital and dividends is constructed
+to identify a potential saddle path toward a stationary state for both variables.
+
+Subsequently, the theoretical model is expanded to accommodate the firm's ability to finance investment through debt,
+subjecting it to financial frictions manifested as monitoring costs and borrowing constraints. By applying the
+Lagrangian method, steady-state conditions for dividends are extracted from the Euler equation, along with consolidation
+constraints to ascertain the steady-state condition for capital. These findings enable the plotting of a phase diagram
+for capital and dividends, illustrating their interrelation.
+
+Reformulating the problem through a Bellman equation and employing a guess-and-verify approach yields the optimal path
+for capital, policy function for dividends, and the steady state for capital. 
+
+In the concluding part, these results underpin simulations that assess the impact of monitoring costs on capital,
+demonstrating significant reductions in capital levels due to such costs. Monte Carlo simulations further explore
+economies with heterogeneous firms, characterized by variations in leverage and productivity. Firms in this model are
+compelled to exit if their return on capital falls below the risk-free rate, enabling an examination of the cleansing
+effect of recessions in the context of financial frictions. This multifaceted analysis offers insightful conclusions
+about the influence of financial frictions on firm behavior, the allocation of resources, and the overall efficiency of
+the economy during downturns, thereby contributing to the broader understanding of economic dynamics in the presence of
+financial constraints.
 \chapter{Literature review}
 \section{Business cycle history}
 
@@ -196,15 +273,15 @@ marginal innovations are frequently a reflection of the adopting firms' constrai
 invest in more advanced and expensive technologies. Consequently, these incremental innovations have limited potential
 for widespread diffusion, as they stem from a position of necessity rather than pioneering advancement. 
 
-Another theory describe a recession as a period in which the opportunity cost of investing in a productivity enhancing
+Another theory describes a recession as a period in which the opportunity cost of investing in productivity-enhancing
 projects is lower since the workforce is not fully in demand to produce goods. Doing this would lead in theory to higher
 productivity in the period of expansion. The key role here is that the productivity-enhancing activity is costly and thus
-divert capital and labor force from production as Hayek \cite{Hay33} explained. 
+diverts capital and labor force from production as  \cite{Hay33} explained. 
 For this view to be valid two key aspects should be true at the same time: in the first place the
 expectations about the length of the recession should reinter in the short-term otherwise it is cheaper to destroy some
 production units (labor and capital) to accommodate the slow in demand. The last condition is that internal resources
-must be less costly than external ones, however, it would be cheaper to higher more skilled workers and fire the low-skill
-one. An additional remark is the this theory describes all those initiatives like worker formation that affect only
+must be less costly than external ones, however, it would be cheaper to hire more skilled workers and fire the low-skill
+one. An additional remark is that this theory describes all those initiatives like worker formation that affect only
 marginally the productivity of a firm. It misses the main mechanics in which a firm can increase its productivity sharply: thorough technical
 innovation, and to do so you need a research program where the workforce is fully dedicated to it and not
 diverted from production.
@@ -213,7 +290,7 @@ Another theory posits that recessions offer a period in which the opportunity co
 productivity-enhancing projects are lower, primarily because the workforce is not fully engaged in producing goods.
 Theoretically, this would lead to higher productivity during subsequent periods of expansion. A crucial element in this
 perspective is the acknowledgment that productivity-enhancing activities are expensive, thereby diverting capital and
-labor away from immediate production, a concept Hayek \cite{Hay33} elucidated. 
+labor away from immediate production, a concept  \cite{Hay33} elucidated. 
 
 For this viewpoint to hold, two critical conditions must be concurrently satisfied: firstly, expectations regarding the
 duration of the recession must be short-term. If the recession is anticipated to be prolonged, it becomes economically
@@ -231,7 +308,7 @@ innovation and research activities, not merely through the opportunistic realloc
 downturns. 
 
 An intricate theory that elaborates on the dynamics of economic recessions and the associated lower opportunity costs is
-grounded in the concept of labor hoarding, as discussed in the seminal work by Clark \cite{Cla73}. This theory posits
+grounded in the concept of labor hoarding, as discussed in the seminal work by  \cite{Cla73}. This theory posits
 that firms maintain employment levels higher than what immediate efficiency metrics might dictate. The rationale behind
 such a strategy is to prepare for a potential surge in demand, ensuring that the firm can quickly ramp up production
 without the delays associated with recruiting and training new employees. However, this strategic maneuver towards the
@@ -274,7 +351,7 @@ influencing individual entities via price adjustments. During periods marked by 
 immediate returns from production activities (e.g., wages for workers) decline in comparison to alternative endeavors,
 notably human capital accumulation, whose benefits are pegged to future earnings. This economic mechanism could
 precipitate a resource reallocation towards these alternative activities. The empirical observation that education
-durations tend to extend during economic recessions lends credence to this argument. Nevertheless, with the exception of
+durations tend to extend during economic recessions lends credence to this argument. Nevertheless, except for
 leisure, most sectors shadow the movements of aggregate GDP. Thus, if productivity-enhancing activities (PEAs) are to
 occur during recessions, the resource reallocation process must predominantly unfold within the firms themselves. 
 
@@ -302,11 +379,10 @@ analysis serves as a pivotal foundation for the new theoretical framework introd
 significant departure from traditional views and emphasizing the multifaceted impact of recessions on firm productivity
 and economic recovery. 
 
-In the forthcoming sections, / we will explore the
+In the forthcoming sections,  we will explore the
 theoretical underpinnings that form the basis of the new, streamlined theoretical framework introduced in this thesis.
 Our examination begins with the insights of \cite{CabHarm94}, focusing on the interplay between the
-destruction and creation margins in economic cycles. Subsequently, we will delve into the work of \cite{OsePap17}
-(2017), which sheds light on the financial dimensions, particularly how capital lending frictions can precipitate
+destruction and creation margins in economic cycles. Subsequently, we will delve into the work of \cite{OsePap17}, which sheds light on the financial dimensions, particularly how capital lending frictions can precipitate
 misallocations. These studies collectively inform the development of our theoretical framework, setting the stage for a
 comprehensive analysis of economic dynamics and firm behavior during recessions. 
 
@@ -344,15 +420,14 @@ embodied the most advanced technology at the time of their creation. The costs a
 slowed down technology adoption, resulting in the coexistence of production units with varying vintages.
 \par
 Key to understanding how firms adapt to business cycles are the concepts of the creative margin and the destruction
-margin. For example, a reduction in demand can be accommodated either by reducing the rate of technology adoption or by
+margin. For example, a demand reduction can be accommodated either by reducing the rate of technology adoption or by
 retiring older production units. One of the primary factors determining which margin is more responsive to business
 cycles is the adjustment cost. When this cost follows a linear pattern, the study shows that insulation is complete, and
 the industry's response relies exclusively on its creation margin. Consequently, the creation margin becomes smoother
 over time in comparison to the destruction margin, which exhibits greater responsiveness to the business cycle.
 \par
 Crucially, \cite{CabHarm94}'s research \cite{BlaDia90} offers theoretical insights supported by empirical
-evidence. Their findings on the cyclical nature of the destruction margin align with the studies conducted by Blanchard
-and Diamond \cite{BlaDia90}, as well as Steven Davis and John Haltiwanger \cite{DavHalt92}, in their respective works
+evidence. Their findings on the cyclical nature of the destruction margin align with the studies conducted by \cite{BlaDia90}, as well as \cite{DavHalt92}, in their respective works
 from 1990. This
 convergence between theoretical framework and empirical substantiation underscores the importance of comprehending the
 dynamic interplay between creative destruction and business cycles, which significantly influences how industries
@@ -527,7 +602,7 @@ by increasing the rate of endogenous destruction \(f(\overline{a}(t),t) \cdot [1
 These two adjustments interact, leading to a reduction in demand causing the most outdated units to be scrapped,
 rendering them unprofitable. However, if the recession is partially accommodated by a reduction in the creation rate,
 the effect on the destruction margin is diminished. The authors argue that the extent to which creation will 'insulate'
-existing units from variations in demand depends on the marginal cost of creating new units \(c'f(0,t)\). When the
+existing units from variations in demand depends on the marginal cost of creating new units \(c^{\prime}f(0,t)\). When the
 marginal cost of creation is zero, demand fluctuations are entirely adjusted by the creation margin. This is exemplified
 in the case where \(c(f(0,t)) = c\). In such instances, the insulation effect is complete, as there is no need to retire
 older units. Lowering \(f(0,t)\) is sufficient, and it is cheaper than reducing the life of existing production units. 
@@ -541,7 +616,7 @@ given by:
 
 In the attained equilibrium, variations in demand are entirely offset by adjustments at the creation margin denoted as
 \(f(0, t)\), with \(\overline{a}(t)\) remaining steady at the destruction margin. The creation process effectively
-counteracts the impact of demand fluctuations on the price \(P(t)\), effectively shielding existing units from demand
+counteracts the impact of demand fluctuations on the price \(P(t)\), shielding existing units from demand
 changes. The price \(P(t)\) experiences a constant decline at a rate represented by \(\sigma\), reflecting the pace of
 technical progress. This consistent decline in \(P(t)\) serves as a clear signal for production units to function
 optimally throughout their constant lifetime \(\overline{a}(t)^*\). \\
@@ -559,7 +634,7 @@ is never binding, implementing equilibrium behaviors does not necessitate expect
 The model undergoes calibration utilizing Job-flow data and Industry production data. The former facilitates the
 replication of job creation dynamics, while the latter is employed to mimic the behaviors of firm creation and
 destruction in the manufacturing industry. To capture these dynamics, the marginal cost of creating new production units
-is stipulated as positive \(c'f(0,t)\). This allows for a partial insulation effect, and the destruction margin responds
+is stipulated as positive \(c^{\prime}f(0,t)\). This allows for a partial insulation effect, and the destruction margin responds
 to demand fluctuations. However, introducing a dependency of \(c\) on \(f(0,t)\) compromises the analytical tractability
 of the system (Equations \ref{eq_2.1} - \ref{eq_2.6}). Consequently, the authors resort to methods such as multiple
 shooting to ascertain the optimal equilibrium and subsequently employ an iterative procedure to converge to the correct
@@ -595,8 +670,8 @@ can be conceptualized as contributing to job creation within the industry, and j
 quantifying the flows of production units. 
 
 Datasets that closely align with the theoretical CC and DD series have been compiled by 
-\cite{DAvHalt90,DavHalt92} and  \cite{BlaDia90}, drawing from various sources. The primary focus
-lies on the dataset curated by Davis and Haltiwanger, who leverage the Longitudinal Research Database to construct
+\cite{DAvHalt90, DavHalt92} and  \cite{BlaDia90}, drawing from various sources. The primary focus
+lies on the dataset curated by \cite{DAvHalt90, DavHalt92}, who leverage the Longitudinal Research Database to construct
 quarterly series for U.S. manufacturing plants spanning the period 1972:2-1986:4. 
 
 In their empirical approach, \cite{DavHal94}utilize output to empirically determine demand, employing the growth
@@ -612,7 +687,7 @@ The figure below illustrates the data that the model seeks to replicate, showcas
 \begin{figure}
     \centering
     \includegraphics[scale = 0.4]{figure/Plot2.2.png}
-    \caption{Figure 1. Job creation and job destruction in U.S. Manufacturing B Index of the industrial production}
+    \caption{Job creation and job destruction in U.S. Manufacturing B Index of the industrial production}
     \label{plot:2.2}
 \end{figure}
 
@@ -622,12 +697,11 @@ responsive to demand fluctuations, while job destruction exhibits a more counter
 \begin{figure}
     \centering
     \includegraphics[scale = 0.4]{figure/Plot2.3.png}
-    \caption{Table 2.1. Job Creation and Job Destruction in U.S. Manufacturing Response to Output Growth}
-    \label{Table 2.1.}
-    \footnotesize textit{Notes}: The table presents the reaction of job creation to the growth rate of the industrial
+    \caption{Job Creation and Job Destruction in U.S. Manufacturing Response to Output Growth: : the table presents the reaction of job creation to the growth rate of the industrial
     production index. The latter is categorized into values above and below its mean (Q). The table encompasses
     quarterly observations for the two-digit SIC industries during the period 1972:2-1986:4. The coefficients are
-    uniformly constrained to be equal across all sectors, with the exception of a constant (not shown).  
+    uniformly constrained to be equal across all sectors, except for a constant (not shown).}
+    \label{Table 2.1.}
 \end{figure}
 The initial finding indicates that the rate of job destruction displays greater responsiveness to changes in sectoral
 activity compared to the rate of job creation. Specifically, the sums of coefficients are -0.384 for job destruction and
@@ -660,9 +734,8 @@ The results are depicted in \ref{plot:2.4}
 \begin{figure}
     \centering
     \includegraphics[scale = 0.4]{figure/Plot2.4.png}
-    \caption{A.  Creation and  Destruction B. Output Growth}
+    \caption{A.  Creation and  Destruction B. Output Growth: the figure depicts a simulation of asymmetrical supply growth.}
     \label{plot:2.4}
-    \footnotesize \textit{Notes}: The figure depicts a simulation of asymmetrical supply growth.
 \end{figure}
 
 From the plot \ref{plot:2.4}, it is evident that firms use prediction in demand to smooth job creation to avoid
@@ -683,14 +756,14 @@ parameters as follows:
     \caption{Calibrated Parameters}
     \label{Tab2.1}
     \begin{tabular}{lcc}
-    \hline \hline
+    \hline
     Variable & Symbol & Value \\
     \hline
     Interest rate & $r$ & 0.065 \\
     Depreciation rate & $\delta$ & 0.150 \\
     Rate of technical progress & $\gamma$ & 0.028 \\
     Adjustment cost parameters & $c_0$ & 0.403 \\
-     & $c_1$ & 0.500 \\
+    Marginal cost parameters& $c_1$ & 0.500 \\
     \hline
     \end{tabular}
     \end{table}
@@ -707,7 +780,7 @@ signifying the vulnerability of the insulation mechanism to breakdown.
 \begin{figure}
     \centering
     \includegraphics[scale = 0.6]{figure/Plot2.5.png}
-    \caption{Figure 1. A employment driven job creation \(c_0=0.403, c_1=0.5\) B Employment job destruction \(c_0=0.403, c_1=0.5\)} 
+    \caption{A employment driven job creation \(c_0=0.403, c_1=0.5\) B Employment job destruction \(c_0=0.403, c_1=0.5\)} 
     \label{plot:2.5}
 \end{figure}
 The model's simulations on employment and output, shown in Figure \ref{plot:2.5}, reveal discrepancies with actual data,
@@ -726,7 +799,7 @@ A notable limitation is the assumption of constant marginal creation costs, whic
 for larger firms known for substantial adjustments in response to demand drops. This observed behavior in larger firms,
 aligning with the model's predictions on downsizing, underscores its ability to reflect real-world dynamics despite  its
 simplifications.
-\subsection{Cleansing effect in \cite{OsePap17}}
+\subsection{Credit Frictions and The Cleansing Effect of Recessions}
 The economy comprises risk-neutral firms with a constant discount rate represented by $0 < \beta < 1$. These firms
 exhibit heterogeneity in productivity and net worth. They employ a production technology that relies solely on capital
 (or production units) as input, featuring diminishing returns to scale.
@@ -782,7 +855,7 @@ The sequence of events includes:
     \item The firm computes the optimal $k$ to maximize the expected value of the firm, with $k$ ranging from $[0,+\infty]$. If $k=0$, it indicates the firm's decision to exit.
     \item At the end of the period, the firm observes $\epsilon$ and the aggregate shock.
     \item The firm repays its debt and the fixed operating cost $(c+k-e)$, resulting in an end-of-period net worth $q$.
-    \item The firm decides on the amount of dividends to distribute $(q-e')$, observes the productivity shock $\theta', Z'$, and the process restarts from step 1.
+    \item The firm decides on the level of dividends to distribute $(q-e')$, observes the productivity shock $\theta', Z'$, and the process restarts from step 1.
 \end{enumerate}
 
 \paragraph{Frictionless economy}
@@ -836,7 +909,7 @@ k^\alpha+(1-\delta)k-\mu k^\alpha] \,d\Phi(\epsilon) \geq (1+r)(c+k+e)
 The financial contract is characterized by $(k,\overline{\epsilon})$. Given $Z,\theta,e$, the participation constraint
 indicates the default threshold $\overline{\epsilon}$ required by the financial intermediary to lend a given amount. For
 some firms, their net worth is too low for the participation constraint of the financial intermediary to be satisfied.
-In fact, given $\theta, Z$, there is a unique threshold $e_b(\theta,Z)$ below which the financial intermediary
+In fact, given $\theta, Z$, there is a unique threshold $e_b(\theta, Z)$ below which the financial intermediary
 refuses to lend any amount:
 \[
 Z[\theta+G(\overline{\epsilon}_b )]k^\alpha+(1-\delta)k-uk_b^\alpha\Phi (\overline{\epsilon}_b)=(1+r)(k_b+c-\underline{e_b})
@@ -851,7 +924,7 @@ q = \begin{cases}
   0 & \text{otherwise}
 \end{cases}
 \]
-Using the default condition we can rewrite as 
+Using the default condition we can rewrite it as 
 \[q = \max[Zk^\alpha(\epsilon-\overline{\epsilon});0]\]
 
 \paragraph{The firm's problem}
@@ -924,7 +997,7 @@ shocks.
 Contributing to the literature on the cleansing effect of recessions, this study elucidates the role of credit frictions
 in affecting the average productivity of firms by facilitating the selective exit of low-productivity firms, even under
 credit constraints. It is imperative to note that the findings do not posit that recessions inherently enhance resource
-allocation efficiency. On the contrary, in the presence of credit frictions, many of the exiting firms could have
+allocation efficiency. On the contrary, in the presence of credit frictions, many of the existing firms could have
 remained operational in the absence of these constraints. This inefficiency is particularly evident during financial
 shocks, where the exit of potentially viable firms highlights the intricate dynamics governing the cleansing effect of
 recessions, emphasizing the importance of a nuanced understanding of economic downturns and their impact on firm
@@ -998,13 +1071,12 @@ Using equations \ref{eq1} and \ref{eq2}, we get the flow of funds constraint for
 \begin{align}
     k_{t+1}=k_{t}(1-\delta)- R b_{t} - d_t + f(k_{t})+b_{t+1} \label{eq3}
 \end{align}
-The above equation describes how capital evolves over time: capital at time \(t+1\) is equal to capital at time t
+The above equation describes how capital evolves: capital at time \(t+1\) is equal to capital at time t
 net of depreciation, less the repayment of debt (principal + interest), augmented by retained earnings. 
 
 \subsection{Steady State}
 
-From \ref{eq1}, assuming (\(k_{t+1}=k_{t}=\widehat{k}\)), we get the steady state investment:% and debt (\(b_{t-1}=b_{t} = \widehat{b}\))
- %and  for definition even dividends (\(d_t=d_{t-1}=\hat{d} \)):
+From \ref{eq1}, assuming (\(k_{t+1}=k_{t}=\widehat{k}\)), we get the steady state investment:
 \begin{align}
     \widehat{k}&=\widehat{k}\left(1-\delta\right) + \widehat{I} \nonumber\\
     \widehat{I}&=\delta \widehat{k}  \label{eq4}
@@ -1052,7 +1124,12 @@ which depicts the locus as defined by equation \ref{eq5'}, employing the followi
         \addlegendentry{\(f(\widehat{k} ) = \delta \cdot \widehat{k} + r \cdot \widehat{b} + \widehat{d}\)}
         \end{axis}
     \end{tikzpicture}
-    \caption{For this plot the following value has been used: \(\delta =0.1, r=0.1, \alpha=0.8, Z=0.5\)}
+    \caption{The three-dimensional plot delineates the steady state locus as defined by equation \ref{eq5'}, where the
+    production function parameter values are set as \(\delta =0.1\), \(r=0.1\), \(\alpha=0.8\), and \(Z=0.5\). It
+    highlights how at any steady-state level of capital \(\widehat{k}\), an increment in debt \(\widehat{b}\) necessitates a
+    decline in dividends \(\widehat{d}\), illustrating the trade-off between debt servicing and dividend distribution.}
+
+
     \label{fig:steadystate3d}
 \end{figure}
 
@@ -1080,7 +1157,7 @@ specified in equation \ref{eq7}. From \ref{eq7}, we derive the difference equati
     \Delta{k_{t+1}} &= f(k_{t}) - d -\delta k_t  \label{eq24}\\
     \Delta{k_{t+1}} &=k_{t+1}-k_t \nonumber
 \end{align}
-Equation \autoref{eq24} presented implies that variation in capital stock depends on the balance between retained earnings and
+Equation \ref{eq24} presented implies that variation in capital stock depends on the balance between retained earnings and
 depreciated capital. Thus, for a positive increase in capital \(\Delta{k_{t+1}} > 0\), it is necessary for a company to
 hold back earnings over what is required to offset depreciated capital:
 \begin{align*}
@@ -1092,12 +1169,7 @@ setting \(k_{t+1}=k_{t}=\hat{k}\) within the difference equation (refer to equat
 \begin{align}
     Z \hat{k}^{\alpha} - d&=  \delta \hat{k}
 \end{align}
-The above equation can be solved as follows:
-\begin{align}
-     \hat{k} &=  \left[\frac{d}{Z(1-\delta)}\right]^{\frac{1}{\alpha}} \label{eq25}
-\end{align}
-Recalling that the production function is monotonic and concave (\(0<\alpha<1\)), thus for a given set of parameters
-(\(Z,\alpha,\delta,d\)), there is a unique steady state for capital \(\hat{k}\), defined by equation \ref{eq25}.
+
 The slope of the phase diagram is:
 \begin{align}
     \frac{\partial k_{t+1}}{\partial k_{t}} &= (1-\delta) + f^{\prime}(k_{t}) = \\
@@ -1320,7 +1392,7 @@ debt will shrink toward 0, while if the debt is over the steady state the dynami
     strategy and long-term financial stability.}
     \label{fig:ph_k}
 \end{figure}
-The phase diagram \autoref{fig:ph_k} illustrates the relationship between a firm's current debt (\(b_t\)) and its capacity for future operations
+The phase diagram \ref{fig:ph_k} illustrates the relationship between a firm's current debt (\(b_t\)) and its capacity for future operations
 (\(k_{t+1}\)), within the context of constant dividends. The steady state is indicated by the red dot, signifying the
 juncture at which the firm's output is precisely adequate to cover dividends, depreciation, and interest on its
 steady-state debt. %r
@@ -1364,7 +1436,7 @@ From these first-order conditions (FOCs), we derive the Euler equation for divid
     U^{\prime}(d_{t}) = \beta U^{\prime}(d_{t+1})[f^{\prime}(k_{t+1}) + (1-\delta)]  \label{eq14}
 \end{align}
 indicating that the marginal utility of distributing 1 unit of output as dividends at time \(t\) should match the discounted marginal
-utility of not distributing  dividends in t,saving, investing in t, using the additional capital to produce and
+utility of not distributing  dividends in t, saving, investing in t, using the additional capital to produce and
 distribute the corresponding dividends at time t+1.
 \paragraph{Steady state condition for dividends}
 Imposing the steady state condition for dividends \( d_t = d_{t+1} = \widehat{d} \) in \ref{eq14} , we
@@ -1377,7 +1449,7 @@ This condition is satisfied if:
 \begin{align}
     f^{\prime}(k_{t+1}) &= \frac{1}{\beta} - (1-\delta), 
 \end{align}
-Using the Cobb Douglas production function and taking the derivative with respect to capital, we get:
+Using the Cobb-Douglas production function and taking the derivative with respect to capital, we get:
 \begin{align}
     f^{\prime}(k_{t+1}) &= Z \alpha k^{\alpha-1}_{t+1},  \label{eq15'}
 \end{align}
@@ -1447,7 +1519,7 @@ dividends.
     \label{fig:ph_d_k_nod_1}
 \end{figure}
 
-The \autoref{fig:ph_d_k_nod_1} portrays the dynamics of dividends (\(d_t\)) in relation to the capital (\(k_t\)) of a firm, with a
+The \ref{fig:ph_d_k_nod_1} portrays the dynamics of dividends (\(d_t\)) in relation to the capital (\(k_t\)) of a firm, with a
 particular focus on the behavior when capital is below or above the steady-state level,  denoted by \(\hat{k}\).
 
 When capital is below the steady-state level (\(k_t < \hat{k}\)), thus on the left of the vertical line, for the
@@ -1628,17 +1700,17 @@ Plotting both loci we get a phase diagram that represents the condition for stat
     that would maximize dividends while maintaining a steady capital stock. \( \bar{k} \) represents the capital
     quantity at which the system reaches a stationary state for k with zero dividends. The arrows illustrate the dynamics of dividends and capital in case of the firm finding itself outside the stable
     loci. Point A is a possible starting point (\(k_0,d_0\)). 
-    The blue arrows indicate a potential trajectory, known as a saddlepath, leading towards saddlepoint B. 
+    The blue arrows indicate a potential trajectory, known as a saddle path, leading towards saddle point B. 
     }
     \label{fig:ph_d_nodebt}
 \end{figure}
 Notice that there exits 3 steady states: one at the origin due to the assumption \(f(0)=0\), the point \((\bar{k};0)\),
 and finally point B \(=(\hat{k},\hat{d})\). Point B was obtained by equations \ref{eq16} and \ref{eq17} and represented the point in
-which dividends and capital are at a steady state, and both are strictly positive. This point is a saddlepoint.
-The blue line depicts a possible saddlepath towards B. Starting at A, the firm chooses exactly the dividend level that
+which dividends and capital are at a steady state, and both are strictly positive. This point is a saddle point.
+The blue line depicts a possible saddle path towards B. Starting at A, the firm chooses exactly the dividend level that
 leads to the stationary point B. This path not only fulfills the difference equations \ref{eq14} and \ref{eq17}, but
 also, the transversality condition \ref{eq26}
-Indeed as \(t \rightarrow \infty\), capital and dividends approach their steady-state level which are both positive and
+Indeed as \(t \rightarrow \infty\), capital and dividends approach their steady-state level, which are both positive and
 finite, thus the marginal utility of dividends at \(\hat{d}\) is also finite, hence \ref{eq26} is valid.
 
 To conclude, this section has outlined the derivation of steady-state levels for capital and dividends, and these
@@ -1689,8 +1761,8 @@ The lender's participation constraint is:
     R_t \cdot b_t p + (1-p) \mu f(k_t) = R_f b_t, \
 \end{align*}
 
-where \(R_f\) represents the risk-free rate, the opportunity cost of lending. This
-framework allows for the derivation of the interest rate as a function of \(p\),\(f(k_t)\),\(\mu\),\(b_t\), and \(R_f\).
+where \(R_f\) represents the risk-free rate, the opportunity cost of lending. This framework allows for the derivation
+of the interest rate as a function of \(p\),\(f(k_t)\),\(\mu\),\(b_t\), and \(R_f\).
 
 The participation constraint can be rewritten as:
 \begin{align}
@@ -1753,7 +1825,7 @@ red curve under a specific condition:
 \end{equation}
 
 This condition implies that the net output from employing capital \(k_t\), after accounting for monitoring costs, must
-be less than the opportunity cost associated with lending the sum \(b_t\). Should this not hold true, firms with a
+be less than the opportunity cost associated with lending the sum \(b_t\). Should this not hold, firms with a
 higher risk profile would end up incurring lower interest charges on their loans. To elucidate, consider the following
 scenario where \(p_h\),  denoting the probability of avoiding default for the less risky firm, is higher than \(p_l\),
 the corresponding probability for the riskier firm. All other factors are assumed to remain constant across both firms:
@@ -2252,7 +2324,7 @@ Our initial guess for the solution is:
      V(k_t) = e + f \ln{k_t},
  \end{align*}
 
-%%ricontrollare 
+
 leading to a refined system:
 
 
@@ -2293,11 +2365,11 @@ Therefore, the transition and policy functions under financial frictions can be 
 \begin{equation}
     k_1 = \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{\alpha\beta}{1-l\alpha\beta}, \label{eq29}
 \end{equation}
-Utilizing \(d^*_0 = k_1(\beta f)^{-1}\) and in conjunction with \autoref{eq30}, we can deduce:
+Utilizing \(d^*_0 = k_1(\beta f)^{-1}\) and in conjunction with \ref{eq30}, we can deduce:
 \begin{equation}
     d^*_0 = \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{1-\alpha\beta}{1-l\alpha\beta} \label{eq31},
 \end{equation}
-By setting \(k_1 = k_0 = \hat{k}\) in \autoref{eq29}, the equation simplifies to:
+By setting \(k_1 = k_0 = \hat{k}\) in \ref{eq29}, the equation simplifies to:
 \begin{equation}
     \hat{k} = \left(\frac{Z \alpha \beta (p + \mu - \mu p)}{p(1 - \alpha \beta l)}\right)^{\frac{1}{1-\alpha}} \label{eq33}
 \end{equation}
@@ -2353,7 +2425,7 @@ repayment (\(p\)) of approximately 0.559 for both firms.
 
 
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \begin{tikzpicture}
     \begin{axis}[
@@ -2372,24 +2444,29 @@ repayment (\(p\)) of approximately 0.559 for both firms.
     \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
-    \caption{The plot depicts the optimal path for capital following equation \ref{eq29}. The red line, which is above
-    the blue line for all periods, represents the optimal path for captial toward the steady state level, in absence of
-    monitoring costs. While the optimal trajectory for the firm facing 25\% of monitoring cost is depicted by the blue
-    line. All the other parameters, exception for monitoring cost, are left equal. Clearly monitoring costs affects
-    affects the steady state by lowering it.}
+    \caption{The graph illustrates the optimal trajectory for capital as defined by equation \ref{eq29}. It features a
+    red line that remains above the blue line across all periods, symbolizing the optimal capital path towards the
+    steady state in the absence of monitoring costs. Conversely, the blue line delineates the optimal path for firms
+    subjected to a 25\% monitoring cost. Apart from the monitoring cost, all other parameters are held constant. It is
+    evident from the graph that monitoring costs have a significant impact on the steady state, notably reducing it.
+    }
     \label{fig:capitalEvolution}
 \end{figure}
-Figure \ref{fig:capitalEvolution} explicitly demonstrates the impact of monitoring costs on reducing the steady-state capital level. The observed discrepancy in steady-state capital levels between the two firms is quantified as follows:
+Figure \ref{fig:capitalEvolution} explicitly demonstrates the impact of monitoring costs on reducing the steady-state
+capital level. The observed discrepancy in steady-state capital levels between the two firms is quantified as follows:
 \begin{align*}
     &\hat{k_0} = 7.077, \\
     &\hat{k_1} = 2.713, \\
     &\Delta\hat{k} = \hat{k_0} - \hat{k_1} = 4.364.
 \end{align*}
-Hence, imposing a 25\% monitoring cost on the output, under a fixed leverage ratio of 0.5, results in a 69\% reduction in the steady-state level of capital.
+Hence, imposing a 25\% monitoring cost on the output, under a fixed leverage ratio of 0.5, results in a 69\% reduction
+in the steady-state level of capital.
 
-Additionally, Figure \ref{fig:dividendsEvolution} illustrates the optimal dividend paths for the same two firms, one burdened by monitoring costs and the other not. Following the policy function detailed in \autoref{eq31}, derived from the solution to the Bellman equation.
+Additionally, Figure \ref{fig:dividendsEvolution} illustrates the optimal dividend paths for the same two firms, one
+burdened by monitoring costs and the other not. Following the policy function detailed in \ref{eq31}, derived from
+the solution to the Bellman equation.
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \begin{tikzpicture}
     \begin{axis}[
@@ -2416,7 +2493,7 @@ Additionally, Figure \ref{fig:dividendsEvolution} illustrates the optimal divide
     \label{fig:dividendsEvolution}
 \end{figure}
 
-The dividend trajectory is notably higher in scenarios without financial frictions, emphasizing the significant role
+In the \ref{fig:dividendsEvolution} The dividend trajectory is notably higher in scenarios without financial frictions, emphasizing the significant role
 these frictions play in reducing returns. In a steady-state analysis, monitoring costs lead to a 78\% decrease in
 dividend levels, given a constant leverage ratio of 0.5. 
 In the forthcoming sections, the analysis will expand to simulate an economy with heterogeneous agents, aiming to
@@ -2448,7 +2525,7 @@ of \(Z\). Consequently, the cycle is represented as follows:
 \end{equation}
 The firm determines an optimal level of output at time \(t_0\) for the subsequent time \(t_1\), based on equation
 \ref{eq29}. However, the actual output may deviate from this optimal level due to fluctuations in the productivity
-factor \(Z\), which is influenced by the business cycle, as described in Equation \ref{eq:bc}. To clearly differentiate
+factor \(Z\), which is influenced by the business cycle, as described in Equation \ref{eq:bc}. To differentiate
 between these two scenarios, the term 'optimal' will refer to the firm's chosen level of output, while 'actual' will
 describe the output level that the firm ultimately achieves. 
 
@@ -2499,7 +2576,7 @@ both setups, firms face financial frictions manifested as monitoring costs, cons
 confidence intervals for total output, comparing scenarios where exits are permitted to those where no reallocation
 occurs.
 
-Visual representation of total output over a 20-step horizon, including 100 iterations among a group of 10 firms,
+Visual representation (\ref{fig:optKnoE}) of total output over a 20-step horizon, including 100 iterations among a group of 10 firms,
 illustrates the comparative trajectories. Under financial frictions, the economy with the exit mechanism in play
 consistently registers a superior aggregate output level. This finding corroborates the notion of a market-driven
 'cleansing effect'—the process through which less productive firms are culled, freeing up resources for redistribution
@@ -2511,11 +2588,11 @@ reallocation mechanisms to bolster economic efficiency, even when financial barr
 
 
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \begin{tikzpicture}
         \begin{axis}[
-            title={Total Production: Actual vs. Optimal},
+            title={Effect of cleansing on total production},
             xlabel={Step},
             xmin=1, ymin=0,
             ylabel={Total Production},
@@ -2552,11 +2629,15 @@ reallocation mechanisms to bolster economic efficiency, even when financial barr
         
         \end{axis}
     \end{tikzpicture}
-    \caption{Illustrating a 20-step simulation of 10 firms, this plot compares the chosen overall optimal output
-    (\(K\)) (red line)
-    against the
-    overall actual capital (\(k\)) post-business cycle adjustment (blue line). The confidence intervals are set at 95\%.
-    }
+    \caption{The plot presents the outcomes of a 20-step simulation involving 10 firms, contrasting the total output
+    (\(K\)) in an economy with an exit and reallocation mechanism (red line) against an economy lacking such mechanisms
+    (blue line). Both scenarios are subject to 15\% monitoring costs and experience a sinusoidal continuous shock
+    affecting productivity. The visualization illustrates that the incorporation of exit and reallocation strategies
+    enhances the overall output of the economy despite the presence of financial frictions. Given that the total number
+    of firms is held constant at ten, the aggregate production can be interpreted as average productivity by dividing by
+    ten. The data suggest the presence of a cleansing effect within the economy, even when financial frictions are
+    factored in. The confidence intervals are depicted at a 95\% level, derived from 100 Monte Carlo simulation
+    iterations.}
     \label{fig:optKnoE}
 \end{figure}
 
@@ -2636,7 +2717,7 @@ mechanism serves as a pivotal driver of economic efficiency and productivity.
 \end{figure}
 
 
-Graph \autoref{fig:output_comparison_frictions} illustrates the effect of firm exits and capital reallocation on total output in two different economic
+Graph \ref{fig:output_comparison_frictions} illustrates the effect of firm exits and capital reallocation on total output in two different economic
 scenarios, factoring in the impact of monitoring costs. The red line represents economies with monitoring costs equating
 to 15\% of recoverable assets (\(1-\mu=0.15\)), while the blue line depicts economies without any monitoring costs
 (\(1-\mu=0\)). The contrast between the two lines showcases the 'cleansing effect' of firm exits: in the absence of
@@ -2644,7 +2725,7 @@ monitoring costs, this effect prompts a 20\% rise in output, whereas, with monit
 modest, at about 7\%. The error bars on the graph denote a 95\% confidence interval, affirming the statistical
 significance of the results. 
 
-Figure \autoref{fig:output_comparison_frictions} affirms that capital reallocation following firm exits can enhance
+Figure \ref{fig:output_comparison_frictions} affirms that capital reallocation following firm exits can enhance
 productivity, even under financial constraints represented by a 15\% monitoring cost. Despite the asymmetric information
 challenges between financial intermediaries and firms, the positive impact on production is not only present but also
 accumulates over time, suggesting a magnifying effect. Therefore, two otherwise identical economies in terms of
@@ -2656,7 +2737,7 @@ and capital reallocation, despite the existence of financial frictions.
 This thesis presents a comprehensive theoretical model that elucidates the intertemporal optimization problem of firms
 contending with financial frictions. By integrating mechanisms for financing through retained earnings and debt within
 the framework of the Ramsey-Cass-Koopmans model, this work embarks on an analytical journey starting with the
-application of Lagrangian methods to establish the steady state conditions. It progresses to leveraging the Bellman
+application of Lagrangian methods to establish steady-state conditions. It progresses to leveraging the Bellman
 equation, in conjunction with guess and verify techniques, to extract explicit solutions for the paths of capital
 accumulation and dividend distribution across an infinite timeline. This rigorous approach facilitates an in-depth
 exploration of the impacts of financial frictions, such as monitoring costs and financing constraints, on the
@@ -2667,7 +2748,7 @@ Empirical analysis, informed by the parameterization in \cite{OsePap17}, demonst
 This highlights the profound effect of financial frictions on the dynamics of firm valuation and asset management.
 
 Monte Carlo simulations further extend this analysis to a heterogeneous firm population, characterized by diverse
-productivity levels and leverage ratios. These simulations assess the impact of capital reallocation following firm
+productivity levels and leverage ratios. These simulations assess the impact of capital reallocation following firms'
 exits in a financial friction-laden environment. Results reveal that such reallocation can boost the economy's total
 output by approximately 10\% under a financial framework with 15\% monitoring costs. Remarkably, the absence of
 monitoring costs escalates the enhancement in total output to around 20\%, validating that while financial frictions may
@@ -2682,7 +2763,7 @@ significantly mitigate the adverse effects of financial frictions, maintaining o
 certain conditions.
 
 Future research avenues are manifold and promise to enrich our understanding by introducing uncertainty into the model
-to increase its realism and applicability across different economic scenarios. Incorporating stochastic shocks to firm
+to increase its realism and applicability across different economic scenarios. Incorporating stochastic shocks into firm
 productivity and the intensity of financial frictions could provide insights into firms' strategic responses under
 uncertainty. Additionally, examining policy interventions targeting firms under financial duress could yield
 recommendations for minimizing unwarranted firm exits and enhancing economic output. Extending the model to account for

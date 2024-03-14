@@ -21,6 +21,13 @@ Ricardo~J. Caballero and Mohamad~L. Hammour.
 \newblock ISSN 00028282.
 \newblock URL \url{http://www.jstor.org/stable/2117776}.
 
+\bibitem[Bernanke and Gertler(1986)]{BerGer86}
+Ben~S Bernanke and Mark Gertler.
+\newblock Agency costs, collateral, and business fluctuations.
+\newblock Working Paper 2015, National Bureau of Economic Research, September
+  1986.
+\newblock URL \url{http://www.nber.org/papers/w2015}.
+
 \bibitem[Solow(1956)]{Sol56}
 Robert~M. Solow.
 \newblock A contribution to the theory of economic growth.
@@ -119,12 +126,5 @@ Ben~S Bernanke and Mark Gertler.
   transmission.
 \newblock \emph{Journal of Economic perspectives}, 9\penalty0 (4):\penalty0
   27--48, 1995.
-
-\bibitem[Bernanke and Gertler(1986)]{BerGer86}
-Ben~S Bernanke and Mark Gertler.
-\newblock Agency costs, collateral, and business fluctuations.
-\newblock Working Paper 2015, National Bureau of Economic Research, September
-  1986.
-\newblock URL \url{http://www.nber.org/papers/w2015}.
 
 \end{thebibliography}
