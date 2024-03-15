@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -126,5 +126,13 @@ Ben~S Bernanke and Mark Gertler.
   transmission.
 \newblock \emph{Journal of Economic perspectives}, 9\penalty0 (4):\penalty0
   27--48, 1995.
+
+\bibitem[Foster et~al.(2016)Foster, Grim, and Haltiwanger]{FosHal16}
+Lucia Foster, Cheryl Grim, and John Haltiwanger.
+\newblock Reallocation in the great recession: Cleansing or not?
+\newblock \emph{Journal of Labor Economics}, 34\penalty0 (S1):\penalty0
+  S293--S331, 2016.
+\newblock \doi{10.1086/682397}.
+\newblock URL \url{https://doi.org/10.1086/682397}.
 
 \end{thebibliography}

@@ -59,63 +59,65 @@
 \usetikzlibrary{shapes.arrows, positioning, arrows.meta}
 
 
-\title{Theoretical framework}
+\title{Financial Frictions and the Cleansing Effects of Recessions}
 \author{Riccardo Dal Cero}
+
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+    \centering
+
+    \Large Catholic University of Sacred Heart\\
+    \large Milan\\
+    \Large Master of Science in Economics\\
+    \vspace{2cm}
+    \includegraphics[width=0.4\textwidth]{logo.png}\\ 
+    \vspace{2cm}
+    \Huge Financial Frictions and the Cleansing Effects of Recessions\\
+
+    \vspace{2cm}
+
+    \begin{flushleft}
+    \large Supervisor: \\ Professor Domenico Delli Gatti
+    \end{flushleft}
+    
+    \vfill
+    
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \raggedleft
+        \large Author:\\
+        \large Riccardo Dal Cero\\
+        \large Student ID: 5112054
+    \end{minipage}
+    
+    \vspace{0.8cm}
+
+    \Large{Academic Year 2023/2024}
+    
+\end{titlepage}
+
 
 \begin{abstract}
-    This thesis formulates a Ramsey-Cass-Koopmans theoretical model, addressing the complex scenario
-    wherein firms, intent on dividend maximization, grapple with financial frictions encompassing both monitoring costs
-    and fixed leverage constraints. A pivotal achievement of this work is the derivation of a closed-form solution to
-    the firms' infinite intertemporal maximization problem, encapsulated within the participation constraints of
-    financial lenders,  underpinned by monitoring expenditures and financing constraints.
-    Employing a Lagrangian framework, I extract the Euler equation for dividends, thereby
-    uncovering the fundamental principles guiding optimal dividend policies in the face of financial constraints. 
-
-    Building on the analytical groundwork, the thesis employs Monte Carlo simulations to investigate the behavior of
-    heterogeneous firms—varied in terms of leverage and productivity—under the influence of business cycles. It uncovers
-    that the 'cleansing effect,' which fosters a reallocation of resources during economic downturns, leads to a 20\%
-    augmentation in the overall output of the economy in scenarios devoid of monitoring costs. However, this effect is
-    attenuated to a 7\% increase when firms are subject to a 15\% monitoring cost.
-    This empirical evidence, aligning with insights from \cite{OsePap17}, confirms the theoretical propositions
-    regarding the modulating role of financial frictions on the cleansing effect.
-    
-    In conclusion, this thesis contributes significantly to the literature by providing a comprehensive analysis of how
-    financial frictions impact firm behavior and the overall economic landscape. By developing a
-    model that captures the effects of such frictions on firm dynamics and leveraging empirical evidence to
-    validate theoretical insights. This endeavor sets the stage for subsequent investigative efforts in the field.
+    This thesis develops a theoretical framework to explore how financial frictions affect the optimal trajectory for
+    capital and dividends. Initially, the model excludes the possibility of debt financing for investment, akin to
+    the Ramsey-Cass-Koopmans model, with dividends instead of consumption levels. By employing a Lagrangian method,
+    the Euler equation for dividends is derived. In the next stage, firms are allowed to finance investments through
+    debt and retained earnings. The model introduces asymmetric information via monitoring costs included in the
+    participation constraint of financial intermediaries. Additionally, a borrowing constraint that sets a fixed
+    leverage ratio for firms represents another financial friction. The solution process starts with a Lagrangian
+    approach to formulate the Euler equations for dividends and capital, followed by a Bellman equation with a
+    guess-and-verify method to derive a closed-form solution for the optimal paths of dividends and capital. An
+    important finding is that monitoring costs lead to lower steady-state levels of capital and dividends. The thesis concludes
+    with Monte Carlo simulations that introduce heterogeneity across firms and continuous sinusoidal productivity shocks.
+    These simulations suggest that financial frictions reduce the cleansing effect, but it remains positively
+    significant, aligning with the findings of \cite{OsePap17}.
 \end{abstract}
 
 
 \tableofcontents
 \chapter{Introduction} 
-
-
-In macroeconomic theory, the dynamic interplay between business cycles and long-term economic growth poses a complex
-challenge, drawing a parallel to the reconciliation efforts between quantum mechanics and Einstein's theory of
-relativity in physics. This traditional academic compartmentalization tends to overlook a crucial question: how do
-business cycles affect long-term economic growth? Investigating this query is essential, as it sheds light on the
-implications of short-term economic policies for the broader economic trajectory.
-
-This thesis focuses on the dynamics of firm optimization amidst financial frictions, bridging theoretical constructs
-with practical economic phenomena. A significant portion of this research is devoted to understanding how financial
-market frictions might
-influence the 'cleansing effect' of reallocation. This effect, akin to natural selection, is scrutinized for its potential
-long-term impacts on economic stability and growth.
-
-Inspired by biological cycles and their long-term trends, described in Lotka-Volterra equations, this work draws an analogy to economic cycles, suggesting that
-short-term fluctuations may conceal underlying growth patterns. Similar to biological interventions that might initially
-seem beneficial, economic policies aimed at stabilizing cycles could inadvertently hinder the natural selection process,
-leading to unforeseen long-term consequences.
-
-Employing a biological analogy, this thesis hypothesizes that recessions can act as a natural selection mechanism
-within economies, purging less efficient firms and promoting more productive ones. Through theoretical models and Monte
-Carlo simulations, this research endeavors to elucidate the relationship between short-term economic fluctuations and
-long-term growth. The thesis particularly emphasizes solving firms' intertemporal maximization problems under financial
-constraints through a closed-form solution, spotlighting the significant influence of financial frictions.
 
 Recessions are characterized by increased instances of bankruptcies and business shutdowns. Notably, during the Great
 Recession, the annual establishment exit rate in the US escalated from 11.8\% to 13.5\% from March 2008 to March 2009.
@@ -131,71 +133,74 @@ insights imply that, amidst credit frictions, even highly productive firms that 
 compelled to leave the market. Consequently, credit frictions could potentially undermine the productivity-boosting
 impact of recessions as found in \cite{OsePap17}. 
 
-This thesis marks a significant departure from prior studies that predominantly rely on numerical methods by offering a
-closed-form solution for determining the optimal trajectories of capital and dividends. Such a breakthrough provides a
-nuanced understanding of the intertemporal maximization challenges faced by firms. This research delves into the
-repercussions of credit frictions on the cleansing effect observed during recessions within a framework encompassing
-firm dynamics, credit restrictions, and mechanisms for firm exit. It is found that, even in the presence of credit
-frictions, recessions exert a cleansing effect by enabling the redistribution of resources to more efficient entities. 
+This thesis investigates the impact of credit frictions on the cleansing effect during recessions by examining firm
+dynamics and credit constraints. Initially, it introduces a theoretical model to analyze how financial
+frictions influence firm decisions on capital, debt, and dividends. Monte Carlo simulations are then applied to assess
+potential implications for the cleansing effect of recessions.
 
-Credit constraints within the model are endogenously driven by asymmetric information and the costs associated with
-verifying states. Incorporating a one-period financial contract, mirroring the methodology proposed by \cite{BerGer86},
-into the model of firm dynamics, allows for the delineation of borrowing capabilities and the determination of interest
-rates by financial intermediaries, which are contingent upon each firm's productivity and leverage. Additionally, the
-model imposes a borrowing constraint on firms, stipulating that leverage is exogenous and remains constant over time. 
+The model is divided into two scenarios: in the first, investment is funded solely through retained earnings; in the
+second, firms also have the option to finance through debt. Without the ability to borrow, the model aligns with
+Ramsey-Cass-Koopmans frameworks, substituting family savings with firm savings and consumption with dividends. Firms
+face capital depreciation and can only replace it by retaining dividends, depicted in the funds flow constraint. Using a
+Lagrangian function, the Euler equation for dividends is derived, leading to steady-state conditions for dividends and
+capital, visualized in a phase diagram.
 
-Following the theoretical developments, this thesis employs Monte Carlo simulations to rigorously analyze the behavior
+The second part introduces financial frictions and debt financing for investments, aiming to find closed-form solutions
+for the optimal paths of dividends and capital. Credit restrictions are shaped by asymmetric information and
+monitoring costs. By incorporating a one-period financial contract, akin to the approach by \cite{BerGer86}, into the
+firm dynamics model, it outlines borrowing constraints and interest rates set by financial intermediaries based on each
+firm's productivity and leverage. The model also applies a borrowing constraint, fixing leverage over time.
+
+Addressing this problem requires the use of a Bellman equation combined with a guess-and-verify approach, using a
+logarithmic utility function. The derived closed-form solution for the optimal trajectories of dividends and capital
+demonstrates the significant impact of monitoring costs, which reduce both capital and dividends, thereby increasing the
+vulnerability of firms irrespective of their productivity. 
+
+Furthermore, eliminating debt and financial frictions enabled the retrieval of closed-form solutions for the initial
+maximization challenge. Remarkably, these results closely mirror those of the Ramsey-Cass-Koopmans model, indicating the
+reliability of the theoretical model's outcomes. 
+
+Following the theoretical developments, this thesis employs Monte Carlo simulations to analyze the behavior
 of firms differentiated by their productivity and leverage ratios in the face of business cycle fluctuations. These
-fluctuations are modeled as continuous sinusoidal shocks to the productivity component, simulating the dynamic pressures
-of economic cycles. A key feature of the model is the exit mechanism, which compels firms to exit the market if their
+fluctuations are modeled as continuous sinusoidal shocks to the productivity component, simulating the economic cycles. 
+A key feature of the model is the exit mechanism, which forces firms to exit the market if their
 return on capital falls below the risk-free rate, directly engaging with the discourse on the cleansing effect of
 recessions. 
 
-The heterogeneity in firm characteristics, notably in terms of productivity and leverage, allows for a detailed
-examination of how diverse firms respond to economic cycles and credit constraints. Firms with higher leverage may face
+The heterogeneity in firm characteristics, in terms of productivity and leverage, allows for an
+examination of how heterogeneous firms respond to economic cycles and credit constraints. Firms with higher leverage may face
 greater financial stress during downturns, influencing their survival and contributing to the market's cleansing
 process. Similarly, variations in productivity affect firms' ability to withstand economic shocks, further delineating
 the selection process during recessions. 
 
-The simulations reveal that recessions facilitate a significant enhancement in the economy's overall output by enabling
+The simulation's exercises suggest that recessions facilitate an enhancement in the economy's overall output by enabling
 the reallocation of resources towards more efficient firms, particularly in scenarios devoid of monitoring costs.
-However, the introduction of such costs tempers this efficiency gain, underscoring the nuanced role that financial
+However, the introduction of such costs tempers this efficiency gain, underscoring the role that financial
 frictions play in influencing the economy's adaptive capacity during downturns. This observed cleansing effect, albeit
-modulated by the presence of financial frictions, substantiates the theoretical assertions posited earlier in the
-thesis. 
+modulated by the presence of financial frictions, aligned with the findings in \cite{OsePap17}. Despite the dampening
+influence of credit constraints, recessions retain an inherent capacity to purge the economy of 
+less efficient firms.
 
-Moreover, this empirical evidence, resonating with the findings from \cite{OsePap17}, affirms the contention that,
-despite the dampening influence of credit constraints, recessions retain an inherent capacity to purge the economy of
-less efficient firms. This mechanism, facilitated by a well-defined exit criterion based on returns relative to the
-risk-free rate and nuanced by firm-specific attributes of productivity and leverage exemplifies the complex interplay
-between financial frictions, firm dynamics, and economic resilience under cyclical pressures. 
+The thesis is organized into three distinct sections. The opening section conducts a review of theories that dissect the
+effects of economic downturns, particularly their role in enhancing productivity by forcing out the
+less effective firms. Two models are presented: the first, cited as \cite{CabHarm94}, examines how recessions can render
+outdated production units unprofitable, forcing their exit. Notably, this model does not account for
+debt financing.  In contrast, the second model, \cite{OsePap17}, extends the analysis by including
+financial frictions. Their approach involves constructing and calibrating a firm dynamics model with credit frictions
+and endogenous entry and exit. Their findings suggest that recessions do have a cleansing effect, enhancing average
+firm-level productivity as a consequence of both aggregate productivity and financial shocks.
 
-The initial segment of this thesis introduces the theoretical frameworks of \cite{CabHarm94} and \cite{OsePap17}, aiming
-to highlight how the incorporation of financial frictions alters previously established results in the literature.
-Following this introduction, the thesis delves into the formulation of theoretical models that explore the dynamics of
-capital flow and debt in financial contracts. An examination of the firm's problem in the absence of debt, mirroring the
-Ramsey-Cass-Koopmans model where consumption is represented by dividends and leverage, employs a Lagrangian approach to
-derive the Euler equation for dividends. This equation serves as the cornerstone for determining the optimal policies
-for dividends and investment. Utilizing the derived solution, a phase diagram for capital and dividends is constructed
-to identify a potential saddle path toward a stationary state for both variables.
+The second section outlines the firm's problem, starting with how the flow of funds restrictions can shape the
+ steady-state conditions for capital and debt. It then explores the firm's problem in the absence of debt,
+shedding light on how dividends and capital evolve when investments can only be financed through retained earnings. 
+In the final section, the thesis tackles the firm's problem introducing financial frictions, to understand how firms
+operate when they can borrow. This part is critical as it explores how these affect firm decisions on
+investment, borrowing, and dividend distribution. 
 
-Subsequently, the theoretical model is expanded to accommodate the firm's ability to finance investment through debt,
-subjecting it to financial frictions manifested as monitoring costs and borrowing constraints. By applying the
-Lagrangian method, steady-state conditions for dividends are extracted from the Euler equation, along with consolidation
-constraints to ascertain the steady-state condition for capital. These findings enable the plotting of a phase diagram
-for capital and dividends, illustrating their interrelation.
-
-Reformulating the problem through a Bellman equation and employing a guess-and-verify approach yields the optimal path
-for capital, policy function for dividends, and the steady state for capital. 
-
-In the concluding part, these results underpin simulations that assess the impact of monitoring costs on capital,
-demonstrating significant reductions in capital levels due to such costs. Monte Carlo simulations further explore
-economies with heterogeneous firms, characterized by variations in leverage and productivity. Firms in this model are
-compelled to exit if their return on capital falls below the risk-free rate, enabling an examination of the cleansing
-effect of recessions in the context of financial frictions. This multifaceted analysis offers insightful conclusions
-about the influence of financial frictions on firm behavior, the allocation of resources, and the overall efficiency of
-the economy during downturns, thereby contributing to the broader understanding of economic dynamics in the presence of
-financial constraints.
+In the final part, the thesis employs Monte Carlo simulations to shed light on how those financial frictions can affect
+the cleansing effect of recession. These simulations apply various economic conditions, including sinusoidal continuous shocks, to test how different
+firms might respond to recessions. The results of the simulations suggest that financial frictions reduce the
+cleansing effect of recession as found by \cite{CabHarm94}. 
 \chapter{Literature review}
 \section{Business cycle history}
 
@@ -381,9 +386,9 @@ and economic recovery.
 
 In the forthcoming sections,  we will explore the
 theoretical underpinnings that form the basis of the new, streamlined theoretical framework introduced in this thesis.
-Our examination begins with the insights of \cite{CabHarm94}, focusing on the interplay between the
+The examination begins with the insights of \cite{CabHarm94}, focusing on the interplay between the
 destruction and creation margins in economic cycles. Subsequently, we will delve into the work of \cite{OsePap17}, which sheds light on the financial dimensions, particularly how capital lending frictions can precipitate
-misallocations. These studies collectively inform the development of our theoretical framework, setting the stage for a
+misallocations. These studies collectively inform the development of this theoretical framework, setting the stage for a
 comprehensive analysis of economic dynamics and firm behavior during recessions. 
 
 \section{Literature review of theoretical models}
@@ -697,7 +702,7 @@ responsive to demand fluctuations, while job destruction exhibits a more counter
 \begin{figure}
     \centering
     \includegraphics[scale = 0.4]{figure/Plot2.3.png}
-    \caption{Job Creation and Job Destruction in U.S. Manufacturing Response to Output Growth: : the table presents the reaction of job creation to the growth rate of the industrial
+    \caption{Job Creation and Job Destruction in U.S. Manufacturing Response to Output Growth: the table presents the reaction of job creation to the growth rate of the industrial
     production index. The latter is categorized into values above and below its mean (Q). The table encompasses
     quarterly observations for the two-digit SIC industries during the period 1972:2-1986:4. The coefficients are
     uniformly constrained to be equal across all sectors, except for a constant (not shown).}
@@ -1529,7 +1534,7 @@ Let's look at the locus in which capital is stationary \(\Delta k = 0 \) is give
 \begin{align}
     d_t & = f(k_t) - \delta k_t
 \end{align}
-In our case, as obtained in the above section, the locus in which capital is stationary becomes \ref{eq17}:
+In this case, as obtained in the above section, the locus in which capital is stationary becomes \ref{eq17}:
 \begin{align}
     d_t &=Z k^{\alpha}_t-\delta k_t
 \end{align}
@@ -2318,7 +2323,7 @@ The first order condition (FOC) is specified as \(d^*_0 = [\beta V'(k_{1})]^{-1}
          k_0 \text{ given.}
      \end{cases}
  \end{align*}
-Our initial guess for the solution is:
+The initial guess for the solution is:
 
  \begin{align*}
      V(k_t) = e + f \ln{k_t},
@@ -2375,7 +2380,80 @@ By setting \(k_1 = k_0 = \hat{k}\) in \ref{eq29}, the equation simplifies to:
 \end{equation}
 This expression elucidates the steady-state capital level, \(\hat{k}\), in relation to the parameters \(\alpha\), \(\beta\), \(l\), \(p\), \(\mu\), and \(Z\).
 
-To derive the optimal trajectories for capital and dividends, as well as the steady-state locus for capital in the
+Taking the derivation of \(\hat{k}\) with respect to \(\mu\) we get:
+\begin{align}
+    \frac{\partial \hat{k}}{\partial \mu}&=\frac{1}{1-\alpha}\left(\frac{Z\alpha\beta(p(1-\mu) + u)}{p(1-\alpha \beta l)}\right)^{\frac{\alpha}{1-\alpha}} \frac{Z \alpha \beta(1-p)}{[(1-
+    \alpha \beta l)]} \label{eq32}
+\end{align}
+Given that the partial derivatives in equation \ref{eq32} are positive, it's clear that monitoring costs (\(1-\mu\))
+diminish the steady-state level of capital, and this effect intensifies with increased productivity. Hence, firms with
+higher productivity face greater adverse impacts from monitoring costs. A potential rationale for this phenomenon is
+that, typically, more productive firms could negotiate lower interest rates due to their ability to present higher
+outputs as collateral to financial intermediaries in case of default. However, monitoring costs erode this advantage. In
+situations where monitoring costs reach 100\%, the differential impact on firms of varying productivity levels
+disappears, as monitoring costs uniformly affect all firms. 
+
+Another interesting aspect to explore is the effect on the steady-state level of capital when there is an increase in
+the leverage ratio. To investigate this, we consider the derivative of \(\hat{k}\) with respect to leverage (\(l\)),
+under the assumption that \(p = R_f l / (1 - \delta)\). 
+
+\begin{align}
+    % First equation part
+    &\frac{\partial \hat{k}}{\partial l} = \frac{1}{1-\alpha} \left( \frac{Z\alpha\beta(p(1-\mu) + \mu)}{p(1-\alpha \beta l)} \right)^{\frac{\alpha}{1-\alpha}} \nonumber \\
+    % Second equation part, split for clarity
+    &\left( \frac{Z\alpha \beta (1-\mu)p^{\prime}p(1-\alpha \beta l) - (p^{\prime}(1-\alpha \beta l)+p \alpha \beta)Z\alpha\beta(p(1-\mu) + \mu)}{(p(1-\alpha \beta l))^2} \right)\nonumber \\
+    % Third equation part
+    &\frac{\partial \hat{k}}{\partial l} = \frac{1}{1-\alpha} \left( \frac{Z\alpha\beta(R_f l (1-\delta)^{-1}(1-\mu) + \mu)}{R_f l (1-\delta)^{-1}(1-\alpha \beta l)} \right)^{\frac{\alpha}{1-\alpha}} \cdot \nonumber \\
+    % Third equation continued, with clearer structure
+    & \Bigl( -\frac{(1-\delta)\mu +  \alpha \beta Z R_f (1-\mu) l}{R_f l^2 (1- \alpha \beta l)} \nonumber \\
+    & +\frac{\alpha \beta (1-\delta)\mu + \alpha^2\beta^2 R_f(1-\mu)Z l}{R_f l (1- \alpha \beta l)^2} +\frac{\alpha \beta Z (1-\mu)}{ l (1- \alpha \beta l)} \Bigr) \label{eq34}
+\end{align}
+The determination of whether the partial derivative mentioned in equation \ref{eq34} is positive primarily hinges on the second term of the derivative. To clarify, we can state the condition for the partial derivative to be positive as follows:
+\begin{align}
+    &l (\alpha \beta (1-\delta)\mu + \alpha^2\beta^2 R_f(1-\mu)Z l) + \alpha \beta Z (1-\mu) \geq \nonumber\\
+    &((1-\delta)\mu +  \alpha \beta Z R_f (1-\mu) l) (1- \alpha \beta l) \label{eq35}
+\end{align}
+If the condition outlined in equation \ref{eq35} is satisfied, then increasing leverage will actually increase the
+steady-state level of capital. This might seem unexpected because typically, higher leverage means a higher risk of
+default. However, if the assumption (\(p-\delta p - R_f l=0\)) and condition \ref{eq35} hold, it suggests that the chance of default decreases enough with increased
+leverage to lower the interest rate, which compensates for the typical rise in interest rates seen with higher leverage.
+This balancing act continues only up to a certain point of leverage; beyond this, the detrimental effects of additional
+leverage surpasses the benefits, resulting in a decrease in steady-state capital. 
+
+The graph referenced as \ref{plot_part} displays this interesting dynamic. For lower levels of leverage, the impact on
+steady-state capital is positive, which aligns with the condition being met. As leverage increases beyond this favorable
+range, the graph shows that the partial derivative becomes negative, which means that more leverage reduces the capital
+level. This dynamic is captured in the graph where, below a leverage point around 0.1, leverage has a positive effect on
+capital, skyrocketing as it approaches zero. 
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        
+        \begin{axis}[
+            title={Effect of leverage to capital},
+            xlabel={\(l\)},
+            ylabel={\(\frac{\partial \hat{k}}{\partial l}\)},
+            grid=both,
+            minor tick num=1,
+            major grid style={lightgray},
+            minor grid style={lightgray!25},
+
+        ]
+        \addplot[blue] table [col sep=comma, x=l, y=par] {output_data/adjusted_partial_derivative_k_with_respect_to_l.csv}; % With friction
+        \end{axis}
+        
+    \end{tikzpicture}
+    \caption{The graph depicts the relationship between the partial derivative of \(\hat{k}\) with respect to
+        leverage and the leverage itself, under the parameters \(R_f=1.4\), \(\mu=0.75\), \(\alpha= 0.7\),
+        \(\beta=0.956\), \(\delta =0.07\), and \(Z=1\). It can be observed that when the leverage is greater than 0.1,
+        the partial derivative becomes negative, signifying that an increase in leverage results in a decrease in
+        steady-state capital. Conversely, when the leverage is below this threshold, the partial derivative sharply
+        rises towards \(+\infty\). }
+
+    \label{plot_part}
+\end{figure}
+
+Finally, we can derive the optimal trajectories for capital and dividends, as well as the steady-state locus for capital in the
 context of no debt and financial friction (assuming \(l = 0\), \(\mu = 1\), and \(p = 1\)), the following expressions
 are obtained:
 \begin{align}
@@ -2409,7 +2487,7 @@ employing  parameters similar to those used in the \cite{OsePap17} study:
     Risk-free rate & $R_f$ & 1.04 \\
     Depreciation rate & $\delta$ & 0.07 \\
     Returns to scale & $\alpha$ & 0.70 \\
-    Aggregate productivity & $\bar{Z}$ & 1 \\
+    Firm productivity & $Z$ & 1 \\
     \hline
     \end{tabular}
     \caption{Benchmark calibration}
@@ -2499,7 +2577,7 @@ dividend levels, given a constant leverage ratio of 0.5.
 In the forthcoming sections, the analysis will expand to simulate an economy with heterogeneous agents, aiming to
 dissect the broader implications of financial frictions on overall output. This simulation will contrast environments
 with and without financial frictions, with a particular focus on the cleansing effect that such frictions may exert in
-economic systems. Through this comparative approach, we aim to deepen our understanding of how financial frictions
+economic systems. Through this comparative approach, we aim to deepen the understanding of how financial frictions
 influence economic resilience, performance, and the potential for innovation and growth amidst challenges. 
 Next, we will simulate an economy with heterogeneous agents to assess the overall output in environments with and
 without financial frictions. This analysis aims to explore the cleansing effect of financial frictions, providing
@@ -2507,7 +2585,7 @@ insights into their influence on economic performance and growth potential.
 
 \subsection{Heterogeneity and Aggregation Mechanism}
 
-To refine our model, we introduce heterogeneity among firms, marking a departure from uniform productivity.
+To refine the model, we introduce heterogeneity among firms, marking a departure from uniform productivity.
 Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
 the model. Additionally, we diversify leverage ratios, ensuring no direct correlation between a firm's productivity and
 its leverage. This heterogeneity is captured from the outset by simulating the initial distribution of capital,
@@ -2562,7 +2640,7 @@ landscape.
 
 \subsection{Findings}
 
-In our investigation, financial frictions are integrated into the economic model, characterized by a monitoring cost
+In the presented investigation, financial frictions are integrated into the economic model, characterized by a monitoring cost
 parameter \(1-\mu = 0.15\). The aim is to discern the repercussions of such frictions on the economic dynamics. To this
 end, we conduct two distinct simulations within the environment of financial frictions: one where an economy is subject
 to an exit and capital reallocation mechanism, and another where this mechanism is absent, inhibiting the movement of
@@ -2734,42 +2812,87 @@ and capital reallocation, despite the existence of financial frictions.
 
 \chapter{Conclusions}
 
-This thesis presents a comprehensive theoretical model that elucidates the intertemporal optimization problem of firms
-contending with financial frictions. By integrating mechanisms for financing through retained earnings and debt within
-the framework of the Ramsey-Cass-Koopmans model, this work embarks on an analytical journey starting with the
-application of Lagrangian methods to establish steady-state conditions. It progresses to leveraging the Bellman
-equation, in conjunction with guess and verify techniques, to extract explicit solutions for the paths of capital
-accumulation and dividend distribution across an infinite timeline. This rigorous approach facilitates an in-depth
-exploration of the impacts of financial frictions, such as monitoring costs and financing constraints, on the
-formulation of firms' optimal strategies for capital and dividend management.
+% Recessions have always been time where the economy experienced higher rate of exit for firms, and higher reallocation
+% rate for the labour rate as stated by \cite{DavHalt92}, and this was always associated with a following periods in which
+% average productivity increases. However in the Great recession, the US experienced a lower reallocation rate since the
+% creation rate that remeined lower than the previus recessions. A paper of \cite{FosHal16} found that reallocation
+% patterns founded in previuse recessions are reversed during the great recession. \cite{OsePap17} reviseted the cleansing
+% effect main theoretical model present in the literature \cite{CabHarm94}, introducing financial frictions, in order to
+% understanfd if such frictions are responsible for the change in the reallocation behaviuor of firms. 
+In the usual course of recessions, as \cite{DavHalt92} noted, there's typically an uptick in the number of firms
+shutting down and a boost in the movement of workers—factors that are often followed by an increase in average
+productivity. However, the Great Recession deviated from this pattern in the U.S., with a sluggish reallocation rate and
+a persistently low rate of new firm creation, unlike what was seen in prior downturns. The research from \cite{FosHal16}
+points out that the reallocation trends that were common in past recessions didn't hold up during the Great Recession.
+In this context, \cite{OsePap17} took a fresh look at the key theoretical model of the cleansing effect from the
+existing literature, specifically the model by \cite{CabHarm94}, by incorporating the concept of financial frictions to
+probe whether these frictions were at play in altering the reallocation behavior of firms during such challenging
+economic times. 
+% 
+This thesis revisits the established model by incorporating borrowing constraints that limit the amount of debt a firm
+can incur. Through this adjustment of the theoretical framework, it has been possible to derive a closed-form solution
+for the optimal trajectories of dividends and capital. This solution enables a direct examination of how monitoring
+costs and a predetermined leverage ratio influence steady-state capital. 
 
-Empirical analysis, informed by the parameterization in \cite{OsePap17}, demonstrates that substantial monitoring costs
-— 25\% of recoverable assets — can lead to a significant reduction in the steady-state level of capital, by up to 69\%.
-This highlights the profound effect of financial frictions on the dynamics of firm valuation and asset management.
-
-Monte Carlo simulations further extend this analysis to a heterogeneous firm population, characterized by diverse
-productivity levels and leverage ratios. These simulations assess the impact of capital reallocation following firms'
-exits in a financial friction-laden environment. Results reveal that such reallocation can boost the economy's total
-output by approximately 10\% under a financial framework with 15\% monitoring costs. Remarkably, the absence of
-monitoring costs escalates the enhancement in total output to around 20\%, validating that while financial frictions may
-reduce the cleansing effect's magnitude, its overall impact remains positive. This aligns with findings from
-\cite{OsePap17}, reinforcing the intricate relationship between financial frictions, firm exit strategies, and economic
-productivity.
-
-This thesis contribution is to elucidate the dynamic interplay between financial frictions, firm operational behavior,
-and the broader market ecosystem. It ascertains that financial frictions, albeit challenging, do not fully negate the
-benefits derived from market-induced capital reallocation. Market dynamics, through inherent exit and entry mechanisms,
-significantly mitigate the adverse effects of financial frictions, maintaining or even amplifying economic output under
-certain conditions.
-
-Future research avenues are manifold and promise to enrich our understanding by introducing uncertainty into the model
-to increase its realism and applicability across different economic scenarios. Incorporating stochastic shocks into firm
-productivity and the intensity of financial frictions could provide insights into firms' strategic responses under
-uncertainty. Additionally, examining policy interventions targeting firms under financial duress could yield
-recommendations for minimizing unwarranted firm exits and enhancing economic output. Extending the model to account for
-endogenous firm exit and entry decisions, broadening the spectrum of firm heterogeneity, and exploring the role of
-financial institutions in mediating financial frictions' effects could unravel further dimensions of the complex
-relationship between financial markets and real economic activity.
+The findings from the model reveal that monitoring costs, which financial intermediaries face when a firm defaults,
+reduce the optimal trajectory and the steady state of capital and dividends. This makes firms more susceptible to the
+adverse effects of economic downturns. Notably, this impact is more pronounced for highly productive firms, which feel a
+greater effect on their steady-state capital and dividends. The reason behind this is linked to the assets that can be
+collateralized in this model, represented by the ratio of output to debt. More productive firms, capable of generating
+more output with the same amount of capital, would typically benefit from lower interest rates. However, because
+monitoring costs scale with output, they diminish the positive impact that productivity has on interest rates. In
+scenarios where monitoring costs match the output-to-debt ratio, the advantage of higher productivity vanishes entirely. 
+% Another Interestingly finding is regarding leverage, the effect of leverage to the steady state capital is not trivial
+% since the partial derivatives depend on level of leverage: for leverage above a certaint level the derivative is
+% negative indicating above a certaint threshold the derivatives became positive. Thus if the borrowing constrint is tight
+% firms can benefit from a lowering the leverage. So in an economy in which regulation does not allows the firms to use
+% leverage over a certain amount incurs in the risk of making the firm works below optimal capital and by adjusting such
+% constraint upward would make the firm better off, uneder certain conditions.
+Another noteworthy result pertains to the influence of leverage on steady-state capital. This effect is ambiguous, as the
+partial derivatives are sensitive to the actual leverage level: the derivative becomes negative when leverage surpasses
+a specific threshold, indicating that excessive leverage reduces steady-state capital. Conversely, within the bounds of
+stringent borrowing constraints, thus below the leverage level that makes derivative positive, firms might find advantages in increasing their leverage. Consequently, in regulatory
+environments that cap leverage at a low level, there's a potential risk of firms operating with suboptimal capital.
+Relaxing these constraints to permit slightly higher leverage could, under certain conditions, enhance the firm's
+financial health and stability. 
+% It is important to notice that these two finacial frictions are not indipendent one another,  and their effect add upp
+% even if those effect can be of opposite sine as in the case of show above in which leverage is so low that an increase
+% in leverage can increase steady state capital and thus production. However, is more realistic thinking to the case in
+% which the leverage is above the low threshold that was making the patial derivative positive. Thinking about great
+% recession if we consider an increasing in the leverage constraint and an increase in the monitoring cost those two
+% effects add up, leading to a relevant reduction in steasy state capital and thus output and dividends. 
+It's crucial to understand that the financial frictions of borrowing constraints and monitoring costs are
+interconnected, and their impacts are cumulative, sometimes even counteracting each other. For instance, as
+demonstrated, when leverage is initially low, an increase in leverage can actually boost steady-state capital and
+production. Yet, it's more common and practical to consider situations where leverage exceeds this minimal threshold,
+reversing the positive effect on the partial derivative. Reflecting on the Great Recession, if we look at tighter
+leverage restrictions combined with heightened monitoring costs, these two factors together contribute to a significant
+decrease in steady-state capital, as well as in overall output and dividends. 
+% This can
+% can give a hint why the Great Recession was different from the other recession in the reallocation pattern, as suggested
+% by \cite{FosHal16}. Indeed, with montecarlo simulations was possible to simulate an economy which experienced a
+% continous sinosoidal shock in productivity, with heterogeneous firms  by leverage and productivity. To represents the
+% cleansing effect had been added an exit mechanism which force firm to exit if their return on capital belongs to the two
+% lowers and if it is below the risk free rate. Interestingly, the economy subjected to monitoring costs reports a lower
+% cleansing effect on avarage productivity, while the economy that was not subjected to monitorng costs found an higher
+% cleansing effects. Those simulation want to emphasize that in presence of financial recession where the financial
+% frictions are stronger the benefit of reallocation of capital due the exit of firms is lowered, this aligns with the
+% findings of \cite{OsePap17}.
+This observation may explain why the Great Recession differed from previous downturns in terms of firm reallocation
+patterns, as \cite{FosHal16} have highlighted. Through Monte Carlo simulations, it was possible to model an economy
+under continuous sinusoidal productivity shocks, featuring firms varied by leverage and productivity. An exit mechanism
+was introduced to simulate the cleansing effect, forcing firms to exit the market if their return on capital was among
+the lowest or fell below the risk-free rate. Notably, economies facing monitoring costs showed a diminished cleansing
+effect on average productivity, in contrast to those without such costs, which experienced an enhanced effect. These
+simulations underscore that during financial recessions with intensified financial frictions, the advantages of capital
+reallocation through firm exits are reduced, corroborating the findings of \cite{OsePap17}. 
+% In conclusion this theoretical model allowed to understand better how financial frictions such as borrowing contraint
+% and monitoring costs can affect the optimal path and the steady starte for capital and dividends. While the montecarlo
+% simulations give an hint to the macroeconomics effect that this can have. 
+In conclusion, this theoretical model has shed some light on how financial frictions, like borrowing constraints and
+monitoring costs, affect the paths and steady states for capital and dividends. The Monte Carlo simulations hint at why
+financial crises might show different reallocation patterns than other recessions, providing a starting point for
+understanding these complex dynamics.  
 \medskip
 \bibliography{reference}
 
