@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 
+
 # Define the function for the partial derivative with respect to l, correctly handling edge cases
 def compute_partial_derivative_k_with_respect_to_l(
     alpha, beta, Z, mu, u, l_values, delta, R_f
@@ -48,7 +49,7 @@ adjusted_derivatives = compute_partial_derivative_k_with_respect_to_l(
 df_adjusted = pd.DataFrame({"l": l_values, "par": adjusted_derivatives})
 
 # Export the DataFrame to a CSV file
-adjusted_file_path = "output_data/adjusted_partial_derivative_k_with_respect_to_l.csv"
+adjusted_file_path = "output_data/adjusted_partial_derivative_k_with_respect_to_l_1.csv"
 df_adjusted.to_csv(adjusted_file_path, index=False)
 
 # Return the file path for download
