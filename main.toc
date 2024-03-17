@@ -1,0 +1,36 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Literature review}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Business cycle history}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}From Business Cycles to Long-Term Growth}{7}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Literature review of theoretical models}{15}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Introduction}{15}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}The cleansing effect by Caballero}{16}{subsection.2.2.2}%
+\contentsline {subsubsection}{Theoretical model}{17}{section*.2}%
+\contentsline {subsubsection}{Application of the model}{24}{section*.3}%
+\contentsline {paragraph}{Frictionless economy}{31}{section*.4}%
+\contentsline {subsection}{\numberline {2.2.3}Credit Frictions and The Cleansing Effect of Recessions}{33}{subsection.2.2.3}%
+\contentsline {paragraph}{Frictionless economy}{35}{section*.5}%
+\contentsline {paragraph}{Economy with Credit Market Frictions}{35}{section*.6}%
+\contentsline {paragraph}{The firm's problem}{37}{section*.7}%
+\contentsline {subsubsection}{Findings}{38}{section*.8}%
+\contentsline {chapter}{\numberline {3}The Firm's Problem}{40}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{40}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Law of motion of capital and debt}{40}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Steady State}{42}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Dynamics of capital}{45}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Dynamics of debts}{48}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Ramsey-Cass-Koopmans reinterpreted}{51}{section.3.3}%
+\contentsline {paragraph}{Steady state condition for dividends}{52}{section*.9}%
+\contentsline {paragraph}{Steady state condition for capital}{53}{section*.10}%
+\contentsline {subsection}{\numberline {3.3.1}Phase diagram}{53}{subsection.3.3.1}%
+\contentsline {paragraph}{Steady state for capital and dividends}{58}{section*.11}%
+\contentsline {chapter}{\numberline {4}Optimization under Financial Frictions}{60}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Participation constraint of the financial intermediaries }{61}{section.4.1}%
+\contentsline {section}{\numberline {4.2}The problem of the firm in the presence of financial frictions}{67}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Phase diagram}{70}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Finding the optimal path}{72}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Monte Carlo Simulations}{78}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Heterogeneity and Aggregation Mechanism}{81}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Findings}{83}{subsection.4.5.2}%
+\contentsline {chapter}{\numberline {5}Conclusions}{88}{chapter.5}%

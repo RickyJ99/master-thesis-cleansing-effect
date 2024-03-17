@@ -2437,11 +2437,12 @@ capital, skyrocketing as it approaches zero.
             minor tick num=1,
             major grid style={lightgray},
             minor grid style={lightgray!25},
-
-        ]
-        \addplot[blue] table [col sep=comma, x=l, y=par] {output_data/adjusted_partial_derivative_k_with_respect_to_l.csv}; % With friction
+            ]
+        \addplot[blue] table [col sep=comma, x=l, y=par]
+        {output_data/adjusted_partial_derivative_k_with_respect_to_l.csv}; % With friction
+        %\addplot[red] table [col sep=comma, x=l, y=par] {output_data/adjusted_partial_derivative_k_with_respect_to_l_1.csv}; % Without friction
         \end{axis}
-        
+         
     \end{tikzpicture}
     \caption{The graph depicts the relationship between the partial derivative of \(\hat{k}\) with respect to
         leverage and the leverage itself, under the parameters \(R_f=1.4\), \(\mu=0.75\), \(\alpha= 0.7\),
@@ -2449,7 +2450,6 @@ capital, skyrocketing as it approaches zero.
         the partial derivative becomes negative, signifying that an increase in leverage results in a decrease in
         steady-state capital. Conversely, when the leverage is below this threshold, the partial derivative sharply
         rises towards \(+\infty\). }
-
     \label{plot_part}
 \end{figure}
 
