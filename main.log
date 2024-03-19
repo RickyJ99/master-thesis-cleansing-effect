@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  19 MAR 2024 17:24
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  19 MAR 2024 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -693,14 +693,11 @@ Chapter 2.
 File: figure/Plot2.1.png Graphic file (type bmp)
 <figure/Plot2.1.png>
  [24] [25]
-
-Package natbib Warning: Citation `DavHal94' on page 26 undefined on input line 684.
-
 File: figure/Plot2.2.png Graphic file (type bmp)
 <figure/Plot2.2.png>
 File: figure/Plot2.3.png Graphic file (type bmp)
 <figure/Plot2.3.png>
-[26] [27] [28] [29]
+ [26] [27] [28] [29]
 File: figure/Plot2.4.png Graphic file (type bmp)
 <figure/Plot2.4.png>
  [30]
@@ -755,21 +752,17 @@ Chapter 5.
 
 ] [89] [90] [91
 
-] [92])
-
-Package natbib Warning: There were undefined citations.
-
-[93] (./main.aux)
+] [92]) [93] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FE54C944C3D90134B6EE4DA8AE514086;4894.
  ) 
 Here is how much of TeX's memory you used:
  36373 strings out of 476684
  864805 string characters out of 5804056
- 2559074 words of memory out of 5000000
+ 2560031 words of memory out of 5000000
  55993 multiletter control sequences out of 15000+600000
  523741 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,18n,94p,1862b,2728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (95 pages, 2408936 bytes).
+Output written on main.xdv (95 pages, 2409452 bytes).

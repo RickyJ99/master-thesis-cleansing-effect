@@ -3,11 +3,10 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: reference.bib
-Warning--I didn't find a database entry for "DavHal94"
 Warning--can't use both author and editor fields in HaCa07
 You've used 17 entries,
             2481 wiz_defined-function locations,
-            711 strings with 7912 characters,
+            709 strings with 7896 characters,
 and the built_in function-call counts, 6598 in all, are:
 = -- 643
 > -- 239
@@ -46,4 +45,4 @@ warning$ -- 1
 while$ -- 55
 width$ -- 0
 write$ -- 281
-(There were 2 warnings)
+(There was 1 warning)
