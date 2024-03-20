@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1710674510 "main.aux" "main.bbl" "main" 1710675087 0
+["bibtex main"] 1710875245 "main.aux" "main.bbl" "main" 1710875262 0
   "./reference.bib" 1707833219 24211 9c9a5dc4ae84408f0e7bada1ed53a26b ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "main.aux" 1710675083 37501 019b802f61c86be4f903ec3eac44cecd "xelatex"
+  "main.aux" 1710875258 37502 5a4fff61cfac87a0c5b8d8ba726d8c38 "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1710675084 "main.xdv" "main.pdf" "main" 1710675087 0
-  "main.xdv" 1710675083 2408312 86e90ab6206a952f7a36d06f850b56b3 "xelatex"
+["xdvipdfmx"] 1710875259 "main.xdv" "main.pdf" "main" 1710875262 0
+  "main.xdv" 1710875258 2409452 918d1bb5d840077418fae486d48b7384 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1710675069 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" "main.xdv" "main" 1710675087 0
-  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" 1710675068 175133 75e270114d240d4c937571071445a28c ""
+["xelatex"] 1710875245 "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" "main.xdv" "main" 1710875262 0
+  "/Users/riccardodalcero/Desktop/Tesi/in_out_market/main.tex" 1710875229 175222 77e887006e3b83a0a4040dfcb16fc82a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -239,11 +239,11 @@
   "figure/Plot2.4.png" 1705320086 180321 7445abad82723d3fed79460063a4588a ""
   "figure/Plot2.5.png" 1706091819 228182 d5205c6f5c2e5056424ea485d3fe1789 ""
   "logo.png" 1710426118 6457 8a0968a12ddfd47df5f48cbd23c589c8 ""
-  "main.aux" 1710675083 37501 019b802f61c86be4f903ec3eac44cecd "xelatex"
-  "main.bbl" 1710674510 5778 179997b45475386f001e1d18ecea57b1 "bibtex main"
-  "main.out" 1710675083 4894 fe54c944c3d90134b6ee4da8ae514086 "xelatex"
-  "main.tex" 1710675068 175133 75e270114d240d4c937571071445a28c ""
-  "main.toc" 1710675083 3009 c406417d16a639b72e316e481c67a86b "xelatex"
+  "main.aux" 1710875258 37502 5a4fff61cfac87a0c5b8d8ba726d8c38 "xelatex"
+  "main.bbl" 1710875245 5778 179997b45475386f001e1d18ecea57b1 "bibtex main"
+  "main.out" 1710875258 4894 fe54c944c3d90134b6ee4da8ae514086 "xelatex"
+  "main.tex" 1710875229 175222 77e887006e3b83a0a4040dfcb16fc82a ""
+  "main.toc" 1710875258 3009 c406417d16a639b72e316e481c67a86b "xelatex"
   "output_data/adjusted_partial_derivative_k_with_respect_to_l.csv" 1710519145 3916 1617f760d700534cc282568d9925eb22 ""
   "output_data/diff.csv" 1710260909 6230 596c1a322e9d868e6173baf39ebb0146 ""
   "output_data/diff_fri.csv" 1710260950 6230 34343e3cb1c60925d43efa5481ef38dd ""
