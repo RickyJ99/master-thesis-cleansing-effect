@@ -13,14 +13,14 @@
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepackage{float}
-\AtBeginDocument{%
-      \DeclareSymbolFont{pureletters}{T1}{lmr}{\mddefault}{it}%
-      }
+
 
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{arrows.meta, bending}
 \pgfplotsset{compat=newest}
 \usetikzlibrary{decorations.markings}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{arrows.meta, bending}
 \usepackage{pgfplotstable}
 \usepackage{float}
 \usepackage{tikz}
@@ -29,55 +29,27 @@
 \usepgfplotslibrary{dateplot}
 \usetheme{Madrid}
 \usecolortheme{default}
-
-\title[Financial Frictions \& Cleansing Effects]{Financial Frictions and the Cleansing Effects of Recessions}
-\author[Riccardo Dal Cero]{Dissertation by: Riccardo Dal Cero \\{\small Supervisor: Domenico Delli Gatti} }
-\date[09/04/24]{09/04/24 \\\vspace{0.5cm}{\small A.Y. 2022/2023}}
-\logo{\includegraphics[scale=0.2]{logo.png}}
-\institute{Università Cattolica del Sacro Cuore \\ Campus of Milan}
-\setbeamertemplate{footline}{
-  \leavevmode%
-  \hbox{%
-  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot}\insertshortauthor
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-    \usebeamerfont{title in head/foot}\insertshorttitle
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-  \end{beamercolorbox}}%
-  \vskip0pt%
-}
-\AtBeginSection[]
-{
-  \begin{frame}
-    \frametitle{Table of Contents}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
+\title{Financial Frictions and the Cleansing Effects of recessions}
+\author{Riccardo Dal Cero}
+\date{09/04/24}
 \begin{document}
 \frame{\titlepage}
 \begin{frame}
-    \frametitle{A historical hint about recessions}
+    \frametitle{An historical hint about recessions}
     \begin{figure}
     \centering
     \includegraphics[scale=0.27]{fredgraph.png}
-    \caption{Annual US GDP growth rates from 1966 to 2022}
+    \caption{Quarterly US GDP growth rates from 1947:Q2 to 2019:Q2}
     \end{figure}
 \end{frame}
 \begin{frame}
     \frametitle{The Cleansing Effect of Recessions}
     \begin{itemize}
         \item Economic downturns are associated with increased patterns of reallocation.
-        \item Literature on the Cleansing Effect suggests this is a productivity-enhancing phenomenon: during economic
-        downturns, less productive units are eliminated, leaving only the most productive ones to survive (Caballero \&
-        Hammour, 1993)
-        \item However, this pattern shifted during the Great Recession (as identified by Foster, Grim, \& Haltiwanger,
-        2016): the intensity of reallocation 
-        fell rather than rose and the reallocation that did occur was less productivity-enhancing than in the prior
-        recessions, (Osotimehin \& Pappada (2017)) attributes to the \textbf{financial frictions}.
+        \item Literature on the Cleansing Effect suggests this is a productivity-enhancing phenomenon: during economic downturns, less productive units are eliminated, leaving only the most productive ones to survive (Caballero \& Hammour, 1993).
+        \item However, this pattern shifted during the Great Recession (as identified by Foster, Grim, \& Haltiwanger, 2015): the intensity of reallocation
+        fell rather than rose and the reallocation that did occur was less productivity enhancing than in prior
+        recessions, (OsePap) attributes to the \bold{financial frictions}.
     \end{itemize}
 \end{frame}
 
@@ -87,10 +59,8 @@
         \centering
         \textbf{Predicted Contribution of Reallocation to Aggregate (Industry-Level) Productivity}\par\medskip
         \includegraphics[scale=0.24]{GreatRecession.png}        
-        \caption{The graph illustrates industry productivity gains from reallocation, measured in log
-        points. "Normal" indicates productivity growth in the absence of unemployment fluctuations. "Mild" and "Sharp"
-        contractions correspond to 1\% and 3\% rises in state unemployment, respectively. "GR" denotes the period of the
-        Great Recession (2007-2009), as analyzed by Foster et al. (2016). 
+        \caption{The figure depicts the increase in industry productivity in log-points due to reallocation effects. The "Normal" bar represents a baseline productivity increase without unemployment rate changes. A “Mild” contraction  and a “Sharp” contraction respectively represent a 1 and a 3 percentage point increase in state-level unemployment. “GR” is for the
+period 2007-09 Foster et. al. (2015)
 }
         \label{fig:enter-label}
     \end{figure}
@@ -98,22 +68,22 @@
 \begin{frame}
     \frametitle{Research Questions}
     \begin{enumerate}
-        \item How do \textbf{financial frictions} influence firms' decisions on optimal \textit{capital} and \textit{dividend} paths?
+        \item How do financial frictions influence firms' decisions on optimal capital and dividend paths?
         \begin{itemize}
-            \item By developing a \textbf{theoretical model} incorporating financial frictions to derive a \textit{closed-form solution} for the firm's optimization problem.
+            \item By developing a theoretical model incorporating financial frictions to derive a closed-form solution for the firm's optimization problem.
         \end{itemize}
-        \item What are the \textit{aggregate-level} effects of financial frictions on the \textbf{cleansing effect}?
+        \item What are the aggregate-level effects of financial frictions?
         \begin{itemize}
-            \item Employing Monte Carlo simulations to investigate the impact of financial frictions within an economy with \textit{heterogeneous firms}.
+            \item Employing Monte Carlo simulations to explore the impact of financial frictions within an economy with heterogeneous firms.
         \end{itemize}
     \end{enumerate}
 \end{frame}
-\section{The firm's problem}
+\section{The firm problem}
 \begin{frame}
 \begin{block}{Flow of fund costraints}
 
 \begin{equation}
-    k_{t+1}=k_{t}(1-\delta)- R b_{t} - d_t + f{(k_{t})}+b_{t+1} \label{c1}
+    k_{t+1}=k_{t}(1-\delta)- R b_{t} - d_t + f(k_{t})+b_{t+1} \label{c1}
 \end{equation}
 \end{block}
     \begin{figure}
@@ -177,28 +147,28 @@
 \begin{frame}{Financial frictions}
     There are two types of financial frictions are included:
     \begin{enumerate}
-        \item \textbf{Monitoring costs} of the financial intermediaries (\(\mu\)) on the participation constraint:
+        \item Monitoring costs of the financial intermediaries (\(\mu\)) on the participation constraint:
             \begin{equation}
-                R_t=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f{(k_{t})}}{b_t} \label{c2}
+                R_t=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_t)}{b_t} \label{c2}
         \end{equation}
-        \item \textbf{Financing constraint}:
+        \item Financing constraint:
         \begin{equation}
             b_t = l \cdot k_t \quad 0<l<1 \label{c3}
         \end{equation}
     \end{enumerate}
 \end{frame}
-\begin{frame}{The firm's inter-temporal problem}
+\begin{frame}{The firm inter-temporal problem}
      The firm's objective is to maximize:
 
 \[
 \max_{{\{d_{t}\}}_{t=0}^{+\infty}}V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)}
 \]
 
-subject to: (\ref{c1}),(\ref{c2}),(\ref{c3}).
-Using the Lagrangian function, we get:
+subject to: (\ref{c1}),(\ref{c2}),(\ref{c3})
+Using the lagragian function, we get:
 \begin{block}{Euler equations for divideds}
     \begin{equation}
-        U^{\prime}{(d_{t})}=\frac{\beta}{\left(1-l\right)} U^{\prime}{(d_{t+1})}\left[ f^{\prime}{(k_{t})}\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right]
+        U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[ f'(k_{t})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right]
     \end{equation}
 \end{block}
 \end{frame}
@@ -268,11 +238,11 @@ Using the Lagrangian function, we get:
          k_0 \text{ given.}
      \end{cases}
  \end{align*}
-The solutions to the above systems are:
+The solutions to the above systems is:
 \begin{equation}
-    k^*_1 = \left[ \frac{p + \mu(1-p) p}{p}Z k_0^{\alpha}\right] \frac{\alpha\beta}{1-l\alpha\beta}, \label{eq29}
+    k_1 = \left[ \frac{p + \mu(1-p) p}{p}Z k_0^{\alpha}\right] \frac{\alpha\beta}{1-l\alpha\beta}, \label{eq29}
 \end{equation}
-The \textit{policy function} is:
+The policy function is:
 \begin{equation}
     d^*_0 = \left[ \frac{p + \mu (1-p) p}{p}Z k_0^{\alpha}\right] \frac{1-\alpha\beta}{1-l\alpha\beta} \label{eq31},
 \end{equation}
@@ -300,75 +270,6 @@ The \textit{policy function} is:
     \end{tikzpicture}
     \label{plot_part}
 \end{figure}
-\end{frame}
-\section{Simulations}
-\begin{frame}{Cleansing effect of recessions}
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            title={Difference in \(K\): exit vs noexit},
-            xlabel={Step},
-            xmin=1, ymin=0,
-            ylabel={K},
-            legend pos=north west,
-            ymajorgrids=true,
-            grid style=dashed,
-        ]
-        
-        % Plot differences with error bars from diff.csv
-        \pgfplotstableread[col sep=comma, row sep=newline]{diff_fri.csv}\datatableDifffri
-        \addplot+ [
-            red, mark=*, mark options={fill=black},
-            error bars/.cd,
-            y dir=both, y explicit,
-            error bar style={color=black},
-            error mark options={
-                rotate=90,
-                mark size=3pt,
-                color=black
-            }
-        ] table [
-            x=Step,
-            y=Total_Production_actual_log_diff_mean,
-            y error plus expr=\thisrow{Total_Production_actual_log_diff_CI_Upper}-\thisrow{Total_Production_actual_log_diff_mean},
-            y error minus expr=\thisrow{Total_Production_actual_log_diff_mean}-\thisrow{Total_Production_actual_log_diff_CI_Lower}
-        ] {\datatableDifffri};
-        
-        \pgfplotstableread[col sep=comma, row sep=newline]{diff.csv}\datatableDiff
-        \addplot+ [
-            blue, mark=*, mark options={fill=black},
-            error bars/.cd,
-            y dir=both, y explicit,
-            error bar style={color=black},
-            error mark options={
-                rotate=90,
-                mark size=3pt,
-                color=black
-            }
-        ] table [
-            x=Step,
-            y=Total_Production_actual_log_diff_mean,
-            y error plus expr=\thisrow{Total_Production_actual_log_diff_CI_Upper}-\thisrow{Total_Production_actual_log_diff_mean},
-            y error minus expr=\thisrow{Total_Production_actual_log_diff_mean}-\thisrow{Total_Production_actual_log_diff_CI_Lower}
-        ] {\datatableDiff};
-        
-        \end{axis}
-    \end{tikzpicture}
-
-
-    \label{fig:output_comparison_frictions}
-\end{figure}
-\end{frame}
-\begin{frame}
-    \frametitle{Final Remarks}
-    
-    \begin{itemize}
-        \item Incorporating monitoring costs and financial constraints into the model reveals a \textbf{reduction} in firms' steady-state \textit{capital} and \textit{dividends}.
-        \item The impact of \textbf{fixed leverage} on capital varies and is dependent on the specific levels of capital and leverage.
-        \item Monte Carlo simulations suggest that such financial frictions could \textbf{dampen} the cleansing effects traditionally observed in recessions.
-    \end{itemize}
-
 \end{frame}
 
 \end{document}

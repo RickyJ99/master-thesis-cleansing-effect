@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  30 MAR 2024 10:45
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  29 MAR 2024 16:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/presentation.tex
-(/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/presentation.tex
+**/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/main.tex
+(/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2023/02/20 v3.69 A class for typesetting presentations
@@ -723,45 +723,41 @@ File: pgfcalendar.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@cal@easter@N=\count369
 \pgf@cal@easter@M=\count370
 \pgf@cal@easter@julianday=\count371
-))) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty))
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 34.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__graphics_track_int=\count372
 \l__pdf_internal_box=\box89
 \g__pdf_backend_object_int=\count373
 \g__pdf_backend_annotation_int=\count374
 \g__pdf_backend_link_int=\count375
-) (./presentation.aux)
-\openout1 = `presentation.aux'.
+)
+No file main.aux.
+\openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 60.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 35.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -797,54 +793,56 @@ LaTeX Font Info:    ... okay on input line 60.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 60.
-(./presentation.out) (./presentation.out)
+Package hyperref Info: Link coloring OFF on input line 35.
 \@outlinefile=\write5
-\openout5 = `presentation.out'.
+\openout5 = `main.out'.
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 60.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 60.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 35.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 60.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 60.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmss/b/n on input line 60.
+(Font)                  OT1/cmr/bx/n --> TU/lmss/b/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmss/b/n on input line 60.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 60.
+(Font)                  OT1/cmr/bx/n --> TU/lmss/b/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 60.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 60.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 60.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmss/m/it on input line 60.
+(Font)                  OT1/cmr/m/it --> TU/lmss/m/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmss/m/it on input line 60.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 60.
+(Font)                  OT1/cmr/bx/it --> TU/lmss/m/it on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 60.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 60.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 60.
+(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 60.
+(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 60.
+(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/lmss/b/n --> TU/lmss/b/n on input line 60.
+(Font)                  TU/lmss/b/n --> TU/lmss/b/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 60.
+(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 60.
+(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 60.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 35.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
@@ -861,138 +859,174 @@ Dictionary: translator-theorem-dictionary, Language: English
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 60.
-LaTeX Font Info:    Encoding `TU' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 60.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  TU/lmss/m/it --> T1/lmr/m/it on input line 60.
-LaTeX Font Info:    Encoding `TU' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 60.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/lmss/b/it --> T1/lmr/m/it on input line 60.
-(./presentation.nav)
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [1
+(./main.nav)
+Overfull \hbox (32.33537pt too wide) in paragraph at lines 35--35
+ [][][][]  
+ []
+
+
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[1
 
 ]
 File: fredgraph.png Graphic file (type bmp)
 <fredgraph.png>
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [2
+
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[2
 
 ]
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [3
+
+Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instead on input line 54.
+
+
+/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/main.tex:54: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{frame}
+                
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[3
 
 ]
 File: GreatRecession.png Graphic file (type bmp)
 <GreatRecession.png>
 
-Overfull \vbox (2.77649pt too high) detected at line 97
+Overfull \vbox (2.77649pt too high) detected at line 67
  []
 
-File: logo.png Graphic file (type bmp)
-<logo.png>
+
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
 [4
 
 ]
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 110.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 110.
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [5
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] (./presentation.toc)
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [6
+[5
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 176.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 146.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 176.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 146.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 176.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [7
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 146.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 146.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 146.
+
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[6
 
 ]
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [8
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[7
 
 ]
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [9
+
+LaTeX Warning: Reference `c1' on page 8 undefined on input line 174.
+
+
+LaTeX Warning: Reference `c2' on page 8 undefined on input line 174.
+
+
+LaTeX Warning: Reference `c3' on page 8 undefined on input line 174.
+
+
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[8
 
 ]
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [10
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[9
 
 ]
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [11
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[10
 
 ]
 PGFPlots: reading {adjusted_partial_derivative_k_with_respect_to_l.csv}
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [12
 
-] (./presentation.toc)
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [13
+Overfull \hbox (32.33537pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-]
-PGFPlots: reading {diff_fri.csv}
-PGFPlots: reading {diff.csv}
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [14
-
-]
-File: logo.png Graphic file (type bmp)
-<logo.png>
- [15
+[11
 
 ]
 \tf@nav=\write6
-\openout6 = `presentation.nav'.
+\openout6 = `main.nav'.
 
 \tf@toc=\write7
-\openout7 = `presentation.toc'.
+\openout7 = `main.toc'.
 
 \tf@snm=\write8
-\openout8 = `presentation.snm'.
+\openout8 = `main.snm'.
 
- (./presentation.aux)
-Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 3F0E577C9F6C1477B4E9E5C22DBC90C0;237.
+ (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  E023F25B7D9278471B4F766CDAB89887;129.
  ) 
 Here is how much of TeX's memory you used:
- 38893 strings out of 476684
- 949072 string characters out of 5804056
- 2669192 words of memory out of 5000000
- 58386 multiletter control sequences out of 15000+600000
- 530191 words of font info for 66 fonts, out of 8000000 for 9000
+ 38520 strings out of 476684
+ 939287 string characters out of 5804056
+ 1865018 words of memory out of 5000000
+ 58031 multiletter control sequences out of 15000+600000
+ 517396 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,18n,122p,865b,2734s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,18n,122p,857b,2655s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on presentation.xdv (15 pages, 1027588 bytes).
+Output written on main.xdv (11 pages, 214852 bytes).
