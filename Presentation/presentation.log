@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  30 MAR 2024 10:45
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  3 APR 2024 22:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -890,13 +890,9 @@ File: logo.png Graphic file (type bmp)
 ]
 File: GreatRecession.png Graphic file (type bmp)
 <GreatRecession.png>
-
-Overfull \vbox (2.77649pt too high) detected at line 97
- []
-
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[4
+ [4
 
 ]
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
@@ -987,12 +983,12 @@ Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 3F0E577C9F6C1477B4E9E5C22DBC90C0;237.
  ) 
 Here is how much of TeX's memory you used:
- 38893 strings out of 476684
- 949072 string characters out of 5804056
- 2669192 words of memory out of 5000000
- 58386 multiletter control sequences out of 15000+600000
+ 38892 strings out of 476684
+ 949061 string characters out of 5804056
+ 2669172 words of memory out of 5000000
+ 58385 multiletter control sequences out of 15000+600000
  530191 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,18n,122p,865b,2734s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on presentation.xdv (15 pages, 1027588 bytes).
+Output written on presentation.xdv (15 pages, 1022204 bytes).
