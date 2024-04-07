@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1712177517 "presentation.xdv" "presentation.pdf" "presentation" 1712177518 0
-  "presentation.xdv" 1712177516 1022204 1d92611b0b7508e8be137683147079fe "xelatex"
+["xdvipdfmx"] 1712504257 "presentation.xdv" "presentation.pdf" "presentation" 1712504258 0
+  "presentation.xdv" 1712504257 964900 76020ebceefccf77ebbf29659df80966 "xelatex"
   (generated)
   "presentation.pdf"
   (rewritten before read)
-["xelatex"] 1712177508 "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/presentation.tex" "presentation.xdv" "presentation" 1712177518 0
-  "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/presentation.tex" 1712177499 13863 93d21137bd38a251e415a07a990d80e2 ""
+["xelatex"] 1712504249 "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/presentation.tex" "presentation.xdv" "presentation" 1712504258 0
+  "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/Presentation/presentation.tex" 1712504249 10872 4ef5027a9eef2b47b472ec8645823781 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -276,17 +276,15 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "GreatRecession.png" 1711727170 383522 ae336dad473fdb643e4459d4c9594af5 ""
   "adjusted_partial_derivative_k_with_respect_to_l.csv" 1711727170 3916 1617f760d700534cc282568d9925eb22 ""
   "diff.csv" 1711729291 6230 596c1a322e9d868e6173baf39ebb0146 ""
   "diff_fri.csv" 1711729291 6230 34343e3cb1c60925d43efa5481ef38dd ""
-  "fredgraph.png" 1711727170 121643 4998b4b59d3e9ccaf71caf564a3031e2 ""
   "logo.png" 1711731041 6757 b68f22846787db3ba387e1142747a773 ""
-  "presentation.aux" 1712177516 4823 43287a3465dba8a099da8c116cead349 "xelatex"
-  "presentation.nav" 1712177516 1895 acb82ded0ddc7276685f5480fb298be8 "xelatex"
-  "presentation.out" 1712177516 237 3f0e577c9f6c1477b4e9e5c22dbc90c0 "xelatex"
-  "presentation.tex" 1712177499 13863 93d21137bd38a251e415a07a990d80e2 ""
-  "presentation.toc" 1712177516 102 66b25bd9d8545c54eb0abb1767b2e9c3 "xelatex"
+  "presentation.aux" 1712504257 4198 7d3217a123ddec0fb4b9d7b7a55771e8 "xelatex"
+  "presentation.nav" 1712504257 1617 4099ab3c10e2d9902e8e373b6ce41d12 "xelatex"
+  "presentation.out" 1712504257 237 3f0e577c9f6c1477b4e9e5c22dbc90c0 "xelatex"
+  "presentation.tex" 1712504249 10872 4ef5027a9eef2b47b472ec8645823781 ""
+  "presentation.toc" 1712504257 102 87055023145cee8a3b7fc246a13dc1fa "xelatex"
   (generated)
   "presentation.aux"
   "presentation.log"

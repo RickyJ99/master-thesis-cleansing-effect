@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 # Define the function for the partial derivative with respect to l, correctly handling edge cases
@@ -50,7 +51,14 @@ df_adjusted = pd.DataFrame({"l": l_values, "par": adjusted_derivatives})
 
 # Export the DataFrame to a CSV file
 adjusted_file_path = "output_data/adjusted_partial_derivative_k_with_respect_to_l_1.csv"
-df_adjusted.to_csv(adjusted_file_path, index=False)
+# df_adjusted.to_csv(adjusted_file_path, index=False)
 
 # Return the file path for download
 adjusted_file_path
+
+plt.figure(figsize=(10, 6))
+plt.plot(l_values, adjusted_derivatives)
+plt.xlabel("l")
+plt.ylabel("Part. der.")
+plt.legend()
+plt.show()

@@ -1,2 +1,2 @@
-\beamer@sectionintoc {1}{The firm's problem}{6}{0}{1}
-\beamer@sectionintoc {2}{Simulations}{13}{0}{2}
+\beamer@sectionintoc {1}{The firm's problem}{4}{0}{1}
+\beamer@sectionintoc {2}{Simulations}{10}{0}{2}
