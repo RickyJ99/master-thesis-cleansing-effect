@@ -1,0 +1,161 @@
+\documentclass[12pt]{report}
+
+ % Add this line to your preamble
+% Language setting
+% Replace `English' with e.g. `Spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+
+\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+	
+% Load the setspace package
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{float}
+
+
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{arrows.meta, bending}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{decorations.markings}
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{gray},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{purple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Useful packages
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{tikz}
+\usepackage{natbib}
+\pgfplotsset{width=12cm,compat=1.9}
+\setstretch{1.5}
+
+\bibliographystyle{unsrtnat}
+
+\usetikzlibrary{shapes.arrows, positioning, arrows.meta}
+
+
+\title{Financial Frictions and the Cleansing Effects of Recessions}
+\author{Riccardo Dal Cero}
+
+
+\begin{document}
+
+
+
+
+\begin{abstract}
+ 
+\end{abstract}
+
+
+\tableofcontents
+\chapter{Model} 
+\begin{align*}
+    \begin{cases}
+        V(k_0) = U(d_0^*) + \beta V(k_1), \\
+        k_1 = \left[ f(k_{0}) + (1 - \delta) k_{0}  - d^*_0 \right] , \\
+        d^*_0 = [\beta V'(k_{1})]^{-1},\\
+        k_0 \text{ given.}
+    \end{cases}
+\end{align*}
+The welfare function instead of being log-linear as in the thesis i use the following quadratic preferences:
+\begin{equation}
+   W_0= \sum_{t=0}^{\infty}\beta^t\left(\epsilon + \gamma d_t - \frac{\eta}{2}d_t^2 \right)
+\end{equation}
+where \(\gamma\) and \(\eta\) are assumed to be positive. Moreover in order to be solvable is necessary to approximate
+the intertemporal constraint with a linear quadratic approximation.
+The steady-state equations are:
+\begin{align}
+    \hat{k} =\left[\frac{Z \alpha \beta}{1-\beta(1-\delta)}\right]^{\frac{1}{1-\alpha}} \label{eq23}\\ 
+    \widehat{d} =Z \hat{k}^{\alpha}-\delta \hat{k} \label{eq:div_opt_path}
+\end{align}
+Using the Taylor theorem to the log utility function:
+\begin{align*}
+    ln(d_t)=ln(\hat{d})+\frac{1}{\hat{d}}(d_t-\hat{d})-\frac{1}{2\hat{d}^2}(d_t-\hat{d})
+\end{align*}
+Doing the same for the flow of funds constraint:
+\begin{align*}
+    k_{t+1}= Z \hat{k}^{\alpha}+(1-\delta)\hat{k}+\alpha A \hat{k}^{\alpha-1}(k_t-\hat{k})+(1-\delta)(k_t-\hat{k})-\hat{d}-(d_t-\hat{d}),\\
+    k_{t+1}= Z \hat{k}^{\alpha} - \hat{d}+\left(\alpha A \hat{k}^{\alpha-1} +1 -\delta\right)(k_t-\hat{k})-(d_t-\hat{d}),
+\end{align*}
+Using the equation \label{eq23}, we get the new :
+\begin{align*}
+    k_t-\hat{k}=\frac{1}{\beta}(k_t-\hat{k})-(d_t-\hat{d})
+\end{align*}
+the firm problem in the absence of debt:
+\begin{align*}
+    W_0= \left(\epsilon + \gamma d_t - \frac{\eta}{2}d_t^2 + \beta V(k_1)\right),
+    s.t. k_1 = (1+r)k_0-d_0
+\end{align*}
+where k and d are deviation from the mean and \(\left(1+r\right)=\frac{1}{\beta}\)
+
+The first order condition is: 
+\begin{equation}
+    \lambda - \eta d_0^* = \beta V^{\prime}(k_1)
+\end{equation}
+from the dynamic constraint we obtain \(d_0=(1+r)k_0-k_1\), substituting into the belman equation, we get:
+\begin{align*}
+    \begin{cases}
+        V_(k_0)= \epsilon + \gamma [(1+r)k_0 -k_1] - \frac{\eta}{2}\left[\left(1+r\right)k_0 -k_1\right]^2 +\beta V(k_1)\\
+        \gamma -\eta\left[\left(1+r\right)k_0-k_1\right]=\beta V^{\prime}(k_1), \\ 
+        k_0 given
+    \end{cases}
+\end{align*}
+Our guess is similar to the quadratic utility function 
+\begin{equation}
+    V(k_t)=g+h k_t = \frac{m}{2}k_t^2
+\end{equation}
+Exploiting the guess and the second equation of the above system we get:
+\begin{equation}
+    k_0=\frac{1}{1+r}\left[\frac{\gamma-\beta h}{\eta}+\frac{\eta-\beta m}{\eta} k_1\right] .
+\end{equation}
+Substituting the guess into \(V(k_0), V(k_1)\), we get:
+\begin{equation}
+    \left\{\begin{array}{c}
+    g+\frac{h}{1+r}\left(\frac{\gamma-\beta h}{\eta}\right)+\frac{m}{2(1+r)^2}\left(\frac{\gamma-\beta h}{\eta}\right)^2=\varepsilon+\frac{\gamma}{\eta}(\gamma-\beta h)-\frac{(\gamma-\beta h)^2}{2 \eta}+\beta g \\
+    \frac{h}{1+r}\left(\frac{\eta-\beta m}{\eta}\right)+\frac{m}{(1+r)^2}\left(\frac{\eta-\beta m}{\eta}\right)\left(\frac{\gamma-\beta h}{\eta}\right)=-\frac{\gamma \beta m}{\eta}+\frac{(\gamma-\beta h) \beta m}{\eta}+\beta h \\
+    \frac{m}{2(1+r)^2}\left(\frac{\eta-\beta m}{\eta}\right)^2=-\frac{(\beta m)^2}{2 \eta}+\frac{\beta m}{2}
+    \end{array}\right.
+\end{equation}
+the solutions of the system are:
+
+\begin{align*}
+    \begin{cases}
+        m=\frac{\eta}{\beta}\left[1-\beta(1+r)^2\right] \\
+        h=\frac{\gamma}{\beta} \frac{\left[\beta(1+r)^2-1\right]}{r} \\ 
+        g=\frac{\epsilon}{1-\beta}+\frac{\gamma^2}{2 \eta \beta(1-\beta)}\left[\frac{1-\beta(1+r)}{r}\right]^2 \\
+    \end{cases}
+\end{align*}
+Therefore the optimal path for capital is:
+\begin{align*}
+    k_0 (1+r) \eta = \gamma -\beta \frac{\gamma}{\beta} \frac{\left[\beta(1+r)^2-1\right]}{r}+\eta 
+\end{align*}
+\medskip
+\bibliography{reference}
+
+\end{document}
