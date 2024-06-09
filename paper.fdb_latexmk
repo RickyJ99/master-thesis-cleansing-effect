@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1717967552 "paper.xdv" "paper.pdf" "paper" 1717967553 0
-  "paper.xdv" 1717967552 28664 13ac177a96b8d3b38ef783aa0340cc64 "xelatex"
+["xdvipdfmx"] 1717968091 "paper.xdv" "paper.pdf" "paper" 1717968092 0
+  "paper.xdv" 1717968091 29060 8576b64f842bc2f96f71e57f12a5454e "xelatex"
   (generated)
   "paper.pdf"
   (rewritten before read)
-["xelatex"] 1717967551 "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper.tex" "paper.xdv" "paper" 1717967553 0
-  "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper.tex" 1717967549 8001 34384a729515eb481640229ffa74a0ad ""
+["xelatex"] 1717968089 "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper.tex" "paper.xdv" "paper" 1717968092 0
+  "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper.tex" 1717968088 8042 318169170b2c8595aeac82e7403fdd9e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -222,9 +222,9 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "paper.aux" 1717967552 762 e70fb0c45c909d4e13d3fb83a71b28c8 "xelatex"
-  "paper.out" 1717967552 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "paper.tex" 1717967549 8001 34384a729515eb481640229ffa74a0ad ""
+  "paper.aux" 1717968091 762 e70fb0c45c909d4e13d3fb83a71b28c8 "xelatex"
+  "paper.out" 1717968091 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "paper.tex" 1717968088 8042 318169170b2c8595aeac82e7403fdd9e ""
   (generated)
   "paper.aux"
   "paper.log"
