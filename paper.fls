@@ -972,11 +972,6 @@ INPUT paper.out
 INPUT ./paper.out
 INPUT ./paper.out
 OUTPUT paper.out
-OUTPUT paper.xdv
-INPUT ./paper.toc
-INPUT paper.toc
-INPUT paper.toc
-OUTPUT paper.toc
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -1003,10 +998,3 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT ./paper.bbl
-INPUT paper.bbl
-INPUT ./paper.bbl
-INPUT paper.bbl
-INPUT paper.aux
-INPUT ./paper.out
-INPUT ./paper.out

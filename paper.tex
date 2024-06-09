@@ -66,15 +66,6 @@
 \begin{document}
 
 
-
-
-\begin{abstract}
- 
-\end{abstract}
-
-
-\tableofcontents
-\chapter{Model} 
 \begin{align*}
     \begin{cases}
         V(k_0) = U(d_0^*) + \beta V(k_1), \\
@@ -153,9 +144,70 @@ the solutions of the system are:
 \end{align*}
 Therefore the optimal path for capital is:
 \begin{align*}
-    k_1=\left[\gamma -\beta \eta +\eta k_0\right]\left\{\eta{\beta-\eta}\right\}^{-1}
+    k_1 = \frac{k_0 (1 + r) - \frac{\gamma \left( \frac{r - \beta (1 + r)^2 + 1}{r} \right)}{\eta}}{\beta (1 + r)^2}
 \end{align*}
-\medskip
-\bibliography{reference}
+Given the substitution \( 1 + r = \frac{1}{\beta} \), we can further simplify the equation for \( k_1 \).
+
+1. Substitute \( 1 + r = \frac{1}{\beta} \) into the expressions for \( m \) and \( h \):
+
+\[ m = \frac{\eta}{\beta} \left[ 1 - \beta \left(\frac{1}{\beta}\right)^2 \right] = \frac{\eta}{\beta} \left[ 1 -
+\frac{1}{\beta^2} \right] = \frac{\eta}{\beta} \left[ \frac{\beta^2 - 1}{\beta^2} \right] = \frac{\eta (\beta^2 -
+1)}{\beta^3} \]
+
+
+\[ h = \frac{\gamma}{\beta} \frac{\left[ \beta \left(\frac{1}{\beta}\right)^2 - 1 \right]}{r} = \frac{\gamma}{\beta}
+\frac{\left[ \frac{1}{\beta} - 1 \right]}{r} = \frac{\gamma}{\beta} \frac{\left[ 1 - \beta \right]}{r \beta} =
+\frac{\gamma (1 - \beta)}{r \beta^2} \]
+
+
+2. Substitute these values into the equation for \( k_1 \):
+
+The original equation is:
+
+\[ k_1 = \frac{k_0 (1 + r) - \frac{\gamma - \beta h}{\eta}}{1 - \frac{\beta m}{\eta}} \]
+
+Substituting the new values of \( m \) and \( h \):
+
+\[ \gamma - \beta h = \gamma - \beta \left( \frac{\gamma (1 - \beta)}{r \beta^2} \right) = \gamma - \frac{\gamma (1 -
+\beta)}{r \beta} = \gamma \left( 1 - \frac{1 - \beta}{r \beta} \right) \]
+
+
+Given \( r = \frac{1}{\beta} - 1 \):
+
+\[ \gamma \left( 1 - \frac{1 - \beta}{r \beta} \right) = \gamma \left( 1 - \frac{1 - \beta}{(\frac{1}{\beta} - 1) \beta} \right) \]
+
+\[ = \gamma \left( 1 - \frac{1 - \beta}{\frac{1 - \beta \beta}{\beta}} \right) = \gamma \left( 1 - \frac{1 - \beta}{1 -
+\beta} \right) = \gamma \left( 1 - 1 \right) = 0 \]
+
+
+Thus, we see that \( \gamma - \beta h = 0 \).
+
+Now substituting \( m \) and simplifying the denominator:
+
+\[ \frac{\beta m}{\eta} = \frac{\beta \left( \frac{\eta (\beta^2 - 1)}{\beta^3} \right)}{\eta} = \frac{\beta (\beta^2 -
+1)}{\beta^3} = \frac{\beta^2 - 1}{\beta^2} \]
+
+
+\[ 1 - \frac{\beta m}{\eta} = 1 - \frac{\beta^2 - 1}{\beta^2} = \frac{\beta^2 - (\beta^2 - 1)}{\beta^2} =
+\frac{1}{\beta^2} \]
+
+
+Therefore:
+
+\[ k_1 = \frac{k_0 (1 + r) - 0}{\frac{1}{\beta^2}} = k_0 (1 + r) \beta^2 \]
+
+Since \( 1 + r = \frac{1}{\beta} \):
+
+\[ k^{\star}_1 = k_0 \left( \frac{1}{\beta} \right) \beta^2 = \beta k_0 \]
+
+This is the optimal path for capital.
+The policy function is:
+\[d^{\star}_0=\frac{1}{\beta} k_0 - k_0 \beta = \frac{1 - \beta^2}{\beta} k_0\]
+
+
+Therefore the optimal path of capital and dividends depends only on \(\beta\), in the case of the absence of debt and
+financial frictions. Remind that the variables are in deviation from the mean. 
+Lets for example consider a shock to the 
+
 
 \end{document}
