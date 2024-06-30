@@ -20,7 +20,8 @@
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepackage{float}
-
+\usepackage{filecontents}
+\usepackage{pgfplotstable}
 
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{arrows.meta, bending}
@@ -64,7 +65,7 @@
 
 
 \begin{document}
-
+\section{Free debt case}
 
 \begin{align*}
     \begin{cases}
@@ -74,30 +75,41 @@
         k_0 \text{ given.}
     \end{cases}
 \end{align*}
-The welfare function instead of being log-linear as in the thesis i use the following quadratic preferences:
+The welfare function instead of being log-linear as in the thesis I employ the following quadratic preferences:
+
 \begin{equation}
    W_0= \sum_{t=0}^{\infty}\beta^t\left(\epsilon + \gamma d_t - \frac{\eta}{2}d_t^2 \right)
 \end{equation}
+
 where \(\gamma\) and \(\eta\) are assumed to be positive. Moreover in order to be solvable is necessary to approximate
 the intertemporal constraint with a linear quadratic approximation.
 The steady-state equations are:
+
 \begin{align}
-    \hat{k} =\left[\frac{Z \alpha \beta}{1-\beta(1-\delta)}\right]^{\frac{1}{1-\alpha}} \label{eq23}\\ 
-    \widehat{d} =Z \hat{k}^{\alpha}-\delta \hat{k} \label{eq:div_opt_path}
+    \frac{1}{\beta}=\alpha Z \hat{k}^{\alpha -1}+1-\delta \label{eq1}\\ 
+    \widehat{d} =Z \hat{k}^{\alpha}-\delta \hat{k}\label{eqds}
 \end{align}
+
 Using the Taylor theorem to the log utility function:
 \begin{align*}
+
     ln(d_t)=ln(\hat{d})+\frac{1}{\hat{d}}(d_t-\hat{d})-\frac{1}{2\hat{d}^2}(d_t-\hat{d})
+
 \end{align*}
+
 Doing the same for the flow of funds constraint:
+
 \begin{align*}
-    k_{t+1}= Z \hat{k}^{\alpha}+(1-\delta)\hat{k}+\alpha A \hat{k}^{\alpha-1}(k_t-\hat{k})+(1-\delta)(k_t-\hat{k})-\hat{d}-(d_t-\hat{d}),\\
-    k_{t+1}= Z \hat{k}^{\alpha} - \hat{d}+\left(\alpha A \hat{k}^{\alpha-1} +1 -\delta\right)(k_t-\hat{k})-(d_t-\hat{d}),
+    k_{t+1}= Z \hat{k}^{\alpha}+(1-\delta)\hat{k}+\alpha Z \hat{k}^{\alpha-1}(k_t-\hat{k})+(1-\delta)(k_t-\hat{k})-\hat{d}-(d_t-\hat{d}),\\
+    k_{t+1}= Z \hat{k}^{\alpha} - \hat{d}+\left(\alpha Z \hat{k}^{\alpha-1} +1 -\delta\right)(k_t-\hat{k})-(d_t-\hat{d}),
 \end{align*}
-Using the equation \label{eq23}, we get the new :
+
+Using the equation (\ref{eq1}, \ref{eqds}), we get the new :
+
 \begin{align*}
     k_t-\hat{k}=\frac{1}{\beta}(k_t-\hat{k})-(d_t-\hat{d})
 \end{align*}
+
 the firm problem in the absence of debt:
 \begin{align*}
     W_0= \left(\epsilon + \gamma d_t - \frac{\eta}{2}d_t^2 + \beta V(k_1)\right),
@@ -203,11 +215,254 @@ Since \( 1 + r = \frac{1}{\beta} \):
 This is the optimal path for capital.
 The policy function is:
 \[d^{\star}_0=\frac{1}{\beta} k_0 - k_0 \beta = \frac{1 - \beta^2}{\beta} k_0\]
+Reminding that \(\beta\) in the steady state of dividends is equal to \((\alpha Z \hat{k}^{\alpha -1}+1-\delta)^{-1}\),
+therefore we can rewrite the optimal path of capital as: 
+\[k_1 = \beta k_0 = \frac{1}{\alpha Z \hat{k}^{\alpha -1}+1-\delta} k_0 \]
+Thus a deviation from the steady state of capital \(k_0\) either positive or negative will follow a converging path to
+the steady state since \(\beta\) is less than 1.
+The optimal path of dividends is:
+\begin{equation}
+    d^{\star} = \frac{1-\left(\alpha Z \hat{k}^{\alpha-1}+1-\delta\right)^{-2}}{\left(\alpha Z \hat{k}^{\alpha-1}+1-\delta\right)^{-1}} k_0
+\end{equation}
+This result suggests that a positive shock to capital will lead to a positive shock to dividends, but the magnitude of
+the shock will be smaller than the shock to capital, since \(0<(1-\beta^2)/\beta<1\).
+\section{simulation}
+Let's use the following parameters:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lcc}
+    \hline Parameter & Symbol & Value \\
+    \hline \hline
+    Depreciation rate & $\delta$ & 0.07 \\
+    Returns to scale & $\alpha$ & 0.70 \\
+    Firm productivity & $Z$ & 1 \\
+    Discount factor & $\beta$ & 0.95 \\
+    \hline
+    \end{tabular}
+    \caption{Benchmark calibration}
+\end{table}
+
+The following plot shows the evolution of capital and dividends over 100 periods, with log deviations from the steady state.
+
+\pgfplotstableread[col sep=comma]{output_data/quadratic_function.csv}\datatable
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=12cm,
+            height=8cm,
+            grid=major,
+            xlabel={Periods},
+            ylabel={Log Deviations from Steady State},
+            legend pos=north east,
+            title={Evolution of Capital and Dividends Over Time},
+            legend style={font=\small},
+            ymajorgrids=true,
+            xmajorgrids=true,
+        ]
+        \addplot[
+            color=blue,
+        ] table[x=Period,y={Capital (log deviations)}] {\datatable};
+        \addlegendentry{Capital (log deviations)}
+
+        \addplot[
+            color=green,
+        ] table[x=Period,y={Dividends (log deviations)}] {\datatable};
+        \addlegendentry{Dividends (log deviations)}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Log deviations from steady state for capital and dividends over 100 periods.}
+    \label{fig:impulse_response1}
+\end{figure}
+ 
+The impulse response function \ref{fig:impulse_response1} represents the effect of a positive $10\%$ shock to the steady state level of capital (blue)
+and on dividends (green). The rate of convergence is a function of \(\beta\). Lets for example consider the same
+positive shock on capital but with a discount factor of 0.9:
+\pgfplotstableread[col sep=comma]{output_data/quadratic_function_lowerb.csv}\datatable
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=12cm,
+            height=8cm,
+            grid=major,
+            xlabel={Periods},
+            ylabel={Log Deviations from Steady State},
+            legend pos=north east,
+            title={Evolution of Capital and Dividends Over Time},
+            legend style={font=\small},
+            ymajorgrids=true,
+            xmajorgrids=true,
+        ]
+        \addplot[
+            color=blue,
+        ] table[x=Period,y={Capital (log deviations)}] {\datatable};
+        \addlegendentry{Capital (log deviations)}
+
+        \addplot[
+            color=green,
+        ] table[x=Period,y={Dividends (log deviations)}] {\datatable};
+        \addlegendentry{Dividends (log deviations)}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Log deviations from steady state for capital and dividends over 100 periods with a discount factor of 0.9.}
+    \label{fig:impulse_response2}
+\end{figure}
+As the impulse response function \ref{fig:impulse_response2} shows, the rate of convergence is faster with a lower discount rate. Therefore,
+an increase in the risk free rate will lead to a faster convergence to the steady state level of capital and dividends,
+after a positive shock to capital.
+Regarding productivity shocks, they affected only the steady state level of capital and dividends, but not the rate of convergence.
+
+\section{Leverage Case}
+
+In the previous section, the firm was unable to finance investment through debt. In this section, we will consider the
+case in which the firm can borrow from the financial market. In this model, firms face a borrowing constraint and a
+participation constraint of the financial intermediaries.  
+
+The participation constraint of the financial intermediaries is defined by the opportunity cost of lending to the firm,
+which is the risk-free rate, and is represented by the following equation: 
+\begin{equation}
+    R_t \cdot b_t p + (1-p) \mu f(k_t) = R_f b_t \label{eq:partecipation}
+\end{equation}
+where \(R_t\) is the return of the firm, \(b_t\) is the amount of debt, \(p\) is the probability of default, \(\mu\) is
+the monitoring cost, \(f(k_t)\) is the return of the firm in the case of no default, and \(R_f\) is the risk-free rate.  
+
+The borrowing constraint is defined by the following equation:
+\begin{equation}
+    b_t \leq l k_t \quad 0 < l < 1 \label{eq:borrowing}
+\end{equation}
+where \(l\) is the leverage ratio. Both constraints are binding conditions for simplicity, meaning that if a firm fails
+to meet one of the two constraints, the firm will default. 
+\subsection{The firm problem}
+The firm's objective is to maximize:
+
+\[
+\max_{{\{d_{t}\}}_{t=0}^{+\infty}}V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)}
+\]
+
+subject to:
+\begin{enumerate}
+    \item the flow of funds constraint: \(I_t + R b_{t} + d_t = f(k_t) + b_{t+1}\)
+    \item the investment function \(I_t = k_{t+1} - k_{t}\left(1-\delta\right)\) 
+    \item the financing constraint \(b_t=l k_t\)
+    \item the participation constraint of lenders \(R_t=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_t)}{b_t}\)
+\end{enumerate}
+Consolidating and linearizing the constraints, we get:
+\begin{align}
+    \tilde{k}_{t+1} &= \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \frac{ \tilde{k}_t}{1-l} - \frac{\tilde{d}_t}{1-l} \label{eq:linearized_flow}
+\end{align}
+where \(\tilde{k}_t\) and \(\tilde{d}_t\) are deviations from the steady state. The calculations are shown in the
+appendix \ref{sec:linearization}.
+The utlity function is the same as in the previous section, therefore the problem can be rewritten as the following
+system:
+\begin{align*}
+    \begin{cases}
+        V(k_0) = U(d_0^*) + \beta V(k_1), \\
+        k_1 =  \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \frac{ \tilde{k}_0}{1-l} - \frac{\tilde{d}^*_0}{1-l} , \\
+        d^*_0 = [\beta V'(k_{1})]^{-1},\\
+        k_0 \text{ given.}
+    \end{cases}
+\end{align*}
 
 
-Therefore the optimal path of capital and dividends depends only on \(\beta\), in the case of the absence of debt and
-financial frictions. Remind that the variables are in deviation from the mean. 
-Lets for example consider a shock to the 
 
+
+\appendix
+
+\section{appendix}
+\subsection{Linearization of Constraints}
+\label{sec:linearization}
+As in the previous section, we will linearize the constraints around the steady state. By consolidating constraints
+\ref{eq:partecipation}, \ref{eq:borrowing}, and the flow of funds, we obtain: 
+\begin{equation}
+    k_{t+1} = \left[ \frac{p + \mu - \mu p}{p}f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t} - d_t \right] \cdot \left(1-l\right)^{-1} \label{eq:flow}
+\end{equation}
+
+First, we compute the steady state of the model (using the results from the master thesis):
+
+\begin{align}
+    &Z \alpha \hat{k}^{\alpha-1} = \frac{p - p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(p + \mu - \mu p\right)} \label{eq:k_opt_path} \\
+    &\widehat{d} =\frac{p+\mu-\mu p}{p}f(\hat{k})-\left(\frac{l R_f+\delta p - l p}{p}\right)\hat{k} \label{eq:div_opt_path}
+\end{align}
+
+Using the Taylor theorem for the log utility function, we get:
+
+\begin{align*}
+    \ln(d_t) = \ln(\hat{d}) + \frac{1}{\hat{d}}(d_t - \hat{d}) - \frac{1}{2\hat{d}^2}(d_t - \hat{d})^2
+\end{align*}
+
+To approximate the following constraint using a Taylor approximation up to the first degree:
+\begin{equation}
+    k_{t+1} = \left[ \frac{p + \mu - \mu p}{p} f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t} - d_{t} \right] \cdot \left(1-l\right)^{-1} \label{eq:flow}
+\end{equation}
+
+We linearize around the steady state values given by:
+\begin{align}
+    Z \alpha \hat{k}^{\alpha-1} &= \frac{p - p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(p + \mu - \mu p\right)} \label{eq:k_opt_path} \\
+    \hat{d} &= \frac{p + \mu - \mu p}{p} f(\hat{k}) - \left(\frac{l R_f + \delta p - l p}{p}\right) \hat{k} \label{eq:div_opt_path}
+\end{align}
+
+First, define the function:
+\begin{equation}
+g(k_t, d_t) = \left[ \frac{p + \mu - \mu p}{p} f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t} - d_{t} \right] \cdot \left(1-l\right)^{-1}
+\end{equation}
+
+We approximate \( g(k_t, d_t) \) around \( \hat{k} \) and \( \hat{d} \) using a first-order Taylor expansion:
+\begin{equation}
+g(k_t, d_t) \approx g(\hat{k}, \hat{d}) + \left. \frac{\partial g}{\partial k_t} \right|_{k_t = \hat{k}} (k_t - \hat{k}) + \left. \frac{\partial g}{\partial d_t} \right|_{d_t = \hat{d}} (d_t - \hat{d})
+\end{equation}
+
+Calculate the partial derivatives:
+\begin{equation}
+\frac{\partial g}{\partial k_t} = \left(1-l\right)^{-1} \left[ \frac{p + \mu - \mu p}{p} f'(k_t) + \frac{p - \delta p - R_f l}{p} \right]
+\end{equation}
+
+\begin{equation}
+\frac{\partial g}{\partial d_t} = -\left(1-l\right)^{-1}
+\end{equation}
+
+Using \( f(k_t) = Z k_t^\alpha \) and \( f'(\hat{k}) = Z \alpha \hat{k}^{\alpha-1} \), we get:
+\begin{equation}
+\left. \frac{\partial g}{\partial k_t} \right|_{k_t = \hat{k}} = \left(1-l\right)^{-1} \left[ \frac{p + \mu - \mu p}{p} Z \alpha \hat{k}^{\alpha-1} + \frac{p - \delta p - R_f l}{p} \right]
+\end{equation}
+
+Substitute the steady-state value:
+\begin{equation}
+Z \alpha \hat{k}^{\alpha-1} = \frac{p - p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(p + \mu - \mu p\right)}
+\end{equation}
+
+So,
+\begin{equation}
+\left. \frac{\partial g}{\partial k_t} \right|_{k_t = \hat{k}} = \left(1-l\right)^{-1} \left[ \frac{p + \mu - \mu p}{p} \cdot \frac{p - p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(p + \mu - \mu p\right)} + \frac{p - \delta p - R_f l}{p} \right]
+\end{equation}
+
+Simplify:
+\begin{equation}
+\left. \frac{\partial g}{\partial k_t} \right|_{k_t = \hat{k}} = \left(1-l\right)^{-1} \left[ \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \right]
+\end{equation}
+
+Thus, the linearized form is:
+\begin{align}
+    k_{t+1} &\approx \hat{k} + \frac{k_t - \hat{k}}{1-l}\left[ \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \right] \nonumber 
+     - \frac{d_t - \hat{d}}{1-l}
+\end{align}
+taking the steady state values of \(k_t\) on the lhs, we get:
+\begin{align}
+    k_{t+1} -\hat{k} &= \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \frac{ k_t - \hat{k}}{1-l} \nonumber 
+    - \frac{d_t - \hat{d}}{1-l}
+\end{align}
+Defining the deviation from the steady state as:
+\begin{align}
+    \begin{cases}
+        k_t = \hat{k} + \tilde{k}_t \\
+        d_t = \hat{d} + \tilde{d}_t
+    \end{cases}
+\end{align}
+we get:
+\begin{align}
+    \tilde{k}_{t+1} &= \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \frac{ \tilde{k}_t}{1-l} - \frac{\tilde{d}_t}{1-l} \label{eq:linearized_flow}
+\end{align}
 
 \end{document}
