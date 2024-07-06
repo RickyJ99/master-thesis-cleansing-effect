@@ -91,11 +91,10 @@ The steady-state equations are:
 \end{align}
 
 Using the Taylor theorem to the log utility function:
-\begin{align*}
+\begin{equation}
+    \ln(d_t) \approx \ln(\hat{d}) + \frac{1}{\hat{d}}(d_t - \hat{d}) - \frac{1}{2\hat{d}^2}(d_t - \hat{d})^2
+\end{equation}
 
-    ln(d_t)=ln(\hat{d})+\frac{1}{\hat{d}}(d_t-\hat{d})-\frac{1}{2\hat{d}^2}(d_t-\hat{d})
-
-\end{align*}
 
 Doing the same for the flow of funds constraint:
 
@@ -354,25 +353,127 @@ Consolidating and linearizing the constraints, we get:
     \tilde{k}_{t+1} &= \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \frac{ \tilde{k}_t}{1-l} - \frac{\tilde{d}_t}{1-l} \label{eq:linearized_flow}
 \end{align}
 where \(\tilde{k}_t\) and \(\tilde{d}_t\) are deviations from the steady state. The calculations are shown in the
-appendix \ref{sec:linearization}.
-The utlity function is the same as in the previous section, therefore the problem can be rewritten as the following
-system:
+appendix.
+The utility function is the same as in the previous section. Therefore, the problem can be rewritten as the following system:
 \begin{align*}
-    \begin{cases}
-        V(k_0) = U(d_0^*) + \beta V(k_1), \\
-        k_1 =  \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \frac{ \tilde{k}_0}{1-l} - \frac{\tilde{d}^*_0}{1-l} , \\
-        d^*_0 = [\beta V'(k_{1})]^{-1},\\
-        k_0 \text{ given.}
-    \end{cases}
-\end{align*}
+     \begin{cases}
+         V(k_0) = U(d_0^*) + \beta V(k_1), \\
+         k_1 =  a \lambda \tilde{k}_0 - \lambda \tilde{d}^*_0, \\
+         k_0 \text{ given.}
+     \end{cases}
+ \end{align*}
+where \(\lambda = \frac{1}{1-l}\) and \(a = \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p}\).
 
+The value function \( V(k_0) \) is:
+\[
+V(k_0) = A \ln(k_0) + B,
+\]
+where:
+\[
+A = \frac{1 - \beta}{\beta \ln(a \lambda)},
+\]
+\[
+B = \frac{\ln(d_0^*)}{1 - \beta}.
+\]
 
+The optimal consumption \( d_0^* \) maximizes:
+\[
+\ln(d_0^*) + \beta V(a \lambda k_0 - \lambda d_0^*).
+\]
 
+The first-order condition gives:
+\[
+d_0^* = \frac{a \lambda k_0}{1 + \beta \lambda}.
+\]
+
+The optimal path for capital is:
+\[
+k_{t+1} = a \lambda k_t - \lambda d_t^*,
+\]
+substituting \( d_t^* \):
+\[
+k_{t+1} = k_t \left( \frac{a \lambda (1 + (\beta - 1) \lambda)}{1 + \beta \lambda} \right).
+\]
+
+This provides the policy function for optimal consumption \( d_0^* \) and the optimal evolution path for capital \( k_t \). See the appendix for the complete solution.
+
+  \section{Simulation}
+
+This section presents the results of our dynamic programming model with linear utility. We simulate the impulse response functions of capital and consumption to a 10\% increase in productivity \(Z\).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lcc}
+    \hline Parameter & Symbol & Value \\
+    \hline \hline
+    Depreciation rate & $\delta$ & 0.07 \\
+    Returns to scale & $\alpha$ & 0.70 \\
+    Firm productivity & $Z$ & 1 \\
+    Discount factor & $\beta$ & 0.95 \\
+    Risk-free rate & $R_f$ & 0.03 \\
+    Initial capital & $k_0$ & 1 \\
+    Initial $\lambda$ & $\lambda_{\text{initial}}$ & 0.1 \\
+    \hline
+    \end{tabular}
+    \caption{Benchmark calibration}
+    \label{tab:benchmark_calibration}
+\end{table}
+
+The simulation data is imported from a CSV file and visualized using charts. The data includes the paths of capital and consumption under the baseline scenario and the scenario where productivity \(Z\) is increased by 10\%.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=\textwidth,
+            height=0.5\textwidth,
+            xlabel={Period},
+            ylabel={Capital (K)},
+            legend pos=outer north east,
+            title={Impulse Response of Capital}
+        ]
+        \addplot table [x=Period, y=Capital, col sep=comma] {output_data/impulse_response.csv};
+        \addlegendentry{Capital (K)}
+        \addplot table [x=Period, y=Capital10, col sep=comma] {output_data/impulse_response.csv};
+        \addlegendentry{Capital (K) with Z increased by 10\%}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Impulse Response of Capital}
+    \label{fig:impulse_response_capital}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=\textwidth,
+            height=0.5\textwidth,
+            xlabel={Period},
+            ylabel={Consumption (d)},
+            legend pos=outer north east,
+            title={Impulse Response of Consumption}
+        ]
+        \addplot table [x=Period, y=Consumption, col sep=comma] {output_data/impulse_response.csv};
+        \addlegendentry{Consumption (d)}
+        \addplot table [x=Period, y=Consumption10, col sep=comma] {output_data/impulse_response.csv};
+        \addlegendentry{Consumption (d) with Z increased by 10\%}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Impulse Response of Consumption}
+    \label{fig:impulse_response_consumption}
+\end{figure}
+
+The charts above show the impulse response functions for capital and consumption over 50 periods. The baseline scenario is represented by solid lines, while the scenario with a 10\% increase in productivity \(Z\) is shown with dashed lines.
+
+\begin{itemize}
+    \item \textbf{Capital (K):} The left chart shows the response of capital to a 10\% increase in productivity. The increase in productivity leads to a higher capital accumulation over time.
+    \item \textbf{Consumption (d):} The right chart shows the response of consumption to a 10\% increase in productivity. Higher productivity also results in increased consumption over time.
+\end{itemize}
 
 \appendix
 
 \section{appendix}
-\subsection{Linearization of Constraints}
+\subsection{A: Linearization of Constraints}
 \label{sec:linearization}
 As in the previous section, we will linearize the constraints around the steady state. By consolidating constraints
 \ref{eq:partecipation}, \ref{eq:borrowing}, and the flow of funds, we obtain: 
@@ -464,5 +565,114 @@ we get:
 \begin{align}
     \tilde{k}_{t+1} &= \frac{p - p l - \beta p + \beta \delta p + \beta R_f l + p - \delta p - R_f l}{\beta p} \frac{ \tilde{k}_t}{1-l} - \frac{\tilde{d}_t}{1-l} \label{eq:linearized_flow}
 \end{align}
+The policy function is:
+  
+\begin{equation}
+d_0^* = \frac{a \lambda k_0}{1 + \beta \lambda}
+\end{equation}
+
+The optimal path for capital is:
+
+\begin{equation}
+    k_{t+1} = k_t \left( \frac{a \lambda (1 + (\beta - 1) \lambda)}{1 + \beta \lambda} \right)
+\end{equation}
+
+
+
+\subsection{B: Resolution with Log Utility and Policy Function}
+
+  Consider the utility function \( U(d_t) = \ln(d_t) \). The Bellman equation is:
+  
+  \[
+  V(k_0) = \ln(d_0^*) + \beta V(k_1),
+  \]
+  
+  where \( k_1 = a \lambda k_0 - \lambda d_0^* \) and \( k_0 \) is given.
+  
+  Assume the value function \( V(k) \) takes the form:
+  
+  \[
+  V(k) = A \ln(k) + B,
+  \]
+  
+  where \( A \) and \( B \) are constants to be determined.
+  
+  Substitute the hypothesized value function into the Bellman equation:
+  
+  \[
+  A \ln(k_0) + B = \ln(d_0^*) + \beta (A \ln(a \lambda k_0) + \beta B).
+  \]
+  
+  Using \( \ln(a \lambda k_0) = \ln(a \lambda) + \ln(k_0) \):
+  
+  \[
+  A \ln(k_0) + B = \ln(d_0^*) + \beta A \ln(a \lambda) + \beta A \ln(k_0) + \beta B.
+  \]
+  
+  Matching coefficients gives:
+  
+  \[
+  A (1 - \beta) = \beta A \ln(a \lambda),
+  \]
+  
+  \[
+  B (1 - \beta) = \ln(d_0^*).
+  \]
+  
+  Solving for \( A \) and \( B \):
+  
+  \[
+  a \lambda = e^{\frac{1 - \beta}{\beta}},
+  \]
+  
+  \[
+  B = \frac{\ln(d_0^*)}{1 - \beta}.
+  \]
+  
+  The value function \( V(k_0) \) is:
+  
+  \[
+  V(k_0) = A \ln(k_0) + B,
+  \]
+  
+  where:
+  
+  \[
+  A = \frac{1 - \beta}{\beta \ln(a \lambda)},
+  \]
+  
+  \[
+  B = \frac{\ln(d_0^*)}{1 - \beta}.
+  \]
+  
+  The optimal consumption \( d_0^* \) maximizes:
+  
+  \[
+  \ln(d_0^*) + \beta V(a \lambda k_0 - \lambda d_0^*).
+  \]
+  
+  The first-order condition gives:
+  
+  \[
+  d_0^* = \frac{a \lambda k_0}{1 + \beta \lambda}.
+  \]
+  
+  The optimal path for capital is:
+  
+  \[
+  k_{t+1} = a \lambda k_t - \lambda d_t^*,
+  \]
+  
+  substituting \( d_t^* \):
+  
+  \[
+  k_{t+1} = k_t \left( \frac{a \lambda (1 + (\beta - 1) \lambda)}{1 + \beta \lambda} \right).
+  \]
+  
+  This provides the policy function for optimal consumption \( d_0^* \) and the optimal evolution path for capital \( k_t \).
+  
+ 
+
+
 
 \end{document}
