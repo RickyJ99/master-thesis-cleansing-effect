@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1720304730 "paper.xdv" "paper.pdf" "paper" 1720304730 0
-  "paper.xdv" 1720304730 241096 41c2eb9f5fd24fde2b2d6baca23e79f3 "xelatex"
+["xdvipdfmx"] 1722805475 "paper.xdv" "paper.pdf" "paper" 1722805476 0
+  "paper.xdv" 1722805475 150476 865a48e2623e24071e4c07b6eda5491e "xelatex"
   (generated)
   "paper.pdf"
   (rewritten before read)
-["xelatex"] 1720304727 "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper.tex" "paper.xdv" "paper" 1720304730 0
-  "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper.tex" 1720304106 25193 66c121e7afd7d609945fb74dd7cec7da ""
+["xelatex"] 1722805473 "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper/paper.tex" "paper.xdv" "paper" 1722805476 0
+  "/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper/paper.tex" 1722805470 14944 f850eff6efef306494c12f13e9141571 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -223,12 +223,13 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1678050682 10497565 85a9f0cfa407b075b6ae117c972c4a01 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "output_data/impulse_response.csv" 1720304723 4751 484c7a8f329b0ec809dc89a06a62cb7b ""
+  "linearization_debt.tex" 1722797908 5458 a293c55fb0963879c47e2059fc46e332 ""
   "output_data/quadratic_function.csv" 1718447661 4628 9ab031a4c11631c07142e583afe54358 ""
   "output_data/quadratic_function_lowerb.csv" 1718452253 4720 0bea21d9e0d0c124d4422484785247af ""
-  "paper.aux" 1720304730 4211 b0ff68870f06f4ab59176cd8d248fbfd "xelatex"
-  "paper.out" 1720304730 1233 48f9b4b7b4783c7a4f0b8345690a6db2 "xelatex"
-  "paper.tex" 1720304106 25193 66c121e7afd7d609945fb74dd7cec7da ""
+  "paper.aux" 1722805475 3797 45f386af63a3ed101a89f3aadfcb3ba1 "xelatex"
+  "paper.out" 1722805475 1423 619c9f8ed0acd204190dcd1d09079bc5 "xelatex"
+  "paper.tex" 1722805470 14944 f850eff6efef306494c12f13e9141571 ""
+  "solving_free_debt.tex" 1722797988 1816 58649620d63d53cfa5b68b3e7f0c991b ""
   (generated)
   "paper.aux"
   "paper.log"

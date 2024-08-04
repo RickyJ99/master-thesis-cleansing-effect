@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  7 JUL 2024 00:25
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  4 AUG 2024 23:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper.tex
-(/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper.tex
+**/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper/paper.tex
+(/Users/riccardodalcero/Library/CloudStorage/OneDrive-UniversitaCattolicaSacroCuore-ICATT/Materials/Tesi/in_out_market/paper/paper.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
@@ -602,20 +602,7 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count329
 \g__pdf_backend_annotation_int=\count330
 \g__pdf_backend_link_int=\count331
-) (./paper.aux
-
-LaTeX Warning: Label `eq:flow' multiply defined.
-
-
-LaTeX Warning: Label `eq:k_opt_path' multiply defined.
-
-
-LaTeX Warning: Label `eq:div_opt_path' multiply defined.
-
-
-LaTeX Warning: Label `eq:linearized_flow' multiply defined.
-
-)
+) (./paper.aux)
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -704,35 +691,34 @@ PGFPlots: reading {output_data/quadratic_function_lowerb.csv}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5] [6] [7] [8] [9]
-PGFPlots: reading {output_data/impulse_response.csv}
-PGFPlots: reading {output_data/impulse_response.csv}
+[5] [6]
 
-Overfull \hbox (238.25006pt too wide) in paragraph at lines 440--441
- [][] 
+LaTeX Warning: Reference `eq:partecipation' on page 7 undefined on input line 328.
+
+[7] (./solving_free_debt.tex [8] [9]) (./linearization_debt.tex
+Overfull \hbox (2.22826pt too wide) in paragraph at lines 1--1
+[]\TU/lmr/bx/n/17.28 Steady-State Computation and Log-Linearization 
  []
 
-PGFPlots: reading {output_data/impulse_response.csv}
-PGFPlots: reading {output_data/impulse_response.csv}
-
-Overfull \hbox (257.25125pt too wide) in paragraph at lines 461--462
- [][] 
+[10] [11] [12]
+Overfull \hbox (26.85522pt too wide) detected at line 107
+[][][]\OML/cmm/m/it/12 k[] \OT1/cmr/m/n/12 = [] [] \OML/cmm/m/it/12 ;  d[] \OT1/cmr/m/n/12 = [] [] \OML/cmm/m/it/12 ;  b[] \OT1/cmr/m/n/12 = [] [] \OML/cmm/m/it/12 ;  k[] \OT1/cmr/m/n/12 = [] [] \OML/cmm/m/it/12 ;  b[] \OT1/cmr/m/n/12 = [] []
  []
 
-[10] [11] [12] [13] [14] [15] [16] (./paper.aux)
+[13]) [14] (./paper.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 48F9B4B7B4783C7A4F0B8345690A6DB2;1233.
+(rerunfilecheck)             Checksum: 619C9F8ED0ACD204190DCD1D09079BC5;1423.
  ) 
 Here is how much of TeX's memory you used:
- 35214 strings out of 476684
- 836061 string characters out of 5804056
- 1871018 words of memory out of 5000000
- 54864 multiletter control sequences out of 15000+600000
+ 35166 strings out of 476684
+ 834863 string characters out of 5804056
+ 1867018 words of memory out of 5000000
+ 54812 multiletter control sequences out of 15000+600000
  517364 words of font info for 60 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,17n,94p,845b,2286s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,94p,851b,2207s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper.xdv (16 pages, 241096 bytes).
+Output written on paper.xdv (14 pages, 150476 bytes).

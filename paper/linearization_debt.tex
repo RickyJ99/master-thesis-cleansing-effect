@@ -1,0 +1,143 @@
+\section{Steady-State Computation and Log-Linearization}
+\label{sec:steady-state-computation}
+
+This appendix provides the derivation of the steady-state values for capital, dividends, and debt, and the log-linearization of the flow of funds constraint using the first-order Taylor expansion.
+
+\subsection{Steady-State Computation}
+Notation marks:
+\begin{itemize}
+    \item lower case letter represents log deviation from the steady state
+    \item upper case letter represents a level variable
+    \item \(X^*\) represents the optimal path
+\end{itemize}
+The utility function is logarithmic:
+\begin{equation}
+U(D) = \ln(D)
+\end{equation}
+
+The flow of funds constraint is:
+\begin{equation}
+K^{t+1} + \left( \frac{R_f}{p} - \frac{(1-p)}{p} \frac{\mu Z K_t^\alpha}{B} \right) B_t + D_t = Z K^\alpha + B^{t+1}
+\end{equation}
+
+At the steady state, we have:
+\begin{equation}
+K + \left( \frac{R_f}{p} - \frac{(1-p)}{p} \frac{\mu Z K^\alpha}{B} \right) B + D = Z K^\alpha + B
+\end{equation}
+
+The Lagrangian for the firm's problem is:
+\begin{equation}
+\mathcal{L} = \sum_{t=0}^\infty \beta^t \left[ \ln(D_t) - \lambda_t \left( - Z K_t^\alpha - B_{t+1} + K_{t+1} + \left( \frac{R_f}{p} - \frac{(1-p)}{p} \frac{\mu Z K_t^\alpha}{B_t} \right) B_t + D_t \right) \right]
+\end{equation}
+
+the first-order conditions are:
+\begin{itemize}
+    \item For Dividends:
+    \begin{equation}
+        \frac{\partial \mathcal{L}}{\partial D_t} = \frac{1}{D_t} - \lambda_t = 0 \implies \lambda_t = \frac{1}{D_t}
+    \end{equation}
+    \item For Capital:
+    \begin{align}
+        &\frac{\partial \mathcal{L}}{\partial K_{t+1}} = -\lambda_t + \beta \lambda_{t+1} \alpha Z K_{t+1}^{\alpha-1} 
+        \left(\frac{p+(1-p)\mu}{p}\right) = 0 \\
+        & \implies \lambda_t = \beta \lambda_{t+1} \alpha Z K_{t+1}^{\alpha-1} \left(\frac{p+(1-p)\mu}{p}\right)
+    \end{align}
+    \item For Debt:
+    \begin{equation}
+        \frac{\partial \mathcal{L}}{\partial B_{t+1}} = \lambda_t - \beta \lambda_{t+1} \frac{R_f}{p}= 0 \implies \lambda_t = \beta \lambda_{t+1} \frac{R_f}{p}
+    \end{equation}
+\end{itemize}
+
+Combining the first-order conditions, we get the Euler equations for capital and debt.
+
+\paragraph{Euler Equation for Capital}
+\begin{equation}
+\frac{1}{D_t} = \beta \frac{1}{D_{t+1}} \alpha Z K_{t+1}^{\alpha-1} \left(\frac{p+(1-p)\mu}{p}\right) \label{eq:euler-capital}
+\end{equation}
+
+\paragraph{Euler Equation for Debt}
+\begin{equation}
+\frac{1}{D_t} = \beta \frac{1}{D_{t+1}} \frac{R_f}{p} \label{eq:euler-debt}
+\end{equation}
+
+At the steady state, \(K_t = K_{t+1} = K\), \(D_t = D_{t+1} = D\), and \(B_t = B_{t+1} = B\).
+
+\subsubsection{Steady-State Euler Equation for Capital}
+\begin{equation}
+K = \left(\frac{\alpha \beta Z (p+(1-p)\mu)}{p}\right)^{\frac{1}{1-\alpha}}
+\end{equation}
+
+\subsubsection{Steady-State Euler Equation for Debt}
+\begin{equation}
+p = \frac{\beta}{R_f}
+\end{equation}
+
+
+\subsubsection{Steady-State Flow of Funds Constraint}
+Using the flow of funds constraint at the steady state:
+\begin{equation}
+K + \left( \frac{R_f}{p} - \frac{(1-p)}{p} \frac{\mu Z K^\alpha}{B} \right) B + D = Z K^\alpha + B
+\end{equation}
+
+we get the steady state level of dividends:
+\begin{equation}
+D = Z K^\alpha \left(\frac{p + \mu (1-p)}{p}\right) - K - B \left(\frac{R_f - p}{p}\right)
+\end{equation}
+
+\subsection{Log-Linearization Using Taylor Expansion}
+
+We denote deviations from the steady state using lower-case letters for the log variables and upper-case letters for the level variables.
+
+\subsubsection{Flow of Funds Constraint}
+
+The original flow of funds constraint is:
+\begin{equation}
+K_{t+1} + \left( \frac{R_f}{p} - \frac{(1-p)}{p} \frac{\mu F(K_t)}{B_t} \right) B_t + D_t = F(K_t) + B_{t+1}
+\end{equation}
+where $F(K_t) = Z K_t^\alpha$.
+
+At the steady state, we have:
+\begin{equation}
+K + \left( \frac{R_f}{p} - \frac{(1-p)}{p} \frac{\mu Z K^\alpha}{B} \right) B + D = Z K^\alpha + B
+\end{equation}
+
+Using log deviations:
+\begin{equation}
+k_t = \ln\left(\frac{K_t}{K}\right), \quad d_t = \ln\left(\frac{D_t}{D}\right), \quad b_t = \ln\left(\frac{B_t}{B}\right), \quad k_{t+1} = \ln\left(\frac{K_{t+1}}{K}\right), \quad b_{t+1} = \ln\left(\frac{B_{t+1}}{B}\right)
+\end{equation}
+
+\subsubsection{Linearizing the Flow of Funds Constraint}
+
+
+Using a first-order Taylor expansion around the steady state (\(K, B, D\)), we get:
+\begin{equation}
+    K_{t+1} = f(K) + (1-R)B - D + \mathbb{J}^{T}\begin{bmatrix}
+        K_t-K \\
+        B_t-B \\
+        B_{t+1}-B \\
+        D_t-D
+\end{bmatrix}
+\end{equation}
+
+where:
+\begin{equation}
+    \mathbb{J} = \begin{bmatrix}
+        \frac{\partial K_{t+1}}{\partial K_t} \\
+        \frac{\partial K_{t+1}}{\partial B_t}\\
+        \frac{\partial K_{t+1}}{\partial B_{t+1}}\\
+        \frac{\partial K_{t+1}}{\partial D_t}
+    \end{bmatrix}
+\end{equation}
+exploiting the Euler equations for capital and debt \ref{eq:euler-capital} and \ref{eq:euler-debt} we get:
+\begin{equation}
+    (K_{t+1}-K) - (B_{t+1}-B) = \frac{1}{\beta} \left[\left(K_t - K\right) - \left(B_t - B\right)\right] - \left(D_t - D\right)
+\end{equation}
+rewriting using lowercase letters to express the log deviation from the steady state:
+\begin{equation}
+    k_{t+1} - b{t+1} = \frac{1}{\beta} \left(k_t - b_t\right) - d_t
+\end{equation}
+we can rewrite expressing the equity as (\(n=k-b\)):
+\begin{equation}
+    n_{t+1} = \frac{1}{\beta} n_t - d_t
+\end{equation}
+This completes the log-linearization of the flow of funds constraint around the steady state.

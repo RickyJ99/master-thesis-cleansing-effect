@@ -1,0 +1,92 @@
+\subsection{B: Resolution with Log Utility and Policy Function}
+
+  Consider the utility function \( U(d_t) = \ln(d_t) \). The Bellman equation is:
+  
+  \[
+  V(k_0) = \ln(d_0^*) + \beta V(k_1),
+  \]
+  
+  where \( k_1 = a \lambda k_0 - \lambda d_0^* \) and \( k_0 \) is given.
+  
+  Assume the value function \( V(k) \) takes the form:
+  
+  \[
+  V(k) = A \ln(k) + B,
+  \]
+  
+  where \( A \) and \( B \) are constants to be determined.
+  
+  Substitute the hypothesized value function into the Bellman equation:
+  
+  \[
+  A \ln(k_0) + B = \ln(d_0^*) + \beta (A \ln(a \lambda k_0) + \beta B).
+  \]
+  
+  Using \( \ln(a \lambda k_0) = \ln(a \lambda) + \ln(k_0) \):
+  
+  \[
+  A \ln(k_0) + B = \ln(d_0^*) + \beta A \ln(a \lambda) + \beta A \ln(k_0) + \beta B.
+  \]
+  
+  Matching coefficients gives:
+  
+  \[
+  A (1 - \beta) = \beta A \ln(a \lambda),
+  \]
+  
+  \[
+  B (1 - \beta) = \ln(d_0^*).
+  \]
+  
+  Solving for \( A \) and \( B \):
+  
+  \[
+  a \lambda = e^{\frac{1 - \beta}{\beta}},
+  \]
+  
+  \[
+  B = \frac{\ln(d_0^*)}{1 - \beta}.
+  \]
+  
+  The value function \( V(k_0) \) is:
+  
+  \[
+  V(k_0) = A \ln(k_0) + B,
+  \]
+  
+  where:
+  
+  \[
+  A = \frac{1 - \beta}{\beta \ln(a \lambda)},
+  \]
+  
+  \[
+  B = \frac{\ln(d_0^*)}{1 - \beta}.
+  \]
+  
+  The optimal consumption \( d_0^* \) maximizes:
+  
+  \[
+  \ln(d_0^*) + \beta V(a \lambda k_0 - \lambda d_0^*).
+  \]
+  
+  The first-order condition gives:
+  
+  \[
+  d_0^* = \frac{a \lambda k_0}{1 + \beta \lambda}.
+  \]
+  
+  The optimal path for capital is:
+  
+  \[
+  k_{t+1} = a \lambda k_t - \lambda d_t^*,
+  \]
+  
+  substituting \( d_t^* \):
+  
+  \[
+  k_{t+1} = k_t \left( \frac{a \lambda (1 + (\beta - 1) \lambda)}{1 + \beta \lambda} \right).
+  \]
+  
+  This provides the policy function for optimal consumption \( d_0^* \) and the optimal evolution path for capital \( k_t \).
+  
