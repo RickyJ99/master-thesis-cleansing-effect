@@ -1,0 +1,1035 @@
+\documentclass[12pt]{report}
+
+ % Add this line to your preamble
+% Language setting
+% Replace `English' with e.g. `Spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+
+\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+	
+% Load the setspace package
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{float}
+
+
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{arrows.meta, bending}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{decorations.markings}
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{gray},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{purple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Useful packages
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{tikz}
+\usepackage{natbib}
+\pgfplotsset{width=12cm,compat=1.9}
+\setstretch{1.5}
+
+\bibliographystyle{unsrtnat}
+
+\usetikzlibrary{shapes.arrows, positioning, arrows.meta}
+
+
+\title{Financial Frictions and the Cleansing Effects of Recessions}
+\author{Riccardo Dal Cero}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    \Large UNIVERSITÀ CATTOLICA DEL SACRO CUORE\\
+    \Large Campus of Milan\\
+    \Large Faculty of Economics\\
+    \Large Master program in Economics\\
+    \vspace{2cm}
+    \includegraphics[width=0.4\textwidth]{logo.png}\\ 
+    \vspace{2cm}
+    \Huge Financial Frictions and the Cleansing Effects of Recessions\\
+
+    \vspace{2cm}
+
+    \begin{flushleft}
+    \large Supervisor \\
+    \large Professor Domenico Delli Gatti
+    \end{flushleft}
+    
+    \vfill
+    
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+        \raggedright
+        \large Dissertation by\\
+        \large Riccardo Dal Cero\\
+        \large Id number: 5112054
+    \end{minipage}
+    
+    \vspace{0.8cm}
+
+    \Large{Academic Year 2022/2023}
+    
+\end{titlepage}
+
+
+\begin{abstract}
+    This thesis develops a theoretical framework to explore how financial frictions affect firm's decision on the optimal trajectory for
+    capital and dividends. Initially, the model excludes the possibility of debt financing for investment, akin to
+    the Ramsey-Cass-Koopmans model, with dividends instead of consumption levels. By employing a Lagrangian method,
+    the Euler equation for dividends is derived. In the next stage, firms are allowed to finance investments through
+    debt and retained earnings. The model introduces asymmetric information via monitoring costs included in the
+    participation constraint of financial intermediaries. Additionally, a borrowing constraint that sets a fixed
+    leverage ratio for firms represents another financial friction. The solution process starts with a Lagrangian
+    approach to formulate the Euler equations for dividends, followed by a Bellman equation with a
+    guess-and-verify method to derive a closed-form solution for the optimal paths of dividends and capital. An
+    important finding is that monitoring costs lead to lower steady-state levels of capital and dividends. The thesis concludes
+    with Monte Carlo simulations that introduce heterogeneity across firms and continuous sinusoidal productivity shocks.
+    These simulations suggest that financial frictions reduce the cleansing effect of recession, but the latter remains positively
+    significant, aligning with the findings of \cite{OsePap17}.
+\end{abstract}
+
+% Add a new page with the centered message
+\newpage
+\vfill
+\begin{center}
+    \textit{This is a shortened version of the original thesis. The full thesis is available here:} \\
+    \textit{\href{https://github.com/RickyJ99/Neural-Network-with-reinforcement-learning/blob/af431eb3509898512380815ea9b118593087b11b/thesis/main.pdf}{Master Thesis on GitHub}} % Add the actual link to your thesis
+\end{center}
+\vfill
+
+\tableofcontents
+\chapter{Introduction} 
+
+\input{introduction.tex}
+\section{Literature review}
+
+
+\input{literature_review.tex}
+
+
+
+\chapter{The Firm's Problem}
+\section{Introduction}
+This thesis presents a partial equilibrium model in which firms maximize dividends over an infinite period, under financial frictions,
+investigating how those frictions can affect the saddle path of capital and dividends. Compared to \cite{OsePap17} and
+\cite{CabHarm94}, this
+model allows us to find a closed-form solution optimal path for dividends and capital.
+The subsequent sections delve into the formulation of the flow of funds and its dynamics. Following this, the focus
+shifts to scenarios  where financial frictions are present, examining their
+implications on firm behavior and market outcomes. 
+
+
+\input{Lfm.tex}
+\input{Ramsey-Cass-Koopmans.tex}
+
+
+
+
+\chapter{Optimization under Financial Frictions}
+This chapter delves into a firm's optimization in a context where debt financing is entwined with financial frictions.
+We dissect two pivotal constraints:
+
+The fixed leverage constraint restricts a firm's debt-to-equity ratio, thereby shaping its capital structure and
+investment choices. This fixed ratio (\(0<l<1\)), where \(b_t = l k_t\), is enforced to mitigate default risk. It
+remains invariant over time, disallowing leverage adjustment in response to productivity shocks, thereby reducing the
+optimization problem to capital and dividend decisions. 
+
+We also explore the participation constraint with monitoring costs for financial intermediaries. These intermediaries
+incur costs to ensure borrowers' compliance and solvency, influencing the cost of borrowing and affecting loan terms
+and credit access.
+
+Incorporating these frictions, the model aims to mirror the real-world financial conditions of firms. We investigate the
+impact of these frictions on firms' steady-state behavior, particularly on capital and dividend dynamics, vital for
+understanding the broader economic impact of financial frictions. 
+
+Following the analysis of participation constraints, we address the firm's maximization problem in the face of financial
+frictions. Using a Lagrangian formulation, we determine the stationary conditions for dividends and capital, visualized
+in a phase diagram. The firm's problem is then reformulated via a Bellman equation and solved using iterative
+techniques. 
+
+The chapter concludes with Monte Carlo simulations to model firm heterogeneity in leverage and productivity,
+incorporating continuous productivity shocks and an exit condition based on a return on capital threshold. This exit
+mechanism serves as a test of the 'cleansing effect' on the economy's output, both with and without monitoring costs, to
+determine if a cleansing effect persists in the presence of financial frictions. 
+\section{Participation constraint of the financial intermediaries } 
+The subsection delves into the constraints facing financial intermediaries within the model. Initially, the model assumed an exogenous
+interest rate, unaffected by the volume of debt, leading to an unrealistic scenario where interest rates remain
+constant.  To address this,  the model incorporates a financial market in which the interest rate is set based on
+market-clearing conditions, with financial intermediaries functioning in a perfectly competitive environment aimed at
+profit maximization. 
+
+According to \cite{BerGer86}, lending should yield a profit equivalent to the opportunity cost. Lenders earn
+interest plus the principal if borrowers repay successfully (with probability \(p\)) or acquire the firm's production
+assets (net of monitoring cost: \(1-\mu\)) in case of bankruptcy. Moreover, \((1-\mu)f(k_t)\)represents monitoring cost.
+The lender's participation constraint is:
+\begin{align*}
+    R_t \cdot b_t p + (1-p) \mu f(k_t) = R_f b_t, \
+\end{align*}
+
+where \(R_f\) represents the risk-free rate, the opportunity cost of lending. This framework allows for the derivation
+of the interest rate as a function of \(p\),\(f(k_t)\),\(\mu\),\(b_t\), and \(R_f\).
+
+The participation constraint can be rewritten as:
+\begin{align}
+    R_t=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_t)}{b_t}. \label{eq21}
+\end{align}
+
+Investigating the asymptotic behavior of \( R_t \) with respect to \( p \) provides critical economic insights.
+Specifically, as \( p \rightarrow 0 \), indicating an increasingly likely default, \( R_t \) escalates without bound,
+reflecting the infinitely rising premium a lender would require to counterbalance the heightened risk. Conversely, as \(
+p \rightarrow 1 \), the default risk vanishes, and \( R_t \) converges to \( R_f \), the risk-free rate, consonant with
+the absence of default risk necessitating no premium above the risk-free return. 
+When examining the behavior of the interest rate formula as the debt amount \(b_t\) trends towards infinity, the resulting limit is given by:
+
+\[
+\lim_{{b_t \rightarrow +\infty}} \frac{R_f}{p} - \frac{1-p}{p}\frac{\mu f(k_t)}{b_t} = \frac{R_f}{p}
+\]
+
+As the denominator \(b_t\), representing the total
+debt, increases without bound, the term involving the firm's productive output adjusted for recovery rate (\(\mu
+f(k_t)/b_t\)) diminishes to zero. This indicates that, in scenarios of very large debt volumes, the fraction of
+recoverable assets (\(\mu f(k_t)\)) compared to the outstanding debt becomes negligible in determining the interest rate
+\(R_t\).
+
+Therefore, under such conditions, the interest rate formula simplifies to \(\frac{R_f}{p}\), underscoring that the
+loan's interest rate is fundamentally determined by the risk-free rate adjusted for the probability of successful
+repayment \(p\), independent of the firm's asset recoverability or productivity levels. This elucidates an important
+economic principle: for vast sums of debt, the critical factors shaping lending rates pivot away from the specifics of
+asset recovery towards broader financial metrics—namely, the prevailing risk-free rate and the inherent risk of default.
+
+
+
+
+
+
+\section{The problem of the firm in the presence of financial frictions}
+ The firm's objective is to maximize:
+
+\[
+\max_{{\{d_{t}\}}_{t=0}^{+\infty}}V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)}
+\]
+
+subject to:
+\begin{enumerate}
+    \item the flow of funds constraint: \(I_t + R b_{t} + d_t = f(k_t) + b_{t+1}\)
+    \item the investment function \(I_t = k_{t+1} - k_{t}\left(1-\delta\right)\) 
+    \item the financing constraint \(b_t=l k_t\)
+    \item the participation constraint of lenders \(R_t=\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_t)}{b_t}\)
+\end{enumerate}
+Consolidating the constraints we get the flow of funds constraints:
+\begin{align}
+    k_{t+1} &= \left\{k_{t}(1 - \delta) - \left[\frac{R_f}{p}  -\frac{ 1-p }{ p }\frac{\mu f(k_{t})}{l  k_{t}}\right] \cdot l k_{t} + f(k_{t}) - d_{t} \right \}{\left(1-l\right)}^{-1} \nonumber \\
+    k_{t+1} &= \left[ \frac{p + \mu - \mu p}{p}f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t}  - d_{t} \right](1-l)^{-1} \label{eq:ff}
+\end{align}
+
+The Lagrangian for this optimization problem is :
+
+\begin{align}
+L=\sum_{t=0}^{+\infty}\beta^t U(d_t) - \beta^t \lambda_t\left[ k_{t+1} - \frac{p + \mu - \mu p}{p}f(k_{t}) - \frac{p - \delta p - R_f l}{p} k_{t}  + d_{t} \right](1-l)^{-1},
+\end{align}
+
+leading to the first-order conditions for optimizing dividends and capital over time:
+
+
+\begin{align}
+    U'(d_t) &= \frac{\lambda_t}{\left(1-l\right)}, \quad \forall t,
+\end{align}
+
+
+and the dynamic optimality conditions for capital allocation:
+
+
+\begin{align}
+    \lambda_t = \beta \frac{\lambda_{t+1}}{\left(1-l\right)} \left[ f'(k_{t})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right], \quad \forall t.
+\end{align}
+
+
+This formulation yields the Euler equation for dividends:
+
+\begin{align}
+U^{\prime}(d_{t})=\frac{\beta}{\left(1-l\right)} U^{\prime}(d_{t+1})\left[ f'(k_{t})\frac{p + \mu - \mu p}{p} + \frac{p - \delta p - R_f l}{p} \right],
+\end{align}
+
+imposing (\(d_t = d_{t+1} =\hat{d}\)), we get:
+
+\begin{align}
+    \frac{\left(1-l \right) p}{\beta} &= f^{\prime}(\hat{k})\left({p+\mu-\mu p}\right) + \left({p-\delta p - R_f l}\right) \nonumber\\
+    f^{\prime}(\hat{k})&=\frac{p -p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(p+\mu-\mu p\right)} \label{eq22}
+\end{align}
+using the Cobb Douglas production function \ref{eq15'} into \ref{eq22} we get:
+\begin{align}
+    Z \alpha\hat{k}^{\alpha-1} &= \frac{p -p l - \beta p + \beta \delta p + \beta R_f l}{\beta \left(p+\mu-\mu p\right)} \nonumber \\
+    \hat{k} &=\left[\frac{Z \alpha \beta \left(p+\mu-\mu p\right)}{p -p l - \beta p + \beta \delta p + \beta R_f l}\right]^{\frac{1}{1-\alpha}} \label{eq23}
+\end{align}
+Similar to the scenario without debt, when the firm's capital falls below the steady-state threshold \( \hat{k} \), it
+is advantageous for the firm to raise its dividend payouts over time. Conversely, when the firm's capital
+surpasses \( \hat{k} \), it would be more beneficial for the firm to gradually reduce dividends. It can be readily
+demonstrated that when monitoring costs become entirely ineffective (\(1-\mu=0\)), the firm operates without debt
+(\(l=0\)), and the probability of default is eliminated (\(1-p=0\)), the resulting capital level aligns with that of the
+debt-free situation as specified in equation \ref{eq16}: 
+\begin{align*}
+    \hat{k} &=\left[\frac{Z \alpha \beta \left(1+1-1\right)}{1 -0 - \beta + \beta \delta + 0}\right]^{\frac{1}{1-\alpha}},\\
+    \hat{k} &=\left[\frac{Z \alpha \beta}{1 - \beta(1-\delta)}\right]^{\frac{1}{1-\alpha}}.  
+\end{align*}
+
+Imposing s.s. condition for capital (\(k_t=k_{t+1}=\hat{k}\)) into the flow of funds constraint \ref{eq:ff}:
+
+\begin{equation}
+    \widehat{d} =\frac{p+\mu-\mu p}{p}f(\hat{k})-\left(\frac{l R_f+\delta p - l p}{p}\right)\hat{k} \label{eq:div_opt_path}
+\end{equation}
+It can be straightforwardly demonstrated that by setting the monitoring cost to \(1-\mu=0\), eliminating debt
+with \(l=0\), and removing the risk of default by setting \(1-p=0\), we arrive at an identical level of dividends as
+observed in the scenario without debt \ref{eq17}. 
+
+
+
+\section{Phase diagram}
+The goal of this section is to portray the phase diagram in two cases: one with monitoring costs and one without.
+However, we will use a less heuristic approach compared to the phase diagram of the free debt case, using  parameters similar to \cite{OsePap17}:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lcc}
+    \hline Parameter & Symbol & Value \\
+    \hline \hline
+    Discount factor & $\beta$ & 0.956 \\
+    Risk-free rate & $R_f$ & 1.04 \\
+    Depreciation rate & $\delta$ & 0.07 \\
+    Returns to scale & $\alpha$ & 0.80 \\
+    Aggregate productivity & $\bar{Z}$ & 0.5 \\
+    Monitoring cost & $1-\mu$ & ${0,0.75}$ \\
+    Productivity &$Z$&$0.2$\\
+    Probability of default & $1-p $&0.6 \\
+    \hline
+    \end{tabular}
+    \caption{Parameters}
+\end{table}
+Moreover, we assume a fixed leverage of \(l=0.8\), since for the moment we want to understand the effect of monitoring
+cost leaving all the other parameters equal.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle, % sets the position of the axes
+            xlabel=\(k_t\),
+            ylabel=\(d_t\),
+            xmin=0, ymin=0,
+            xmax=15.5, ymax=1.3,
+            % Removed ticks=none to enable ticks
+            clip=false,
+            axis on top=true,
+            xtick={0,5,...,20}, % Adds ticks at intervals of 5 on the x-axis
+            ytick={0,0.3,...,1.3}, % Adds ticks at intervals of 0.3 on the y-axis
+            xticklabel style={/pgf/number format/fixed},
+            yticklabel style={/pgf/number format/fixed}
+        ]
+        
+        % Parabolic curve without monitoring costs
+        \addplot [
+            color=red,
+            domain=0:15, 
+            samples=100, 
+            thick,
+        ]
+        {0.5*x^0.8-0.22*x};
+        \node at (axis cs:11,1.2) {\(\Delta{k_0}=0\)};
+        %optimal capital without monitoring costs
+        \draw [color=red] (axis cs:6.9296,0) -- (axis cs:6.9296,1.3);
+        \node at (axis cs:7.3,1.4) {\(\Delta{d_0}=0\)};
+        \node at (axis cs:7.3,-0.08) {\(\hat{k}_0\)};
+        \node[draw, circle, fill=red, inner sep=2pt] at (axis cs:6.9296,0.826) {};
+        \node at (axis cs:7.25,0.9) {\(B\)};
+         % Parabolic curve with monitoring costs
+         \addplot [
+            color=blue,
+            domain=0:15, 
+            samples=100, 
+            thick,
+        ]
+        {0.367*x^0.8-0.22*x};
+        \node at (axis cs:11,0.2) {\(\Delta{k_1}=0\)};
+        %optimal capital with monitoring costs
+        \draw  [color=blue] (axis cs:2.1,0) -- (axis cs:2.1,1.3);
+        \node at (axis cs:2.3,1.4) {\(\Delta{d_1}=0\)};
+        \node at (axis cs:2.1,-0.08) {\(\hat{k}_1\)};
+
+        % Draw a green dot at coordinates 
+        \node[draw, circle, fill=blue, inner sep=2pt] at (axis cs:2.1,0.203) {};
+        \node at (axis cs:2.5,0.28) {\(B^{\prime}\)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{This phase diagram illustrates the relationship between dividends (\(d_t\)) and capital (\(k_t\)) for two different
+    scenarios of a firm. The red curve represents a firm (Firm 0) that has debt but incurs no monitoring costs, while
+    the blue curve represents another firm (Firm 1) that does have monitoring costs. The curves, labeled
+    \(\Delta d_1 = 0\) and \(\Delta d_0 = 0\), represent the loci where dividends remain constant. The vertical lines,
+    labeled \(\Delta k_1 = 0\) and \(\Delta k_0 = 0\), denote the loci where capital is
+    stationary. The intersection point B on the red curve indicates the equilibrium for Firm 0 where both capital and
+    dividends are stationary, located at (\(7.25, 0.9\)). In contrast, the intersection point \(B'\) on the blue curve
+    represents the corresponding equilibrium for Firm 1 with monitoring costs, positioned at (\(2.5, 0.28\)). It is
+    evident that Firm 1, which bears monitoring costs, sustains lower dividends while keeping capital constant, and also
+    requires a lower level of capital to maintain constant dividends when compared to Firm 0.}
+    \label{pl_phase_b}
+
+\end{figure}
+% \begin{figure}
+%     \centering
+%     \begin{tikzpicture}
+%         \begin{axis}[
+%             axis lines=middle, % sets the position of the axes
+%             xlabel=\(k_t\),
+%             ylabel=\(d_t\),
+%             xmin=0, ymin=0,
+%             xmax=5, ymax=5,
+%             ticks=none, % removes ticks on axes
+%             clip=false,
+%             axis on top=true
+%         ]
+        
+%         % Parabolic curve
+%         \addplot [
+%             color=red,
+%             domain=0:4, 
+%             samples=100, 
+%             thick,
+%         ]
+%         {-x^2 + 4*x};
+        
+%         \addplot [
+%             color=blue,
+%             domain=0:3.5, 
+%             samples=100, 
+%             thick,
+%         ]
+%         {-x^2 + 3.5*x};
+        
+%         % Arrows
+       
+        
+%         % Vertical line at k hat
+%         \draw [dashed] (axis cs:2,0) -- (axis cs:2,5);
+%         \node at (axis cs:2.5,4.5) {\(\Delta k_t = 0\)};
+%         \node at (axis cs:3.5,3.5) {\(\Delta d_t = 0\)};
+%         \node at (axis cs:2,-0.5) {\(\underline{k} \)};
+
+%         \draw [dashed] (axis cs:1.7,0) -- (axis cs:1.7,5);
+%         \node at (axis cs:1.5,5.5) {\(\Delta k_t^{\prime} = 0\)};
+%         \node at (axis cs:2.3,2) {\(\Delta d_t^{\prime} = 0\)};
+%         \node at (axis cs:1.7,-0.5) {\(\underline{k}^{\prime} \)};
+%         % Arrows on the left side
+%         \draw [-{Stealth[bend]}]  (axis cs:1.3,1)--(axis cs:1.8,1);
+%         \draw [-{Stealth[bend]}]  (axis cs:0.8,3) -- (axis cs:0.3,3);
+        
+%         % Arrows on the right side
+%         \draw [-{Stealth[bend]}]  (axis cs:2.5,1)--(axis cs:3,1);
+%         \draw [-{Stealth[bend]}]  (axis cs:4,3) -- (axis cs:3.5,3);
+        
+%         % Arrows
+%         % Upwards arrows
+%         \draw [-{Stealth[bend]}]  (axis cs:0.8,3) -- (axis cs:0.8,3.5);
+%         \draw [-{Stealth[bend]}]  (axis cs:1.3,1) -- (axis cs:1.3,1.5);
+%         \draw [-{Stealth[bend]}]  (axis cs:2.5,1) -- (axis cs:2.5,0.5);
+%         \draw [-{Stealth[bend]}]  (axis cs:4,3) -- (axis cs:4,2.5);
+        
+%         % Vertical line at k hat
+%         \draw [dashed] (axis cs:1,0) -- (axis cs:1,5);
+%         \node at (axis cs:0.8,2) {A};
+%         \node at (axis cs:1,-0.5) {\(k_0\)};
+%         \draw [dashed] (axis cs:1,0) -- (axis cs:1,5);
+        
+%         % Draw a green dot at coordinates (1.1,1.1)
+%         \draw [-{Stealth[bend]}, color=red]  (axis cs:1,2) -- (axis cs:2,4);
+%         \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:2,4) {};
+%         \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:1,2) {};
+%         \node at (axis cs:2.1,4.2) {B};
+
+%         \draw [-{Stealth[bend]}, color=blue]  (axis cs:1,1.5) -- (axis cs:1.7,3.05);
+%         \node[draw, circle, fill=orange, inner sep=2pt] at (axis cs:1,1.5) {};
+%         \node[draw, circle, fill=orange, inner sep=2pt] at (axis cs:1.7,3.05) {};
+
+%         \node at (axis cs:0.8,1.5) {A'};
+%         \node at (axis cs:1.8,3.15) {B'};
+
+%         \end{axis}
+%     \end{tikzpicture}
+%     \caption{This diagram depicts the consumption dynamics as they relate to capital accumulation, highlighting areas of
+%     stability and instability. The red line corresponds to a firm that is carrying debt, whereas the blue line
+%     represents a firm with fixed leverage. The red arrow traces a potential saddle path for the indebted firm, beginning
+%     from \( k_0 \), while
+%      the blue arrow illustrates a conceivable saddle path for a firm with fixed leverage.} 
+%     \label{pl_phase_b}
+% \end{figure}
+The phase diagram illustrated in \ref{pl_phase_b} depicts the capital accumulation dynamics under scenarios of fixed
+leverage and varying monitoring costs. While the overall dynamics remain consistent across both scenarios, the
+equilibrium capital level is notably reduced in firms that incur monitoring costs, in contrast to those without such
+costs. As a result, firms with monitoring costs settle into a steady state equilibrium for dividends, which
+leads to diminished dividend distributions compared to firms that do not bear these costs. 
+
+\section{Finding the optimal path}
+ Addressing the dynamic optimization problem with an initial condition \(k_0\), we employ a logarithmic utility function
+ and frame the issue through a Bellman equation:
+
+
+ \begin{align*}
+     \max _{\{d_t\}_{t=0}^{\infty}} V_0 = \max _{\{d_t\}_{t=0}^{\infty}} \left\{U(d_0) + \beta \left[\sum_{t=1}^{\infty} \beta^{t-1} U(d_t)\right]\right\}
+ \end{align*}
+
+
+ subject to a dynamic capital accumulation constraint:
+
+ \begin{align*}
+    k_{t+1} &= \left[ \frac{p + \mu - \mu p}{p}f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t}  - d_{t} \right] \cdot \left(1-l\right)^{-1} \, \forall t,
+\end{align*}
+
+ The aim is to determine the optimal dividend strategy \(d_t^*\) and the consequent capital levels \(k_{t+1}^*\) across
+ all periods. The optimal policy \(d_t^{\star}=\varphi(k_t)\) links dividends and capital in a time-invariant manner, deduced from the
+ constraint:
+ \begin{align*}
+    k_{t+1} &= \left[ \frac{p + \mu - \mu p}{p}f(k_{t}) + \frac{p - \delta p - R_f l}{p} k_{t}  - \varphi(k_{t}) \right] \cdot \left(1-l\right)^{-1} 
+\end{align*}
+ Given the continuous and differentiable nature of capital and dividends, the optimal dividend path can be represented as
+ a function of initial capital, thereby defining the maximum value function \(V(k_1)\) in terms of overall utility
+ maximization. The revised problem formulation becomes:
+
+
+ \begin{align}
+     & V(k_0) = \max_{d_0} \left\{U(d_0) + \beta V(k_1)\right\} \\
+     & \text{s.t. } k_1 = \left[ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}  - \varphi(k_{0}) \right] \cdot \left(1-l\right)^{-1} \nonumber  \\
+     & k_0 \text{ given.} \nonumber
+ \end{align}
+
+ The method of 'guess and verify' involves working through the
+ transition equation defined as:
+ \begin{align*}
+     k_1 = \left[ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}  - d^*_0 \right] \cdot \left(1-l\right)^{-1}
+ \end{align*}
+The first order condition (FOC) is specified as \(d^*_0 = [\beta V'(k_{1})]^{-1}\). When this
+ FOC is incorporated into the transition equation, the formulation of the problem becomes a system of equations outlined
+ as follows:
+ \begin{align*}
+     \begin{cases}
+         V(k_0) = U(d_0^*) + \beta V(k_1), \\
+         k_1 = \left[ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}  - d^*_0 \right] \cdot \left(1-l\right)^{-1}, \\
+         d^*_0 = [\beta V'(k_{1})]^{-1},\\
+         k_0 \text{ given.}
+     \end{cases}
+ \end{align*}
+The initial guess for the solution is:
+
+ \begin{align*}
+     V(k_t) = e + f \ln{k_t},
+ \end{align*}
+
+
+leading to a refined system:
+
+
+ \begin{align}
+    &e + f \ln(k_0) = \ln\left( \frac{k_1}{\beta f} \right) + \beta \left[ e + f \ln(k_1) \right] \label{eq28}\\
+    &k_1 = \left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0} - \left[ \frac{k_1}{\beta f} \right] \right\} \cdot \left(1-l\right)^{-1}. \nonumber
+\end{align}
+Solving the above system we find:
+\begin{align}
+    k_1 = \frac{\beta f}{\beta f (1-l) + 1} \left( \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0} \right)
+\end{align}
+
+Using \(d_0^*=k_1(\beta f)^{-1}\) in the above equation we get:
+\begin{align}
+    d_1 =\frac{1}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}f(k_{0}) + \frac{p - \delta p - R_f l}{p} k_{0}\right\}
+\end{align}
+Assuming \(p - \delta p - R_f l = 0\), and using the Cobb-Douglas production function \ref{eq7}simplifies to:
+\begin{align*}
+    &k_1 = \frac{\beta f}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\\
+    &d_1 =\frac{1}{\beta f (1-l)+1}\left\{  \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\\
+    &e + f \ln(k_0) = \ln \left\{ \frac{1}{\beta f (1-l)+1}\left\{ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right\}\right\} \nonumber \\
+    &\quad + \beta \left\{ e + f \ln \left[ \frac{\beta f}{\beta f (1-l)+1}\left(  \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right)\right]  \right\},\\
+    &e + f \ln(k_0) = -\ln{(1+(1-l)\beta f)} + \ln{(p + \mu - \mu p)} - \ln{p} +\\
+    &+({\alpha}\ln{Z} + {\alpha}\ln{k_0}) + \beta e - \beta f \ln{(1+(1-l)\beta f)} +\\
+    &+\beta f \ln{(p + \mu - \mu p)} - \beta f \ln{p} +\beta f \ln{(\beta f)}+ \beta f ({\alpha}\ln{Z} + {\alpha}\ln{k_0})
+\end{align*}
+The above equation must be satisfied for any \(k_0\) and for any admissible value of the parameters \(Z, \beta, \alpha,
+\mu, p, R_f,l\). Therefore, must be true that:
+\begin{align}
+    &f = \frac{\alpha}{1-\alpha \beta} \label{eq30}\\
+    &e = \left[ -\ln(1+(1-l)\beta f) + \ln(p + \mu - \mu p) - \ln(p) \right.\nonumber\\
+    &\quad + \alpha\ln(Z) - \beta f \ln(1+(1-l)\beta f) \nonumber\\
+    &\quad \left. + \beta f \ln(p + \mu - \mu p) - \beta f \ln(p) + \beta f (\alpha\ln(Z)) +\beta f \ln{(\beta f)} \right](1-\beta)^{-1}\nonumber
+\end{align}
+
+
+Therefore, the transition and policy functions under financial frictions can be articulated as follows:
+\begin{equation}
+    k_1 = \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{\alpha\beta}{1-l\alpha\beta}, \label{eq29}
+\end{equation}
+Utilizing \(d^*_0 = k_1(\beta f)^{-1}\) and in conjunction with \ref{eq30}, we can deduce:
+\begin{equation}
+    d^*_0 = \left[ \frac{p + \mu - \mu p}{p}Z k_0^{\alpha}\right] \frac{1-\alpha\beta}{1-l\alpha\beta} \label{eq31},
+\end{equation}
+By setting \(k_1 = k_0 = \hat{k}\) in \ref{eq29}, the equation simplifies to:
+\begin{equation}
+    \hat{k} = \left(\frac{Z \alpha \beta (p + \mu - \mu p)}{p(1 - \alpha \beta l)}\right)^{\frac{1}{1-\alpha}} \label{eq33}
+\end{equation}
+This expression elucidates the steady-state capital level, \(\hat{k}\), in relation to the parameters \(\alpha\), \(\beta\), \(l\), \(p\), \(\mu\), and \(Z\).
+
+Taking the derivation of \(\hat{k}\) with respect to \(\mu\) we get:
+\begin{align}
+    \frac{\partial \hat{k}}{\partial \mu}&=\frac{1}{1-\alpha}\left(\frac{Z\alpha\beta(p(1-\mu) + u)}{p(1-\alpha \beta l)}\right)^{\frac{\alpha}{1-\alpha}} \frac{Z \alpha \beta(1-p)}{[(1-
+    \alpha \beta l)]} \label{eq32}
+\end{align}
+Given that the partial derivatives in equation \ref{eq32} are positive, it's clear that monitoring costs (\(1-\mu\))
+diminish the steady-state level of capital, and this effect intensifies with increased productivity. Hence, firms with
+higher productivity face greater adverse impacts from monitoring costs. A potential rationale for this phenomenon is
+that, typically, more productive firms could negotiate lower interest rates due to their ability to present higher
+outputs as collateral to financial intermediaries in case of default. However, monitoring costs erode this advantage. In
+situations where monitoring costs reach 100\%, the differential impact on firms of varying productivity levels
+disappears, as monitoring costs uniformly affect all firms. 
+
+Another interesting aspect to explore is the effect on the steady-state level of capital when there is an increase in
+the leverage ratio. To investigate this, we consider the derivative of \(\hat{k}\) with respect to leverage (\(l\)),
+under the assumption that \(p = R_f l / (1 - \delta)\). 
+
+\begin{align}
+    % First equation part
+    &\frac{\partial \hat{k}}{\partial l} = \frac{1}{1-\alpha} \left( \frac{Z\alpha\beta(p(1-\mu) + \mu)}{p(1-\alpha \beta l)} \right)^{\frac{\alpha}{1-\alpha}} \nonumber \\
+    % Second equation part, split for clarity
+    &\left( \frac{Z\alpha \beta (1-\mu)p^{\prime}p(1-\alpha \beta l) - (p^{\prime}(1-\alpha \beta l)+p \alpha \beta)Z\alpha\beta(p(1-\mu) + \mu)}{(p(1-\alpha \beta l))^2} \right)\nonumber \\
+    % Third equation part
+    &\frac{\partial \hat{k}}{\partial l} = \frac{1}{1-\alpha} \left( \frac{Z\alpha\beta(R_f l (1-\delta)^{-1}(1-\mu) + \mu)}{R_f l (1-\delta)^{-1}(1-\alpha \beta l)} \right)^{\frac{\alpha}{1-\alpha}} \cdot \nonumber \\
+    % Third equation continued, with clearer structure
+    & \Bigl( -\frac{(1-\delta)\mu +  \alpha \beta Z R_f (1-\mu) l}{R_f l^2 (1- \alpha \beta l)} \nonumber \\
+    & +\frac{\alpha \beta (1-\delta)\mu + \alpha^2\beta^2 R_f(1-\mu)Z l}{R_f l (1- \alpha \beta l)^2} +\frac{\alpha \beta Z (1-\mu)}{ l (1- \alpha \beta l)} \Bigr) \label{eq34}
+\end{align}
+The determination of whether the partial derivative mentioned in equation \ref{eq34} is positive primarily hinges on the second term of the derivative. To clarify, we can state the condition for the partial derivative to be positive as follows:
+\begin{align}
+    &l (\alpha \beta (1-\delta)\mu + \alpha^2\beta^2 R_f(1-\mu)Z l) + \alpha \beta Z (1-\mu) \geq \nonumber\\
+    &((1-\delta)\mu +  \alpha \beta Z R_f (1-\mu) l) (1- \alpha \beta l) \label{eq35}
+\end{align}
+If the condition outlined in equation \ref{eq35} is satisfied, then increasing leverage will actually increase the
+steady-state level of capital. This might seem unexpected because typically, higher leverage means a higher risk of
+default. However, if the assumption (\(p-\delta p - R_f l=0\)) and condition \ref{eq35} hold, it suggests that the chance of default decreases enough with increased
+leverage to lower the interest rate, which compensates for the typical rise in interest rates seen with higher leverage.
+This balancing act continues only up to a certain point of leverage; beyond this, the detrimental effects of additional
+leverage surpasses the benefits, resulting in a decrease in steady-state capital. 
+
+The graph referenced as \ref{plot_part} displays this interesting dynamic. For lower levels of leverage, the impact on
+steady-state capital is positive, which aligns with the condition being met. As leverage increases beyond this favorable
+range, the graph shows that the partial derivative becomes negative, which means that more leverage reduces the capital
+level. This dynamic is captured in the graph where, below a leverage point around 0.1, leverage has a positive effect on
+capital, skyrocketing as it approaches zero. 
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        
+        \begin{axis}[
+            title={Effect of leverage to capital},
+            xlabel={\(l\)},
+            ylabel={\(\frac{\partial \hat{k}}{\partial l}\)},
+            grid=both,
+            minor tick num=1,
+            major grid style={lightgray},
+            minor grid style={lightgray!25},
+            ]
+        \addplot[blue] table [col sep=comma, x=l, y=par]
+        {../output_data/adjusted_partial_derivative_k_with_respect_to_l.csv}; % With friction
+        %\addplot[red] table [col sep=comma, x=l, y=par] {../output_data/adjusted_partial_derivative_k_with_respect_to_l_1.csv}; % Without friction
+        \end{axis}
+         
+    \end{tikzpicture}
+    \caption{The graph depicts the relationship between the partial derivative of \(\hat{k}\) with respect to
+        leverage and the leverage itself, under the parameters \(R_f=1.4\), \(\mu=0.75\), \(\alpha= 0.7\),
+        \(\beta=0.956\), \(\delta =0.07\), and \(Z=1\). It can be observed that when the leverage is greater than 0.1,
+        the partial derivative becomes negative, signifying that an increase in leverage results in a decrease in
+        steady-state capital. Conversely, when the leverage is below this threshold, the partial derivative sharply
+        rises towards \(+\infty\). }
+    \label{plot_part}
+\end{figure}
+
+Finally, we can derive the optimal trajectories for capital and dividends, as well as the steady-state locus for capital in the
+context of no debt and financial friction (assuming \(l = 0\), \(\mu = 1\), and \(p = 1\)), the following expressions
+are obtained:
+\begin{align}
+    k_1 &= Z k_0^{\alpha}\alpha\beta, \\
+    d^*_0 &= Z k_0^{\alpha}(1-\alpha\beta), \\
+    \hat{k} &= \left[Z \alpha \beta \right]^{\frac{1}{1-\alpha}}.
+\end{align}
+In conclusion, the optimal capital and dividend paths have been derived under specific financial conditions. Key
+assumptions, particularly \( p - \delta p - R_f l = 0 \), critically simplify the dynamics, implying that the net effect
+of the discount rate, the probability of repayment, and the cost of debt on capital growth is neutral. This assumption
+allows for a direct relationship between the capital level and the dividend policy, as depicted by the transition and
+policy functions. The closed-form expressions for \( k_1 \), \( d_1 \), and \( \hat{k} \) emphasize the steady-state
+capital level's sensitivity to these parameters, underscoring the pivotal role of \( p \) in shaping the firm's
+financial trajectory. Under the no-debt and no-financial-friction scenario (\( l = 0 \), \( \mu = 1 \), \( p = 1 \)),
+the model further reflects how the absence of these frictions leads to straightforward growth dynamics, reinforcing the
+importance of these financial parameters in determining the firm's optimal strategies. 
+
+
+
+\section{Monte Carlo Simulations}
+
+To explore the distinctions between scenarios with and without financial frictions, we conduct a simulation exercise
+employing  parameters similar to those used in the \cite{OsePap17} study:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lcc}
+    \hline Parameter & Symbol & Value \\
+    \hline \hline
+    Discount factor & $\beta$ & 0.956 \\
+    Risk-free rate & $R_f$ & 1.04 \\
+    Depreciation rate & $\delta$ & 0.07 \\
+    Returns to scale & $\alpha$ & 0.70 \\
+    Firm productivity & $Z$ & 1 \\
+    \hline
+    \end{tabular}
+    \caption{Benchmark calibration}
+\end{table}
+
+
+This section presents a simulation study to compare scenarios with and without financial frictions, employing parameters
+from the \cite{OsePap17} study. The simulation explores the effects of financial frictions by setting different
+monitoring costs for two firms, with firm 0 facing no monitoring cost and firm 1 experiencing a monitoring cost of
+25\%\(\mu =0.75 \).
+The key assumption for the simulation is \( p - \delta p - R_f l = 0 \), leading to a calculated probability of
+repayment (\(p\)) of approximately 0.559 for both firms.
+
+
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={The optimal Path of Capital},
+        xlabel={Time},
+        ylabel={Capital},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+    ]
+    \addplot[blue] table [col sep=comma, x=Time, y=Capital] {../output_data/simulation.csv}; % With friction
+    \addplot[red] table [col sep=comma, x=Time, y=Capital] {../output_data/simulation_withoutfriction.csv}; % Without friction
+    \legend{With Friction, Without Friction}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{The graph illustrates the optimal trajectory for capital as defined by equation \ref{eq29}. It features a
+    red line that remains above the blue line across all periods, symbolizing the optimal capital path towards the
+    steady state in the absence of monitoring costs. Conversely, the blue line delineates the optimal path for firms
+    subjected to a 25\% monitoring cost. Apart from the monitoring cost, all other parameters are held constant. It is
+    evident from the graph that monitoring costs have a significant impact on the steady state, notably reducing it.
+    }
+    \label{fig:capitalEvolution}
+\end{figure}
+Figure \ref{fig:capitalEvolution} explicitly demonstrates the impact of monitoring costs on reducing the steady-state
+capital level. The observed discrepancy in steady-state capital levels between the two firms is quantified as follows:
+\begin{align*}
+    &\hat{k_0} = 7.077, \\
+    &\hat{k_1} = 2.713, \\
+    &\Delta\hat{k} = \hat{k_0} - \hat{k_1} = 4.364.
+\end{align*}
+Hence, imposing a 25\% monitoring cost on the output, under a fixed leverage ratio of 0.5, results in a 69\% reduction
+in the steady-state level of capital.
+
+Additionally, Figure \ref{fig:dividendsEvolution} illustrates the optimal dividend paths for the same two firms, one
+burdened by monitoring costs and the other not. Following the policy function detailed in \ref{eq31}, derived from
+the solution to the Bellman equation.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Path of Dividends},
+        xlabel={Time},
+        ylabel={Dividends},
+        grid=both,
+        minor tick num=1,
+        major grid style={lightgray},
+        minor grid style={lightgray!25},
+        width=0.8\textwidth,
+        height=6cm,
+    ]
+    \addplot[blue] table [col sep=comma, x=Time, y=Dividends] {../output_data/simulation.csv}; % With friction
+    \addplot[red] table [col sep=comma, x=Time, y=Dividends] {../output_data/simulation_withoutfriction.csv}; % Without friction
+    \legend{With Friction, Without Friction}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{The figure illustrates the optimal trajectory of dividends as derived from equation \ref{eq31}. Here, the
+    red line, consistently above the blue across all periods, indicates the optimal progression toward the steady-state
+    level when monitoring costs are not factored in. In contrast, the blue line represents the trajectory under the
+    influence of a 25\% monitoring cost. With all other parameters held constant, it is evident that monitoring costs
+    exert a downward pressure on the steady-state level of dividends.}
+    \label{fig:dividendsEvolution}
+\end{figure}
+
+In the \ref{fig:dividendsEvolution} The dividend trajectory is notably higher in scenarios without financial frictions, emphasizing the significant role
+these frictions play in reducing returns. In a steady-state analysis, monitoring costs lead to a 78\% decrease in
+dividend levels, given a constant leverage ratio of 0.5. 
+In the forthcoming sections, the analysis will expand to simulate an economy with heterogeneous agents, aiming to
+dissect the broader implications of financial frictions on overall output. This simulation will contrast environments
+with and without financial frictions, with a particular focus on the cleansing effect that such frictions may exert in
+economic systems. Through this comparative approach, we aim to deepen the understanding of how financial frictions
+influence economic resilience, performance, and the potential for innovation and growth amidst challenges. 
+Next, we will simulate an economy with heterogeneous agents to assess the overall output in environments with and
+without financial frictions. This analysis aims to explore the cleansing effect of financial frictions, providing
+insights into their influence on economic performance and growth potential.
+
+\subsection{Heterogeneity and Aggregation Mechanism}
+
+To refine the model, we introduce heterogeneity among firms, marking a departure from uniform productivity.
+Specifically, productivity levels (\( Z_i \)) now vary across firms, introducing a spectrum of efficiency within
+the model. Additionally, we diversify leverage ratios, ensuring no direct correlation between a firm's productivity and
+its leverage. This heterogeneity is captured from the outset by simulating the initial distribution of capital,
+leverage, and productivity, setting the stage for a dynamic interplay of firm characteristics. The aggregate output at
+time t for a population of N firms
+is :
+\begin{equation}
+    K_t = \sum_{i=0}^{N}{Z_{i,t}k_{i,t^\alpha}} \label{eq:K_bar}
+\end{equation}
+The business cycle is modeled through a sine function, impacting the productivity factor \(Z\) uniformly across all
+firms in the economy. Furthermore, the maximum influence the business cycles can exert on productivity is limited to 10\%
+of \(Z\). Consequently, the cycle is represented as follows: 
+\begin{equation}
+    \Delta Z_t = 1 + 0.1 \sin(t) \label{eq:bc}
+\end{equation}
+The firm determines an optimal level of output at time \(t_0\) for the subsequent time \(t_1\), based on equation
+\ref{eq29}. However, the actual output may deviate from this optimal level due to fluctuations in the productivity
+factor \(Z\), which is influenced by the business cycle, as described in Equation \ref{eq:bc}. To differentiate
+between these two scenarios, the term 'optimal' will refer to the firm's chosen level of output, while 'actual' will
+describe the output level that the firm ultimately achieves. 
+
+Productivity (\(Z\)) and leverage (\(l\)) follow truncated normal distributions:
+\begin{align}
+    l &\sim \mathcal{N}(0.05, 0.1), & 0.01 \leq l \leq 1, \\
+    Z-1 &\sim \mathcal{N}(0.5, 0.1), & 1.01 \leq Z \leq 1.1.
+\end{align}
+
+
+The exit mechanism for firms in this model is based on criteria where a firm's exit is contingent on its return on
+capital being below the risk-free rate and also being among the lowest two within the entire firm population. This
+approach ensures that at each evaluation point, the potential for market exit is limited to the two firms with the least
+efficient capital utilization, provided their returns are less than the risk-free rate. Consequently, this mechanism
+inherently caps the maximum proportion of firms that can exit the market at any given time to prevent unrealistic,
+explosive market dynamics.
+
+By introducing a natural cap that theoretically limits maximum exits to 20\% of the firm population, the market
+maintains a dynamic equilibrium, facilitating the exit of the least productive firms and preventing scenarios where
+excessive market exits lead to implausible economic conditions.
+
+For a firm \(i\) at time \(t\), the return on capital is calculated as follows:
+\begin{equation}
+    R_{i,t} = \frac{d_{i,t-1}}{k_{i,t}} + \frac{k_{i,t}-k_{i,t-1}}{k_{i,t}} 
+\end{equation}
+
+A firm is mandated to exit the market if its return on capital ranks among the lowest two and falls below the risk-free
+rate (\(R_f\)). This criterion is applied systematically at each simulation step, aligning the market's evolutionary
+process with economic efficiency principles.\footnote{The exit criteria, focusing on the two lowest returns below the
+risk-free rate, are assessed at each step of the simulation to identify firms for market exit.} Through this mechanism,
+the model illustrates a market that rewards efficiency while ensuring a balanced impact of exits on the economic
+landscape. 
+
+
+\subsection{Findings}
+
+In the presented investigation, financial frictions are integrated into the economic model, characterized by a monitoring cost
+parameter \(1-\mu = 0.15\). The aim is to discern the repercussions of such frictions on the economic dynamics. To this
+end, we conduct two distinct simulations within the environment of financial frictions: one where an economy is subject
+to an exit and capital reallocation mechanism, and another where this mechanism is absent, inhibiting the movement of
+capital. 
+
+The analysis is robust, comprising 100 Monte Carlo simulations to determine the sample mean and variance of each
+variable. Central to our inquiry is whether a recession induces a 'cleansing effect,' wherein less efficient firms exit
+the market, leading to a potential increase in aggregate productivity. Accordingly, we simulate two economic setups: one
+where firms operate without an enforced exit, and another where firms are mandated to exit under certain conditions. In
+both setups, firms face financial frictions manifested as monitoring costs, consistent with \(1-\mu=0.15\). The ensuing figures present the sample mean and 95\%
+confidence intervals for total output, comparing scenarios where exits are permitted to those where no reallocation
+occurs.
+
+Visual representation (\ref{fig:optKnoE}) of total output over a 20-step horizon, including 100 iterations among a group of 10 firms,
+illustrates the comparative trajectories. Under financial frictions, the economy with the exit mechanism in play
+consistently registers a superior aggregate output level. This finding corroborates the notion of a market-driven
+'cleansing effect'—the process through which less productive firms are culled, freeing up resources for redistribution
+to more efficient entities. Notably, this effect is not merely sustained amidst financial frictions; it is measurably
+impactful, enhancing production output. This observed phenomenon underscores the potential for policy-driven capital
+reallocation mechanisms to bolster economic efficiency, even when financial barriers are present.
+
+
+
+
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            title={Effect of cleansing on total production},
+            xlabel={Step},
+            xmin=1, ymin=0,
+            ylabel={Total Production},
+            legend pos=north west,
+            ymajorgrids=true,
+            grid style=dashed,
+        ]
+        
+        % Import data from the first CSV (noexit_nofriction_stats.csv)
+        \pgfplotstableread[col sep=comma, row sep=newline]{../output_data/noexit_friction_stats.csv}\datatableNoExit
+        
+        % Plot mean Total_production_actual from the first dataset
+        \addplot [name path=mean_actual_noexit, blue, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableNoExit};
+        \addlegendentry{\(K\) No Exit}
+        
+        
+        % CI for Total_production_actual as grey area (No Exit)
+        \addplot [name path=upper_actual_noexit, draw=none] table [x=Step, y=Total_Production_actual_CI_Upper] {\datatableNoExit};
+        \addplot [name path=lower_actual_noexit, draw=none] table [x=Step, y=Total_Production_actual_CI_Lower] {\datatableNoExit};
+        \addplot [fill=gray!40] fill between[of=upper_actual_noexit and lower_actual_noexit];
+        
+        % Import data from the second CSV (exit_nofriction_stats.csv)
+        \pgfplotstableread[col sep=comma, row sep=newline]{../output_data/exit_friction_stats.csv}\datatableExit
+        
+        % Plot mean Total_production_actual from the second dataset
+        \addplot [name path=mean_actual_exit, blue!50!red, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableExit};
+        \addlegendentry{\(K\) Exit}
+        
+        % CI for Total_production_actual as lighter grey area (Exit)
+        \addplot [name path=upper_actual_exit, draw=none] table [x=Step, y=Total_Production_actual_CI_Upper] {\datatableExit};
+        \addplot [name path=lower_actual_exit, draw=none] table [x=Step, y=Total_Production_actual_CI_Lower] {\datatableExit};
+        \addplot [fill=gray!20] fill between[of=upper_actual_exit and lower_actual_exit];
+        
+        
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The plot presents the outcomes of a 20-step simulation involving 10 firms, contrasting the total output
+    (\(K\)) in an economy with an exit and reallocation mechanism (red line) against an economy lacking such mechanisms
+    (blue line). Both scenarios are subject to 15\% monitoring costs and experience a sinusoidal continuous shock
+    affecting productivity. The visualization illustrates that the incorporation of exit and reallocation strategies
+    enhances the overall output of the economy despite the presence of financial frictions. Given that the total number
+    of firms is held constant at ten, the aggregate production can be interpreted as average productivity by dividing by
+    ten. The data suggest the presence of a cleansing effect within the economy, even when financial frictions are
+    factored in. The confidence intervals are depicted at a 95\% level, derived from 100 Monte Carlo simulation
+    iterations.}
+    \label{fig:optKnoE}
+\end{figure}
+
+The presence of a forced reallocation mechanism contributes to a higher overall capital (\(k\)) at each step,
+substantiating the notion that a cleansing effect persists even amidst financial frictions, resulting in greater
+production compared to scenarios where firms are barred from exiting. Evidently, these variations in overall capital are
+markedly pro-cyclical, aligning with the findings in \cite{DavHalt92}.
+In the subsequent figure \ref{fig:output_comparison_frictions}, we delve into the nuances of this impact by examining the mean log difference in total
+production between the two scenarios, accompanied by a 95\% confidence interval.  The data underscores a positive and
+a statistically significant difference in overall output, indicative of the beneficial role played by the exit mechanism
+in the context of financial frictions. This effect echoes the theoretical insights discussed earlier, where the exit
+mechanism serves as a pivotal driver of economic efficiency and productivity.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            title={Difference in \(K\): exit vs noexit},
+            xlabel={Step},
+            xmin=1, ymin=0,
+            ylabel={K},
+            legend pos=north west,
+            ymajorgrids=true,
+            grid style=dashed,
+        ]
+        
+        % Plot differences with error bars from diff.csv
+        \pgfplotstableread[col sep=comma, row sep=newline]{../output_data/diff_fri.csv}\datatableDifffri
+        \addplot+ [
+            red, mark=*, mark options={fill=black},
+            error bars/.cd,
+            y dir=both, y explicit,
+            error bar style={color=black},
+            error mark options={
+                rotate=90,
+                mark size=3pt,
+                color=black
+            }
+        ] table [
+            x=Step,
+            y=Total_Production_actual_log_diff_mean,
+            y error plus expr=\thisrow{Total_Production_actual_log_diff_CI_Upper}-\thisrow{Total_Production_actual_log_diff_mean},
+            y error minus expr=\thisrow{Total_Production_actual_log_diff_mean}-\thisrow{Total_Production_actual_log_diff_CI_Lower}
+        ] {\datatableDifffri};
+        \addlegendentry{\(K_E - K_NE\) with \(\mu=0.85\)}
+        
+        \pgfplotstableread[col sep=comma, row sep=newline]{../output_data/diff.csv}\datatableDiff
+        \addplot+ [
+            blue, mark=*, mark options={fill=black},
+            error bars/.cd,
+            y dir=both, y explicit,
+            error bar style={color=black},
+            error mark options={
+                rotate=90,
+                mark size=3pt,
+                color=black
+            }
+        ] table [
+            x=Step,
+            y=Total_Production_actual_log_diff_mean,
+            y error plus expr=\thisrow{Total_Production_actual_log_diff_CI_Upper}-\thisrow{Total_Production_actual_log_diff_mean},
+            y error minus expr=\thisrow{Total_Production_actual_log_diff_mean}-\thisrow{Total_Production_actual_log_diff_CI_Lower}
+        ] {\datatableDiff};
+        \addlegendentry{\(K_E - K_NE\) with \(\mu=1\)}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The graph presents the percentage difference in total output between two economic scenarios: one with firm
+    exit and capital reallocation and another with no firm exit, with a consideration of monitoring costs. The red line
+    indicates economies where monitoring costs amount to 15\% of recoverable assets (\(1-\mu=0.15\)), and the blue line
+    represents economies without monitoring costs (\(1-\mu=0\)). The 'cleansing effect' of market exit on overall output
+    is depicted by the difference between these lines. In the absence of monitoring costs, the cleansing effect results
+    in a 20\% increase in output, while in the presence of monitoring costs, the increase in output is positive but
+    smaller, at approximately 7\%. Additionally, the error bars indicate a 95\% confidence interval (CI), highlighting
+    the statistical reliability of the observed differences.}
+
+
+    \label{fig:output_comparison_frictions}
+\end{figure}
+
+
+Graph \ref{fig:output_comparison_frictions} illustrates the effect of firm exits and capital reallocation on total output in two different economic
+scenarios, factoring in the impact of monitoring costs. The red line represents economies with monitoring costs equating
+to 15\% of recoverable assets (\(1-\mu=0.15\)), while the blue line depicts economies without any monitoring costs
+(\(1-\mu=0\)). The contrast between the two lines showcases the 'cleansing effect' of firm exits: in the absence of
+monitoring costs, this effect prompts a 20\% rise in output, whereas, with monitoring costs, the output boost is more
+modest, at about 7\%. The error bars on the graph denote a 95\% confidence interval, affirming the statistical
+significance of the results. 
+
+Figure \ref{fig:output_comparison_frictions} affirms that capital reallocation following firm exits can enhance
+productivity, even under financial constraints represented by a 15\% monitoring cost. Despite the asymmetric information
+challenges between financial intermediaries and firms, the positive impact on production is not only present but also
+accumulates over time, suggesting a magnifying effect. Therefore, two otherwise identical economies in terms of
+productivity and capital distribution will ultimately diverge in output if one incorporates the mechanism of firm exits
+and capital reallocation, despite the existence of financial frictions. 
+
+\input{conclusions.tex}
+\medskip
+\bibliography{reference}
+
+\end{document}

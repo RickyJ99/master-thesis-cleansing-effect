@@ -1,0 +1,257 @@
+%% Appendix law of motion of capital and debt
+
+\subsection{Dynamics of capital}
+In the
+simplified scenario where a firm operates without incurring debt (\(b_t = 0\) for all \(t\)) and imposing constant and
+positive dividends (\(d_t=d>0\)), the flow of funds constraint changes as follows:
+\begin{align}
+    I_t + d &= f(k_{t}) \\
+    I_t &= S_t \label{eq7}
+\end{align}
+In the absence of debt, a firm's investment is solely financed through retained earnings, as
+specified in equation \ref{eq7}. From \ref{eq7}, we derive the difference equation describing the evolution of capital:
+\begin{align}
+    \Delta{k_{t+1}} &= f(k_{t}) - d -\delta k_t  \label{eq24}\\
+    \Delta{k_{t+1}} &=k_{t+1}-k_t \nonumber
+\end{align}
+Equation \ref{eq24} presented implies that variation in capital stock depends on the balance between retained earnings and
+depreciated capital. Thus, for a positive increase in capital \(\Delta{k_{t+1}} > 0\), it is necessary for a company to
+hold back earnings over what is required to offset depreciated capital:
+\begin{align*}
+    f(k_{t}) - d &> \delta k_t
+\end{align*}
+Similarly, the reverse scenario holds as well.
+To determine the steady-state level of capital, we apply the previously used production function (see equation \ref{eq6}),
+setting \(k_{t+1}=k_{t}=\hat{k}\) within the difference equation (refer to equation \ref{eq24}): 
+\begin{align}
+    Z \hat{k}^{\alpha} - d&=  \delta \hat{k}
+\end{align}
+
+The slope of the phase diagram is:
+\begin{align}
+    \frac{\partial k_{t+1}}{\partial k_{t}} &= (1-\delta) + f^{\prime}(k_{t}) = \\
+     &= (1-\delta) + \alpha Z k_{t}^{\alpha-1} \label{eq8}
+\end{align}
+Analysis reveals two distinct scenarios based on the derivative of capital with respect to \(k_{t}\):
+\begin{enumerate}
+    \item \textbf{Exploding Path When Derivative Is Greater Than 1}: If the partial derivative with respect to \(k_{t}\) is greater than 1, it suggests that small deviations from the
+    steady-state level (\(\widehat{k}\)) will lead to increasing divergence rather than convergence back to
+    \(\widehat{k}\). This scenario can be characterized by potentially unstable dynamics. The condition is:
+    \[
+    (1-\delta) + \alpha Z k_{t}^{\alpha-1} > 1, \quad \alpha Z k_{t}^{\alpha-1} > \delta, \quad k_{t} > \left(\frac{\alpha Z}{\delta}\right)^{\frac{1}{1-\alpha}}
+    \]
+
+    \item \textbf{Convergence to Steady State}: Conversely, if the derivative is less than 1, this indicates
+    that deviations from the steady-state level will
+    diminish over time, leading to a stable equilibrium. This scenario reflects a stable path where the system tends to
+    return to its steady state following a perturbation.   The condition is:
+    \[
+    (1-\delta) + \alpha Z k_{t}^{\alpha-1} < 1, \quad \alpha Z k_{t}^{\alpha-1} < \delta, \quad k_{t} < \left(\frac{\alpha Z}{\delta}\right)^{\frac{1}{1-\alpha}}
+    \]
+
+\end{enumerate}
+
+The following phase diagram represent the case \(\frac{\partial{k_t}}{\partial k_{t-1}} > 1\), using the following
+parameters: \(\delta =
+0.1\), \(\alpha = 0.8\), \(Z = 0.5\), and \(d = 0.8\)
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=center,
+            xlabel=\(k_{t-1}\),
+            ylabel={\(k_{t}\)},
+            extra y ticks={0},
+            extra y ticks={-0.8},
+            xmin=0,
+            ymin=-0.8,
+        ]
+        % Below the black line is defined
+        \addplot [
+            domain=0:5, 
+            samples=100, 
+            color=black,
+            dotted,
+        ]
+        {x};
+        
+        % Horizontal line at y=2.5
+        \draw [dotted, color=black] (axis cs:0,2.5) -- (axis cs:2.5,2.5);
+        
+        % Vertical line at x=2.5
+        \draw [dotted, color=black] (axis cs:2.5,0) -- (axis cs:2.5,2.5);
+        
+        % Draw a red dot at coordinates (2.5,2.5)
+        \node[draw, circle, fill=red, inner sep=2pt] at (axis cs:2.5,2.5) {};
+        
+        \node at (axis cs:2.5,1.8) {\(\widehat{k}\)};
+
+        % Here the blue curve is defined with arrows
+        \addplot [
+            domain=0:5, 
+            samples=100, 
+            color=blue,
+            postaction={
+                decorate,
+                decoration={
+                    markings,
+                    mark=at position 0.33 with {\arrow{<}},
+                    %mark=at position 0.5 with {\arrow{>}},
+                    mark=at position 0.66 with {\arrow{>}},
+                }
+            }
+        ]
+        {0.5*x^0.8 - 0.1*x + x - 0.8};
+        
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The phase diagram demonstrates the evolution of capital in a debt-free scenario, with the dynamics dictated by the specific
+    parameters:  depreciation rate (\(\delta =0.1\)), capital's output elasticity (\(\alpha = 0.8\)), total factor
+    productivity (\( Z= 0.5\)), and fixed dividends (\(d = 0.8\)). The blue trajectory line depicts the capital accumulation
+    process, calculated with the formula \( k_{t+1} = 0.5 \cdot k_{t}^{0.8} - 0.1 \cdot k_{t} + k_{t} - 0.8 \), which
+    captures the interplay between capital growth through production, the diminishing returns as capital increases
+    (reflected by the concavity of the curve), and the outflow due to depreciation and dividends. The steady-state
+    capital (\(\widehat{k}\)), marked by a red dot, indicates the level where the economy naturally gravitates over
+    time. At this point, the firm's investment is precisely calibrated to replace depreciated capital and issue
+    dividends, with no additional net investment. Notably, this equilibrium is a focal point of the system; below this
+    level, capital accumulates, and above it, capital stock adjusts downward, converging back to this stable point. The
+    diagram serves as a visual aid to comprehend capital dynamics within this economic framework and underscores the
+    balancing act between production, depreciation, and dividend distribution in long-term capital management.
+    }
+
+\end{figure}
+
+The graph distinctly demonstrates that when capital at time \(t\) is below the red dot, it means that
+capital is less than the steady-state capital, leading to a diminishing trajectory in the firm's capital. Conversely, if
+capital is above the steady-state level, indicated by \(\widehat{k}\), the firm is overcapitalized, and the
+trajectory becomes explosive, with capital increasing without bound. 
+\\
+If a firm's capital is less than the steady state, the outflows—such as
+the replacement of depreciated capital and dividends—are disproportionately high compared to its production. This dynamic will inevitably
+cause the firm's capital to go down to zero. It's crucial to recognize that this path is predicated on the
+assumption of constant dividends.
+\\
+Furthermore, the steeper the slope of the blue line, the higher the productivity factor \(Z\), signifying a reduced need
+for capital.
+\vspace{1cm}
+\subsection{Dynamics of debts}
+To examine the dynamics of debt, consider a scenario where capital remains constant \(k_t=k_{t+1}=\widehat{k}\), thus it is at the
+steady-state level. From equation \ref{eq5'} we get the difference equation for debt:
+\begin{align}
+    \Delta{b_{t+1}} &= d - f(\widehat{k}) + \delta \widehat{k} + r  b_{t}  \label{eq10}
+\end{align}
+
+To derive the steady-state debt level, we'll look for the point where debt doesn't change from one period to the next,
+which means  \(\Delta{b_{t+1}} = 0\). This occurs when:
+\begin{align}
+    d &- f(\widehat{k}) + \delta \widehat{k} + r b_{t} = 0 
+\end{align}
+Solving for the steady-state debt level \( \widehat{b} \), we set \( b_{t} = \widehat{b} \) and get:
+\begin{align}
+    d &- f(\widehat{k}) + \delta \widehat{k} + r \widehat{b} = 0 
+\end{align}
+ where \( f(\widehat{k}) \) is the output of the firm given the
+steady-state  capital \( \widehat{k} \). Since \( f(k) \) follows a Cobb-Douglas production function \ref{eq6},  then:
+
+\begin{align}
+    d &- Z \widehat{k}^\alpha + \delta \widehat{k} + r \widehat{b} = 0
+\end{align}
+
+Isolating \( \widehat{b} \) to find the steady-state level of debt, we get:
+\begin{align}
+    r \widehat{b} &= Z \widehat{k}^\alpha - \delta \widehat{k} - d, \nonumber\\
+    \widehat{b} &= \frac{Z \widehat{k}^\alpha - \delta \widehat{k} - d}{r}
+\end{align}
+This equation gives us the steady-state level of debt \( \widehat{b} \), assuming that the output of the firm is enough
+to cover depreciation and dividends, with the remaining used to service debt. If output is insufficient, the
+firm would need to borrow more, and the steady-state debt would be higher. If the output exceeds the depreciation and
+dividends, the firm can pay down the debt, and the steady-state debt would be lower. 
+Let's determine the condition for a stable path taking the partial derivatives with respect to \(b_{t-1}\):
+\begin{align}
+    \frac{\partial{b_t}}{\partial b_{t-1}} &= 1+r  \label{eq11} \\
+\end{align}
+Since \(r >0\), the partial derivative will always be greater than one, thus the slope of the
+difference equation for debt will always be steeper than one. Adding a negative intercept due to positive dividends we
+get that under those conditions there exists a steady state of debt. Moreover, if the debt is below the steady state, the
+debt will shrink toward 0, while if the debt is over the steady state the dynamics of debt will explode toward
+\(+\infty\).
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=left,
+            xlabel=\(b_t\),
+            ylabel={\(b_{t+1}\)},
+            ymin=0,
+            xmin=0,
+        ]
+        % Below the black line is defined
+        \addplot [
+            domain=0:5, 
+            samples=100, 
+            color=black,
+            dotted,
+        ]
+        {x};
+        % Horizontal line at y=2.5
+        \draw [dotted, color=black] (axis cs:0,2.5) -- (axis cs:2.5,2.5);
+        
+        % Vertical line at x=2.5
+        \draw [dotted, color=black] (axis cs:2.5,0) -- (axis cs:2.5,2.5);
+        
+        % Draw a red dot at coordinates (2.5,2.5)
+        \node[draw, circle, fill=red, inner sep=2pt] at (axis cs:2.5,2.5) {};
+        
+        % Horizontal line at y=2.5
+        \draw [dotted, color=black] (axis cs:0,1.1) -- (axis cs:1.1,1.1);
+        
+        % Vertical line at x=2.5
+        \draw [dotted, color=black] (axis cs:1.1,0) -- (axis cs:1.1,1.1);
+        
+        
+        
+        % Here the blue curve is defined with arrows
+        \addplot [
+            domain=0:5, 
+            samples=100, 
+            color=blue,
+            postaction={
+                decorate,
+                decoration={
+                    markings,
+                    mark=at position 0.1 with {\arrow{<}},
+                    %mark=at position 0.5 with {\arrow{>}},
+                    mark=at position 0.3 with {\arrow{>}},
+                }
+            }
+        ]
+        {-0.5*3^0.8 + 0.1*3 + 1.1*x + 0.8};
+        % Draw a red dot at coordinates (2.5,2.5)
+        \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:1.1,1.1) {};
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The phase diagram dynamically visualizes the firm's debt trajectory given a static capital stock ($\Delta k = 0$),
+    operationalized within a model characterized by the parameters $\delta = 0.1$ (depreciation rate), $r = 0.1$
+    (interest rate), $\alpha = 0.8$ (capital output elasticity), $Z = 0.5$ (total factor productivity), $d = 0.8$
+    (constant dividend payout), and a steady-state capital ($\widehat{k} = 3$). The blue line embodies the trajectory of
+    debt, guided by  the finite difference equation $b_{t+1} = (1+r) \cdot b_{t} - (f(\widehat{k}) -
+    \delta \widehat{k} - d)$, where $f(\widehat{k})$ denotes the firm's output at the steady state of capital. This
+    equation encapsulates the interplay between the interest on existing debt and the firm's obligations due to
+    dividends and depreciation. The red dot marks the threshold beyond which debt cannot exceed capital, effectively serving
+    as a limit 
+    on debt. The green dot
+    represents the equilibrium or steady-state debt level, where the firm's financial obligations are perfectly balanced
+    with its repayment capacity. The distance between the red and green dots illustrates the magnitude of the firm's
+    equity buffer, serving as a measure of financial health and resilience against market fluctuations. This diagram is
+    pivotal in understanding how dividend policies and productivity rates interlink to shape the firm's leverage
+    strategy and long-term financial stability.}
+    \label{fig:ph_k}
+\end{figure}
+The phase diagram \ref{fig:ph_k} illustrates the relationship between a firm's current debt (\(b_t\)) and its capacity for future operations
+(\(k_{t+1}\)), within the context of constant dividends. The steady state is indicated by the red dot, signifying the
+juncture at which the firm's output is precisely adequate to cover dividends, depreciation, and interest on its
+steady-state debt. %r
+In essence, the graph conveys how steady-state conditions are shaped by dividend policy and productivity, with the
+former influencing the firm's financial leverage and the latter determining its capital efficiency. 

@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main_short.aux
+The style file: unsrtnat.bst
+Database file #1: reference.bib
+Warning--can't use both author and editor fields in HaCa07
+You've used 8 entries,
+            2481 wiz_defined-function locations,
+            634 strings with 6227 characters,
+and the built_in function-call counts, 3249 in all, are:
+= -- 310
+> -- 138
+< -- 8
++ -- 54
+- -- 38
+* -- 274
+:= -- 524
+add.period$ -- 38
+call.type$ -- 8
+change.case$ -- 15
+chr.to.int$ -- 8
+cite$ -- 9
+duplicate$ -- 148
+empty$ -- 283
+format.name$ -- 58
+if$ -- 687
+int.to.chr$ -- 1
+int.to.str$ -- 9
+missing$ -- 8
+newline$ -- 61
+num.names$ -- 24
+pop$ -- 44
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 87
+stack$ -- 0
+substring$ -- 167
+swap$ -- 20
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 53
+warning$ -- 1
+while$ -- 26
+width$ -- 0
+write$ -- 137
+(There was 1 warning)

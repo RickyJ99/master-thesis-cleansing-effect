@@ -1,0 +1,317 @@
+\section{Ramsey-Cass-Koopmans reinterpreted}
+This section outlines the intertemporal maximization problem faced by the firm in the absence of debt, which is a
+Ramsey-Cass-Koopmans revisited model, where there is a firm that seeks to maximize the utility of consumption of the
+shareholders (= dividends).
+The objective function is:
+\[V_0 = \sum_{t=0}^{+\infty}{\beta^t U(d_t)},\]
+where \(U^{\prime}>0, U^{\prime \prime}<0\).
+Let's assume that the firm's investment is entirely financed by equity (\(b_t=0\)  for all \(t\)), this leads to a simplified flow-of-funds constraint equation:
+\begin{align}
+    k_{t+1} = k_{t}(1 - \delta) + f(k_{t}) - d_{t}.  \label{eq13}
+\end{align}
+The maximization problem is tackled using a Lagrangian method, where the Lagrangian is defined as:
+\[L_0 = \sum_{t=0}^{+\infty}\left[{\beta^t U(d_t) - \beta^t \lambda_t\left[k_{t+1} - k_{t}(1 - \delta) - f(k_t) + d_t\right]}\right].\]
+
+The first-order conditions for \(d_{t}\), \(k_{t}\), for all periods \(t=0,1,\ldots\) yield:
+\[
+U^{\prime}(d_{t}) = \lambda_t, \quad \forall t,
+\]
+\[
+\beta^t \lambda_t = \beta^{t+1} \lambda_{t+1}[f^{\prime}(k_{t+1}) + (1-\delta)], \quad \forall t,
+\]
+
+
+This approach delineates the optimal strategy for dividend distribution and capital allocation in a debt-free
+case.
+In the infinite horizon model, the transversality condition reads:
+\begin{align}
+    \lim _{t \rightarrow \infty} \beta^T U^{\prime}\left(d_{t}\right) k_{T+1}=0 \label{eq26}
+\end{align}
+From these first-order conditions (FOCs), we derive the Euler equation for dividends:
+\begin{align}
+    U^{\prime}(d_{t}) = \beta U^{\prime}(d_{t+1})[f^{\prime}(k_{t+1}) + (1-\delta)]  \label{eq14}
+\end{align}
+indicating that the marginal utility of distributing 1 unit of output as dividends at time \(t\) should match the discounted marginal
+utility of not distributing  dividends in t, saving, investing in t, using the additional capital to produce and
+distribute the corresponding dividends at time t+1.
+\paragraph{Steady state condition for dividends}
+Imposing the steady state condition for dividends \( d_t = d_{t+1} = \widehat{d} \) in \ref{eq14} , we
+equate the marginal  utilities across two consecutive periods:
+\begin{align}
+    U^{\prime}(d_t) &= U^{\prime}(d_{t+1}), \nonumber \\
+    \frac{1}{\beta} = f^{\prime}(k_{t+1}) + (1-\delta),\label{eq27}
+\end{align}
+This condition is satisfied if:
+\begin{align}
+    f^{\prime}(k_{t+1}) &= \frac{1}{\beta} - (1-\delta), 
+\end{align}
+Using the Cobb-Douglas production function and taking the derivative with respect to capital, we get:
+\begin{align}
+    f^{\prime}(k_{t+1}) &= Z \alpha k^{\alpha-1}_{t+1},  \label{eq15'}
+\end{align}
+From \ref{eq27}, we get: 
+\begin{align}
+    \frac{1}{\beta}&=1-\delta+Z\alpha k^{\alpha-1},\nonumber \\
+    Z\alpha k^{\alpha-1} &+(1-\delta)\beta=1, \nonumber \\
+    \widehat{k} &= \left[\frac{\alpha \beta Z}{1 - \beta\left(1-\delta\right)}\right]^{\frac{1}{1-\alpha}}.  \label{eq16}
+\end{align}
+The locus of points on the (\(k_t,d_t\)) plane such that dividends are constant is therefore
+\(k_t=\hat{k}\), whose representation in the vertical line in figure \ref{fig:ph_d_k_nod_1}.
+\paragraph{Steady state condition for capital}
+Imposing the steady state condition for capital (\(k_t = k_{t+1} = \widehat{k}\)) in the law of motion of capital \ref{eq13} we
+get:
+\begin{align}
+    d_t & = f(k_t) - \delta k_t  \label{eq17}
+\end{align}
+This locus represents the set of points where capital stock remains constant over time. Hence, we can determine the
+level of dividends that ensures both capital and dividends are maintained at steady-state levels. By incorporating the
+steady-state level of capital  from Equation \ref{eq16} and the production function from Equation \ref{eq6} into the equilibrium
+condition for capital from Equation \ref{eq17}, the steady-state level of dividends, can be
+deduced:
+
+\begin{align}
+    \widehat{d} &= Z \left( \frac{\alpha \beta Z}{1 - \beta(1 - \delta)} \right)^{\frac{\alpha}{1 - \alpha}} - \delta \left( \frac{\alpha \beta Z}{1 - \beta(1 - \delta)} \right)^{\frac{1}{1 - \alpha}}
+\end{align}
+
+
+
+In this manner, we ascertain the steady-state levels for both capital and dividends.
+\subsection{Phase diagram}
+
+In this section, we will plot the phase diagram for capital and dividends exploiting steady-state conditions for capital and
+dividends. 
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle, % sets the position of the axes
+            xlabel=\(k_t\),
+            ylabel=\(d_t\),
+            ymin=0, xmin=0,
+            xmax=5, ymax=5,
+            ticks=none, % removes ticks on axes
+            clip=false,
+            every axis plot post/.style={thick}
+        ]
+        
+        % Vertical line at k hat
+        \draw  (axis cs:1.8,0) -- (axis cs:1.8,5);
+        \node at (axis cs:2,5.5) {\(\Delta d_t = 0\)};
+        \node at (axis cs:1.8,-0.5) {\(\hat{k}\)};
+        
+        % Arrows
+        % Upwards arrows
+        \draw [-{Latex[length=3mm]}] (axis cs:1,1) -- (axis cs:1,2);
+    
+        % Downwards arrows
+        \draw [{Latex[length=3mm]}-] (axis cs:3,1) -- (axis cs:3,2);
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The phase diagram illustrates locus of points such that \(d_t=d_{t-1}\). The vertical line at \( \hat{k} \) represents the steady-state level of capital, where
+    the rate of change in dividends \( \Delta d_t \) is zero. To the left of \( \hat{k} \), where capital is below its
+    steady-state level, the firm increases dividend payments. Conversely, to the right of \( \hat{k} \), where capital
+    exceeds the steady state, dividend payments decrease.}
+    \label{fig:ph_d_k_nod_1}
+\end{figure}
+
+The \ref{fig:ph_d_k_nod_1} portrays the dynamics of dividends (\(d_t\)) in relation to the capital (\(k_t\)) of a firm, with a
+particular focus on the behavior when capital is below or above the steady-state level,  denoted by \(\hat{k}\).
+
+When capital is below the steady-state level (\(k_t < \hat{k}\)), thus on the left of the vertical line, for the
+firm it is optimal to increase dividends over time (\(d_t<d_{t+1}\)) as represented by the arrow pointing upward. When instead
+\(k_t > \hat{k}\), dividends must shrink over time (\(d_t>d_{t+1}\)).
+Let's look at the locus in which capital is stationary \(\Delta k = 0 \) is given by the f-of-f constraint \ref{eq17}:
+\begin{align}
+    d_t & = f(k_t) - \delta k_t
+\end{align}
+In this case, as obtained in the above section, the locus in which capital is stationary becomes \ref{eq17}:
+\begin{align}
+    d_t &=Z k^{\alpha}_t-\delta k_t
+\end{align}
+
+This function starts at the origin since (\(f(0)=0\)), with a maximum in \(\underline{k}\) (defined as capital level
+such that \(f^{\prime}(\underline{k})=\delta\)). The level of capital \(\underline{k}\) is:
+\begin{align}
+    \underline{k} &= \left[\frac{\alpha Z}{\delta}\right]^{\frac{1}{1-\alpha}}  \label{eq19}
+\end{align}
+It is easy to see that \(\hat{k}<\underline{k}\):
+\begin{align*}
+    \frac{\alpha \beta Z}{1-\beta+\beta \delta}&<\frac{\alpha Z}{\delta},\\
+    \frac{\beta}{1-\beta+\beta \delta}&<\frac{1}{\delta},\\
+    \beta \delta &<1-\beta + \beta \delta, \\
+    1-\beta&>0 
+\end{align*}
+We denote \(\bar{k}\) the capital level such that \(d_t=0\), thus it's obtained by solving \(f(\bar{k}) -\delta
+\bar{k} = 0\), using the Cobb-Douglas production function \ref{eq6}, we get:
+\begin{align}
+    Z \bar{k}^{\alpha} &= \delta \bar{k}, \nonumber\\
+    \bar{k}&=\left[\frac{Z}{\delta}\right]^{\frac{1}{1-\alpha}}
+\end{align}
+It is easy to see that \(\underline{k}<\bar{k}\), since:
+\begin{align}
+    \left[\frac{Z}{\delta}\right]^{\frac{1}{1-\alpha}}&>\left[\frac{\alpha Z}{\delta}\right]^{\frac{1}{1-\alpha}},\nonumber\\
+    \frac{Z}{\delta}&>\frac{\alpha Z}{\delta}, \nonumber \\
+    1&>\alpha \nonumber 
+\end{align}
+Considering transitivity, the sequence for \(\underline{k}, \hat{k}, \bar{k}\) is:
+\begin{align*}
+    \hat{k} < \underline{k} < \bar{k}
+\end{align*}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle, % sets the position of the axes
+            xlabel=\(k_t\),
+            ylabel=\(d_t\),
+            xmin=0, ymin=0,
+            xmax=5, ymax=5,
+            ticks=none, % removes ticks on axes
+            clip=false,
+            axis on top=true
+        ]
+        
+        % Parabolic curve
+        \addplot [
+            domain=0:4, 
+            samples=100, 
+            thick,
+        ]
+        {-x^2 + 4*x};
+        
+        % Vertical line at k hat
+
+        \node at (axis cs:3.5,3.5) {\(\Delta k_t = 0\)};
+
+        
+        % Arrows on the left side
+        \draw [-{Stealth[bend]}]  (axis cs:0.5,1)--(axis cs:1,1);
+        \draw [-{Stealth[bend]}]  (axis cs:0.8,4) -- (axis cs:0.5,4);
+        
+        % Arrows on the right side
+        \draw [-{Stealth[bend]}]  (axis cs:2.5,1)--(axis cs:3,1);
+        \draw [-{Stealth[bend]}]  (axis cs:4,4) -- (axis cs:3.5,4);
+        \node at (axis cs:2,-0.2) {\(\underline{k}\)};
+        \node at (axis cs:4,-0.2) {\(\bar{k}\)};
+
+        %vertical line at maximum
+        \draw [dashed] (axis cs:2,0) -- (axis cs:2,4);
+        \end{axis}
+    \end{tikzpicture}
+    \caption{This phase diagram displays the set of points at which the capital stock \( k_t \) is
+    unchanging from one period to the next (\( k_t = k_{t-1} \)). The capital level at \( \underline{k} \) represents the
+    maximum sustainable dividend payout without affecting the capital stock. Arrows above the curve pointing leftward
+    indicate a reduction in capital resulting from dividend levels that exceed the sustainable steady state, while
+    arrows pointing to the right below the curve signify the accumulation of capital due to dividend levels that are
+    below the steady state, leading to an increase in capital stock over time. 
+    }
+    \label{fig:ph_d_k_nod}
+\end{figure}
+
+For a given level of capital \(k_0 \in [0,\bar{k}]\), the corresponding dividends level that
+guarantee the stationarity of capital is:
+\begin{align*}
+    d_0 &= f(k_0) -\delta k_0
+\end{align*}
+If the firm distributes more dividends than \(d_0\) the capital stock must decrease over time: since
+dividends are too high the firm is consuming part of her capital. More precisely the firm is distributing more dividends than
+\(d_0\), which guarantees that the difference between production, and dividends is exactly equal to the replacement of
+depreciated capital.
+This behavior is represented by the arrows above the curve pointing to the left. If the firm distributes fewer
+dividends than \(d_0\), the opposite happens: the firm increases its capital since there is a positive net
+investment. This behavior is represented by
+the arrows below the curve pointing toward the right. 
+
+\paragraph{Steady state for capital and dividends}
+Plotting both loci we get a phase diagram that represents the condition for stationarity. 
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle, % sets the position of the axes
+            xlabel=\(k_t\),
+            ylabel=\(d_t\),
+            xmin=0, ymin=0,
+            xmax=5, ymax=5,
+            ticks=none, % removes ticks on axes
+            clip=false,
+            axis on top=true
+        ]
+        
+        % Parabolic curve
+        \addplot [
+            domain=0:4, 
+            samples=100, 
+            thick,
+        ]
+        {-x^2 + 4*x};
+        
+        % Arrows
+       
+        
+        % Vertical line at k hat
+        \draw [dashed] (axis cs:2,0) -- (axis cs:2,4);
+        \node at (axis cs:2.5,4.5) {\(\Delta d_t = 0\)};
+        \node at (axis cs:3.5,3.5) {\(\Delta k_t = 0\)};
+        \node at (axis cs:4,-0.2) {\(\bar{k} \)};
+
+        \draw  (axis cs:1.8,0) -- (axis cs:1.8,5);
+
+        \node at (axis cs:1.8,-0.2) {\(\hat{k} \)};
+        % Arrows on the left side
+        \draw [-{Stealth[bend]}]  (axis cs:1.3,1)--(axis cs:1.8,1);
+        \draw [-{Stealth[bend]}]  (axis cs:0.8,3) -- (axis cs:0.3,3);
+        
+        % Arrows on the right side
+        \draw [-{Stealth[bend]}]  (axis cs:2.5,1)--(axis cs:3,1);
+        \draw [-{Stealth[bend]}]  (axis cs:4,3) -- (axis cs:3.5,3);
+        
+        % Arrows
+        % Upwards arrows
+        \draw [-{Stealth[bend]}]  (axis cs:0.8,3) -- (axis cs:0.8,3.5);
+        \draw [-{Stealth[bend]}]  (axis cs:1.3,1) -- (axis cs:1.3,1.5);
+        \draw [-{Stealth[bend]}]  (axis cs:2.5,1) -- (axis cs:2.5,0.5);
+        \draw [-{Stealth[bend]}]  (axis cs:4,3) -- (axis cs:4,2.5);
+        
+        % Vertical line at k hat
+        \draw [dashed] (axis cs:1,0) -- (axis cs:1,5);
+        \node at (axis cs:0.8,2) {A};
+        \node at (axis cs:1,-0.2) {\(k_0\)};
+        \draw [dashed] (axis cs:1,0) -- (axis cs:1,5);
+        
+        % Draw a green dot at coordinates (1.1,1.1)
+        \draw [-{Stealth[bend]}, color=blue]  (axis cs:1,2) -- (axis cs:1.76,3.87);
+        \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:1.81,3.96) {};
+        \node[draw, circle, fill=green, inner sep=2pt] at (axis cs:1,2) {};
+        \node at (axis cs:1.7,4.2) {B};
+        
+        \node at (axis cs:2,-0.2) {\(\underline{k}\)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The phase diagram visualizes the relationship between dividends and capital. The vertical line marks
+    where the dividend level remains constant, and the solid concave curve traces where the capital remains constant.
+    Point B indicates the equilibrium where both dividends and capital are stationary, with the steady-state capital at
+    \( \hat{k} \). This value of \( \hat{k} \) is notably lower than \( \underline{k} \), which is the capital level
+    that would maximize dividends while maintaining a steady capital stock. \( \bar{k} \) represents the capital
+    quantity at which the system reaches a stationary state for k with zero dividends. The arrows illustrate the dynamics of dividends and capital in case of the firm finding itself outside the stable
+    loci. Point A is a possible starting point (\(k_0,d_0\)). 
+    The blue arrows indicate a potential trajectory, known as a saddle path, leading towards saddle point B. 
+    }
+    \label{fig:ph_d_nodebt}
+\end{figure}
+Notice that there exits 3 steady states: one at the origin due to the assumption \(f(0)=0\), the point \((\bar{k};0)\),
+and finally point B \(=(\hat{k},\hat{d})\). Point B was obtained by equations \ref{eq16} and \ref{eq17} and represented the point in
+which dividends and capital are at a steady state, and both are strictly positive. This point is a saddle point.
+The blue line depicts a possible saddle path towards B. Starting at A, the firm chooses exactly the dividend level that
+leads to the stationary point B. This path not only fulfills the difference equations \ref{eq14} and \ref{eq17}, but
+also, the transversality condition \ref{eq26}
+Indeed as \(t \rightarrow \infty\), capital and dividends approach their steady-state level, which are both positive and
+finite, thus the marginal utility of dividends at \(\hat{d}\) is also finite, hence \ref{eq26} is valid.
+
+To conclude, this section has outlined the derivation of steady-state levels for capital and dividends, and these
+conditions have been visually represented in a phase diagram. The upcoming section will undertake a similar analysis but
+will incorporate debt and financial friction into the model. Additionally, it is important to note that in the steady
+state, where output \(\hat{y}\) is given by \(f(\hat{k})\), the production level is exclusively influenced by the
+productivity parameter \(Z\), signifying that financial elements do not alter the fundamental connection between the
+production function and output. 

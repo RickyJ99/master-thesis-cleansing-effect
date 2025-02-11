@@ -2441,8 +2441,8 @@ capital, skyrocketing as it approaches zero.
             minor grid style={lightgray!25},
             ]
         \addplot[blue] table [col sep=comma, x=l, y=par]
-        {output_data/adjusted_partial_derivative_k_with_respect_to_l.csv}; % With friction
-        %\addplot[red] table [col sep=comma, x=l, y=par] {output_data/adjusted_partial_derivative_k_with_respect_to_l_1.csv}; % Without friction
+        {../output_data/adjusted_partial_derivative_k_with_respect_to_l.csv}; % With friction
+        %\addplot[red] table [col sep=comma, x=l, y=par] {../output_data/adjusted_partial_derivative_k_with_respect_to_l_1.csv}; % Without friction
         \end{axis}
          
     \end{tikzpicture}
@@ -2519,8 +2519,8 @@ repayment (\(p\)) of approximately 0.559 for both firms.
         width=0.8\textwidth,
         height=6cm,
     ]
-    \addplot[blue] table [col sep=comma, x=Time, y=Capital] {output_data/simulation.csv}; % With friction
-    \addplot[red] table [col sep=comma, x=Time, y=Capital] {output_data/simulation_withoutfriction.csv}; % Without friction
+    \addplot[blue] table [col sep=comma, x=Time, y=Capital] {../output_data/simulation.csv}; % With friction
+    \addplot[red] table [col sep=comma, x=Time, y=Capital] {../output_data/simulation_withoutfriction.csv}; % Without friction
     \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
@@ -2560,8 +2560,8 @@ the solution to the Bellman equation.
         width=0.8\textwidth,
         height=6cm,
     ]
-    \addplot[blue] table [col sep=comma, x=Time, y=Dividends] {output_data/simulation.csv}; % With friction
-    \addplot[red] table [col sep=comma, x=Time, y=Dividends] {output_data/simulation_withoutfriction.csv}; % Without friction
+    \addplot[blue] table [col sep=comma, x=Time, y=Dividends] {../output_data/simulation.csv}; % With friction
+    \addplot[red] table [col sep=comma, x=Time, y=Dividends] {../output_data/simulation_withoutfriction.csv}; % Without friction
     \legend{With Friction, Without Friction}
     \end{axis}
     \end{tikzpicture}
@@ -2682,7 +2682,7 @@ reallocation mechanisms to bolster economic efficiency, even when financial barr
         ]
         
         % Import data from the first CSV (noexit_nofriction_stats.csv)
-        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/noexit_friction_stats.csv}\datatableNoExit
+        \pgfplotstableread[col sep=comma, row sep=newline]{../output_data/noexit_friction_stats.csv}\datatableNoExit
         
         % Plot mean Total_production_actual from the first dataset
         \addplot [name path=mean_actual_noexit, blue, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableNoExit};
@@ -2695,7 +2695,7 @@ reallocation mechanisms to bolster economic efficiency, even when financial barr
         \addplot [fill=gray!40] fill between[of=upper_actual_noexit and lower_actual_noexit];
         
         % Import data from the second CSV (exit_nofriction_stats.csv)
-        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/exit_friction_stats.csv}\datatableExit
+        \pgfplotstableread[col sep=comma, row sep=newline]{../output_data/exit_friction_stats.csv}\datatableExit
         
         % Plot mean Total_production_actual from the second dataset
         \addplot [name path=mean_actual_exit, blue!50!red, mark=none] table [x=Step, y=Total_Production_actual_mean] {\datatableExit};
@@ -2744,7 +2744,7 @@ mechanism serves as a pivotal driver of economic efficiency and productivity.
         ]
         
         % Plot differences with error bars from diff.csv
-        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/diff_fri.csv}\datatableDifffri
+        \pgfplotstableread[col sep=comma, row sep=newline]{../output_data/diff_fri.csv}\datatableDifffri
         \addplot+ [
             red, mark=*, mark options={fill=black},
             error bars/.cd,
@@ -2763,7 +2763,7 @@ mechanism serves as a pivotal driver of economic efficiency and productivity.
         ] {\datatableDifffri};
         \addlegendentry{\(K_E - K_NE\) with \(\mu=0.85\)}
         
-        \pgfplotstableread[col sep=comma, row sep=newline]{output_data/diff.csv}\datatableDiff
+        \pgfplotstableread[col sep=comma, row sep=newline]{../output_data/diff.csv}\datatableDiff
         \addplot+ [
             blue, mark=*, mark options={fill=black},
             error bars/.cd,
